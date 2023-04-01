@@ -8,10 +8,10 @@ html {
   body {
     margin: 0;
     padding: 0;
-    
     font-style: normal;
     font-family: ${theme.fonts.body};
     background: ${theme.colors.background};
+
   }
   h1,
   h2,

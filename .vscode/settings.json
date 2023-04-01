@@ -1,0 +1,7 @@
+{
+  "emmet.optimizeStylesheetParsing": true,
+  "emmet.showAbbreviationSuggestions": true,
+  "emmet.showSuggestionsAsSnippets": false,
+  "emmet.triggerExpansionOnTab": true,
+  "editor.suggest.filterGraceful": true
+}
