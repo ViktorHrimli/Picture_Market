@@ -1,7 +1,6 @@
 {
   "name": "market",
   "version": "0.1.0",
-  "private": false,
   "dependencies": {
     "@mui/material": "^5.11.15",
     "@mui/styled-engine-sc": "^5.11.11",

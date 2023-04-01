@@ -1,50 +1,47 @@
 export const theme = {
   colors: {
-    black: "#111111",
-    white: "#fff",
-    text: "#111111",
-    background: "#FDF7F2",
-    gradient: "linear-gradient(90deg, #FF634E 0%, #FFDF48 105.44%)",
-    muted: "rgba(17, 17, 17, 0.6)",
-    primary: "#F59256",
-    secondary: "#3091EB",
-    focus: "#FF6101",
-    inputAuthForm: "rgba(245, 146, 86, 0.5)",
-    footerText: "#545454",
+    blackLight: 'rgba(3, 15, 15, 0.9)',
+    main: '#003031',
+    accent: '#634789',
+    accentLight: 'rgba(99, 71, 137, 0.25)',
+    white: '#F9FCFC',
+    background: '#F9FCFC',
+    gradientCard:
+      'linear-gradient(270deg, #634789 0%, rgba(99, 71, 137, 0) 100%)',
+    gradientGallery:
+      'linear-gradient(360deg, #634789 -4.78%, rgba(99, 71, 137, 0) 100%)',
   },
 
   space: [
-    "0px",
-    "4px",
-    "8px",
-    "16px",
-    "20px",
-    "28px",
-    "32px",
-    "40px",
-    "44px",
-    "60px",
-    "80px",
-    "90px",
+    '0px',
+    '4px',
+    '8px',
+    '16px',
+    '20px',
+    '28px',
+    '32px',
+    '40px',
+    '44px',
+    '60px',
+    '80px',
+    '90px',
   ],
 
   fonts: {
-    body: "Manrope, sans-serif",
-    special: "Poppins, monospace",
-    monospace: "",
+    body: 'Morgrach, sans-serif',
   },
 
   fontSizes: {
-    xxxs: "12px",
-    xxs: "14px",
-    xs: "16px",
-    ms: "18px",
-    s: "20px",
-    m: "24px",
-    l: "28px",
-    xl: "36px",
-    xxl: "48px",
-    xxxl: "68px",
+    xxxs: '12px',
+    xxs: '14px',
+    xs: '16px',
+    ms: '18px',
+    s: '20px',
+    m: '24px',
+    l: '28px',
+    xl: '40px',
+    xxl: '48px',
+    xxxl: '64px',
   },
 
   fontWeights: {
@@ -60,28 +57,29 @@ export const theme = {
   },
 
   letterSpacings: {
-    min: "-0.01em",
-    normal: "0.04em",
-    max: "0.07em",
+    min: '-0.01em',
+    normal: '0.04em',
+    max: '0.07em',
   },
 
   borders: {
-    none: "none",
-    normal: "1px solid",
-    medium: "2px solid",
+    none: 'none',
+    normal: '1px solid',
+    medium: '2px solid',
+    big: '3px solid',
   },
 
   shadows: {
-    normal: "7px 4px 14px rgba(49, 21, 4, 0.07)",
-    form: "7px 4px 14px rgba(0, 0, 0, 0.11)",
+    cardOk:
+      '68px 152px 67px rgba(83, 59, 121, 0.01), 38px 85px 56px rgba(83, 59, 121, 0.05), 17px 38px 42px rgba(83, 59, 121, 0.09), 4px 9px 23px rgba(83, 59, 121, 0.1), 0px 0px 0px rgba(83, 59, 121, 0.1)',
+    cardNotOk:
+      '72px 140px 63px rgba(99, 71, 136, 0.01), 41px 78px 53px rgba(99, 71, 136, 0.05), 18px 35px 39px rgba(99, 71, 136, 0.09), 5px 9px 22px rgba(99, 71, 136, 0.1), 0px 0px 0px rgba(99, 71, 136, 0.1)',
   },
 
   radii: {
-    none: "0",
-    normal: "20px",
-    big: "40px",
-    round: "50%",
-    card: "0px 0px 40px 40px;",
+    none: '0',
+    normal: '8px',
+    round: '50%',
   },
 
   screens: {
