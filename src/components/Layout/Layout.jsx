@@ -1,7 +1,7 @@
-import { Conteiner } from 'components/Layout/Lyout.styled';
+import { Container } from 'components/Layout/Lyout.styled';
 
 const Layout = ({ children }) => {
-  return <Conteiner>{children}</Conteiner>;
+  return <Container>{children}</Container>;
 };
 
 export { Layout };
