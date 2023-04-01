@@ -1,4 +1,4 @@
-import { Container } from 'components/Layout/Lyout.styled';
+import { Container } from 'components/Layout/Layout.styled';
 
 const Layout = ({ children }) => {
   return <Container>{children}</Container>;

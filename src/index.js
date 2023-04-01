@@ -6,6 +6,9 @@ import App from './components/App';
 
 import { GlobalStyled, theme } from 'styles';
 
+import 'modern-normalize';
+import './index.css';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(

@@ -1,7 +1,8 @@
 {
   "emmet.optimizeStylesheetParsing": true,
   "emmet.showAbbreviationSuggestions": true,
-  "emmet.showSuggestionsAsSnippets": false,
+  "emmet.showSuggestionsAsSnippets": true,
   "emmet.triggerExpansionOnTab": true,
-  "editor.suggest.filterGraceful": true
+  "editor.suggest.filterGraceful": true,
+  "typescript.tsdk": "node_modules\\typescript\\lib"
 }
