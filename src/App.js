@@ -3,6 +3,7 @@ const App = () => {
     <div>
       <header>
         <h1>awdawdawdawd</h1>
+        <p>qs</p>
       </header>
     </div>
   );
