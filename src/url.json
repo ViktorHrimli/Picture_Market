@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "url": "https://res.cloudinary.com/djoprd9i4/image/upload/v1680381246/samples/picture_market/rbqw9bjjlsupml6mnhfu.png",
+    "name": "logo"
+  },
+  {
+    "id": 2,
+    "url": "https://res.cloudinary.com/djoprd9i4/image/upload/v1680381248/samples/picture_market/pwaxxvjwcei307vrmlgc.jpg",
+    "name": "gallery_card"
+  },
+  {
+    "id": 3,
+    "url": "https://res.cloudinary.com/djoprd9i4/image/upload/v1680381245/samples/picture_market/wentg8b2a0vro5funxje.png",
+    "name": "laptop"
+  },
+  {
+    "id": 4,
+    "url": "https://res.cloudinary.com/djoprd9i4/image/upload/v1680381245/samples/picture_market/sgeb4hruuzibctbpu1cb.jpg",
+    "name": "card_is_Ok"
+  },
+  {
+    "id": 5,
+    "url": "https://res.cloudinary.com/djoprd9i4/image/upload/v1680381247/samples/picture_market/je6xpfzu25j78lzh4si1.jpg",
+    "name": "about_girl"
+  },
+  {
+    "id": 6,
+    "url": "https://res.cloudinary.com/djoprd9i4/image/upload/v1680381247/samples/picture_market/duenoy7svntgbtqwxljj.jpg",
+    "name": "gallery_card"
+  },
+  {
+    "id": 7,
+    "url": "https://res.cloudinary.com/djoprd9i4/image/upload/v1680381247/samples/picture_market/rroabton9qzuwaaskxf1.jpg",
+    "name": "card_is_Ok"
+  },
+  {
+    "id": 8,
+    "url": "https://res.cloudinary.com/djoprd9i4/image/upload/v1680381248/samples/picture_market/kqadxz06vw94mbg5v4di.jpg",
+    "name": "gallery_card"
+  },
+  {
+    "id": 9,
+    "url": "https://res.cloudinary.com/djoprd9i4/image/upload/v1680381245/samples/picture_market/ufisicogtourq12nxrzg.jpg",
+    "name": "gallery_card"
+  },
+  {
+    "id": 10,
+    "url": "https://res.cloudinary.com/djoprd9i4/image/upload/v1680381245/samples/picture_market/gkx46qbyhvsulzwdmmlf.png",
+    "name": "hero"
+  },
+  {
+    "id": 11,
+    "url": "https://res.cloudinary.com/djoprd9i4/image/upload/v1680381248/samples/picture_market/yz2hyoladx5bbdciqbqr.jpg",
+    "name": "gallery_card"
+  },
+  {
+    "id": 12,
+    "url": "https://res.cloudinary.com/djoprd9i4/image/upload/v1680381250/samples/picture_market/m6yhgvlwjxgx2j1moxpo.jpg",
+    "name": "gallery_card"
+  },
+  {
+    "id": 13,
+    "url": "https://res.cloudinary.com/djoprd9i4/image/upload/v1680381246/samples/picture_market/mpvfnv1glphomfqcwisd.jpg",
+    "name": "dude"
+  },
+  {
+    "id": 14,
+    "url": "https://res.cloudinary.com/djoprd9i4/image/upload/v1680381245/samples/picture_market/xpm5uoghnbafsdx9xg1p.jpg",
+    "name": "girls"
+  }
+]
