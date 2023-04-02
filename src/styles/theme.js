@@ -5,6 +5,8 @@ export const theme = {
     accent: '#634789',
     accentLight: 'rgba(99, 71, 137, 0.25)',
     white: '#F9FCFC',
+    backgroundWhite: '#ffffff',
+    whitesmoke: '#f5f5f5',
     background: '#F9FCFC',
     gradientCard:
       'linear-gradient(270deg, #634789 0%, rgba(99, 71, 137, 0) 100%)',
@@ -16,14 +18,15 @@ export const theme = {
     '0px',
     '4px',
     '8px',
+    '11px',
     '16px',
     '20px',
     '28px',
     '32px',
     '40px',
     '44px',
-    '60px',
-    '80px',
+    '50px',
+    '76px',
     '90px',
   ],
 
@@ -54,6 +57,7 @@ export const theme = {
     min: 1.33,
     normal: 1.35,
     max: 1.375,
+    ultra: 1.6,
   },
 
   letterSpacings: {
