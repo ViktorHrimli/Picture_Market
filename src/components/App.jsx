@@ -1,12 +1,13 @@
 import { Layout } from 'components/Layout/Layout';
 import { Header } from 'components/Header/Header';
+import { About } from './About/About';
 
 const App = () => {
   return (
     <Layout>
       <Header />
       <main>
-        <h1>Layout</h1>
+        <About />
       </main>
       {/* <footer></footer> */}
     </Layout>

@@ -11,8 +11,8 @@ export const Container = styled.div`
 
   width: 100%;
 
-  @media screen and (min-width: 320px) {
-    width: 320px;
+  @media screen and (min-width: 360px) {
+    width: 360px;
   }
   @media screen and (min-width: 768px) {
     width: 768px;
