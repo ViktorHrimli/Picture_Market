@@ -46,7 +46,7 @@
   },
   {
     "id": 10,
-    "url": "https://res.cloudinary.com/djoprd9i4/image/upload/v1680381245/samples/picture_market/gkx46qbyhvsulzwdmmlf.png",
+    "url": "https://res.cloudinary.com/djoprd9i4/image/upload/v1680452465/samples/picture_market/hero%D1%84_u5gxtw.png",
     "name": "hero"
   },
   {
@@ -68,5 +68,16 @@
     "id": 14,
     "url": "https://res.cloudinary.com/djoprd9i4/image/upload/v1680381245/samples/picture_market/xpm5uoghnbafsdx9xg1p.jpg",
     "name": "girls"
+  },
+
+  {
+    "id": 15,
+    "url": "https://res.cloudinary.com/djoprd9i4/image/upload/v1680452464/samples/picture_market/Group_128_4_zvenh9.png",
+    "name": "black_logo"
+  },
+  {
+    "id": 16,
+    "url": "https://res.cloudinary.com/djoprd9i4/image/upload/v1680452464/samples/picture_market/Rectangle_119-min_hnzudp.png",
+    "name": "about_girl_mobile"
   }
 ]
