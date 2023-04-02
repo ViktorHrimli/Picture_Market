@@ -1,0 +1,78 @@
+import styled, { keyframes } from 'styled-components';
+
+import { GoX } from 'react-icons/go';
+import { TfiEmail } from 'react-icons/tfi';
+import { AiOutlineShopping } from 'react-icons/ai';
+
+const slideInAnimation = keyframes`
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+`;
+
+export const MenuSection = styled.section`
+  animation: ${slideInAnimation} 0.5s ease-out;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: ${p => p.theme.colors.accent};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 44px 28px 68px 28px;
+`;
+
+export const BtnBox = styled.div`
+  margin-left: auto;
+`;
+
+export const ListLayout = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: ${p => p.theme.space[7]};
+`;
+
+export const LinkLayout = styled.a`
+  color: ${p => p.theme.colors.white};
+  font-size: ${p => p.theme.fontSizes.m};
+  line-height: ${p => p.theme.lineHeights.normal};
+  font-weight: ${p => p.theme.fontWeights.normal};
+`;
+
+export const MenuSectionBtn = styled.button`
+  cursor: pointer;
+`;
+
+export const ListContacts = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: ${p => p.theme.space[6]};
+`;
+
+export const LinkIcons = styled.li`
+  width: ${p => p.theme.space[8]};
+  height: ${p => p.theme.space[8]};
+  background: ${p => p.theme.colors.white};
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Close = styled(GoX)`
+  fill: ${p => p.theme.colors.white};
+  font-size: ${p => p.theme.fontSizes.xl};
+`;
+
+export const Email = styled(TfiEmail)`
+  fill: ${p => p.theme.colors.accent};
+  font-size: ${p => p.theme.fontSizes.m};
+`;
+
+export const Shop = styled(AiOutlineShopping)`
+  fill: ${p => p.theme.colors.accent};
+  font-size: ${p => p.theme.fontSizes.m};
+`;
