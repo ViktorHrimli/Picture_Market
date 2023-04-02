@@ -1,6 +1,7 @@
 import { Layout } from 'components/Layout/Layout';
-import { Header } from 'components/Header/Header';
+import { Header } from 'components/Header/Header'
 import { Hero } from 'components/Hero/Hero';
+import { About } from './About/About';
 
 
 const App = () => {
@@ -9,9 +10,8 @@ const App = () => {
       <Header />
       <main>
         <Hero />
-        {/* <h1>Layout</h1> */}
+        <About />
       </main>
-      {/* <footer></footer> */}
     </Layout>
   );
 };
