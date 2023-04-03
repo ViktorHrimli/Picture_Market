@@ -14,6 +14,7 @@ export const Section = styled.section`
   justify-content: flex-end;
   position: relative;
   z-index: -2;
+  margin-bottom: 200px;
 `;
 
 export const TextBox = styled.div`
@@ -49,12 +50,12 @@ export const TextAfterArt = styled.span`
 `;
 
 export const Text = styled.p`
-  font-size: ${p => p.theme.fontSizes.xxs};
+  font-size: ${p => p.theme.fontSizes.s};
   font-weight: ${p => p.theme.fontWeights.normal};
   font-family: ${p => p.theme.fonts.body};
   line-height: ${p => p.theme.lineHeights.min};
   color: ${p => p.theme.colors.main};
   /* width: ${p => p.theme.space[12] + [10]} px; */
-  width: 145px; //???
+  width: 148px; //???
   height: 55px;
 `;

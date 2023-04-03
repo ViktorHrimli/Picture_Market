@@ -12,6 +12,7 @@ export const theme = {
       'linear-gradient(270deg, #634789 0%, rgba(99, 71, 137, 0) 100%)',
     gradientGallery:
       'linear-gradient(360deg, #634789 -4.78%, rgba(99, 71, 137, 0) 100%)',
+    gradientMenu: 'linear-gradient(91.41deg, #634789 1.38%, #4b3b6b);',
   },
 
   space: [
@@ -40,6 +41,7 @@ export const theme = {
     xs: '16px',
     ms: '18px',
     s: '20px',
+    f: '22px',
     m: '24px',
     l: '28px',
     xl: '40px',

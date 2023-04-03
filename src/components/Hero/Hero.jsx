@@ -9,7 +9,7 @@ const Hero = () => {
                 <TextAfterArt>ART</TextAfterArt>
             </TextBox>
             <div>
-                <Text>Unique string art pieces from your FAVOURITE PHOTOS</Text>
+                <Text>Unique string art pieces from your favourite photos</Text>
             </div>
         </Section>
     )
