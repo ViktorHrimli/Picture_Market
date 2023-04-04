@@ -15,9 +15,10 @@ const slideInAnimation = keyframes`
 
 export const MenuSection = styled.section`
   animation: ${slideInAnimation} 0.5s ease-out;
-  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-in-out;
   transform: ${({ isClosed }) =>
     isClosed ? 'translateX(0)' : 'translateX(100%)'};
+
   position: fixed;
   width: 100vw;
   height: 100vh;

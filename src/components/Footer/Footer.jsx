@@ -9,8 +9,6 @@ const Footer = () => {
                         <li><FooterLinkContacts href="mailto:test@test.com">Email: string_world@gmail.com </FooterLinkContacts></li>
                         <li><FooterLinkContacts href="tel:+112564895">Telephone: 112564895</FooterLinkContacts></li>
                     </FooterListContacts>
-                </div>
-                <div>
                     <FooterListText>
                         <li><FooterLinkText href="#">Imprint</FooterLinkText></li>
                         <li><FooterLinkText href="#">Privacy police</FooterLinkText></li>
