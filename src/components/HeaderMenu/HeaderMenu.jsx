@@ -1,11 +1,11 @@
-import { MenuSection, MenuSectionBtn, Close, BtnBox, ListLayout, LinkLayout, ListContacts, LinkIcons, Email, Shop} from "components/HeaderMenu/HeaderMenu.styles";
+import { MenuSection, MenuSectionBtn, Close, BtnBox, ListLayout, LinkLayout, ListContacts, LinkIcons, Email, Shop } from "components/HeaderMenu/HeaderMenu.styles";
 
 
 const HeaderMenu = (props) => {
     return (
-        <MenuSection>
+        <MenuSection isClosed={!props.closeSection}>
             <BtnBox>
-                <MenuSectionBtn onClick={props.handleClick}>
+                <MenuSectionBtn  onClick={() => props.setcloseSection(!props.closeSection)}>
                     <Close />
                 </MenuSectionBtn>
             </BtnBox>
@@ -36,4 +36,7 @@ const HeaderMenu = (props) => {
     )
 };
 
-export {HeaderMenu}
+export { HeaderMenu }
+
+
+// onClick={props.handleClick}

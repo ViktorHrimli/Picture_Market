@@ -15,10 +15,14 @@ const slideInAnimation = keyframes`
 
 export const MenuSection = styled.section`
   animation: ${slideInAnimation} 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+  transform: ${({ isClosed }) =>
+    isClosed ? 'translateX(0)' : 'translateX(100%)'};
   position: fixed;
   width: 100vw;
   height: 100vh;
   background-color: ${p => p.theme.colors.accent};
+  background: ${p => p.theme.colors.gradientMenu};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
