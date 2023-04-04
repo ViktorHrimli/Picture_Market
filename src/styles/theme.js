@@ -8,6 +8,7 @@ export const theme = {
     backgroundWhite: '#ffffff',
     whitesmoke: '#f5f5f5',
     background: '#F9FCFC',
+    textColor: '#19334C',
     gradientCard:
       'linear-gradient(270deg, #634789 0%, rgba(99, 71, 137, 0) 100%)',
     gradientGallery:
@@ -29,6 +30,9 @@ export const theme = {
     '50px',
     '76px',
     '90px',
+    '80px',
+    '110px',
+    '212px',
   ],
 
   fonts: {
