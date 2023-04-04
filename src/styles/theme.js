@@ -8,10 +8,12 @@ export const theme = {
     backgroundWhite: '#ffffff',
     whitesmoke: '#f5f5f5',
     background: '#F9FCFC',
+    textColor: '#19334C',
     gradientCard:
       'linear-gradient(270deg, #634789 0%, rgba(99, 71, 137, 0) 100%)',
     gradientGallery:
       'linear-gradient(360deg, #634789 -4.78%, rgba(99, 71, 137, 0) 100%)',
+    gradientMenu: 'linear-gradient(91.41deg, #634789 1.38%, #4b3b6b);',
   },
 
   space: [
@@ -28,6 +30,9 @@ export const theme = {
     '50px',
     '76px',
     '90px',
+    '80px',
+    '110px',
+    '212px',
   ],
 
   fonts: {
@@ -40,6 +45,7 @@ export const theme = {
     xs: '16px',
     ms: '18px',
     s: '20px',
+    f: '22px',
     m: '24px',
     l: '28px',
     xl: '40px',
