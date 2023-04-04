@@ -1,8 +1,10 @@
 import { Layout } from 'components/Layout/Layout';
 import { Header } from 'components/Header/Header';
 import { Hero } from 'components/Hero/Hero';
-import { About } from 'components/About/About';
-import { Card } from 'components/Card/Card';
+import { About } from './About/About';
+import { Footer } from './Footer/Footer';
+import { Description } from './Description/Description';
+import { CardConteiner } from 'components/CardConteiner/CardConteiner';
 
 const App = () => {
   return (
@@ -11,8 +13,10 @@ const App = () => {
       <main>
         <Hero />
         <About />
-        <Card />
+        <CardConteiner />
+        <Description />
       </main>
+      <Footer />
     </Layout>
   );
 };

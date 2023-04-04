@@ -1,20 +1,5 @@
 import styled from 'styled-components';
-import {
-  GlobalPostition,
-  GlobalSection,
-  GlobalText,
-  GlobalTitleText,
-} from 'styles/GlobalStyles.styled';
-
-export const SectionCard = styled(GlobalSection)`
-  padding: 0 30px;
-`;
-
-export const ConteinerCard = styled(GlobalPostition)`
-  gap: 34px;
-`;
-
-export const SectionCardTitle = styled(GlobalTitleText)``;
+import { GlobalPostition, GlobalTitleText } from 'styles/GlobalStyles.styled';
 
 export const CardForm = styled(GlobalPostition)`
   justify-content: flex-start;
