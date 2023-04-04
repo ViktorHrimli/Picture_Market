@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import { theme } from 'styles/theme';
 
 const GlobalStyled = createGlobalStyle`
@@ -52,4 +52,46 @@ html {
 
 `;
 
-export { GlobalStyled };
+const GlobalSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 200px;
+
+  overflow: hidden;
+`;
+
+const GlobalPostition = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+const GlobalTitleText = styled.h2`
+  font-size: ${p => p.theme.fontSizes.m};
+  font-weight: 400;
+
+  line-height: 29px;
+
+  text-transform: uppercase;
+
+  color: ${p => p.theme.colors.main};
+`;
+
+const GlobalText = styled.p`
+  font-size: ${p => p.theme.fontSizes.xs};
+  line-height: 19px;
+
+  color: ${p => p.theme.colors.backgroundWhite};
+`;
+
+export {
+  GlobalStyled,
+  GlobalPostition,
+  GlobalText,
+  GlobalTitleText,
+  GlobalSection,
+};

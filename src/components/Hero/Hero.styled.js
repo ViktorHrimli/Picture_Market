@@ -9,9 +9,13 @@ export const Section = styled.section`
   background-position: -16% 50%;
   background-repeat: no-repeat;
   padding-left: ${p => p.theme.space[3]};
+
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
+  margin-bottom: 200px;
+
   position: relative;
   z-index: -2;
 `;
