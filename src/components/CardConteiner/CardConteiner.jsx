@@ -8,19 +8,22 @@ import {
   ButtonCard,
 } from 'components/CardConteiner/CardConteiner.styled';
 
-import { Card } from 'components/Card/Card';
+import { Card } from 'components/Cards/Card';
+import { CardPay } from 'components/Cards/CardPay/CardPay';
 
-const payloadCard = [<Card />, <Card />, <Card />, <Card />];
+const payloadCard = [<Card />, <CardPay />, <Card />, <CardPay />];
 
 const CardConteiner = () => {
   const [isChangeCard, setIsChangeCard] = useState(false);
-  const [card, setCard] = useState(0);
+  const [card, setCard] = useState(1);
 
   const hadnleChange = () => {
     if (card < 4) {
       setCard(prev => prev + 1);
+      setIsChangeCard(prev => !prev);
     } else {
       setCard(prev => prev - 1);
+      setIsChangeCard(prev => !prev);
     }
   };
 
@@ -32,7 +35,7 @@ const CardConteiner = () => {
           {payloadCard.find((item, id) => (id === card ? item : ''))}
         </Slider>
       </ConteinerCard>
-      <ButtonCard>Buy now</ButtonCard>
+      <ButtonCard onClick={hadnleChange}>Buy now</ButtonCard>
     </SectionCard>
   );
 };

@@ -7,7 +7,7 @@ import {
   ConteinerInfoCard,
   ImgDeskribe,
   TextDeskribe,
-} from 'components/Card/Card.styled';
+} from 'components/Cards/Card.styled';
 
 const Card = () => {
   return (
