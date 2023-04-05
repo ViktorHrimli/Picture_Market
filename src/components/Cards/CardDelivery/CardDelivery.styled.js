@@ -1,6 +1,5 @@
 import styled, { keyframes } from 'styled-components';
 import { GlobalPostition, GlobalTitleText } from 'styles/GlobalStyles.styled';
-
 const slideInAnimation = keyframes`
   from {
     transform: translateX(-100%);
@@ -16,28 +15,23 @@ export const CardForm = styled(GlobalPostition)`
   width: 100%;
   height: 380px;
 
-  background-image: url(https://res.cloudinary.com/djoprd9i4/image/upload/v1680381245/samples/picture_market/wentg8b2a0vro5funxje.png);
+  padding: 30px 20px;
 
+  background-image: linear-gradient(
+      90deg,
+      #634789 0%,
+      rgba(99, 71, 137, 0) 100%
+    ),
+    url(https://res.cloudinary.com/djoprd9i4/image/upload/v1680727969/mobile_delivery_1_u300vh.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 
+  border-radius: ${p => p.theme.radii.normal};
+
   box-shadow: 0px 8px 20px rgba(41, 10, 39, 0.1);
 
   animation: ${slideInAnimation} 0.6s;
-`;
-
-export const ConteinerImgBackground = styled(GlobalPostition)`
-  justify-content: start;
-
-  width: 100%;
-  height: 100%;
-
-  padding: 30px 22px 20px 22px;
-
-  border-radius: 8px;
-
-  background: rgba(99, 71, 137, 0.8);
 `;
 
 export const CardTitle = styled(GlobalTitleText)`
@@ -64,12 +58,8 @@ export const CardTitle = styled(GlobalTitleText)`
 `;
 
 export const ConteinerInfoCard = styled(GlobalPostition)`
-  flex-direction: row;
-
-  margin-top: 32px;
-  margin-bottom: 34px;
-
-  gap: 28px;
+  width: 100%;
+  align-items: flex-start;
 `;
 
 export const CardText = styled.p`
@@ -77,12 +67,14 @@ export const CardText = styled.p`
   font-size: 16px;
   line-height: 19px;
 
+  width: 140px;
+
   color: #f9fcfc;
 `;
 
 export const FakeFormCard = styled(GlobalPostition)`
-  width: 120px;
-  height: 150px;
+  width: 170px;
+  height: 160px;
 
   margin-left: auto;
   margin-top: auto;
