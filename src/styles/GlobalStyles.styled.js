@@ -88,10 +88,48 @@ const GlobalText = styled.p`
   color: ${p => p.theme.colors.backgroundWhite};
 `;
 
+const GlobalButton = styled.button`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 300px;
+
+  padding: 13px 0 12px 0;
+
+  border-radius: ${p => p.theme.radii.normal};
+
+  font-weight: ${p => p.theme.fontWeights.normal};
+  font-size: ${p => p.theme.fontSizes.s};
+  line-height: 24px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  outline: none;
+  border: 1px solid white;
+
+  color: ${p => p.theme.colors.background};
+  background-color: ${p => p.theme.colors.accent};
+
+  filter: drop-shadow(3px 8px 20px rgba(177, 27, 13, 0.1));
+
+  cursor: pointer;
+
+  transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:is(:hover, :focus) {
+    background-color: ${p => p.theme.colors.white};
+    border: 1px solid #003031;
+    color: ${p => p.theme.colors.accent};
+  }
+`;
+
 export {
   GlobalStyled,
   GlobalPostition,
   GlobalText,
   GlobalTitleText,
   GlobalSection,
+  GlobalButton,
 };

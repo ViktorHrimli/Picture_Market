@@ -1,20 +1,14 @@
-import styled from 'styled-components';
-import {
-  GlobalPostition,
-  GlobalSection,
-  GlobalText,
-  GlobalTitleText,
-} from 'styles/GlobalStyles.styled';
+import styled, { keyframes } from 'styled-components';
+import { GlobalPostition, GlobalTitleText } from 'styles/GlobalStyles.styled';
 
-export const SectionCard = styled(GlobalSection)`
-  padding: 0 30px;
+const slideInAnimation = keyframes`
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
 `;
-
-export const ConteinerCard = styled(GlobalPostition)`
-  gap: 34px;
-`;
-
-export const SectionCardTitle = styled(GlobalTitleText)``;
 
 export const CardForm = styled(GlobalPostition)`
   justify-content: flex-start;
@@ -29,6 +23,8 @@ export const CardForm = styled(GlobalPostition)`
   border-radius: ${p => p.theme.radii.normal};
 
   box-shadow: 0px 8px 20px rgba(41, 10, 39, 0.1);
+
+  animation: ${slideInAnimation} 0.6s;
 `;
 
 export const CardTitle = styled(GlobalTitleText)`
