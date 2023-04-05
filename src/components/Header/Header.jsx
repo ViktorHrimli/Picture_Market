@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Swipeable from 'react-swipeable';
 import { HeaderConteiner, Section, HeaderLogo, HeaderBtn, HeaderBtnLin, ListLayout, LinkLayout, LinkBorder } from 'components/Header/Header.styled';
 import { HeaderMenu } from 'components/HeaderMenu/HeaderMenu';
   
@@ -21,12 +20,6 @@ export function Header() {
       setIsOpenedNavigation(false);
     }, 600);
 
-
-  const handleSwipe = (eventData) => {
-    if (eventData.dir === 'left') {
-      setIsClosedSection(true);
-    }
-  };
 
     return () => clearTimeout(timeoutId);
   }, [isClosedSection]);

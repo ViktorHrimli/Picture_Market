@@ -4,5 +4,6 @@
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.triggerExpansionOnTab": true,
   "editor.suggest.filterGraceful": true,
+  "editor.tabSize": 2,
   "typescript.tsdk": "node_modules\\typescript\\lib"
 }

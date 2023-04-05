@@ -57,6 +57,7 @@ export const DescriptionBtn = styled.button`
   border-radius: 8px;
   text-transform: uppercase;
   line-height: ${p => p.theme.lineHeights.min};
+  cursor: pointer;
 
   @media (min-width: 320px) and (max-width: 480px) {
     width: 301px;
