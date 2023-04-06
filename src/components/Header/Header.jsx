@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import { Swipeable } from 'react-swipeable';
 import {
   HeaderConteiner,
@@ -10,6 +11,7 @@ import {
   LinkLayout,
   LinkBorder,
 } from 'components/Header/Header.styled';
+
 import { HeaderMenu } from 'components/HeaderMenu/HeaderMenu';
 
 export function Header() {
@@ -35,6 +37,7 @@ export function Header() {
         setIsClosedSection(true);
       }
     };
+
 
     return () => clearTimeout(timeoutId);
   }, [isClosedSection]);
