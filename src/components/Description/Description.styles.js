@@ -25,12 +25,20 @@ export const TextColor = styled.span`
 `;
 
 export const DescriptionBtn = styled(GlobalButton)`
-  /* width: 301px;
-  height: 49px;
-  color: ${p => p.theme.colors.white};
-  background-color: ${p => p.theme.colors.accent};
-  border-radius: 8px;
-  font-size: ${p => p.theme.fontSizes.s};
-  line-height: ${p => p.theme.lineHeights.min};
-  text-transform: uppercase; */
+ 
+  cursor: pointer;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    width: 301px;
+    height: 49px;
+    font-size: ${p => p.theme.fontSizes.s};
+    margin-bottom: 211px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 334px;
+    height: 61px;
+    font-size: ${p => p.theme.fontSizes.m};
+    margin-left: 950px;
+  }
 `;
