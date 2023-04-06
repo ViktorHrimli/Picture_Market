@@ -6,10 +6,9 @@ import { Hero } from 'components/Hero/Hero';
 import { About } from './About/About';
 import { Footer } from './Footer/Footer';
 import { Description } from './Description/Description';
-import { Card } from 'components/Card/Card';
 import { Modal } from 'components/Modal/Modal';
-
 import { ModalStateContext } from './ModalStateContext';
+import { CardConteiner } from 'components/CardConteiner/CardConteiner';
 
 
 const App = () => {
@@ -24,7 +23,7 @@ const App = () => {
         <Hero />
         {isOpened && <Modal closeModal={() => setIsOpened(false)} />}
         <About />
-        <Card />
+        <CardConteiner />
         <Description />
       </main>
         <Footer />

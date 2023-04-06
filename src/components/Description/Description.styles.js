@@ -1,62 +1,31 @@
 import styled from 'styled-components';
+import { GlobalSection, GlobalButton } from 'styles/GlobalStyles.styled';
 
-export const DescriptionSection = styled.section`
+export const DescriptionSection = styled(GlobalSection)`
+  /* width: 360px;
+  height: 653px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (min-width: 320px) and (max-width: 480px) {
-    width: 360px;
-    height: 653px;
-    display: flex;
-    padding-top: 200px;
-  }
-  @media (min-width: 1440px) {
-    width: 1440px;
-    height: 731px;
-    padding-top: 260px;
-  }
+  padding-top: 200px; */
 `;
 
 export const Text = styled.p`
-  @media (min-width: 320px) and (max-width: 480px) {
-    width: 293px;
-    font-weight: ${p => p.theme.fontWeights.normal};
-    font-size: ${p => p.theme.fontSizes.f};
-    line-height: ${p => p.theme.lineHeights.normal};
-    text-transform: uppercase;
-    color: ${p => p.theme.colors.main};
-    margin-bottom: 24px;
-  }
-
-  @media (min-width: 1440px) {
-    width: 1285px;
-    font-weight: ${p => p.theme.fontWeights.normal};
-    font-size: ${p => p.theme.fontSizes.xxl};
-    line-height: ${p => p.theme.lineHeights.normal};
-    text-transform: uppercase;
-    color: ${p => p.theme.colors.main};
-  }
+  width: 293px;
+  font-weight: ${p => p.theme.fontWeights.normal};
+  font-size: ${p => p.theme.fontSizes.f};
+  line-height: ${p => p.theme.lineHeights.normal};
+  text-transform: uppercase;
+  color: ${p => p.theme.colors.main};
+  margin-bottom: 24px;
 `;
 
 export const TextColor = styled.span`
-  @media (min-width: 320px) and (max-width: 480px) {
-    color: ${p => p.theme.colors.accent};
-  }
-  @media (min-width: 1440px) {
-    font-weight: ${p => p.theme.fontWeights.normal};
-    font-size: ${p => p.theme.fontSizes.xxl};
-    line-height: ${p => p.theme.lineHeights.normal};
-    color: ${p => p.theme.colors.accent};
-    text-transform: uppercase;
-  }
+  color: ${p => p.theme.colors.accent};
 `;
 
-export const DescriptionBtn = styled.button`
-  color: ${p => p.theme.colors.white};
-  background-color: ${p => p.theme.colors.accent};
-  border-radius: 8px;
-  text-transform: uppercase;
-  line-height: ${p => p.theme.lineHeights.min};
+export const DescriptionBtn = styled(GlobalButton)`
+ 
   cursor: pointer;
 
   @media (min-width: 320px) and (max-width: 480px) {
