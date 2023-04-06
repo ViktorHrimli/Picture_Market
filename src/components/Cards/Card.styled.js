@@ -34,6 +34,8 @@ export const CardTitle = styled(GlobalTitleText)`
 
   margin-right: 15px;
 
+  text-transform: none;
+
   color: white;
 
   ::after {
