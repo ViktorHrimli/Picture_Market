@@ -22,6 +22,8 @@ export const CardForm = styled(GlobalPostition)`
   background-size: cover;
 
   background-repeat: no-repeat;
+  border: 1px solid #000000;
+  border-radius: 8px;
 
   box-shadow: 0px 8px 20px rgba(41, 10, 39, 0.1);
 

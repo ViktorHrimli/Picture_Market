@@ -4,7 +4,9 @@ import {
   SectionGallery,
   GalleryTitle,
   GallerySliderWrapper,
-  GalleryImg,
+  GalleryImgCenter,
+  GalleryImgLeft,
+  GalleryImgRight,
 } from 'components/Gallery/Gallery.styled';
 
 const images = [
@@ -13,21 +15,21 @@ const images = [
   'https://res.cloudinary.com/djoprd9i4/image/upload/v1680381248/samples/picture_market/yz2hyoladx5bbdciqbqr.jpg',
 ];
 const Gallery = () => {
-  const [isHorizontal, setIsHorizontal] = useState(false);
-
   const [count, setCount] = useState(1);
 
   return (
     <SectionGallery>
       <GalleryTitle>Enjoy our Gallerry</GalleryTitle>
       <GallerySliderWrapper>
-        {images.map((item, id) => {
-          if (id === count) {
-            return <GalleryImg act={true} key={id} src={item} alt="men" />;
-          } else {
-            return <GalleryImg act={false} key={id} src={item} alt="men" />;
-          }
-        })}
+        <GalleryImgLeft>
+          <img src={images[0]} alt="card" width={300} height={150} />
+        </GalleryImgLeft>
+        <GalleryImgCenter>
+          <img src={images[1]} alt="card" width={150} height={280} />
+        </GalleryImgCenter>{' '}
+        <GalleryImgRight>
+          <img src={images[2]} alt="card" width={300} height={150} />
+        </GalleryImgRight>
       </GallerySliderWrapper>
     </SectionGallery>
   );
