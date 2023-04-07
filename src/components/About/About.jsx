@@ -13,12 +13,6 @@ const About = () => {
   return (
     <SectionAbout>
       <ConteinerImg>
-        <img
-          src="https://res.cloudinary.com/djoprd9i4/image/upload/v1680452464/samples/picture_market/Rectangle_119-min_hnzudp.png"
-          alt="Girl face"
-          width={360}
-          height={530}
-        />
         <TextImgConteiner>
           <TextConteiner>
             <TitleAboutConteiner>
