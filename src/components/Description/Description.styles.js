@@ -1,14 +1,7 @@
 import styled from 'styled-components';
 import { GlobalSection, GlobalButton } from 'styles/GlobalStyles.styled';
 
-export const DescriptionSection = styled(GlobalSection)`
-  /* width: 360px;
-  height: 653px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 200px; */
-`;
+export const DescriptionSection = styled(GlobalSection)``;
 
 export const Text = styled.p`
   width: 293px;
@@ -25,14 +18,12 @@ export const TextColor = styled.span`
 `;
 
 export const DescriptionBtn = styled(GlobalButton)`
- 
   cursor: pointer;
 
   @media (min-width: 320px) and (max-width: 480px) {
     width: 301px;
     height: 49px;
     font-size: ${p => p.theme.fontSizes.s};
-    margin-bottom: 211px;
   }
 
   @media (min-width: 1440px) {

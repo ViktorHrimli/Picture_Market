@@ -1,33 +1,37 @@
 import { useState } from 'react';
-
+// COMPONENTS
 import { Layout } from 'components/Layout/Layout';
 import { Header } from 'components/Header/Header';
 import { Hero } from 'components/Hero/Hero';
-import { About } from './About/About';
-import { Footer } from './Footer/Footer';
-import { Description } from './Description/Description';
+import { About } from 'components/About/About';
+import { Footer } from 'components/Footer/Footer';
+import { Description } from 'components/Description/Description';
 import { Modal } from 'components/Modal/Modal';
-import { ModalStateContext } from './ModalStateContext';
 import { CardConteiner } from 'components/CardConteiner/CardConteiner';
+import { Gallery } from 'components/Gallery/Gallery';
 
+// CONTEXT
+import { ModalStateContext } from 'components/ModalStateContext';
 
 const App = () => {
   const [isOpened, setIsOpened] = useState(false);
 
-
   return (
     <Layout>
-      <ModalStateContext.Provider value={{openModal: () => setIsOpened(true)}}>
-      <Header />
-      <main>
-        <Hero />
-        {isOpened && <Modal closeModal={() => setIsOpened(false)} />}
-        <About />
-        <CardConteiner />
-        <Description />
-      </main>
+      <ModalStateContext.Provider
+        value={{ openModal: () => setIsOpened(true) }}
+      >
+        <Header />
+        <main>
+          <Hero />
+          {isOpened && <Modal closeModal={() => setIsOpened(false)} />}
+          <About />
+          <CardConteiner />
+          <Description />
+          <Gallery />
+        </main>
         <Footer />
-        </ModalStateContext.Provider>
+      </ModalStateContext.Provider>
     </Layout>
   );
 };

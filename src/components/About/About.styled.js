@@ -71,17 +71,4 @@ export const HederAboutText = styled(GlobalTitleText)`
   text-align: center;
 
   color: ${p => p.theme.colors.backgroundWhite};
-
-  /*   
-  position: absolute;
-  font-weight: 400;
-
-  top: 55px;
-  left: -130px;
-
-  width: 280px;
-
-  text-align: center;
-
-  color: ${p => p.theme.colors.backgroundWhite}; */
 `;
