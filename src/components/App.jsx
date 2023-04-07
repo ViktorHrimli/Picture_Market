@@ -21,12 +21,12 @@ const App = () => {
       <Header />
       <main>
         <Hero />
-        {isOpened && <Modal closeModal={() => setIsOpened(false)} />}
         <About />
         <CardConteiner />
         <Description />
       </main>
         <Footer />
+        {isOpened && <Modal closeModal={() => setIsOpened(false)} />}
         </ModalStateContext.Provider>
     </Layout>
   );

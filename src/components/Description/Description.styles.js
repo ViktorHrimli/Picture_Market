@@ -2,22 +2,38 @@ import styled from 'styled-components';
 import { GlobalSection, GlobalButton } from 'styles/GlobalStyles.styled';
 
 export const DescriptionSection = styled(GlobalSection)`
-  /* width: 360px;
-  height: 653px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 200px; */
+
+  @media (min-width: 1440px) {
+    width: 1440px;
+  }
+`;
+
+export const TextBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const Text = styled.p`
-  width: 293px;
+  display: block;
   font-weight: ${p => p.theme.fontWeights.normal};
-  font-size: ${p => p.theme.fontSizes.f};
   line-height: ${p => p.theme.lineHeights.normal};
   text-transform: uppercase;
   color: ${p => p.theme.colors.main};
-  margin-bottom: 24px;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    font-size: ${p => p.theme.fontSizes.f};
+    width: 293px;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: ${p => p.theme.fontSizes.xxl};
+    margin-left: 80px;
+  }
 `;
 
 export const TextColor = styled.span`
@@ -25,14 +41,12 @@ export const TextColor = styled.span`
 `;
 
 export const DescriptionBtn = styled(GlobalButton)`
- 
   cursor: pointer;
 
   @media (min-width: 320px) and (max-width: 480px) {
     width: 301px;
     height: 49px;
     font-size: ${p => p.theme.fontSizes.s};
-    margin-bottom: 211px;
   }
 
   @media (min-width: 1440px) {
