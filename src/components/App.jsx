@@ -18,8 +18,22 @@ const App = () => {
 
   return (
     <Layout>
-<<<<<<< HEAD
       <ModalStateContext.Provider
+        value={{ openModal: () => setIsOpened(true) }}
+      >
+        <Header />
+        <main>
+          <Hero />
+          <About />
+          <CardConteiner />
+          <Description />
+          <Gallery />
+        </main>
+        <Footer />
+        {isOpened && <Modal closeModal={() => setIsOpened(false)} />}
+      </ModalStateContext.Provider>
+
+      {/* <ModalStateContext.Provider
         value={{ openModal: () => setIsOpened(true) }}
       >
         <Header />
@@ -32,20 +46,7 @@ const App = () => {
           <Gallery />
         </main>
         <Footer />
-      </ModalStateContext.Provider>
-=======
-      <ModalStateContext.Provider value={{openModal: () => setIsOpened(true)}}>
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <CardConteiner />
-        <Description />
-      </main>
-        <Footer />
-        {isOpened && <Modal closeModal={() => setIsOpened(false)} />}
-        </ModalStateContext.Provider>
->>>>>>> main
+      </ModalStateContext.Provider> */}
     </Layout>
   );
 };

@@ -15,7 +15,23 @@ const slideInAnimation = keyframes`
 `;
 
 export const SectionGallery = styled(GlobalSection)`
-  overflow: scroll;
+  padding: 0px;
+  overflow: hidden;
+`;
+
+export const GallerySliderWrapper = styled.div`
+  position: relative;
+`;
+
+export const GalleryImg = styled.img`
+  position: absolute;
+  background: ${({ act }) => {
+    return act
+      ? 'linear-gradient(360deg, #634789 -4.78%, rgba(99, 71, 137, 0) 100%)'
+      : 'none';
+  }};
+
+  border-radius: 8px;
 `;
 
 export const GalleryTitle = styled(GlobalTitleText)`
@@ -23,22 +39,7 @@ export const GalleryTitle = styled(GlobalTitleText)`
   line-height: 24px;
   font-weight: 400;
 
+  margin-bottom: 32px;
+
   color: ${p => p.theme.colors.main};
-
-  ::after {
-    content: '';
-    display: block;
-    margin-top: 2px;
-    width: 100%;
-    border-bottom: 3px solid #634789;
-  }
-`;
-
-export const GallerySliderWrapper = styled(GlobalPostition)`
-  overflow: scroll;
-  flex-direction: row;
-  gap: 24px;
-  padding: 0;
-
-  width: 100%;
 `;
