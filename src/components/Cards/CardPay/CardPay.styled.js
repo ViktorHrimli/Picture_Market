@@ -3,10 +3,10 @@ import { GlobalPostition, GlobalTitleText } from 'styles/GlobalStyles.styled';
 
 const slideInAnimation = keyframes`
   from {
-    transform: translateX(-100%);
+    opacity: 0;
   }
   to {
-    transform: translateX(0%);
+    opacity: 1;
   }
 `;
 
@@ -20,11 +20,15 @@ export const CardForm = styled(GlobalPostition)`
 
   background-position: center;
   background-size: cover;
+
   background-repeat: no-repeat;
+  border: 1px solid #000000;
+  border-radius: 8px;
 
   box-shadow: 0px 8px 20px rgba(41, 10, 39, 0.1);
 
-  animation: ${slideInAnimation} 0.6s;
+  animation: ${slideInAnimation} 1s;
+  animation-delay: 0;
 `;
 
 export const ConteinerImgBackground = styled(GlobalPostition)`

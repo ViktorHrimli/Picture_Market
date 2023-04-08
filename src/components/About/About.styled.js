@@ -94,12 +94,13 @@ export const ParagraphAbout = styled(GlobalText)`
 `;
 
 export const HederAboutText = styled(GlobalTitleText)`
-  transform: translateX(-50%);
-  text-align: center;
-  color: ${p => p.theme.colors.backgroundWhite};
   position: absolute;
+  color: ${p => p.theme.colors.backgroundWhite};
 
   @media (min-width: 320px) and (max-width: 480px) {
+    transform: translateX(-50%);
+    text-align: center;
+
     font-weight: 400;
     width: 280px;
     top: 55px;
@@ -107,6 +108,8 @@ export const HederAboutText = styled(GlobalTitleText)`
   }
 
   @media (min-width: 1440px) {
+    transform: translateX(-51%);
+
     font-weight: 400;
     font-size: 48px;
     width: 524px;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { Swipeable } from 'react-swipeable';
+// import { Swipeable } from 'react-swipeable';
 import {
   HeaderConteiner,
   Section,
@@ -32,12 +32,11 @@ export function Header() {
       setIsOpenedNavigation(false);
     }, 600);
 
-    const handleSwipe = eventData => {
-      if (eventData.dir === 'left') {
-        setIsClosedSection(true);
-      }
-    };
-
+    // const handleSwipe = eventData => {
+    //   if (eventData.dir === 'left') {
+    //     setIsClosedSection(true);
+    //   }
+    // };
 
     return () => clearTimeout(timeoutId);
   }, [isClosedSection]);

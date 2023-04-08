@@ -40,6 +40,13 @@ export const ArrowRight = styled(MdOutlineKeyboardDoubleArrowRight)`
 
   height: 24px;
   width: 24px;
+
+  color: ${p => p.theme.colors.main};
+
+  &:is(:hover) {
+    cursor: pointer;
+    color: ${p => p.theme.colors.accent};
+  }
 `;
 
 export const ArrowLeft = styled(MdOutlineKeyboardDoubleArrowLeft)`
@@ -50,4 +57,11 @@ export const ArrowLeft = styled(MdOutlineKeyboardDoubleArrowLeft)`
 
   height: 24px;
   width: 24px;
+
+  color: ${p => p.theme.colors.main};
+
+  &:is(:hover) {
+    cursor: pointer;
+    color: ${p => p.theme.colors.accent};
+  }
 `;
