@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ModalSection, ModalContent, ModalClosed, Close } from "./Modal.styled";
+import { ModalSection, ModalContent, ModalClosed } from "./Modal.styled";
 
 import { contentTypes } from './modal.constants';
 import { ModalStrategyContext } from './ModalStrategyContext';
@@ -25,9 +25,8 @@ export function Modal ({closeModal}) {
   return (
     <ModalStrategyContext.Provider value={{ strategy, setStrategy }}>
       <ModalSection>
-          <ModalContent>
-              <ModalClosed onClick={closeModal}>
-                <Close />
+        <ModalContent>
+          <ModalClosed onClick={closeModal}>
               </ModalClosed>
                 <div>{modalStrategies[strategy]}</div>
           </ModalContent>

@@ -12,17 +12,14 @@ export const ModalSection = styled.section`
   justify-content: center;
   align-items: center;
   z-index: 3;
+  border-radius: 8px;
 `;
 
 export const ModalContent = styled.div`
+  position: relative;
   width: 583px;
-  height: 695px;
   background-color: ${p => p.theme.colors.white};
   border-radius: ${p => p.theme.space[2]};
-  padding-top: 42px;
-  padding-right: 46px;
-  padding-left: 46px;
-  padding-bottom: 65px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -30,11 +27,11 @@ export const ModalContent = styled.div`
 `;
 
 export const ModalClosed = styled.button`
+  position: absolute;
+  top: 48px;
+  right: 60px;
+  width: 29px;
+  height: 27px;
   margin-left: auto;
   cursor: pointer;
-`;
-
-export const Close = styled(GoX)`
-  fill: ${p => p.theme.colors.main};
-  font-size: ${p => p.theme.fontSizes.xl};
 `;
