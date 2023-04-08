@@ -4,21 +4,21 @@ import { GoX } from 'react-icons/go';
 
 export const Section = styled(GlobalPostition)`
   width: 583px;
-  height: 422px;
+  /* height: 622px; */
   padding-top: 42px;
-  padding-right: 70px;
-  padding-left: 70px;
+  padding-right: 46px;
+  padding-left: 46px;
   padding-bottom: 72px;
 `;
 
 export const Text = styled.p`
   font-style: normal;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 32px;
   line-height: 34px;
   text-align: center;
   color: #003031;
-  margin-bottom: 40px;
+  margin-bottom: 88px;
   padding-right: 50px;
   padding-left: 50px;
 `;
