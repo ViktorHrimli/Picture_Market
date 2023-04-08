@@ -1,4 +1,4 @@
-import { Section, Text, ModalClosed, Close } from "../UploadPhoto/UploadPhoto.styles";
+import { Section, Text, ModalClosed, Close } from "./ModalContent.styles";
 
 export function ModalContentText () {
   return (

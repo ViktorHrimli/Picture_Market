@@ -126,5 +126,6 @@ export const Text = styled.p`
     color: ${p => p.theme.colors.main};
     width: 331px; //???
     height: 144px;
+    position: absolute;
   }
 `;
