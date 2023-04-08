@@ -14,7 +14,6 @@ import { CardConteiner } from 'components/CardConteiner/CardConteiner';
 const App = () => {
   const [isOpened, setIsOpened] = useState(false);
 
-
   return (
     <Layout>
       <ModalStateContext.Provider value={{openModal: () => setIsOpened(true)}}>

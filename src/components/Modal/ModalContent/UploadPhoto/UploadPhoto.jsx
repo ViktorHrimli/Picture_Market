@@ -3,13 +3,22 @@ import { useContext } from 'react';
 import { contentTypes } from '../../modal.constants';
 import { ModalStrategyContext } from '../../ModalStrategyContext';
 
+import { Section, Text, ModalClosed, Close, ChooseImg } from './UploadPhoto.styles';
+import { GlobalButton } from 'styles/GlobalStyles.styled';
+
 export function UploadPhoto() {
   const { setStrategy } = useContext(ModalStrategyContext);
 
   return (
-    <div>
-      <p>UploadPhoto</p>
-      <button onClick={() => setStrategy(contentTypes.FillTheForm)}>BTN</button>
-    </div>
+    <Section>
+      <ModalClosed>
+            <Close />
+        </ModalClosed>
+      <Text>Please, upload your photo</Text>
+      <ChooseImg>
+
+      </ChooseImg>
+      <GlobalButton onClick={() => setStrategy(contentTypes.FillTheForm)}>choose image</GlobalButton>
+    </Section>
   )
 }
