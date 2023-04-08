@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { GoX } from 'react-icons/go';
+// import { GoX } from 'react-icons/go';
 
 export const ModalSection = styled.section`
   position: fixed;

@@ -32,21 +32,6 @@ const App = () => {
         <Footer />
         {isOpened && <Modal closeModal={() => setIsOpened(false)} />}
       </ModalStateContext.Provider>
-
-      {/* <ModalStateContext.Provider
-        value={{ openModal: () => setIsOpened(true) }}
-      >
-        <Header />
-        <main>
-          <Hero />
-          {isOpened && <Modal closeModal={() => setIsOpened(false)} />}
-          <About />
-          <CardConteiner />
-          <Description />
-          <Gallery />
-        </main>
-        <Footer />
-      </ModalStateContext.Provider> */}
     </Layout>
   );
 };
