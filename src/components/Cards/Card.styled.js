@@ -26,6 +26,12 @@ export const CardForm = styled(GlobalPostition)`
 
   animation: ${slideInAnimation} 1s;
   animation-delay: 0;
+
+  @media screen and (min-width: 1440px) {
+    width: 547px;
+
+    padding: 58px 50px 50px 58px;
+  }
 `;
 
 export const CardTitle = styled(GlobalTitleText)`
