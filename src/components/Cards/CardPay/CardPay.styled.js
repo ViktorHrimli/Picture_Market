@@ -30,6 +30,7 @@ export const CardForm = styled(GlobalPostition)`
 
   @media screen and (min-width: 1440px) {
     width: 547px;
+    animation: none;
   }
 `;
 

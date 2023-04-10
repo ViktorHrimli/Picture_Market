@@ -40,6 +40,8 @@ export const CardForm = styled(GlobalPostition)`
     align-items: start;
 
     padding: 80px 53px 58px 48px;
+
+    animation: none;
   }
 `;
 
