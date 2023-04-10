@@ -1,19 +1,20 @@
 import styled from 'styled-components';
+import { GlobalLayout } from 'styles/GlobalStyles.styled';
 
-export const Section = styled.section`
+export const Section = styled(GlobalLayout)`
   background-color: ${p => p.theme.colors.backgroundWhite};
   background-image: url(https://res.cloudinary.com/djoprd9i4/image/upload/v1680452465/samples/picture_market/hero%D1%84_u5gxtw.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 606px 606px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
 
-  @media (min-width: 320px) and (max-width: 480px) {
-    width: 360px;
+  @media (min-width: 320px) and (max-width: 768px) {
+    width: 100vw;
     height: 606px;
-    background-position: -16% 50%;
+    background-position: 43px top;
     padding-left: ${p => p.theme.space[3]};
     margin-bottom: 200px;
     z-index: -2;
@@ -31,7 +32,7 @@ export const Section = styled.section`
 `;
 
 export const TextBox = styled.div`
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 768px) {
     transform-origin: left top;
     transform: rotate(-90deg) translateY(-50%);
     position: absolute;
@@ -47,7 +48,7 @@ export const TextBox = styled.div`
 `;
 
 export const TextHeader = styled.h1`
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 768px) {
     font-size: ${p => p.theme.fontSizes.xl};
     font-weight: ${p => p.theme.fontWeights.normal};
     font-family: ${p => p.theme.fonts.body};
@@ -63,7 +64,7 @@ export const TextHeader = styled.h1`
 `;
 
 export const TextSpanColor = styled.span`
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 768px) {
     display: none;
   }
 
@@ -73,7 +74,7 @@ export const TextSpanColor = styled.span`
 `;
 
 export const TextAfter = styled.span`
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 768px) {
     color: ${p => p.theme.colors.accent};
     font-size: ${p => p.theme.fontSizes.xl};
     font-weight: ${p => p.theme.fontWeights.normal};
@@ -90,7 +91,7 @@ export const TextAfter = styled.span`
 `;
 
 export const TextAfterArt = styled.span`
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 768px) {
     font-size: ${p => p.theme.fontSizes.xl};
     font-weight: ${p => p.theme.fontWeights.normal};
     font-family: ${p => p.theme.fonts.body};
@@ -108,7 +109,7 @@ export const TextAfterArt = styled.span`
 `;
 
 export const Text = styled.p`
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 768px) {
     font-size: ${p => p.theme.fontSizes.s};
     font-weight: ${p => p.theme.fontWeights.normal};
     font-family: ${p => p.theme.fonts.body};

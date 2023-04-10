@@ -1,5 +1,4 @@
 import {
-  ConteinerImg,
   SectionAbout,
   TextImgConteiner,
   TextConteiner,
@@ -12,7 +11,6 @@ import {
 const About = () => {
   return (
     <SectionAbout>
-      <ConteinerImg>
         <TextImgConteiner>
           <TextConteiner>
             <TitleAboutConteiner>
@@ -30,7 +28,6 @@ const About = () => {
             </ParagraphConteiner>
           </TextConteiner>
         </TextImgConteiner>
-      </ConteinerImg>
     </SectionAbout>
   );
 };
