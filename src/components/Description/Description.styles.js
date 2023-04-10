@@ -5,10 +5,11 @@ export const DescriptionSection = styled(GlobalSection)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100vw;
+`;
 
-  @media (min-width: 1440px) {
-    width: 1440px;
-  }
+export const Box = styled.div`
+  width: 1220px;
 `;
 
 export const TextBox = styled.div`
@@ -32,7 +33,6 @@ export const Text = styled.p`
 
   @media (min-width: 1440px) {
     font-size: ${p => p.theme.fontSizes.xxl};
-    margin-left: 80px;
   }
 `;
 
@@ -53,6 +53,6 @@ export const DescriptionBtn = styled(GlobalButton)`
     width: 334px;
     height: 61px;
     font-size: ${p => p.theme.fontSizes.m};
-    margin-left: 950px;
+    margin-left: 880px;
   }
 `;

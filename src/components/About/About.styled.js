@@ -7,31 +7,31 @@ import {
 } from 'styles/GlobalStyles.styled';
 
 export const SectionAbout = styled(GlobalSection)`
-  @media (min-width: 320px) and (max-width: 480px) {
-    height: 530px;
-  }
-
-  @media (min-width: 1440px) {
-    height: 881px;
-  }
-`;
-
-export const ConteinerImg = styled.div`
+  width: 100vw;
   position: relative;
-  width: 100%;
-  height: 100%;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 360px) {
     background-image: url(https://res.cloudinary.com/djoprd9i4/image/upload/v1680452464/samples/picture_market/Rectangle_119-min_hnzudp.png);
     background-repeat: no-repeat;
-    background-position: 100% 100%;
+    background-position: left;
     background-size: 100%;
+    background-size: cover;
+    height: 530px;
+  }
+  @media (min-width: 361px) and (max-width: 768px) {
+    background-image: url(https://res.cloudinary.com/djoprd9i4/image/upload/v1680881828/andrysha_special_jvnphu.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 100% 530px;
+    height: 530px;
+    background-size: cover;
   }
   @media (min-width: 1440px) {
     background-image: url(https://res.cloudinary.com/djoprd9i4/image/upload/v1680881828/andrysha_special_jvnphu.jpg);
     background-repeat: no-repeat;
     background-position: 100% 100%;
     background-size: 100%;
+    height: 881px;
   }
 `;
 
@@ -50,10 +50,19 @@ export const TextImgConteiner = styled.div`
 export const TextConteiner = styled(GlobalPostition)`
   flex-direction: row;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 360px) {
+    justify-content: space-between;
     margin-top: 140px;
     grid-gap: 40px;
     width: inherit;
+    padding-left: 35px;
+    padding-right: 43px;
+  }
+  @media (min-width: 361px) and (max-width: 768px) {
+    margin-top: 210px;
+    margin-left: auto;
+    justify-content: end;
+    padding-right: 32px;
   }
 
   @media (min-width: 1440px) {
@@ -62,7 +71,7 @@ export const TextConteiner = styled(GlobalPostition)`
 `;
 
 export const ParagraphConteiner = styled.div`
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 360px) {
     margin-left: 80px;
   }
   @media (min-width: 1440px) {
@@ -73,16 +82,28 @@ export const ParagraphConteiner = styled.div`
 
 export const TitleAboutConteiner = styled.div`
   position: relative;
-  @media (min-width: 320px) and (max-width: 480px) {
+
+  @media (min-width: 320px) and (max-width: 361px) {
     rotate: 270deg;
   }
 
-  @media (min-width: 1440px) {
+  /* @media (min-width: 361px) and (max-width: 768px) {
   }
+
+  @media (min-width: 1440px) {
+  } */
 `;
 
 export const ParagraphAbout = styled(GlobalText)`
   width: 167px;
+
+  @media (min-width: 361px) and (max-width: 768px) {
+    width: 295px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+  }
 
   @media (min-width: 1440px) {
     width: 539px;
@@ -94,10 +115,10 @@ export const ParagraphAbout = styled(GlobalText)`
 `;
 
 export const HederAboutText = styled(GlobalTitleText)`
-  position: absolute;
   color: ${p => p.theme.colors.backgroundWhite};
+  position: absolute;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 360px) {
     transform: translateX(-50%);
     text-align: center;
 
@@ -106,10 +127,17 @@ export const HederAboutText = styled(GlobalTitleText)`
     top: 55px;
     left: 50%;
   }
+  @media (min-width: 361px) and (max-width: 768px) {
+    transform: translateX(-51%);
+    font-weight: 400;
+    font-size: 28px;
+    width: 306px;
+    top: -198px;
+    left: 152px;
+  }
 
   @media (min-width: 1440px) {
     transform: translateX(-51%);
-
     font-weight: 400;
     font-size: 48px;
     width: 524px;

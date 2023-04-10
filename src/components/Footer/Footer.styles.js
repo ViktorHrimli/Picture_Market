@@ -4,16 +4,15 @@ export const FooterSection = styled.section`
   background-color: ${p => p.theme.colors.main};
   display: flex;
   align-items: center;
+  width: 100vw;
 
   @media (min-width: 320px) and (max-width: 480px) {
-    width: 360px;
     height: 476px;
     flex-direction: column;
     padding-top: ${p => p.theme.space[8]};
   }
 
   @media (min-width: 1440px) {
-    width: 1440px;
     height: 300px;
     padding-top: ${p => p.theme.space[11]};
     padding-left: ${p => p.theme.space[14]};

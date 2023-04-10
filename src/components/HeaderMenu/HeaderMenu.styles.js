@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { GlobalLayout } from 'styles/GlobalStyles.styled';
 
 import { GoX } from 'react-icons/go';
 import { TfiEmail } from 'react-icons/tfi';
@@ -13,7 +14,7 @@ const slideInAnimation = keyframes`
   }
 `;
 
-export const MenuSection = styled.section`
+export const MenuSection = styled(GlobalLayout)`
   animation: ${slideInAnimation} 0.5s ease-out;
   transition: transform 0.5s ease-in-out;
   transform: ${({ isClosed }) =>

@@ -4,7 +4,9 @@ import { GoX } from 'react-icons/go';
 import { GlobalPostition, GlobalButton } from 'styles/GlobalStyles.styled';
 
 export const Section = styled(GlobalPostition)`
+  border-radius: 8px;
   background-color: ${p => p.theme.colors.accent};
+
   @media (min-width: 320px) and (max-width: 480px) {
     width: 312px;
     height: 498px;

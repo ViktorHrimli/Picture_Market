@@ -52,6 +52,21 @@ html {
 
 `;
 
+const GlobalLayout = styled.div`
+  @media (min-width: 360px) and (max-width: 769px) {
+    width: 360px;
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    width: 768px;
+  }
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    width: 1024px;
+  }
+  @media (min-width: 1441px) {
+    width: 1440px;
+  }
+`;
+
 const GlobalSection = styled.section`
   display: flex;
   flex-direction: column;
@@ -124,6 +139,7 @@ const GlobalButton = styled.button`
 `;
 
 export {
+  GlobalLayout,
   GlobalStyled,
   GlobalPostition,
   GlobalText,
