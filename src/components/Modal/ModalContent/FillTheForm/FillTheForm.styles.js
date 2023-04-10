@@ -3,69 +3,140 @@ import { GlobalPostition } from 'styles/GlobalStyles.styled';
 import { GoX } from 'react-icons/go';
 
 export const Section = styled(GlobalPostition)`
-  width: 583px;
-  padding-top: 42px;
-  padding-right: 54px;
-  padding-left: 54px;
-  padding-bottom: 72px;
+  @media (min-width: 320px) and (max-width: 480px) {
+    width: 312px;
+    height: 498px;
+    padding-top: 82px;
+    padding-right: 23px;
+    padding-left: 23px;
+    padding-bottom: 40px;
+    position: relative;
+  }
+
+  @media (min-width: 1440px) {
+    width: 583px;
+    padding-top: 42px;
+    padding-right: 54px;
+    padding-left: 54px;
+    padding-bottom: 72px;
+  }
 `;
 
 export const Text = styled.p`
   font-style: normal;
   font-weight: 400;
-  font-size: 28px;
-  line-height: 34px;
-  text-align: center;
   color: #003031;
-  margin-bottom: 58px;
-`;
+  text-align: center;
+  margin-bottom: 40px;
 
+  @media (min-width: 320px) and (max-width: 480px) {
+    font-size: ${p => p.theme.fontSizes.s};
+    line-height: 21px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: ${p => p.theme.fontSizes.l};
+    line-height: 34px;
+  }
+`;
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  width: 100%;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    gap: 12px;
+  }
+
+  @media (min-width: 1440px) {
+    gap: 20px;
+    width: 100%;
+  }
 `;
 
 export const Input = styled.input`
-  height: 50px;
   background-color: rgba(99, 71, 137, 0.1);
   border: 1px solid #003031;
   border-radius: 8px;
-  padding-left: 20px;
 
-  ::placeholder {
-    color: #634789;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
+  @media (min-width: 320px) and (max-width: 480px) {
+    height: 36px;
+    padding-left: 8px;
+
+    ::placeholder {
+      color: #634789;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+  @media (min-width: 1440px) {
+    height: 50px;
+    padding-left: 20px;
+
+    ::placeholder {
+      color: #634789;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 `;
 
 export const Box = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 90px;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 90px;
+  }
 `;
 
 export const Label = styled.label`
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
   line-height: 22px;
   text-align: center;
   color: #003031;
+  @media (min-width: 320px) and (max-width: 480px) {
+    font-size: 12px;
+  }
+  @media (min-width: 1440px) {
+    font-size: 18px;
+  }
 `;
 
 export const ModalClosed = styled.button`
   margin-left: auto;
   cursor: pointer;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+  }
 `;
 
 export const Close = styled(GoX)`
   fill: ${p => p.theme.colors.main};
-  font-size: ${p => p.theme.fontSizes.xl};
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    font-size: ${p => p.theme.fontSizes.l};
+  }
+
+  @media (min-width: 1440px) {
+    font-size: ${p => p.theme.fontSizes.xl};
+  }
 `;
 
 export const LabelColor = styled.a`
@@ -76,12 +147,19 @@ export const LabelColor = styled.a`
 export const CheckboxContainer = styled.label`
   display: flex;
   align-items: center;
-  margin-bottom: 90px;
-  position: relative;
-  padding-left: 30px;
   cursor: pointer;
+  padding-left: 30px;
   font-size: 18px;
   user-select: none;
+  position: relative;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 90px;
+  }
 
   input {
     position: absolute;
@@ -96,12 +174,19 @@ export const CheckboxContainer = styled.label`
     position: absolute;
     top: 0;
     left: 0;
-    height: 18px;
-    width: 18px;
     border: 1px solid #634789;
     background-color: #fff;
     border-radius: 3px;
     margin-top: 2px;
+
+    @media (min-width: 320px) and (max-width: 480px) {
+      height: 15px;
+      width: 15px;
+    }
+    @media (min-width: 1440px) {
+      height: 18px;
+      width: 18px;
+    }
   }
 
   /* Стилізуємо галочку */
@@ -109,6 +194,20 @@ export const CheckboxContainer = styled.label`
     content: '';
     position: absolute;
     display: none;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+
+    @media (min-width: 320px) and (max-width: 480px) {
+      left: 5px;
+      top: 0px;
+    }
+    @media (min-width: 1440px) {
+      left: 6px;
+      top: 2px;
+    }
   }
 
   /* Показуємо галочку при виборі */
@@ -118,16 +217,5 @@ export const CheckboxContainer = styled.label`
 
   input:checked ~ .checkmark {
     background-color: #634789;
-  }
-
-  /* Стилізуємо галочку */
-  .checkmark:after {
-    left: 5px;
-    top: 2px;
-    width: 6px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
   }
 `;

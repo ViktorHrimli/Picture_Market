@@ -4,66 +4,140 @@ import { GoX } from 'react-icons/go';
 import { MdAddAPhoto } from 'react-icons/md';
 
 export const Section = styled(GlobalPostition)`
-  width: 583px;
-  padding-top: 42px;
-  padding-right: 54px;
-  padding-left: 54px;
-  padding-bottom: 72px;
-`;
+  position: relative;
 
-export const Text = styled.p`
-  font-style: normal;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 34px;
-  text-align: center;
-  color: #003031;
-  margin-bottom: 40px;
+  @media (min-width: 320px) and (max-width: 480px) {
+    width: 312px;
+    height: 498px;
+    padding-top: 82px;
+    padding-right: 23px;
+    padding-left: 23px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 583px;
+    padding-top: 82px;
+    padding-right: 54px;
+    padding-left: 54px;
+    padding-bottom: 72px;
+  }
 `;
 
 export const ModalClosed = styled.button`
   margin-left: auto;
   cursor: pointer;
+  position: absolute;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    top: 18px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+  }
+  @media (min-width: 1440px) {
+    top: 42px;
+    right: 54px;
+  }
 `;
 
 export const Close = styled(GoX)`
   fill: ${p => p.theme.colors.main};
-  font-size: ${p => p.theme.fontSizes.xl};
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    font-size: ${p => p.theme.fontSizes.l};
+  }
+
+  @media (min-width: 1440px) {
+    font-size: ${p => p.theme.fontSizes.xl};
+  }
+`;
+
+export const Text = styled.p`
+  font-style: normal;
+  font-weight: 400;
+  color: #003031;
+  text-align: center;
+  margin-bottom: 40px;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    font-size: ${p => p.theme.fontSizes.s};
+    line-height: 21px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: ${p => p.theme.fontSizes.l};
+    line-height: 34px;
+  }
 `;
 
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  width: 100%;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    gap: 12px;
+    width: 252px;
+  }
+
+  @media (min-width: 1440px) {
+    gap: 20px;
+    width: 100%;
+  }
 `;
 
 export const Input = styled.input`
-  height: 50px;
   background-color: rgba(99, 71, 137, 0.1);
   border: 1px solid #003031;
   border-radius: 8px;
-  padding-left: 20px;
 
-  ::placeholder {
-    color: #634789;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
+  @media (min-width: 320px) and (max-width: 480px) {
+    height: 36px;
+    padding-left: 8px;
+
+    ::placeholder {
+      color: #634789;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+  @media (min-width: 1440px) {
+    height: 50px;
+    padding-left: 20px;
+
+    ::placeholder {
+      color: #634789;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 `;
 
 export const Message = styled.textarea`
-  position: relative;
-  width: 100%;
-  height: 193px;
   border-radius: 8px;
   border: 1px solid #003031;
   background-color: rgba(99, 71, 137, 0.1);
-  margin-bottom: 65px;
-  padding-top: 13px;
-  padding-left: 20px;
+  position: relative;
+  width: 100%;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    padding-left: 8px;
+    margin-bottom: 35px;
+    height: 150px;
+  }
+  @media (min-width: 1440px) {
+    height: 193px;
+    margin-bottom: 65px;
+    padding-top: 13px;
+    padding-left: 20px;
+  }
 
   ::placeholder {
     color: #634789;
@@ -76,11 +150,21 @@ export const Message = styled.textarea`
 `;
 
 export const IconPhoto = styled(MdAddAPhoto)`
-  width: 25px;
-  height: 25px;
-  position: absolute;
-  bottom: 202px;
-  right: 71px;
   color: #003031;
   transform: scaleX(-1);
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 125px;
+    right: 38px;
+  }
+  @media (min-width: 1440px) {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    bottom: 202px;
+    right: 71px;
+  }
 `;
