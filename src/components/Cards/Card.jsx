@@ -7,9 +7,16 @@ import {
   ConteinerInfoCard,
   ImgDeskribe,
   TextDeskribe,
+  ArrowIcons,
 } from 'components/Cards/Card.styled';
 
+import { useMediaQuery } from 'react-responsive';
+
 const Card = () => {
+  const isDesktopScreen = useMediaQuery({
+    query: '(min-width: 1440px)',
+  });
+
   return (
     <CardForm>
       <CardTitle>Choose a photo</CardTitle>
@@ -18,6 +25,7 @@ const Card = () => {
           Upload a clear portrait photo with visible faces for your
           one-of-a-kind art piece.
         </CardText>
+        {isDesktopScreen && <ArrowIcons />}
         <ConteinerImgCard>
           <img
             src="https://res.cloudinary.com/djoprd9i4/image/upload/v1680381246/samples/picture_market/mpvfnv1glphomfqcwisd.jpg"

@@ -8,7 +8,7 @@ import {
 const CardDilevery = () => {
   return (
     <CardForm>
-      <CardTitle>Wait delivery</CardTitle>
+      <CardTitle>Wait for delivery</CardTitle>
       <ConteinerInfoCard>
         <CardText>
           Production typically takes around 2 days, and we offer free delivery

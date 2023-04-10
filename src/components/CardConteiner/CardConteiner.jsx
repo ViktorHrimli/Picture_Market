@@ -45,17 +45,20 @@ const CardConteiner = () => {
 
   return (
     <SectionCard isisChangeCard={isChangeCard}>
-      {card < 3 ? (
-        <ArrowRight onClick={hadnleChange} />
-      ) : (
-        <ArrowLeft onClick={hadnleChange} />
-      )}
       <ConteinerCard>
         <SectionCardTitle>Make your own portrait</SectionCardTitle>
         {isMobileScreen && (
-          <Slider>
-            {payloadCard.find((item, id) => (id === card ? item : ''))}
-          </Slider>
+          <>
+            <Slider>
+              {payloadCard.find((item, id) => (id === card ? item : ''))}
+            </Slider>
+
+            {card < 3 ? (
+              <ArrowRight onClick={hadnleChange} />
+            ) : (
+              <ArrowLeft onClick={hadnleChange} />
+            )}
+          </>
         )}
 
         {isDesktopScreen && (
@@ -67,7 +70,7 @@ const CardConteiner = () => {
         )}
       </ConteinerCard>
 
-      <ButtonCard>Buy now</ButtonCard>
+      <ButtonCard>Buy for £ 149</ButtonCard>
     </SectionCard>
   );
 };

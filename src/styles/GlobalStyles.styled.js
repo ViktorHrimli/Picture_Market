@@ -70,9 +70,8 @@ const GlobalPostition = styled.div`
 
 const GlobalTitleText = styled.h2`
   font-size: ${p => p.theme.fontSizes.m};
+  line-height: ${p => p.theme.lineHeights.keks};
   font-weight: 400;
-
-  line-height: 29px;
 
   text-transform: uppercase;
 
@@ -99,7 +98,7 @@ const GlobalButton = styled.button`
 
   font-weight: ${p => p.theme.fontWeights.normal};
   font-size: ${p => p.theme.fontSizes.s};
-  line-height: 24px;
+  line-height: ${p => p.theme.lineHeights.keks};
 
   text-align: center;
   text-transform: uppercase;

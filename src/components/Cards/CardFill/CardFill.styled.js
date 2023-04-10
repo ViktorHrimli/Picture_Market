@@ -25,17 +25,24 @@ export const CardForm = styled(GlobalPostition)`
 
   animation: ${slideInAnimation} 1s;
   animation-delay: 0;
+
+  @media screen and (min-width: 1440px) {
+    position: relative;
+
+    align-items: start;
+
+    padding: 80px 53px 58px 48px;
+  }
 `;
 
 export const CardTitle = styled(GlobalTitleText)`
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 400;
+  font-size: ${p => p.theme.fontSizes.s};
+  line-height: ${p => p.theme.lineHeights.keks};
 
   text-align: center;
   text-transform: none;
 
-  color: #f9fcfc;
+  color: ${p => p.theme.colors.white};
 
   ::after {
     content: '';
@@ -47,6 +54,18 @@ export const CardTitle = styled(GlobalTitleText)`
     margin-bottom: 32px;
 
     border-bottom: 3px solid #f9fcfc;
+
+    @media screen and (min-width: 1440px) {
+      margin-bottom: 40px;
+      border-bottom: 3px solid ${p => p.theme.colors.accent};
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: ${p => p.theme.fontSizes.l};
+    line-height: ${p => p.theme.lineHeights.keks};
+
+    margin: 0;
   }
 `;
 
@@ -56,15 +75,19 @@ export const ConteinerInfoCard = styled(GlobalPostition)`
 `;
 
 export const CardText = styled.p`
+  font-size: ${p => p.theme.fontSizes.xs};
+  line-height: ${p => p.theme.lineHeights.mines};
   font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
 
   width: 156px;
 
   text-align: start;
 
-  color: #f9fcfc;
+  color: ${p => p.theme.colors.white};
+
+  @media screen and (min-width: 1440px) {
+    width: 232px;
+  }
 `;
 
 export const FakeFormCard = styled(GlobalPostition)`
@@ -77,5 +100,17 @@ export const FakeFormCard = styled(GlobalPostition)`
   img {
     width: 100%;
     height: 100%;
+  }
+
+  @media screen and (min-width: 1440px) {
+    position: absolute;
+
+    top: 50%;
+    right: 50%;
+
+    transform: translate(110%, -60%);
+
+    width: 232px;
+    height: 243px;
   }
 `;

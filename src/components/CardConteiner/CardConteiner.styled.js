@@ -19,6 +19,8 @@ export const SectionCard = styled(GlobalSection)`
   }
 
   @media (min-width: 1440px) {
+    position: relative;
+
     max-width: 1440px;
   }
 `;
@@ -49,6 +51,12 @@ export const ButtonCard = styled(GlobalButton)`
   }
 
   @media (min-width: 1440px) {
+    position: absolute;
+
+    top: 53%;
+    left: 30%;
+
+    transform: translate(50%, 50%);
   }
 `;
 

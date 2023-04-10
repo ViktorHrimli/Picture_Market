@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { GlobalPostition, GlobalTitleText } from 'styles/GlobalStyles.styled';
+import { FaRegArrowAltCircleDown } from 'react-icons/fa';
 
 const slideInAnimation = keyframes`
   from {
@@ -28,16 +29,17 @@ export const CardForm = styled(GlobalPostition)`
   animation-delay: 0;
 
   @media screen and (min-width: 1440px) {
-    width: 547px;
+    position: relative;
 
-    padding: 58px 50px 50px 58px;
+    align-items: start;
+
+    padding: 80px 53px 58px 48px;
   }
 `;
 
 export const CardTitle = styled(GlobalTitleText)`
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 400;
+  font-size: ${p => p.theme.fontSizes.s};
+  line-height: ${p => p.theme.lineHeights.keks};
 
   margin-right: 15px;
 
@@ -52,6 +54,13 @@ export const CardTitle = styled(GlobalTitleText)`
     width: 100%;
     border-bottom: 3px solid #634789;
   }
+
+  @media screen and (min-width: 1440px) {
+    font-size: ${p => p.theme.fontSizes.l};
+    line-height: ${p => p.theme.lineHeights.keks};
+
+    margin: 0;
+  }
 `;
 
 export const ConteinerInfoCard = styled(GlobalPostition)`
@@ -61,6 +70,15 @@ export const ConteinerInfoCard = styled(GlobalPostition)`
   margin-bottom: 34px;
 
   gap: 28px;
+
+  @media screen and (min-width: 1440px) {
+    width: 100%;
+
+    gap: 126px;
+    margin-top: 40px;
+
+    justify-content: space-between;
+  }
 `;
 
 export const CardText = styled.p`
@@ -70,7 +88,14 @@ export const CardText = styled.p`
 
   width: 156px;
 
-  color: #f9fcfc;
+  color: ${p => p.theme.colors.white};
+
+  @media screen and (min-width: 1440px) {
+    font-size: ${p => p.theme.fontSizes.xs};
+    line-height: ${p => p.theme.lineHeights.mines};
+
+    width: 232px;
+  }
 `;
 
 export const ConteinerImgCard = styled.div`
@@ -83,14 +108,17 @@ export const ConteinerImgCard = styled.div`
     object-fit: cover;
     border-radius: 50%;
   }
+
+  @media screen and (min-width: 1440px) {
+    position: absolute;
+
+    top: 55px;
+    right: 70px;
+  }
 `;
 
 export const ConteinerDeskribe = styled(GlobalPostition)`
   position: relative;
-
-  flex-direction: row;
-
-  height: auto;
 `;
 
 export const TextDeskribe = styled.div`
@@ -100,6 +128,14 @@ export const TextDeskribe = styled.div`
 
   margin-left: -235px;
   margin-top: 50px;
+
+  @media screen and (min-width: 1440px) {
+    rotate: 0deg;
+    margin-left: 8px;
+    margin-bottom: auto;
+
+    width: 190px;
+  }
 
   p {
     position: relative;
@@ -142,4 +178,20 @@ export const ImgDeskribe = styled.div`
     width: 100%;
     object-fit: cover;
   }
+
+  @media screen and (min-width: 1440px) {
+    transform: translate(100%, -50%);
+  }
+`;
+
+export const ArrowIcons = styled(FaRegArrowAltCircleDown)`
+  position: absolute;
+
+  top: 163px;
+  right: 105px;
+
+  width: 20px;
+  height: 20px;
+
+  color: ${p => p.theme.colors.white};
 `;
