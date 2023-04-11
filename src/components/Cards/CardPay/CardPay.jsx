@@ -1,14 +1,22 @@
+import { useMediaQuery } from 'react-responsive';
+
 import {
   CardForm,
   ConteinerImgBackground,
   CardTitle,
   CardText,
   FakeFormCard,
+  DesktopAnimated,
 } from 'components/Cards/CardPay/CardPay.styled';
 
 const CardPay = () => {
+  const isDesktopScreen = useMediaQuery({
+    query: '(min-width: 1440px)',
+  });
   return (
     <CardForm>
+      {isDesktopScreen && <DesktopAnimated>Does</DesktopAnimated>}
+
       <ConteinerImgBackground>
         <CardTitle>Fill the form</CardTitle>
         <CardText>

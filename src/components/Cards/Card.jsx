@@ -1,3 +1,5 @@
+import { useMediaQuery } from 'react-responsive';
+
 import {
   CardForm,
   CardText,
@@ -8,9 +10,8 @@ import {
   ImgDeskribe,
   TextDeskribe,
   ArrowIcons,
+  DesktopAnimated,
 } from 'components/Cards/Card.styled';
-
-import { useMediaQuery } from 'react-responsive';
 
 const Card = () => {
   const isDesktopScreen = useMediaQuery({
@@ -19,6 +20,7 @@ const Card = () => {
 
   return (
     <CardForm>
+      {isDesktopScreen && <DesktopAnimated>How</DesktopAnimated>}
       <CardTitle>Choose a photo</CardTitle>
       <ConteinerInfoCard>
         <CardText>

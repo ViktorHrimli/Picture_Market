@@ -29,6 +29,7 @@ export const CardForm = styled(GlobalPostition)`
   animation-delay: 0;
 
   @media screen and (min-width: 1440px) {
+    position: relative;
     width: 547px;
     animation: none;
   }
@@ -131,4 +132,50 @@ export const FakeFormCard = styled(GlobalPostition)`
 
     margin: 0;
   }
+`;
+
+const howAnimated = keyframes`
+0%{
+  opacity: 1;
+}
+100%{
+  opacity: 0;
+}
+`;
+
+export const DesktopAnimated = styled.div`
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  left: 0;
+  top: 0;
+
+  font-size: 135px;
+  line-height: 162px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #f9fcfc;
+  background: #003031;
+
+  border: 3px solid #634789;
+  border-radius: 8px;
+
+  box-shadow: 68px 152px 67px rgba(83, 59, 121, 0.01),
+    38px 85px 56px rgba(83, 59, 121, 0.05),
+    17px 38px 42px rgba(83, 59, 121, 0.09), 4px 9px 23px rgba(83, 59, 121, 0.1),
+    0px 0px 0px rgba(83, 59, 121, 0.1);
+
+  animation: ${howAnimated} 1s ease-out 2s;
+
+  z-index: 2;
+
+  opacity: 0;
 `;
