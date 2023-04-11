@@ -12,13 +12,31 @@ import {
 } from 'styles/GlobalStyles.styled';
 
 export const SectionCard = styled(GlobalSection)`
-  position: relative;
-  padding: 0 30px;
-  gap: 30px;
+  @media screen and (max-width: 767px) {
+    position: relative;
+    padding: 0 30px;
+    gap: 30px;
+  }
+
+  @media (min-width: 1440px) {
+    position: relative;
+
+    max-width: 1440px;
+  }
 `;
 
 export const ConteinerCard = styled(GlobalPostition)`
-  gap: 34px;
+  @media screen and (max-width: 767px) {
+    gap: 34px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 100%;
+
+    align-items: flex-start;
+
+    padding: 0 110px;
+  }
 `;
 
 export const Slider = styled.div`
@@ -28,9 +46,33 @@ export const Slider = styled.div`
     !isChangeCard ? 'translateX(0)' : 'translateX(100%)'};
 `;
 
-export const ButtonCard = styled(GlobalButton)``;
+export const ButtonCard = styled(GlobalButton)`
+  @media screen and (max-width: 767px) {
+  }
 
-export const SectionCardTitle = styled(GlobalTitleText)``;
+  @media (min-width: 1440px) {
+    position: absolute;
+
+    top: 53%;
+    left: 30%;
+
+    transform: translate(50%, 50%);
+  }
+`;
+
+export const SectionCardTitle = styled(GlobalTitleText)`
+  @media screen and (max-width: 767px) {
+  }
+
+  @media (min-width: 1440px) {
+    width: 585px;
+
+    font-size: 48px;
+    line-height: 58px;
+
+    margin-bottom: 48px;
+  }
+`;
 
 export const ArrowRight = styled(MdOutlineKeyboardDoubleArrowRight)`
   position: absolute;

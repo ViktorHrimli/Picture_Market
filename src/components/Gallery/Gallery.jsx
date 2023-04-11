@@ -37,8 +37,6 @@ const Gallery = () => {
     setCount(0);
   }
 
-  console.log(count);
-
   return (
     <SectionGallery>
       <GalleryTitle>Enjoy our Gallerry</GalleryTitle>

@@ -1,3 +1,5 @@
+import { useMediaQuery } from 'react-responsive';
+
 import {
   CardForm,
   CardText,
@@ -7,17 +9,25 @@ import {
   ConteinerInfoCard,
   ImgDeskribe,
   TextDeskribe,
+  ArrowIcons,
+  DesktopAnimated,
 } from 'components/Cards/Card.styled';
 
 const Card = () => {
+  const isDesktopScreen = useMediaQuery({
+    query: '(min-width: 1440px)',
+  });
+
   return (
     <CardForm>
+      {isDesktopScreen && <DesktopAnimated>How</DesktopAnimated>}
       <CardTitle>Choose a photo</CardTitle>
       <ConteinerInfoCard>
         <CardText>
           Upload a clear portrait photo with visible faces for your
           one-of-a-kind art piece.
         </CardText>
+        {isDesktopScreen && <ArrowIcons />}
         <ConteinerImgCard>
           <img
             src="https://res.cloudinary.com/djoprd9i4/image/upload/v1680381246/samples/picture_market/mpvfnv1glphomfqcwisd.jpg"
