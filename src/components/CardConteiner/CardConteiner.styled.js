@@ -21,6 +21,9 @@ export const SectionCard = styled(GlobalSection)`
   @media (min-width: 1440px) {
     position: relative;
 
+    margin-right: auto;
+    margin-left: auto;
+
     max-width: 1440px;
   }
 `;

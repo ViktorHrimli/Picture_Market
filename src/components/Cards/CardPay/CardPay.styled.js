@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { GlobalPostition, GlobalTitleText } from 'styles/GlobalStyles.styled';
+import { MdOutlineKeyboardDoubleArrowRight } from 'react-icons/md';
 
 const slideInAnimation = keyframes`
   from {
@@ -32,6 +33,22 @@ export const CardForm = styled(GlobalPostition)`
     position: relative;
     width: 547px;
     animation: none;
+  }
+`;
+
+export const ArrowWay = styled(MdOutlineKeyboardDoubleArrowRight)`
+  position: absolute;
+
+  top: 42%;
+  right: -17%;
+
+  width: 60px;
+  height: 60px;
+
+  color: ${p => p.theme.colors.main};
+  &:is(:hover) {
+    cursor: pointer;
+    color: ${p => p.theme.colors.accent};
   }
 `;
 
@@ -134,15 +151,6 @@ export const FakeFormCard = styled(GlobalPostition)`
   }
 `;
 
-const howAnimated = keyframes`
-0%{
-  opacity: 1;
-}
-100%{
-  opacity: 0;
-}
-`;
-
 export const DesktopAnimated = styled.div`
   position: absolute;
 
@@ -173,9 +181,9 @@ export const DesktopAnimated = styled.div`
     17px 38px 42px rgba(83, 59, 121, 0.09), 4px 9px 23px rgba(83, 59, 121, 0.1),
     0px 0px 0px rgba(83, 59, 121, 0.1);
 
-  animation: ${howAnimated} 1s ease-out 2s;
-
   z-index: 2;
 
-  opacity: 0;
+  transition: opacity 1s ease-in 2s;
+
+  opacity: ${({ isShow }) => (isShow ? 0 : 1)};
 `;

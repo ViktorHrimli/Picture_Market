@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import { GlobalPostition, GlobalTitleText } from 'styles/GlobalStyles.styled';
 import { FaRegArrowAltCircleDown } from 'react-icons/fa';
+import { MdOutlineKeyboardDoubleArrowRight } from 'react-icons/md';
 
 const slideInAnimation = keyframes`
   from {
@@ -198,13 +199,20 @@ export const ArrowIcons = styled(FaRegArrowAltCircleDown)`
   color: ${p => p.theme.colors.white};
 `;
 
-const howAnimated = keyframes`
-0%{
-  opacity: 1;
-}
-100%{
-  opacity: 0;
-}
+export const ArrowWay = styled(MdOutlineKeyboardDoubleArrowRight)`
+  position: absolute;
+
+  top: 42%;
+  right: -17%;
+
+  width: 60px;
+  height: 60px;
+
+  color: ${p => p.theme.colors.main};
+  &:is(:hover) {
+    cursor: pointer;
+    color: ${p => p.theme.colors.accent};
+  }
 `;
 
 export const DesktopAnimated = styled.div`
@@ -237,9 +245,9 @@ export const DesktopAnimated = styled.div`
     17px 38px 42px rgba(83, 59, 121, 0.09), 4px 9px 23px rgba(83, 59, 121, 0.1),
     0px 0px 0px rgba(83, 59, 121, 0.1);
 
-  animation: ${howAnimated} 1s ease-out 1s;
+  transition: opacity 1s ease-in 1s;
 
   z-index: 2;
 
-  opacity: 0;
+  opacity: ${({ isShow }) => (isShow ? 0 : 1)};
 `;

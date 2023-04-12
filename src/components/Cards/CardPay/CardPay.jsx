@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 import {
@@ -7,15 +8,25 @@ import {
   CardText,
   FakeFormCard,
   DesktopAnimated,
+  ArrowWay,
 } from 'components/Cards/CardPay/CardPay.styled';
+
+import { CardContextState } from 'components/CardConteiner/CardContextState';
 
 const CardPay = () => {
   const isDesktopScreen = useMediaQuery({
     query: '(min-width: 1440px)',
   });
+
+  const isVisible = useContext(CardContextState);
+
   return (
     <CardForm>
-      {isDesktopScreen && <DesktopAnimated>Does</DesktopAnimated>}
+      {isDesktopScreen && (
+        <DesktopAnimated isShow={isVisible}>Does</DesktopAnimated>
+      )}
+
+      {isDesktopScreen && <ArrowWay />}
 
       <ConteinerImgBackground>
         <CardTitle>Fill the form</CardTitle>
