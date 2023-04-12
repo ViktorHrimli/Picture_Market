@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 import {
@@ -11,23 +12,30 @@ import {
   TextDeskribe,
   ArrowIcons,
   DesktopAnimated,
+  ArrowWay,
 } from 'components/Cards/Card.styled';
+
+import { CardContextState } from 'components/CardConteiner/CardContextState';
 
 const Card = () => {
   const isDesktopScreen = useMediaQuery({
     query: '(min-width: 1440px)',
   });
 
+  const isVisible = useContext(CardContextState);
+
   return (
     <CardForm>
-      {isDesktopScreen && <DesktopAnimated>How</DesktopAnimated>}
+      {isDesktopScreen && (
+        <DesktopAnimated isShow={isVisible}>How</DesktopAnimated>
+      )}
       <CardTitle>Choose a photo</CardTitle>
       <ConteinerInfoCard>
         <CardText>
           Upload a clear portrait photo with visible faces for your
           one-of-a-kind art piece.
         </CardText>
-        {isDesktopScreen && <ArrowIcons />}
+        {isDesktopScreen && <ArrowIcons /> && <ArrowWay />}
         <ConteinerImgCard>
           <img
             src="https://res.cloudinary.com/djoprd9i4/image/upload/v1680381246/samples/picture_market/mpvfnv1glphomfqcwisd.jpg"

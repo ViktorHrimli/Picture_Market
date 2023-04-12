@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 import {
@@ -18,11 +18,15 @@ import { CardDilevery } from 'components/Cards/CardDelivery/CardDilevery';
 
 import { CardConteinerDesktop } from 'components/CardConteiner/CardConteinerDesktop/CardConteinerDesktop';
 
+import { CardContextState } from 'components/CardConteiner/CardContextState';
+
 const payloadCard = [<Card />, <CardPay />, <CardFill />, <CardDilevery />];
 
 const CardConteiner = () => {
   const [isChangeCard, setIsChangeCard] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const [card, setCard] = useState(0);
+  const elementRef = useRef(null);
 
   // HOOKS MEDIA SCREEN
   const isMobileScreen = useMediaQuery({
@@ -43,8 +47,24 @@ const CardConteiner = () => {
     }
   };
 
+  const handleIntersection = entries => {
+    if (entries[0].isIntersecting) {
+      setIsVisible(true);
+    }
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleIntersection);
+    observer.observe(elementRef.current);
+
+    return () => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      observer.unobserve(elementRef.current);
+    };
+  }, []);
+
   return (
-    <SectionCard isisChangeCard={isChangeCard}>
+    <SectionCard isisChangeCard={isChangeCard} ref={elementRef}>
       <ConteinerCard>
         <SectionCardTitle>Make your own portrait</SectionCardTitle>
         {isMobileScreen && (
@@ -62,11 +82,13 @@ const CardConteiner = () => {
         )}
 
         {isDesktopScreen && (
-          <CardConteinerDesktop>
-            {payloadCard.map((item, id) => (
-              <li key={id}>{item}</li>
-            ))}
-          </CardConteinerDesktop>
+          <CardContextState.Provider value={isVisible}>
+            <CardConteinerDesktop>
+              {payloadCard.map((item, id) => (
+                <li key={id}>{item}</li>
+              ))}
+            </CardConteinerDesktop>
+          </CardContextState.Provider>
         )}
       </ConteinerCard>
 
