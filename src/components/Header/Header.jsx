@@ -32,12 +32,6 @@ export function Header() {
       setIsOpenedNavigation(false);
     }, 600);
 
-    // const handleSwipe = eventData => {
-    //   if (eventData.dir === 'left') {
-    //     setIsClosedSection(true);
-    //   }
-    // };
-
     return () => clearTimeout(timeoutId);
   }, [isClosedSection]);
 

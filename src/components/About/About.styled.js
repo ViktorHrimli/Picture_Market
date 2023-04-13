@@ -18,7 +18,7 @@ export const SectionAbout = styled(GlobalSection)`
     background-size: cover;
     height: 530px;
   }
-  @media (min-width: 361px) and (max-width: 768px) {
+  @media (min-width: 361px) and (max-width: 767px) {
     background-image: url(https://res.cloudinary.com/djoprd9i4/image/upload/v1680881828/andrysha_special_jvnphu.jpg);
     background-repeat: no-repeat;
     background-position: left;
@@ -26,12 +26,36 @@ export const SectionAbout = styled(GlobalSection)`
     height: 530px;
     background-size: cover;
   }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    width: 768px;
+    background-image: url(https://res.cloudinary.com/djoprd9i4/image/upload/v1680881828/andrysha_special_jvnphu.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 100% 530px;
+    height: 440px;
+    background-size: cover;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    width: 1024px;
+    height: 574px;
+    background-image: url(https://res.cloudinary.com/djoprd9i4/image/upload/v1680881828/andrysha_special_jvnphu.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 100% 574px;
+    background-size: cover;
+    margin: 0 auto;
+  }
+
   @media (min-width: 1440px) {
+    width: 1440px;
     background-image: url(https://res.cloudinary.com/djoprd9i4/image/upload/v1680881828/andrysha_special_jvnphu.jpg);
     background-repeat: no-repeat;
     background-position: 100% 100%;
     background-size: 100%;
     height: 881px;
+    margin: 0 auto;
   }
 `;
 
@@ -64,6 +88,9 @@ export const TextConteiner = styled(GlobalPostition)`
     justify-content: end;
     padding-right: 32px;
   }
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    margin-left: 490px;
+  }
 
   @media (min-width: 1440px) {
     margin-left: 518px;
@@ -74,6 +101,14 @@ export const ParagraphConteiner = styled.div`
   @media (min-width: 320px) and (max-width: 360px) {
     margin-left: 80px;
   }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    margin-left: 413px;
+    margin-top: 154px;
+  }
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    /* margin-left: 413px; */
+    margin-top: 186px;
+  }
   @media (min-width: 1440px) {
     margin-left: 80px;
     margin-top: 460px;
@@ -83,15 +118,13 @@ export const ParagraphConteiner = styled.div`
 export const TitleAboutConteiner = styled.div`
   position: relative;
 
-  @media (min-width: 320px) and (max-width: 361px) {
+  @media (min-width: 320px) and (max-width: 360px) {
     rotate: 270deg;
   }
 
-  /* @media (min-width: 361px) and (max-width: 768px) {
+  @media (min-width: 769px) and (max-width: 1023px) {
+    /* rotate: 270deg; */
   }
-
-  @media (min-width: 1440px) {
-  } */
 `;
 
 export const ParagraphAbout = styled(GlobalText)`
@@ -103,6 +136,20 @@ export const ParagraphAbout = styled(GlobalText)`
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
+  }
+  @media (min-width: 769px) and (max-width: 1023px) {
+    width: 295px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    width: 400px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 29px;
   }
 
   @media (min-width: 1440px) {
@@ -127,7 +174,7 @@ export const HederAboutText = styled(GlobalTitleText)`
     top: 55px;
     left: 50%;
   }
-  @media (min-width: 361px) and (max-width: 768px) {
+  @media (min-width: 361px) and (max-width: 767px) {
     transform: translateX(-51%);
     font-weight: 400;
     font-size: 28px;
@@ -135,13 +182,33 @@ export const HederAboutText = styled(GlobalTitleText)`
     top: -198px;
     left: 152px;
   }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    width: 768px;
+    transform: translateX(-51%);
+    font-size: 28px;
+    width: 524px;
+    top: -100px;
+    left: 677px;
+    margin: 0 auto;
+  }
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    width: 1024px;
+    transform: translateX(-51%);
+    font-size: 38px;
+    width: 524px;
+    top: -150px;
+    left: 259px;
+    margin: 0 auto;
+  }
 
   @media (min-width: 1440px) {
+    width: 1440px;
     transform: translateX(-51%);
     font-weight: 400;
     font-size: 48px;
     width: 524px;
     top: 20px;
     left: 345px;
+    margin: 0 auto;
   }
 `;
