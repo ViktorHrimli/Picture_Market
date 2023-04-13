@@ -4,12 +4,18 @@ import { GlobalTitleText, GlobalSection } from 'styles/GlobalStyles.styled';
 export const SectionGallery = styled(GlobalSection)`
   padding: 0px;
   overflow: hidden;
+
+  @media screen and (min-width: 1024px) {
+    overflow-x: hidden;
+  }
 `;
 
 export const GallerySliderWrapper = styled.div`
   position: relative;
   width: 100%;
   height: 380px;
+
+  overflow: hidden;
 `;
 
 const slideInAnimationRight = keyframes`
@@ -50,6 +56,7 @@ export const GalleryImgRight = styled.div`
     width: 100%;
     height: 100%;
     border-radius: 8px;
+    object-fit: cover;
 
     background: linear-gradient(
       360deg,
@@ -84,10 +91,14 @@ export const GalleryImgCenter = styled.div`
 
   animation: ${slideInAnimationCenter} 2s;
 
+  object-fit: cover;
+
   img {
     width: 100%;
     height: 100%;
     border-radius: 8px;
+
+    object-fit: cover;
   }
 `;
 
