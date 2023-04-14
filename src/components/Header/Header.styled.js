@@ -117,6 +117,8 @@ export const ListLayout = styled.ul`
 `;
 
 export const LinkLayout = styled.a`
+  cursor: pointer;
+
   @media (min-width: 320px) and (max-width: 1023px) {
     display: none;
   }

@@ -7,7 +7,7 @@ import { About } from 'components/About/About';
 import { Footer } from 'components/Footer/Footer';
 import { Description } from 'components/Description/Description';
 import { Modal } from 'components/Modal/Modal';
-import { CardConteiner } from 'components/CardConteiner/CardConteiner';
+// import { CardConteiner } from 'components/CardConteiner/CardConteiner';
 import { Gallery } from 'components/Gallery/Gallery';
 
 // CONTEXT
@@ -25,7 +25,7 @@ const App = () => {
         <main>
           <Hero />
           <About />
-          <CardConteiner />
+          {/* <CardConteiner /> */}
           <Gallery />
           <Description />
         </main>

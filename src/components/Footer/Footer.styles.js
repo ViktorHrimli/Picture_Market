@@ -6,7 +6,7 @@ export const FooterSection = styled.section`
   align-items: center;
   width: 100vw;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     height: 476px;
     flex-direction: column;
     padding-top: ${p => p.theme.space[8]};
@@ -27,7 +27,7 @@ export const FooterSection = styled.section`
     height: 300px;
     padding-top: ${p => p.theme.space[11]};
     padding-left: ${p => p.theme.space[14]};
-    padding-right: ${p => p.theme.space[15]};
+    padding-right: ${p => p.theme.space[14]};
     justify-content: space-between;
   }
 
@@ -41,7 +41,7 @@ export const FooterSection = styled.section`
 `;
 
 export const FooterLogo = styled.img`
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     width: 202px;
     height: 152px;
     margin-bottom: ${p => p.theme.space[8]};
@@ -61,11 +61,18 @@ export const FooterLogo = styled.img`
   }
 `;
 
+export const FooterList = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const FooterListContacts = styled.ul`
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     justify-content: center;
     align-items: center;
     gap: 18px;
@@ -97,11 +104,11 @@ export const FooterLinkContacts = styled.a`
   line-height: ${p => p.theme.lineHeights.normal};
   color: ${p => p.theme.colors.white};
 
-  @media (min-width: 320px) and (max-width: 480px) {
-    font-size: ${p => p.theme.fontSizes.s};
+  @media (min-width: 320px) and (max-width: 767px) {
+    font-size: ${p => p.theme.fontSizes.ms};
   }
 
-  @media (min-width: 769px) and (max-width: 1024px) {
+  @media (min-width: 768px) and (max-width: 1024px) {
     font-size: ${p => p.theme.fontSizes.m};
   }
 
@@ -113,11 +120,11 @@ export const FooterLinkContacts = styled.a`
 export const FooterListText = styled.ul`
   display: flex;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     gap: ${p => p.theme.space[9]};
   }
 
-  @media (min-width: 769px) and (max-width: 1023px) {
+  @media (min-width: 768px) and (max-width: 1023px) {
     gap: ${p => p.theme.space[10]};
   }
   @media (min-width: 1024px) and (max-width: 1439px) {
@@ -134,7 +141,7 @@ export const FooterLinkText = styled.a`
   font-family: ${p => p.theme.fonts.body};
   font-weight: ${p => p.theme.fontWeights.normal};
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     font-size: ${p => p.theme.fontSizes.xxs};
   }
 

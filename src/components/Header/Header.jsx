@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { ModalStateContext } from "components/ModalStateContext"
 
-// import { Swipeable } from 'react-swipeable';
 import {
   HeaderConteiner,
   Section,
@@ -17,6 +17,9 @@ import { HeaderMenu } from 'components/HeaderMenu/HeaderMenu';
 export function Header() {
   const [isClosedSection, setIsClosedSection] = useState(true);
   const [isOpenedNavigation, setIsOpenedNavigation] = useState(false);
+
+  const { openModal } = useContext(ModalStateContext)
+
 
   const handleClick = () => {
     setIsOpenedNavigation(true);
@@ -56,13 +59,13 @@ export function Header() {
         </HeaderBtn>
         <ListLayout>
           <li>
-            <LinkLayout href="">About Us</LinkLayout>
+            <LinkLayout>About Us</LinkLayout>
           </li>
           <li>
-            <LinkLayout href="">Gallery</LinkLayout>
+            <LinkLayout>Gallery</LinkLayout>
           </li>
           <li>
-            <LinkLayout href="">Order</LinkLayout>
+            <LinkLayout onClick={() => openModal()}>Order</LinkLayout>
           </li>
         </ListLayout>
         <LinkBorder />
