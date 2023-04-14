@@ -27,7 +27,7 @@ export const FooterSection = styled.section`
     height: 300px;
     padding-top: ${p => p.theme.space[11]};
     padding-left: ${p => p.theme.space[14]};
-    padding-right: ${p => p.theme.space[15]};
+    padding-right: ${p => p.theme.space[14]};
     justify-content: space-between;
   }
 
@@ -59,6 +59,13 @@ export const FooterLogo = styled.img`
     width: 224px;
     height: 175px;
   }
+`;
+
+export const FooterList = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const FooterListContacts = styled.ul`
@@ -98,10 +105,10 @@ export const FooterLinkContacts = styled.a`
   color: ${p => p.theme.colors.white};
 
   @media (min-width: 320px) and (max-width: 767px) {
-    font-size: ${p => p.theme.fontSizes.s};
+    font-size: ${p => p.theme.fontSizes.ms};
   }
 
-  @media (min-width: 769px) and (max-width: 1024px) {
+  @media (min-width: 768px) and (max-width: 1024px) {
     font-size: ${p => p.theme.fontSizes.m};
   }
 
@@ -117,7 +124,7 @@ export const FooterListText = styled.ul`
     gap: ${p => p.theme.space[9]};
   }
 
-  @media (min-width: 769px) and (max-width: 1023px) {
+  @media (min-width: 768px) and (max-width: 1023px) {
     gap: ${p => p.theme.space[10]};
   }
   @media (min-width: 1024px) and (max-width: 1439px) {
