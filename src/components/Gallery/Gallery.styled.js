@@ -6,7 +6,9 @@ export const SectionGallery = styled(GlobalSection)`
   overflow: hidden;
 
   @media screen and (min-width: 1024px) {
-    overflow-x: hidden;
+    position: relative;
+
+    overflow: hidden;
   }
 `;
 

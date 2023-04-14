@@ -1,12 +1,17 @@
 import {
   ConteinerImgCenter,
   ConteinerImgRight,
+  ConteinerImgLeft,
   Conteiner,
+  GalleryTitleDesktop,
 } from 'components/Gallery/GalleryDesktop/GalleryDesktop.styled';
 
 const GalleryDesktop = () => {
   return (
     <Conteiner>
+      <GalleryTitleDesktop>
+        Enjoy our <br /> <span>Gallerry</span>
+      </GalleryTitleDesktop>
       <ConteinerImgCenter>
         <img />
       </ConteinerImgCenter>
@@ -15,9 +20,9 @@ const GalleryDesktop = () => {
         <img />
       </ConteinerImgRight>
 
-      <ConteinerImgRight>
+      <ConteinerImgLeft>
         <img />
-      </ConteinerImgRight>
+      </ConteinerImgLeft>
     </Conteiner>
   );
 };

@@ -50,32 +50,39 @@ const Gallery = () => {
 
   return (
     <SectionGallery>
-      <GalleryTitle>Enjoy our Gallerry</GalleryTitle>
       {/* mobile */}
       {isMobile && (
-        <GallerySliderWrapper>
-          {images.map((item, id, arr) => {
-            if (id === count && count + 1 === id + 1) {
-              return (
-                <div key={id}>
-                  <GalleryImgCenter>
-                    <img src={arr[count]} alt="card" width={150} height={280} />
-                  </GalleryImgCenter>
-                  <GalleryImgRight>
-                    <img
-                      src={arr[count + 1]}
-                      alt="card"
-                      width={300}
-                      height={150}
-                    />
-                  </GalleryImgRight>
-                </div>
-              );
-            } else {
-              return '';
-            }
-          })}
-        </GallerySliderWrapper>
+        <>
+          <GalleryTitle>Enjoy our Gallerry</GalleryTitle>
+          <GallerySliderWrapper>
+            {images.map((item, id, arr) => {
+              if (id === count && count + 1 === id + 1) {
+                return (
+                  <div key={id}>
+                    <GalleryImgCenter>
+                      <img
+                        src={arr[count]}
+                        alt="card"
+                        width={150}
+                        height={280}
+                      />
+                    </GalleryImgCenter>
+                    <GalleryImgRight>
+                      <img
+                        src={arr[count + 1]}
+                        alt="card"
+                        width={300}
+                        height={150}
+                      />
+                    </GalleryImgRight>
+                  </div>
+                );
+              } else {
+                return '';
+              }
+            })}
+          </GallerySliderWrapper>
+        </>
       )}
       {/* mobile end */}
 
