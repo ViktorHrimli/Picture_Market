@@ -23,10 +23,10 @@ export const ModalContent = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     width: 312px;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     width: 583px;
   }
 `;
@@ -37,13 +37,13 @@ export const ModalClosed = styled.button`
   position: absolute;
   z-index: 10;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     top: 18px;
     right: 20px;
     width: 20px;
     height: 20px;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     top: 48px;
     right: 60px;
     width: 29px;

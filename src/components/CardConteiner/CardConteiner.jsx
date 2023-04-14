@@ -1,5 +1,7 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useContext } from 'react';
 import { useMediaQuery } from 'react-responsive';
+
+import { ModalStateContext } from "components/ModalStateContext"
 
 import {
   SectionCard,
@@ -27,6 +29,9 @@ const CardConteiner = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [card, setCard] = useState(0);
   const elementRef = useRef(null);
+
+  const { openModal } = useContext(ModalStateContext)
+
 
   // HOOKS MEDIA SCREEN
   const isMobileScreen = useMediaQuery({
@@ -92,7 +97,7 @@ const CardConteiner = () => {
         )}
       </ConteinerCard>
 
-      <ButtonCard>Buy for £ 149</ButtonCard>
+      <ButtonCard onClick={() => openModal()}>Buy for £ 149</ButtonCard>
     </SectionCard>
   );
 };

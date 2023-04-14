@@ -7,7 +7,7 @@ export const Section = styled(GlobalPostition)`
   border-radius: 8px;
   background-color: ${p => p.theme.colors.accent};
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     width: 312px;
     height: 498px;
     padding-top: 82px;
@@ -17,7 +17,7 @@ export const Section = styled(GlobalPostition)`
     position: relative;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     width: 583px;
     padding-top: 160px;
     padding-right: 54px;
@@ -26,10 +26,10 @@ export const Section = styled(GlobalPostition)`
   }
 `;
 export const TextBox = styled.div`
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     width: 100%;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     width: 100%;
     margin-bottom: 116px;
   }
@@ -43,12 +43,12 @@ export const Text = styled.p`
   margin-bottom: 40px;
   color: ${p => p.theme.colors.white};
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     font-size: ${p => p.theme.fontSizes.s};
     line-height: 21px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     font-size: ${p => p.theme.fontSizes.m};
     line-height: 29px;
   }
@@ -61,12 +61,12 @@ export const TextUp = styled.p`
   text-transform: uppercase;
   text-align: center;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     font-size: 12px;
     line-height: 14px;
     margin-bottom: 91px;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     font-size: 21px;
     line-height: 34px;
   }
@@ -77,7 +77,7 @@ export const ModalClosed = styled.button`
   cursor: pointer;
   position: absolute;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     top: 18px;
     right: 20px;
     display: flex;
@@ -86,7 +86,7 @@ export const ModalClosed = styled.button`
     width: 20px;
     height: 20px;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     top: 42px;
     right: 54px;
   }
@@ -95,11 +95,11 @@ export const ModalClosed = styled.button`
 export const Close = styled(GoX)`
   fill: ${p => p.theme.colors.white};
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     font-size: ${p => p.theme.fontSizes.l};
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     font-size: ${p => p.theme.fontSizes.xl};
   }
 `;

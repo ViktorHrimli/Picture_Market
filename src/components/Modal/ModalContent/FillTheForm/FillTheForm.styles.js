@@ -3,7 +3,7 @@ import { GlobalPostition } from 'styles/GlobalStyles.styled';
 import { GoX } from 'react-icons/go';
 
 export const Section = styled(GlobalPostition)`
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     width: 312px;
     height: 498px;
     padding-top: 82px;
@@ -13,7 +13,7 @@ export const Section = styled(GlobalPostition)`
     position: relative;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     width: 583px;
     padding-top: 42px;
     padding-right: 54px;
@@ -29,12 +29,12 @@ export const Text = styled.p`
   text-align: center;
   margin-bottom: 40px;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     font-size: ${p => p.theme.fontSizes.s};
     line-height: 21px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     font-size: ${p => p.theme.fontSizes.l};
     line-height: 34px;
   }
@@ -43,11 +43,11 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     gap: 12px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     gap: 20px;
     width: 100%;
   }
@@ -58,7 +58,7 @@ export const Input = styled.input`
   border: 1px solid #003031;
   border-radius: 8px;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     height: 36px;
     padding-left: 8px;
 
@@ -70,7 +70,7 @@ export const Input = styled.input`
       line-height: 22px;
     }
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     height: 50px;
     padding-left: 20px;
 
@@ -88,11 +88,11 @@ export const Box = styled.div`
   display: flex;
   align-items: center;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     margin-bottom: 50px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     margin-bottom: 90px;
   }
 `;
@@ -103,10 +103,10 @@ export const Label = styled.label`
   line-height: 22px;
   text-align: center;
   color: #003031;
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     font-size: 12px;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     font-size: 18px;
   }
 `;
@@ -115,7 +115,7 @@ export const ModalClosed = styled.button`
   margin-left: auto;
   cursor: pointer;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     position: absolute;
     top: 18px;
     right: 20px;
@@ -130,11 +130,11 @@ export const ModalClosed = styled.button`
 export const Close = styled(GoX)`
   fill: ${p => p.theme.colors.main};
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     font-size: ${p => p.theme.fontSizes.l};
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     font-size: ${p => p.theme.fontSizes.xl};
   }
 `;
@@ -153,11 +153,11 @@ export const CheckboxContainer = styled.label`
   user-select: none;
   position: relative;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     margin-bottom: 50px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     margin-bottom: 90px;
   }
 
@@ -179,11 +179,11 @@ export const CheckboxContainer = styled.label`
     border-radius: 3px;
     margin-top: 2px;
 
-    @media (min-width: 320px) and (max-width: 480px) {
+    @media (min-width: 320px) and (max-width: 767px) {
       height: 15px;
       width: 15px;
     }
-    @media (min-width: 1440px) {
+    @media (min-width: 768px) {
       height: 18px;
       width: 18px;
     }
@@ -200,11 +200,11 @@ export const CheckboxContainer = styled.label`
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
 
-    @media (min-width: 320px) and (max-width: 480px) {
+    @media (min-width: 320px) and (max-width: 767px) {
       left: 5px;
       top: 0px;
     }
-    @media (min-width: 1440px) {
+    @media (min-width: 768px) {
       left: 6px;
       top: 2px;
     }
