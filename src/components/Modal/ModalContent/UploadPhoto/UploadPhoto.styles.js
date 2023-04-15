@@ -5,7 +5,7 @@ import { GoX } from 'react-icons/go';
 export const Section = styled(GlobalPostition)`
   position: relative;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     width: 312px;
     height: 498px;
     padding-top: 82px;
@@ -14,7 +14,7 @@ export const Section = styled(GlobalPostition)`
     padding-bottom: 40px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     width: 583px;
     padding-top: 82px;
     padding-right: 54px;
@@ -30,25 +30,25 @@ export const Text = styled.p`
   text-align: center;
   margin-bottom: 40px;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     font-size: ${p => p.theme.fontSizes.s};
     line-height: 21px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     font-size: ${p => p.theme.fontSizes.l};
     line-height: 34px;
   }
 `;
 
 export const ChooseImg = styled.div`
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     width: 252px;
     height: 184px;
     border: 1px solid red;
     margin-bottom: 78px;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     width: 350px;
     height: 250px;
     margin-bottom: 150px;
@@ -61,7 +61,7 @@ export const ModalClosed = styled.button`
   cursor: pointer;
   position: absolute;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     top: 18px;
     right: 20px;
     display: flex;
@@ -70,7 +70,7 @@ export const ModalClosed = styled.button`
     width: 20px;
     height: 20px;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     top: 42px;
     right: 54px;
   }
@@ -79,11 +79,11 @@ export const ModalClosed = styled.button`
 export const Close = styled(GoX)`
   fill: ${p => p.theme.colors.main};
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     font-size: ${p => p.theme.fontSizes.l};
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     font-size: ${p => p.theme.fontSizes.xl};
   }
 `;

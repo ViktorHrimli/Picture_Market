@@ -26,8 +26,8 @@ const App = () => {
           <Hero />
           <About />
           <CardConteiner />
-          <Description />
           <Gallery />
+          <Description />
         </main>
         <Footer />
         {isOpened && <Modal closeModal={() => setIsOpened(false)} />}

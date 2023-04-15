@@ -60,11 +60,9 @@ export const theme = {
   },
 
   lineHeights: {
-    mines: 1.18,
     min: 1.33,
     normal: 1.35,
     max: 1.375,
-    keks: 1.22,
     ultra: 1.6,
   },
 

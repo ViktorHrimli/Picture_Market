@@ -10,7 +10,7 @@ html {
     padding: 0;
     font-style: normal;
     font-family: ${theme.fonts.body};
-    background: ${theme.colors.background};
+    background: ${theme.colors.backgroundWhite};
 
   }
   h1,
@@ -53,16 +53,16 @@ html {
 `;
 
 const GlobalLayout = styled.div`
-  @media (min-width: 360px) and (max-width: 769px) {
+  @media (min-width: 360px) and (max-width: 767px) {
     width: 360px;
   }
-  @media (min-width: 769px) and (max-width: 1024px) {
+  @media (min-width: 768px) and (max-width: 1023px) {
     width: 768px;
   }
-  @media (min-width: 1025px) and (max-width: 1440px) {
+  @media (min-width: 1024px) and (max-width: 1439px) {
     width: 1024px;
   }
-  @media (min-width: 1441px) {
+  @media (min-width: 1440px) {
     width: 1440px;
   }
 `;
