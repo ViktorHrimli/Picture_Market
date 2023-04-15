@@ -6,6 +6,7 @@ import {
   ConteinerImgLeft,
   Conteiner,
   GalleryTitleDesktop,
+  Wrapper,
 } from 'components/Gallery/GalleryDesktop/GalleryDesktop.styled';
 
 const images = [
@@ -30,6 +31,8 @@ const GalleryDesktop = () => {
       }, 4000);
     };
     timeOut();
+
+    return () => {};
   });
 
   if (count >= images.length) {
@@ -37,7 +40,7 @@ const GalleryDesktop = () => {
   }
 
   return (
-    <>
+    <Wrapper>
       <GalleryTitleDesktop>
         Enjoy our <br /> <span>Gallerry</span>
       </GalleryTitleDesktop>
@@ -62,7 +65,7 @@ const GalleryDesktop = () => {
           return '';
         }
       })}
-    </>
+    </Wrapper>
   );
 };
 
