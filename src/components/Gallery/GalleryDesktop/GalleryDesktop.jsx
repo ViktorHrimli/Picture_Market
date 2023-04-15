@@ -23,14 +23,14 @@ const images = [
 const GalleryDesktop = () => {
   const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    const timeOut = () => {
-      setInterval(() => {
-        setCount(prev => prev + 1);
-      }, 4000);
-    };
-    timeOut();
-  });
+  // useEffect(() => {
+  //   const timeOut = () => {
+  //     setInterval(() => {
+  //       setCount(prev => prev + 1);
+  //     }, 4000);
+  //   };
+  //   timeOut();
+  // });
 
   if (count >= images.length) {
     setCount(0);

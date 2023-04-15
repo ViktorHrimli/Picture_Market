@@ -26,7 +26,7 @@ const Gallery = () => {
   const [count, setCount] = useState(0);
 
   const isDesktop = useMediaQuery({
-    query: '(min-width: 1024px)',
+    query: '(min-width: 768px)',
   });
 
   const isMobile = useMediaQuery({

@@ -10,7 +10,7 @@ export const Conteiner = styled.div`
   height: 650px;
   width: 100vw;
 
-  padding-left: 110px;
+  padding-left: 5%;
 `;
 
 const animatedCenterImg = keyframes`
@@ -29,8 +29,8 @@ width: 440px;
 `;
 
 export const ConteinerImgCenter = styled.div`
-  width: 565px;
-  height: 650px;
+  width: 40%;
+  height: 100%;
 
   margin-right: 23px;
 
@@ -61,8 +61,8 @@ transform: translate(0, 0);
 `;
 
 export const ConteinerImgRight = styled.div`
-  width: 440px;
-  height: 450px;
+  width: 35%;
+  height: 60%;
 
   margin-left: 53px;
 
@@ -103,9 +103,9 @@ export const ConteinerImgLeft = styled.div`
   top: 50%;
   left: 50%;
 
-  transform: translate(104%, -28%);
-  width: 440px;
-  height: 450px;
+  transform: translate(104%, -17%);
+  width: 35%;
+  height: 60%;
 
   object-fit: cover;
 
