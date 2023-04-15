@@ -12,28 +12,36 @@ import {
 } from 'styles/GlobalStyles.styled';
 
 export const SectionCard = styled(GlobalSection)`
-  @media screen and (max-width: 767px) {
-    position: relative;
-    padding: 0 30px;
-    gap: 30px;
+  position: relative;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  margin-top: 100px;
+
+  gap: 30px;
+
+  @media screen and (min-width: 768px) {
   }
 
   @media (min-width: 1440px) {
-    position: relative;
-
-    margin-right: auto;
-    margin-left: auto;
-
+    gap: 0;
     max-width: 1440px;
   }
 `;
 
 export const ConteinerCard = styled(GlobalPostition)`
-  @media screen and (max-width: 767px) {
-    gap: 34px;
+  gap: 34px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 0 0px;
   }
 
-  @media (min-width: 1440px) {
+  @media screen and (min-width: 1440px) {
     width: 100%;
 
     align-items: flex-start;
@@ -44,13 +52,22 @@ export const ConteinerCard = styled(GlobalPostition)`
 
 export const Slider = styled.div`
   width: 100%;
-  transition: transform 0.5s ease-out cubic-bezier(0.165, 0.84, 0.44, 1);
+  /* transition: transform 0.5s ease-out cubic-bezier(0.165, 0.84, 0.44, 1);
   transform: ${({ isChangeCard }) =>
-    !isChangeCard ? 'translateX(0)' : 'translateX(100%)'};
+    !isChangeCard ? 'translateX(0)' : 'translateX(100%)'}; */
 `;
 
 export const ButtonCard = styled(GlobalButton)`
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1024px) {
+    position: absolute;
+
+    top: 53%;
+    left: 30%;
+
+    transform: translate(23%, 22%);
   }
 
   @media (min-width: 1440px) {
@@ -64,7 +81,16 @@ export const ButtonCard = styled(GlobalButton)`
 `;
 
 export const SectionCardTitle = styled(GlobalTitleText)`
-  @media screen and (max-width: 767px) {
+  margin-left: 10px;
+  margin-right: auto;
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 320px;
+
+    margin-bottom: 48px;
   }
 
   @media (min-width: 1440px) {

@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect, useContext } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
-import { ModalStateContext } from "components/ModalStateContext"
+import { ModalStateContext } from 'components/ModalStateContext';
 
 import {
   SectionCard,
@@ -30,8 +30,7 @@ const CardConteiner = () => {
   const [card, setCard] = useState(0);
   const elementRef = useRef(null);
 
-  const { openModal } = useContext(ModalStateContext)
-
+  const { openModal } = useContext(ModalStateContext);
 
   // HOOKS MEDIA SCREEN
   const isMobileScreen = useMediaQuery({
@@ -39,7 +38,7 @@ const CardConteiner = () => {
   });
 
   const isDesktopScreen = useMediaQuery({
-    query: '(min-width: 1440px)',
+    query: '(min-width: 768px)',
   });
 
   const hadnleChange = () => {

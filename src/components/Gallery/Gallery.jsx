@@ -30,7 +30,7 @@ const Gallery = () => {
   });
 
   const isMobile = useMediaQuery({
-    query: '(min-width: 360px) and (max-width: 767px)',
+    query: '(min-width: 320px) and (max-width: 767px)',
   });
 
   useEffect(() => {

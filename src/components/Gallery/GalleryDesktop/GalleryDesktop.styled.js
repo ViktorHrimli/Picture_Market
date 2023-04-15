@@ -2,23 +2,50 @@ import styled, { keyframes } from 'styled-components';
 
 import { GlobalTitleText } from 'styles/GlobalStyles.styled';
 
+export const Wrapper = styled.div`
+  position: relative;
+`;
+
 export const Conteiner = styled.div`
   position: relative;
   display: flex;
   align-items: end;
 
-  height: 650px;
   width: 100vw;
 
-  padding-left: 5%;
+  @media screen and (min-width: 768px) {
+    position: relative;
+
+    height: 420px;
+    width: 768px;
+
+    padding-left: 5%;
+  }
+
+  @media screen and (min-width: 1024px) {
+    position: relative;
+
+    padding-left: 7%;
+    height: 470px;
+
+    width: 1024px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    position: relative;
+    height: 650px;
+
+    padding-left: 110px;
+    width: 1440px;
+  }
 `;
 
 const animatedCenterImg = keyframes`
 0%{
   opacity: 0.3;
   transform: translate(100%, 0);
-height: 450px;
-width: 440px;
+height: 60%;
+width: 40%;
 
 }
 
@@ -29,17 +56,33 @@ width: 440px;
 `;
 
 export const ConteinerImgCenter = styled.div`
-  width: 40%;
-  height: 100%;
-
-  margin-right: 23px;
-
   object-fit: cover;
 
   background-color: black;
   border-radius: 8px;
 
   animation: ${animatedCenterImg} 3s;
+
+  @media screen and (min-width: 768px) {
+    width: 310px;
+    height: 420px;
+
+    margin-right: 15px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 390px;
+    height: 470px;
+
+    margin-right: 20px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 500px;
+    height: 590px;
+
+    margin-right: 23px;
+  }
 
   img {
     width: 100%;
@@ -61,11 +104,6 @@ transform: translate(0, 0);
 `;
 
 export const ConteinerImgRight = styled.div`
-  width: 35%;
-  height: 60%;
-
-  margin-left: 53px;
-
   object-fit: cover;
 
   background-color: black;
@@ -78,6 +116,27 @@ export const ConteinerImgRight = styled.div`
   );
   animation: ${animatedRightImg} 3s;
 
+  @media screen and (min-width: 768px) {
+    width: 250px;
+    height: 320px;
+
+    margin-left: 25px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 310px;
+    height: 320px;
+
+    margin-left: 35px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 430px;
+    height: 440px;
+
+    margin-left: 53px;
+  }
+
   img {
     width: 100%;
     height: 100%;
@@ -89,6 +148,8 @@ const animatedLeftImg = keyframes`
 0%{ 
   transform: translate(200%, -28%);
   opacity: 0;
+
+
 } 
 100%{
 transform: translateX(104%, -28%);
@@ -98,15 +159,6 @@ transform: translateX(104%, -28%);
 `;
 
 export const ConteinerImgLeft = styled.div`
-  position: absolute;
-
-  top: 50%;
-  left: 50%;
-
-  transform: translate(104%, -17%);
-  width: 35%;
-  height: 60%;
-
   object-fit: cover;
 
   background-color: black;
@@ -120,6 +172,34 @@ export const ConteinerImgLeft = styled.div`
 
   animation: ${animatedLeftImg} 4s;
 
+  @media screen and (min-width: 768px) {
+    position: absolute;
+
+    top: 24%;
+    left: 89%;
+
+    width: 250px;
+    height: 320px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    position: absolute;
+
+    top: 32%;
+    left: 86%;
+
+    width: 310px;
+    height: 320px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    top: 32%;
+    left: 82%;
+
+    width: 430px;
+    height: 440px;
+  }
+
   img {
     width: 100%;
     height: 100%;
@@ -130,18 +210,30 @@ export const ConteinerImgLeft = styled.div`
 export const GalleryTitleDesktop = styled(GlobalTitleText)`
   position: absolute;
 
-  top: 12%;
-  left: 49%;
-
-  font-style: normal;
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 58px;
-  text-transform: uppercase;
-
   color: #003031;
 
   span {
     color: ${p => p.theme.colors.accent};
+  }
+
+  @media screen and (min-width: 768px) {
+    top: 5%;
+    left: 50%;
+  }
+
+  @media screen and (min-width: 1024px) {
+    top: 8%;
+    left: 50%;
+
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    top: 12%;
+    left: 49%;
+
+    font-size: 48px;
+    line-height: 58px;
   }
 `;

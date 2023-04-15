@@ -53,8 +53,8 @@ html {
 `;
 
 const GlobalLayout = styled.div`
-  @media (min-width: 360px) and (max-width: 767px) {
-    width: 360px;
+  @media (min-width: 320px) and (max-width: 767px) {
+    width: 320px;
   }
   @media (min-width: 768px) and (max-width: 1023px) {
     width: 768px;

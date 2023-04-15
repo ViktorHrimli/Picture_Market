@@ -6,6 +6,7 @@ import {
   ConteinerImgLeft,
   Conteiner,
   GalleryTitleDesktop,
+  Wrapper,
 } from 'components/Gallery/GalleryDesktop/GalleryDesktop.styled';
 
 const images = [
@@ -23,21 +24,23 @@ const images = [
 const GalleryDesktop = () => {
   const [count, setCount] = useState(0);
 
-  // useEffect(() => {
-  //   const timeOut = () => {
-  //     setInterval(() => {
-  //       setCount(prev => prev + 1);
-  //     }, 4000);
-  //   };
-  //   timeOut();
-  // });
+  useEffect(() => {
+    const timeOut = () => {
+      setInterval(() => {
+        setCount(prev => prev + 1);
+      }, 4000);
+    };
+    timeOut();
+
+    return () => {};
+  });
 
   if (count >= images.length) {
     setCount(0);
   }
 
   return (
-    <>
+    <Wrapper>
       <GalleryTitleDesktop>
         Enjoy our <br /> <span>Gallerry</span>
       </GalleryTitleDesktop>
@@ -62,7 +65,7 @@ const GalleryDesktop = () => {
           return '';
         }
       })}
-    </>
+    </Wrapper>
   );
 };
 
