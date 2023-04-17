@@ -12,7 +12,8 @@ const PreloadVideo = (props) => {
       onEnded={props.handleCloseVideo}
       loop={false}
       controls={false}
-      width='95vw'
+      width='100vw'
+      // height='100vh'
       />
   );
 };

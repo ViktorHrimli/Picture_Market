@@ -20,6 +20,8 @@ export const MenuSection = styled(GlobalLayout)`
   transform: ${({ isClosed }) =>
     isClosed ? 'translateX(0)' : 'translateX(100%)'};
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   background-color: ${p => p.theme.colors.accent};
@@ -31,7 +33,7 @@ export const MenuSection = styled(GlobalLayout)`
   margin: 0 auto;
   z-index: 1;
 
-  @media (min-width: 769px) and (max-width: 1279px) {
+  @media (min-width: 769px) and (max-width: 1042px) {
     padding: 44px 60px 68px 60px;
     width: 769px;
     margin: 0 auto;

@@ -30,38 +30,38 @@ const slideInText = keyframes`
 `;
 
 export const Section = styled(GlobalLayout)`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   position: relative;
   z-index: -2;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: 320px) and (max-width: 767px) {
+    display: block;
     width: 100vw;
     height: 800px;
-    padding-left: ${p => p.theme.space[3]};
+    margin-top: 100px;
   }
   @media (min-width: 768px) and (max-width: 1023px) {
-    margin: 0 auto;
+    margin: 100px 0 auto;
     width: 768px;
     height: 590px;
     padding: auto;
-    align-items: center;
   }
 
   @media (min-width: 1024px) and (max-width: 1439px) {
     width: 1024px;
-    margin: 0 auto;
+    margin: 150px 0 auto;
     height: 730px;
     padding: auto;
-    align-items: center;
   }
 
   @media (min-width: 1440px) {
     width: 1440px;
     height: 1040px;
     padding: auto;
+    margin: 100px 0 auto;
   }
 `;
 
@@ -77,21 +77,21 @@ export const TextBox = styled.div`
   @media (min-width: 768px) and (max-width: 1023px) {
     position: absolute;
     left: 60px;
-    bottom: 269px;
+    bottom: 230px;
     animation: ${shrinkBackgroundTablet} 2s ease forwards;
   }
 
   @media (min-width: 1024px) and (max-width: 1439px) {
     position: absolute;
     left: 80px;
-    bottom: 330px;
+    bottom: 290px;
     animation: ${shrinkBackgroundTablet} 2s ease forwards;
   }
 
   @media (min-width: 1440px) {
     position: absolute;
     left: 110px;
-    bottom: 460px;
+    bottom: 420px;
     animation: ${shrinkBackgroundTablet} 2s ease forwards;
   }
 `;
@@ -195,7 +195,7 @@ export const Text = styled.p`
     width: 240px;
     height: 144px;
     position: absolute;
-    top: 360px;
+    top: 390px;
     left: 62px;
     animation: ${shrinkBackgroundTablet} 2s ease forwards;
   }
@@ -205,7 +205,7 @@ export const Text = styled.p`
     width: 331px;
     height: 144px;
     position: absolute;
-    bottom: 130px;
+    bottom: 100px;
     left: 80px;
     animation: ${shrinkBackgroundTablet} 2s ease forwards;
   }
@@ -216,7 +216,7 @@ export const Text = styled.p`
     width: 331px;
     height: 144px;
     position: absolute;
-    bottom: 250px;
+    bottom: 215px;
     left: 110px;
     animation: ${shrinkBackgroundTablet} 2s ease forwards;
   }

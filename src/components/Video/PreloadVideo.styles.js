@@ -6,9 +6,9 @@ const shrinkBackgroundMobail = keyframes`
     width: 100%;
   }
   to {
-    margin-top: 55px;
+    margin-top: 155px;
     width: 606px;
-    margin-left: 40px;
+    margin-left: 55px;
     transform: scale(1.7); 
   }
 `;
@@ -20,7 +20,7 @@ const shrinkBackgroundTablet = keyframes`
   to {
     width: 399px;
     height: 399px;
-    margin-left: 255px;
+    margin-left: 250px;
   }
 `;
 
@@ -31,7 +31,7 @@ const shrinkBackgroundLaptop = keyframes`
   to {
     width: 575px;
     height: 575px;
-    margin-left: 310px;
+    margin-left: 320px;
   }
 `;
 
@@ -42,7 +42,7 @@ const shrinkBackgroundLaptopMax = keyframes`
   to {
     width: 745px;
     height: 745px;
-    margin-left: 515px;
+    margin-left: 335px;
   }
 `;
 
