@@ -7,17 +7,18 @@ import {
   Conteiner,
   GalleryTitleDesktop,
   Wrapper,
+  ConteinerFakeCenterImg,
 } from 'components/Gallery/GalleryDesktop/GalleryDesktop.styled';
 
 const images = [
-  'https://res.cloudinary.com/djoprd9i4/image/upload/v1680727969/mobile_delivery_1_u300vh.png',
+  'https://res.cloudinary.com/djoprd9i4/image/upload/v1680381248/samples/picture_market/pwaxxvjwcei307vrmlgc.jpg',
+  'https://res.cloudinary.com/djoprd9i4/image/upload/v1680381248/samples/picture_market/kqadxz06vw94mbg5v4di.jpg',
+  'https://res.cloudinary.com/djoprd9i4/image/upload/v1680381248/samples/picture_market/yz2hyoladx5bbdciqbqr.jpg',
+  'https://res.cloudinary.com/djoprd9i4/image/upload/v1680381247/samples/picture_market/je6xpfzu25j78lzh4si1.jpg',
   'https://res.cloudinary.com/djoprd9i4/image/upload/v1680881828/andrysha_special_jvnphu.jpg',
   'https://res.cloudinary.com/djoprd9i4/image/upload/v1680381248/samples/picture_market/yz2hyoladx5bbdciqbqr.jpg',
-  'https://res.cloudinary.com/djoprd9i4/image/upload/v1680727969/mobile_delivery_1_u300vh.png',
-  'https://res.cloudinary.com/djoprd9i4/image/upload/v1680881828/andrysha_special_jvnphu.jpg',
-  'https://res.cloudinary.com/djoprd9i4/image/upload/v1680381248/samples/picture_market/yz2hyoladx5bbdciqbqr.jpg',
-  'https://res.cloudinary.com/djoprd9i4/image/upload/v1680727969/mobile_delivery_1_u300vh.png',
-  'https://res.cloudinary.com/djoprd9i4/image/upload/v1680881828/andrysha_special_jvnphu.jpg',
+  'https://res.cloudinary.com/djoprd9i4/image/upload/v1680381245/samples/picture_market/sgeb4hruuzibctbpu1cb.jpg',
+  'https://res.cloudinary.com/djoprd9i4/image/upload/v1680381247/samples/picture_market/duenoy7svntgbtqwxljj.jpg',
   'https://res.cloudinary.com/djoprd9i4/image/upload/v1680381248/samples/picture_market/yz2hyoladx5bbdciqbqr.jpg',
 ];
 
@@ -33,7 +34,7 @@ const GalleryDesktop = () => {
     timeOut();
 
     return () => {};
-  });
+  }, []);
 
   if (count >= images.length) {
     setCount(0);
@@ -45,19 +46,23 @@ const GalleryDesktop = () => {
         Enjoy our <br /> <span>Gallerry</span>
       </GalleryTitleDesktop>
       {images.map((item, id, arr) => {
-        if (id === count && count + 2 === id + 2) {
+        if (id === count) {
           return (
             <Conteiner key={item}>
               <ConteinerImgCenter key={1}>
-                <img src={arr[id]} alt="keks" />
+                <img src={arr[count + 1]} alt="keks" />
               </ConteinerImgCenter>
 
+              <ConteinerFakeCenterImg key={14}>
+                <img src={images[count]} alt="keks" />
+              </ConteinerFakeCenterImg>
+
               <ConteinerImgRight key={2}>
-                <img src={arr[id + 1]} alt="keks" />
+                <img src={arr[count + 2]} alt="keks" />
               </ConteinerImgRight>
 
               <ConteinerImgLeft key={3}>
-                <img src={arr[id + 2]} alt="keks" />
+                <img src={arr[count + 3]} alt="keks" />
               </ConteinerImgLeft>
             </Conteiner>
           );
