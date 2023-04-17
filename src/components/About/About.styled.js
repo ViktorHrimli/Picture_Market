@@ -9,6 +9,7 @@ import {
 export const SectionAbout = styled(GlobalSection)`
   width: 100vw;
   position: relative;
+  z-index: -5;
 
   @media (min-width: 320px) and (max-width: 360px) {
     background-image: url(https://res.cloudinary.com/djoprd9i4/image/upload/v1680452464/samples/picture_market/Rectangle_119-min_hnzudp.png);

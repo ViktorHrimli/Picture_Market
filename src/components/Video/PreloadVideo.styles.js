@@ -6,7 +6,6 @@ const shrinkBackgroundMobail = keyframes`
     width: 100%;
   }
   to {
-    margin-top: 155px;
     width: 606px;
     margin-left: 55px;
     transform: scale(1.7); 
@@ -14,9 +13,7 @@ const shrinkBackgroundMobail = keyframes`
 `;
 
 const shrinkBackgroundTablet = keyframes`
-  from {
-    width: 100%;
-  }
+
   to {
     width: 399px;
     height: 399px;
@@ -31,7 +28,7 @@ const shrinkBackgroundLaptop = keyframes`
   to {
     width: 575px;
     height: 575px;
-    margin-left: 320px;
+    margin-left: 310px;
   }
 `;
 
@@ -42,7 +39,7 @@ const shrinkBackgroundLaptopMax = keyframes`
   to {
     width: 745px;
     height: 745px;
-    margin-left: 335px;
+    margin-left: 325px;
   }
 `;
 

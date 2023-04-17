@@ -31,12 +31,10 @@ export const MenuSection = styled(GlobalLayout)`
   justify-content: space-between;
   padding: 44px 28px 68px 28px;
   margin: 0 auto;
-  z-index: 1;
+  z-index: 5;
 
   @media (min-width: 769px) and (max-width: 1042px) {
     padding: 44px 60px 68px 60px;
-    width: 769px;
-    margin: 0 auto;
     z-index: 10;
   }
 `;

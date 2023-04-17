@@ -7,13 +7,16 @@ import {
   TextAfter,
   TextAfterArt,
   Text,
+  VideoBox,
 } from './Hero.styled';
 
 const Hero = (props) => {
   return (
     
     <Section>
-      <PreloadVideo handleCloseVideo={props.handleCloseVideo} />
+      <VideoBox>
+        <PreloadVideo handleCloseVideo={props.handleCloseVideo} />
+      </VideoBox>
       {!props.showVideo && <TextBox>
         <TextHeader>
           PERSONALIZ<TextSpanColor>ED</TextSpanColor>

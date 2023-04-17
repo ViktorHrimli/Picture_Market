@@ -48,20 +48,43 @@ export const Section = styled(GlobalLayout)`
     width: 768px;
     height: 590px;
     padding: auto;
+    position: relative;
+    left: 0;
+    top: -50px;
   }
 
   @media (min-width: 1024px) and (max-width: 1439px) {
     width: 1024px;
-    margin: 150px 0 auto;
+    margin: 219px 0 auto;
     height: 730px;
     padding: auto;
+    position: relative;
+    left: 0;
+    top: -70px;
   }
 
   @media (min-width: 1440px) {
     width: 1440px;
     height: 1040px;
     padding: auto;
-    margin: 100px 0 auto;
+    margin: 150px 0 auto;
+    position: relative;
+    left: 0;
+    top: -100px;
+  }
+`;
+
+export const VideoBox = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    display: block;
+    position: absolute;
+    top: 155px;
   }
 `;
 
