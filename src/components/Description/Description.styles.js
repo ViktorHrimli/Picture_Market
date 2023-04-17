@@ -84,7 +84,7 @@ export const Text = styled.p`
     width: 293px;
     margin-bottom: 24px;
   }
-  @media (min-width: 360px) and (max-width: 768px) {
+  @media (min-width: 361px) and (max-width: 768px) {
     font-size: ${p => p.theme.fontSizes.f};
     margin-bottom: 24px;
   }
@@ -110,7 +110,7 @@ export const DescriptionBtn = styled(GlobalButton)`
     height: 49px;
     font-size: ${p => p.theme.fontSizes.s};
   }
-  @media (min-width: 360px) and (max-width: 768px) {
+  @media (min-width: 361px) and (max-width: 768px) {
     width: 301px;
     height: 49px;
     font-size: ${p => p.theme.fontSizes.s};

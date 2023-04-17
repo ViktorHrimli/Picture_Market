@@ -13,26 +13,37 @@ import { Gallery } from 'components/Gallery/Gallery';
 // CONTEXT
 import { ModalStateContext } from 'components/ModalStateContext';
 
+
 const App = () => {
   const [isOpened, setIsOpened] = useState(false);
+  const [showVideo, setShowVideo] = useState(true);
 
-  return (
+  console.log(showVideo);
+  
+  function handleCloseVideo() {
+    setShowVideo(false);
+  }
+
+
+
+  return (<>
     <Layout>
       <ModalStateContext.Provider
         value={{ openModal: () => setIsOpened(true) }}
       >
-        <Header />
+        {!showVideo && <Header /> }
         <main>
-          <Hero />
-          <About />
-          <CardConteiner />
-          <Gallery />
-          <Description />
+          <Hero handleCloseVideo={handleCloseVideo} showVideo={showVideo} />
+          {!showVideo && <About />}
+          {!showVideo && <CardConteiner />}
+          {!showVideo && <Gallery />}
+          {!showVideo && <Description />}
         </main>
-        <Footer />
+        {!showVideo && <Footer />}
         {isOpened && <Modal closeModal={() => setIsOpened(false)} />}
       </ModalStateContext.Provider>
     </Layout>
+  </>
   );
 };
 

@@ -11,7 +11,6 @@ export const ModalSection = styled.section`
   justify-content: center;
   align-items: center;
   z-index: 3;
-  border-radius: 8px;
 `;
 
 export const ModalContent = styled.div`
