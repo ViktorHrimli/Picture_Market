@@ -35,6 +35,7 @@ export const SectionAbout = styled(GlobalSection)`
     height: 440px;
     background-size: cover;
     margin: 0 auto;
+    margin-bottom: 178px;
   }
 
   @media (min-width: 1024px) and (max-width: 1439px) {
@@ -46,6 +47,7 @@ export const SectionAbout = styled(GlobalSection)`
     background-size: 100% 574px;
     background-size: cover;
     margin: 0 auto;
+    margin-bottom: 178px;
   }
 
   @media (min-width: 1440px) {
@@ -56,6 +58,7 @@ export const SectionAbout = styled(GlobalSection)`
     background-size: 100%;
     height: 881px;
     margin: 0 auto;
+    margin-bottom: 340px;
   }
 `;
 
@@ -82,7 +85,7 @@ export const TextConteiner = styled(GlobalPostition)`
     padding-left: 35px;
     padding-right: 43px;
   }
-  @media (min-width: 361px) and (max-width: 768px) {
+  @media (min-width: 361px) and (max-width: 767px) {
     margin-top: 210px;
     margin-left: auto;
     justify-content: end;
@@ -99,14 +102,13 @@ export const TextConteiner = styled(GlobalPostition)`
 
 export const ParagraphConteiner = styled.div`
   @media (min-width: 320px) and (max-width: 360px) {
-    margin-left: 80px;
+    margin-left: 66px;
   }
   @media (min-width: 768px) and (max-width: 1023px) {
     margin-left: 413px;
     margin-top: 154px;
   }
   @media (min-width: 1024px) and (max-width: 1439px) {
-    /* margin-left: 413px; */
     margin-top: 186px;
   }
   @media (min-width: 1440px) {

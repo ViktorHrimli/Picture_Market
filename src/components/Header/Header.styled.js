@@ -1,5 +1,14 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { GlobalLayout } from 'styles/GlobalStyles.styled';
+
+const slideIn = keyframes`
+  from {
+  transform: translateY(-70%);
+  }
+  to {
+    transform: translateY(0);
+  }
+`;
 
 export const HeaderConteiner = styled.header`
   background-color: ${p => p.theme.colors.backgroundWhite};
@@ -11,24 +20,23 @@ export const Section = styled(GlobalLayout)`
 
   @media (min-width: 320px) and (max-width: 767px) {
     width: 100vw;
-    height: 143px;
     padding-top: 24px;
     padding-left: 36px;
     padding-right: 33px;
+    animation: ${slideIn} 2s forwards;
   }
 
   @media (min-width: 768px) and (max-width: 1023px) {
-    width: 769px;
-    height: 143px;
+    width: 768px;
     padding-top: 34px;
     padding-left: 60px;
     padding-right: 60px;
     margin: 0 auto;
+    animation: ${slideIn} 2s forwards;
   }
 
   @media (min-width: 1024px) and (max-width: 1439px) {
     width: 1024px;
-    height: 219px;
     padding-top: 58px;
     padding-left: 80px;
     padding-right: 80px;
@@ -36,11 +44,11 @@ export const Section = styled(GlobalLayout)`
     align-items: center;
     position: relative;
     margin: 0 auto;
+    animation: ${slideIn} 2s forwards;
   }
 
   @media (min-width: 1440px) {
     width: 1440px;
-    height: 219px;
     padding-top: 58px;
     padding-left: 110px;
     padding-right: 110px;
@@ -48,6 +56,7 @@ export const Section = styled(GlobalLayout)`
     align-items: center;
     position: relative;
     margin: 0 auto;
+    animation: ${slideIn} 2s forwards;
   }
 `;
 

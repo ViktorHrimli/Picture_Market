@@ -1,3 +1,4 @@
+import { PreloadVideo } from 'components/Video/PreloadVideo';
 import {
   Section,
   TextBox,
@@ -6,23 +7,28 @@ import {
   TextAfter,
   TextAfterArt,
   Text,
+  // BoxVideo,
 } from './Hero.styled';
 
-const Hero = () => {
+const Hero = (props) => {
   return (
+    
     <Section>
-      <TextBox>
+        {/* <BoxVideo> */}
+          <PreloadVideo handleCloseVideo={props.handleCloseVideo} />
+        {/* </BoxVideo> */}
+      {!props.showVideo && <TextBox>
         <TextHeader>
           PERSONALIZ<TextSpanColor>ED</TextSpanColor>
         </TextHeader>
         <TextAfter>STRING</TextAfter>
         <TextAfterArt>ART</TextAfterArt>
-      </TextBox>
-      <div>
+      </TextBox>}
+      {!props.showVideo && <div>
         <Text>Unique string art pieces from your favourite photos</Text>
-      </div>
+      </div>}
     </Section>
-  );
+);
 };
 
 export { Hero };
