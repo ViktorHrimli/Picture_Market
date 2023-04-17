@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { contentTypes } from '../../modal.constants';
 import { ModalStrategyContext } from '../../ModalStrategyContext';
 
-import { Section, ModalClosed, Close, TextBox, Text, TextUp, Btn } from './Discount.styles';
+import { Section, ModalBack, Back, ModalClosed, Close, TextBox, Text, TextUp, Btn } from './Discount.styles';
 
 
 export function Discount() {
@@ -11,6 +11,9 @@ export function Discount() {
   
     return (
         <Section>
+            <ModalBack onClick={() => setStrategy(contentTypes.FillTheForm)}>
+                <Back />
+            </ModalBack>
             <ModalClosed>
                 <Close />
             </ModalClosed>

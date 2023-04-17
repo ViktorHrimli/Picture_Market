@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { GlobalPostition } from 'styles/GlobalStyles.styled';
 import { GoX } from 'react-icons/go';
+import { ImArrowLeft2 } from 'react-icons/im';
 
 export const Section = styled(GlobalPostition)`
   @media (min-width: 320px) and (max-width: 767px) {
@@ -37,6 +38,38 @@ export const Text = styled.p`
   @media (min-width: 768px) {
     font-size: ${p => p.theme.fontSizes.l};
     line-height: 34px;
+  }
+`;
+
+export const ModalBack = styled.button`
+  margin-left: auto;
+  cursor: pointer;
+  position: absolute;
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    top: 18px;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+  }
+  @media (min-width: 768px) {
+    top: 42px;
+    left: 54px;
+  }
+`;
+
+export const Back = styled(ImArrowLeft2)`
+  fill: ${p => p.theme.colors.main};
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    font-size: ${p => p.theme.fontSizes.l};
+  }
+
+  @media (min-width: 768px) {
+    font-size: ${p => p.theme.fontSizes.xl};
   }
 `;
 

@@ -18,13 +18,16 @@ const App = () => {
   const [isOpened, setIsOpened] = useState(false);
   const [showVideo, setShowVideo] = useState(true);
 
-  console.log(showVideo);
   
   function handleCloseVideo() {
     setShowVideo(false);
   }
 
-
+  if (isOpened) {
+    document.body.classList.add('modal-open');
+  } else {
+    document.body.classList.remove('modal-open');
+  }
 
   return (<>
     <Layout>

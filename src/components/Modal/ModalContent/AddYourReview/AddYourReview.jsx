@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 import { contentTypes } from '../../modal.constants';
 import { ModalStrategyContext } from '../../ModalStrategyContext';
-import { Section, ModalClosed, Close, Text, Form, Input, Message, IconPhoto} from './AddYourReview.styles';
+import { Section, ModalBack, Back, ModalClosed, Close, Text, Form, Input, Message, IconPhoto} from './AddYourReview.styles';
 import { GlobalButton } from 'styles/GlobalStyles.styled';
 
 
@@ -21,6 +21,9 @@ export function AddYourReview({closeModal}) {
     
     return (
         <Section>
+            <ModalBack onClick={() => setStrategy(contentTypes.Discount)}>
+                <Back />
+            </ModalBack>
             <ModalClosed onClick={closeModal}>
                 <Close />
             </ModalClosed>
