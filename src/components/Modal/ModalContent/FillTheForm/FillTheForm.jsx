@@ -3,7 +3,7 @@ import { useContext, useState } from 'react';
 import { contentTypes } from '../../modal.constants';
 import { ModalStrategyContext } from '../../ModalStrategyContext';
 
-import { Section, Text, Form, Input, CheckboxContainer, Label, LabelColor, Close, ModalClosed  } from './FillTheForm.styles'
+import { Section, Text, Form, Input, CheckboxContainer, Label, LabelColor, ModalBack, Back, Close, ModalClosed  } from './FillTheForm.styles'
 import { GlobalButton } from 'styles/GlobalStyles.styled';
 
 export function FillTheForm({ label, ...rest }) {
@@ -26,8 +26,11 @@ export function FillTheForm({ label, ...rest }) {
 
   return (
     <Section>
+      <ModalBack onClick={() => setStrategy(contentTypes.UploadPhoto)}>
+        <Back />
+      </ModalBack>
       <ModalClosed >
-            <Close />
+        <Close />
         </ModalClosed>
       <Text>Please fill the form</Text>
         <Form onSubmit={handleSubmit}>

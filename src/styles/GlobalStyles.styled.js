@@ -11,8 +11,8 @@ html {
     font-style: normal;
     font-family: ${theme.fonts.body};
     background: ${theme.colors.backgroundWhite};
-
   }
+
   h1,
   h2,
   h3,
@@ -49,7 +49,12 @@ html {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
-
+  .modal-open {
+    overflow: hidden;
+  }
+  .menu-open {
+    overflow: hidden;
+  }
 `;
 
 const GlobalLayout = styled.div`

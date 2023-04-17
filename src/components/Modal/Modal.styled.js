@@ -30,6 +30,26 @@ export const ModalContent = styled.div`
   }
 `;
 
+export const ModalBack = styled.button`
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  border: 1px solid red;
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    top: 18px;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+  }
+  @media (min-width: 768px) {
+    top: 48px;
+    left: 60px;
+    width: 29px;
+    height: 27px;
+  }
+`;
+
 export const ModalClosed = styled.button`
   margin-left: auto;
   cursor: pointer;

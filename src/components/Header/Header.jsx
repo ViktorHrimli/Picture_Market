@@ -23,6 +23,7 @@ export function Header() {
 
   const handleClick = () => {
     setIsOpenedNavigation(true);
+    document.body.classList.add('menu-open');
   };
 
   useEffect(() => {

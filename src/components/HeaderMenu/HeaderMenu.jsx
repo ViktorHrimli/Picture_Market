@@ -5,10 +5,11 @@ import { ModalStateContext } from "components/ModalStateContext"
 import { MenuSection, MenuSectionBtn, Close, BtnBox, ListLayout, LinkLayout, ListContacts, LinkIcons, Email, Shop } from "components/HeaderMenu/HeaderMenu.styles";
 
 export function HeaderMenu({ isClosed, setIsClosed }) {
-    const { openModal } = useContext(ModalStateContext)
+  const { openModal } = useContext(ModalStateContext)
 
 	const handleClose = () => {
 		setIsClosed(false);
+		document.body.classList.remove('menu-open');
 	};
 
 	return (
