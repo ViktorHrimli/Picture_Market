@@ -91,6 +91,46 @@ export const ConteinerImgCenter = styled.div`
   }
 `;
 
+const fakeCenterImgAnimation = keyframes`
+0%{
+  opacity: 1
+}
+
+50% {
+opacity: 0.5;
+}
+
+100%{
+  opacity: 0;
+}
+
+`;
+
+export const ConteinerFakeCenterImg = styled(ConteinerImgCenter)`
+  position: absolute;
+
+  animation: ${fakeCenterImgAnimation} 3s;
+
+  background-color: white;
+
+  opacity: 0;
+
+  @media screen and (min-width: 768px) {
+    top: 0px;
+    left: 38px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    top: 0px;
+    left: 72px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    top: 60px;
+    left: 110px;
+  }
+`;
+
 const animatedRightImg = keyframes`
 0%{ 
   transform: translate(100%, 0);
@@ -104,9 +144,6 @@ transform: translate(0, 0);
 `;
 
 export const ConteinerImgRight = styled.div`
-  object-fit: cover;
-
-  background-color: black;
   border-radius: 8px;
 
   background: linear-gradient(
@@ -114,7 +151,6 @@ export const ConteinerImgRight = styled.div`
     #634789 -4.78%,
     rgba(99, 71, 137, 0) 100%
   );
-  animation: ${animatedRightImg} 3s;
 
   @media screen and (min-width: 768px) {
     width: 250px;
@@ -138,9 +174,13 @@ export const ConteinerImgRight = styled.div`
   }
 
   img {
+    object-fit: cover;
+
     width: 100%;
     height: 100%;
+
     border-radius: 8px;
+    animation: ${animatedRightImg} 3s;
   }
 `;
 
@@ -159,9 +199,6 @@ transform: translateX(104%, -28%);
 `;
 
 export const ConteinerImgLeft = styled.div`
-  object-fit: cover;
-
-  background-color: black;
   border-radius: 8px;
 
   background: linear-gradient(
@@ -169,8 +206,6 @@ export const ConteinerImgLeft = styled.div`
     #634789 -4.78%,
     rgba(99, 71, 137, 0) 100%
   );
-
-  animation: ${animatedLeftImg} 4s;
 
   @media screen and (min-width: 768px) {
     position: absolute;
@@ -201,9 +236,13 @@ export const ConteinerImgLeft = styled.div`
   }
 
   img {
+    object-fit: cover;
+
     width: 100%;
     height: 100%;
     border-radius: 8px;
+
+    animation: ${animatedLeftImg} 4s;
   }
 `;
 
