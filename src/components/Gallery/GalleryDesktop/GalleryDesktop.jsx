@@ -8,6 +8,7 @@ import {
   GalleryTitleDesktop,
   Wrapper,
   ConteinerFakeCenterImg,
+  ConteinerBackgroundGradient,
 } from 'components/Gallery/GalleryDesktop/GalleryDesktop.styled';
 
 const images = [
@@ -58,10 +59,13 @@ const GalleryDesktop = () => {
               </ConteinerFakeCenterImg>
 
               <ConteinerImgRight key={2}>
+                <ConteinerBackgroundGradient></ConteinerBackgroundGradient>
                 <img src={arr[count + 2]} alt="keks" />
               </ConteinerImgRight>
 
               <ConteinerImgLeft key={3}>
+                <ConteinerBackgroundGradient></ConteinerBackgroundGradient>
+
                 <img src={arr[count + 3]} alt="keks" />
               </ConteinerImgLeft>
             </Conteiner>
