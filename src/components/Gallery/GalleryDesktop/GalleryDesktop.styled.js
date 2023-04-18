@@ -40,6 +40,28 @@ export const Conteiner = styled.div`
   }
 `;
 
+export const ConteinerBackgroundGradient = styled.div`
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 8px;
+
+  background: linear-gradient(
+    360deg,
+    #634789 -4.78%,
+    rgba(99, 71, 137, 0) 100%
+  );
+
+  z-index: 10;
+`;
+
 const animatedCenterImg = keyframes`
 0%{
   opacity: 0.3;
@@ -144,13 +166,9 @@ transform: translate(0, 0);
 `;
 
 export const ConteinerImgRight = styled.div`
-  border-radius: 8px;
+  position: relative;
 
-  background: linear-gradient(
-    360deg,
-    #634789 -4.78%,
-    rgba(99, 71, 137, 0) 100%
-  );
+  border-radius: 8px;
 
   @media screen and (min-width: 768px) {
     width: 250px;
@@ -199,13 +217,9 @@ transform: translateX(104%, -28%);
 `;
 
 export const ConteinerImgLeft = styled.div`
-  border-radius: 8px;
+  position: relative;
 
-  background: linear-gradient(
-    360deg,
-    #634789 -4.78%,
-    rgba(99, 71, 137, 0) 100%
-  );
+  border-radius: 8px;
 
   @media screen and (min-width: 768px) {
     position: absolute;
