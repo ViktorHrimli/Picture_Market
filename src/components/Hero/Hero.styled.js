@@ -60,7 +60,7 @@ export const Section = styled(GlobalLayout)`
     padding: auto;
     position: relative;
     left: 0;
-    top: -70px;
+    top: -140px;
   }
 
   @media (min-width: 1440px) {
