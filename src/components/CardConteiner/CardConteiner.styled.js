@@ -14,6 +14,11 @@ import {
 export const SectionCard = styled(GlobalSection)`
   position: relative;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   margin-right: auto;
   margin-left: auto;
 
@@ -21,24 +26,22 @@ export const SectionCard = styled(GlobalSection)`
 
   gap: 30px;
 
-  @media screen and (min-width: 768px) {
-  }
-
   @media (min-width: 1440px) {
     gap: 0;
+
     max-width: 1440px;
   }
 `;
 
 export const ConteinerCard = styled(GlobalPostition)`
+  position: relative;
+
   gap: 34px;
 
   @media screen and (min-width: 768px) {
     flex-direction: column;
 
     align-items: flex-start;
-
-    padding: 0 0px;
   }
 
   @media screen and (min-width: 1440px) {
@@ -106,8 +109,8 @@ export const SectionCardTitle = styled(GlobalTitleText)`
 export const ArrowRight = styled(MdOutlineKeyboardDoubleArrowRight)`
   position: absolute;
 
-  top: 47%;
-  right: 5px;
+  top: 55%;
+  right: -8%;
 
   height: 24px;
   width: 24px;
@@ -118,13 +121,18 @@ export const ArrowRight = styled(MdOutlineKeyboardDoubleArrowRight)`
     cursor: pointer;
     color: ${p => p.theme.colors.accent};
   }
+
+  @media screen and (max-width: 400px) {
+    top: 100%;
+    right: 2px;
+  }
 `;
 
 export const ArrowLeft = styled(MdOutlineKeyboardDoubleArrowLeft)`
   position: absolute;
 
-  top: 47%;
-  left: 5px;
+  top: 55%;
+  left: -8%;
 
   height: 24px;
   width: 24px;
@@ -134,5 +142,10 @@ export const ArrowLeft = styled(MdOutlineKeyboardDoubleArrowLeft)`
   &:is(:hover) {
     cursor: pointer;
     color: ${p => p.theme.colors.accent};
+  }
+
+  @media screen and (max-width: 400px) {
+    top: 100%;
+    left: 2px;
   }
 `;

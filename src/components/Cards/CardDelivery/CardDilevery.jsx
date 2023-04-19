@@ -14,7 +14,7 @@ import { CardContextState } from 'components/CardConteiner/CardContextState';
 
 const CardDilevery = () => {
   const isDesktopScreen = useMediaQuery({
-    query: '(min-width: 1440px)',
+    query: '(min-width: 768px)',
   });
 
   const isVisible = useContext(CardContextState);

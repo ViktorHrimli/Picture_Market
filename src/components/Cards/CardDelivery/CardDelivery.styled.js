@@ -36,6 +36,16 @@ export const CardForm = styled(GlobalPostition)`
   animation: ${slideInAnimation} 1s;
   animation-delay: 0;
 
+  @media screen and (max-width: 400px) {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    position: relative;
+  }
+
   @media screen and (min-width: 1440px) {
     position: relative;
 
@@ -53,13 +63,40 @@ export const ArrowWay = styled(MdOutlineKeyboardDoubleArrowRight)`
   top: 42%;
   left: -17%;
 
-  width: 60px;
-  height: 60px;
-
   color: ${p => p.theme.colors.main};
   &:is(:hover) {
     cursor: pointer;
     color: ${p => p.theme.colors.accent};
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 0px;
+    height: 0px;
+
+    top: 109%;
+    left: 43%;
+
+    rotate: 90deg;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 40px;
+    height: 40px;
+
+    top: 42%;
+    left: -15%;
+
+    rotate: 0deg;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 60px;
+    height: 60px;
+
+    top: 42%;
+    left: -17%;
+
+    rotate: 0deg;
   }
 `;
 
@@ -143,9 +180,6 @@ export const DesktopAnimated = styled.div`
   left: 0;
   top: 0;
 
-  font-size: 135px;
-  line-height: 162px;
-
   text-align: center;
   text-transform: uppercase;
 
@@ -165,4 +199,19 @@ export const DesktopAnimated = styled.div`
   opacity: ${({ isShow }) => (isShow ? 0 : 1)};
 
   transition: opacity 1s ease-in 4s;
+
+  @media screen and (min-width: 768px) {
+    font-size: 70px;
+    line-height: 100px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 100px;
+    line-height: 124px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 134px;
+    line-height: 162px;
+  }
 `;
