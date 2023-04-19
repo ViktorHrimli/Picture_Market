@@ -17,7 +17,7 @@ const shrinkBackgroundTablet = keyframes`
   to {
     width: 399px;
     height: 399px;
-    margin-left: 250px;
+    margin-left: 255px;
   }
 `;
 
@@ -29,6 +29,7 @@ const shrinkBackgroundLaptop = keyframes`
     width: 575px;
     height: 575px;
     margin-left: 310px;
+    margin-top: 40px;
   }
 `;
 

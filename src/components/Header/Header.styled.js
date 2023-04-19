@@ -41,7 +41,7 @@ export const Section = styled(GlobalLayout)`
 
   @media (min-width: 1024px) and (max-width: 1439px) {
     width: 1024px;
-    padding-top: 58px;
+    padding-top: 38px;
     padding-left: 80px;
     padding-right: 80px;
     align-items: center;
