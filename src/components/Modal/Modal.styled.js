@@ -10,7 +10,7 @@ export const ModalSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 3;
+  z-index: 10;
 `;
 
 export const ModalContent = styled.div`

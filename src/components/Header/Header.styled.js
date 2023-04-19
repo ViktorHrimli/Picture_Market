@@ -153,7 +153,7 @@ export const LinkBorder = styled.span`
     width: 1024px;
     position: absolute;
     right: 77px;
-    top: 119px;
+    top: 99px;
     border-bottom: 3px solid;
     width: 68px;
     color: ${p => p.theme.colors.accent};

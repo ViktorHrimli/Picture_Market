@@ -234,11 +234,11 @@ export const CheckboxContainer = styled.label`
     transform: rotate(45deg);
 
     @media (min-width: 320px) and (max-width: 767px) {
-      left: 5px;
+      left: 4px;
       top: 0px;
     }
     @media (min-width: 768px) {
-      left: 6px;
+      left: 5px;
       top: 2px;
     }
   }
