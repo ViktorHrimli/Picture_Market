@@ -11,6 +11,8 @@ const PreloadVideo = (props) => {
   if (mediaQuery.matches) {
     return (
       <Player
+        playsinline   // playning iphone
+        autoPlay   // playning iphone
         url={VIDEO}
         muted={true}
         playing={true}
