@@ -11,7 +11,7 @@ export const SectionAbout = styled(GlobalSection)`
   position: relative;
   z-index: -5;
 
-  @media (min-width: 320px) and (max-width: 360px) {
+  @media (min-width: 320px) and (max-width: 479px) {
     background-image: url(https://res.cloudinary.com/djoprd9i4/image/upload/v1680452464/samples/picture_market/Rectangle_119-min_hnzudp.png);
     background-repeat: no-repeat;
     background-position: left;
@@ -19,7 +19,7 @@ export const SectionAbout = styled(GlobalSection)`
     background-size: cover;
     height: 530px;
   }
-  @media (min-width: 361px) and (max-width: 767px) {
+  @media (min-width: 480px) and (max-width: 767px) {
     background-image: url(https://res.cloudinary.com/djoprd9i4/image/upload/v1680881828/andrysha_special_jvnphu.jpg);
     background-repeat: no-repeat;
     background-position: left;
@@ -35,7 +35,6 @@ export const SectionAbout = styled(GlobalSection)`
     background-size: 100% 530px;
     height: 440px;
     background-size: cover;
-    margin: 0 auto;
     margin-bottom: 178px;
   }
 
@@ -78,7 +77,7 @@ export const TextImgConteiner = styled.div`
 export const TextConteiner = styled(GlobalPostition)`
   flex-direction: row;
 
-  @media (min-width: 320px) and (max-width: 360px) {
+  @media (min-width: 320px) and (max-width: 479px) {
     justify-content: space-between;
     margin-top: 140px;
     grid-gap: 40px;
@@ -86,7 +85,7 @@ export const TextConteiner = styled(GlobalPostition)`
     padding-left: 35px;
     padding-right: 43px;
   }
-  @media (min-width: 361px) and (max-width: 767px) {
+  @media (min-width: 480px) and (max-width: 767px) {
     margin-top: 210px;
     margin-left: auto;
     justify-content: end;
@@ -102,7 +101,7 @@ export const TextConteiner = styled(GlobalPostition)`
 `;
 
 export const ParagraphConteiner = styled.div`
-  @media (min-width: 320px) and (max-width: 360px) {
+  @media (min-width: 320px) and (max-width: 480px) {
     margin-left: 66px;
   }
   @media (min-width: 768px) and (max-width: 1023px) {
@@ -121,7 +120,7 @@ export const ParagraphConteiner = styled.div`
 export const TitleAboutConteiner = styled.div`
   position: relative;
 
-  @media (min-width: 320px) and (max-width: 360px) {
+  @media (min-width: 320px) and (max-width: 480px) {
     rotate: 270deg;
   }
 
@@ -133,14 +132,14 @@ export const TitleAboutConteiner = styled.div`
 export const ParagraphAbout = styled(GlobalText)`
   width: 167px;
 
-  @media (min-width: 361px) and (max-width: 768px) {
+  @media (min-width: 480px) and (max-width: 767px) {
     width: 295px;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
   }
-  @media (min-width: 769px) and (max-width: 1023px) {
+  @media (min-width: 768px) and (max-width: 1023px) {
     width: 295px;
     font-style: normal;
     font-weight: 400;
@@ -168,7 +167,7 @@ export const HederAboutText = styled(GlobalTitleText)`
   color: ${p => p.theme.colors.backgroundWhite};
   position: absolute;
 
-  @media (min-width: 320px) and (max-width: 360px) {
+  @media (min-width: 320px) and (max-width: 479px) {
     transform: translateX(-50%);
     text-align: center;
 
@@ -177,7 +176,7 @@ export const HederAboutText = styled(GlobalTitleText)`
     top: 55px;
     left: 50%;
   }
-  @media (min-width: 361px) and (max-width: 767px) {
+  @media (min-width: 480px) and (max-width: 767px) {
     transform: translateX(-51%);
     font-weight: 400;
     font-size: 28px;

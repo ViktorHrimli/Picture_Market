@@ -7,8 +7,8 @@ const shrinkBackgroundMobail = keyframes`
   }
   to {
     width: 606px;
-    margin-left: 55px;
-    transform: scale(1.7); 
+    margin-left: 15px;
+    transform: scale(1.5); 
   }
 `;
 

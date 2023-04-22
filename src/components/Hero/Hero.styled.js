@@ -41,7 +41,7 @@ export const Section = styled(GlobalLayout)`
     display: block;
     width: 100vw;
     height: 800px;
-    margin-top: 100px;
+    margin-top: 65px;
   }
   @media (min-width: 768px) and (max-width: 1023px) {
     margin: 100px 0 auto;
