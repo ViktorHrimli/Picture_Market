@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { GlobalPostition } from 'styles/GlobalStyles.styled';
+import { GlobalButton, GlobalPostition } from 'styles/GlobalStyles.styled';
 import { GoX } from 'react-icons/go';
 import { ImArrowLeft2 } from 'react-icons/im';
 import { MdAddAPhoto } from 'react-icons/md';
@@ -126,6 +126,7 @@ export const Input = styled.input`
   background-color: rgba(99, 71, 137, 0.1);
   border: 1px solid #003031;
   border-radius: 8px;
+  width: 100%;
 
   @media (min-width: 320px) and (max-width: 767px) {
     height: 36px;
@@ -197,7 +198,18 @@ export const IconPhoto = styled(MdAddAPhoto)`
     width: 25px;
     height: 25px;
     position: absolute;
-    bottom: 202px;
-    right: 71px;
+    bottom: 215px;
+    right: 70px;
+  }
+`;
+
+export const ButtonForm = styled(GlobalButton)`
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: 320px) and (max-width: 767px) {
+    width: 250px;
+  }
+  @media (min-width: 768px) {
+    width: 334px;
   }
 `;

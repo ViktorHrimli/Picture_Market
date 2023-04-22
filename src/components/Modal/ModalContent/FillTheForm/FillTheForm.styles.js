@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { GlobalPostition } from 'styles/GlobalStyles.styled';
+import { GlobalPostition, GlobalButton } from 'styles/GlobalStyles.styled';
 import { GoX } from 'react-icons/go';
 import { ImArrowLeft2 } from 'react-icons/im';
 
@@ -251,4 +251,9 @@ export const CheckboxContainer = styled.label`
   input:checked ~ .checkmark {
     background-color: #634789;
   }
+`;
+
+export const ButtonForm = styled(GlobalButton)`
+  margin-left: auto;
+  margin-right: auto;
 `;

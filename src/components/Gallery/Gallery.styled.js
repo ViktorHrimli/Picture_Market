@@ -165,9 +165,9 @@ export const GalleryImgLeft = styled.div`
     border-radius: 8px;
   }
 
-  @media screen and (min-width: 430px) {
+  @media screen and (min-width: 360px) {
     top: 37%;
-    left: -45%;
+    left: -64%;
   }
 
   @media screen and (min-width: 480px) {

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { ModalSection, ModalContent, ModalClosed } from "./Modal.styled";
+import React, { useState, useEffect } from 'react';
+
+import { ModalSection, ModalContent, ModalClosed } from './Modal.styled';
 
 import { contentTypes } from './modal.constants';
 import { ModalStrategyContext } from './ModalStrategyContext';
@@ -10,9 +11,20 @@ import { Discount } from './ModalContent/Discount/Discount';
 import { AddYourReview } from './ModalContent/AddYourReview/AddYourReview';
 import { ModalContentText } from './ModalContent/ModalContent/ModalContent';
 
+const initialGlobalState = {
+  photo: null,
+  name: '',
+  surname: '',
+  email: '',
+  phone: '',
+  nameMsg: '',
+  emailMsg: '',
+  msg: '',
+};
 
-export function Modal ({closeModal}) {
+export function Modal({ closeModal }) {
   const [strategy, setStrategy] = useState(contentTypes.UploadPhoto);
+  const [globalModalState, setGlobalModalState] = useState(initialGlobalState);
 
   const modalStrategies = {
     [contentTypes.UploadPhoto]: <UploadPhoto />,
@@ -20,16 +32,39 @@ export function Modal ({closeModal}) {
     [contentTypes.Discount]: <Discount />,
     [contentTypes.AddYourReview]: <AddYourReview />,
     [contentTypes.ModalContentText]: <ModalContentText />,
-  }
-    
+  };
+
+  useEffect(() => {
+    if (strategy === contentTypes.ModalContentText) {
+      const formData = new FormData();
+
+      const { email, name, phone, photo, surname } = globalModalState;
+
+      formData.append('name', name);
+      formData.append('surname', surname);
+      formData.append('email', email);
+      formData.append('phone', phone);
+      formData.append('photo', photo);
+
+      fetch('https://postapi.onrender.com/api/sendMail', {
+        body: formData,
+        method: 'POST',
+      })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(e => console.log(e.message));
+    }
+  }, [globalModalState, strategy]);
+
   return (
-    <ModalStrategyContext.Provider value={{ strategy, setStrategy }}>
+    <ModalStrategyContext.Provider
+      value={{ strategy, setStrategy, setGlobalModalState }}
+    >
       <ModalSection>
         <ModalContent>
-          <ModalClosed onClick={closeModal}>
-              </ModalClosed>
-                <div>{modalStrategies[strategy]}</div>
-          </ModalContent>
+          <ModalClosed onClick={closeModal}></ModalClosed>
+          <div>{modalStrategies[strategy]}</div>
+        </ModalContent>
       </ModalSection>
     </ModalStrategyContext.Provider>
   );

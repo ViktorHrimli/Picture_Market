@@ -87,6 +87,8 @@ export const SectionCardTitle = styled(GlobalTitleText)`
   margin-left: 10px;
   margin-right: auto;
 
+  width: 250px;
+
   @media screen and (min-width: 768px) {
   }
 
@@ -122,7 +124,7 @@ export const ArrowRight = styled(MdOutlineKeyboardDoubleArrowRight)`
     color: ${p => p.theme.colors.accent};
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 360px) {
     top: 100%;
     right: 2px;
   }
@@ -144,7 +146,7 @@ export const ArrowLeft = styled(MdOutlineKeyboardDoubleArrowLeft)`
     color: ${p => p.theme.colors.accent};
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 360px) {
     top: 100%;
     left: 2px;
   }

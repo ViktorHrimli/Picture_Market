@@ -29,8 +29,8 @@ export const CardForm = styled(GlobalPostition)`
   animation: ${slideInAnimation} 1s;
   animation-delay: 0;
 
-  @media screen and (max-width: 400px) {
-    width: 90%;
+  @media screen and (max-width: 767px) {
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
   }
@@ -213,6 +213,7 @@ export const ArrowWay = styled(MdOutlineKeyboardDoubleArrowRight)`
   position: absolute;
 
   color: ${p => p.theme.colors.main};
+
   &:is(:hover) {
     cursor: pointer;
     color: ${p => p.theme.colors.accent};

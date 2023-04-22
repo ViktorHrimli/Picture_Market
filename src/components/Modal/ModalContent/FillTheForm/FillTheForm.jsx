@@ -3,11 +3,23 @@ import { useContext, useState } from 'react';
 import { contentTypes } from '../../modal.constants';
 import { ModalStrategyContext } from '../../ModalStrategyContext';
 
-import { Section, Text, Form, Input, CheckboxContainer, Label, LabelColor, ModalBack, Back, Close, ModalClosed  } from './FillTheForm.styles'
-import { GlobalButton } from 'styles/GlobalStyles.styled';
+import {
+  Section,
+  Text,
+  Form,
+  Input,
+  CheckboxContainer,
+  Label,
+  LabelColor,
+  ModalBack,
+  Back,
+  Close,
+  ModalClosed,
+  ButtonForm,
+} from './FillTheForm.styles';
 
 export function FillTheForm({ label, ...rest }) {
-  const { setStrategy } = useContext(ModalStrategyContext);
+  const { setStrategy, setGlobalModalState } = useContext(ModalStrategyContext);
 
   const [name, setName] = useState('');
   const [surname, setSurname] = useState('');
@@ -15,13 +27,18 @@ export function FillTheForm({ label, ...rest }) {
   const [phone, setPhone] = useState('');
   const [isChecked, setIsChecked] = useState(false);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = event => {
     event.preventDefault();
-    console.log(`Name: ${name}`);
-    console.log(`Surname: ${surname}`);
-    console.log(`Email: ${email}`);
-    console.log(`Phone: ${phone}`);
-    console.log(`IsChecked: ${isChecked}`);
+
+    setGlobalModalState(prev => ({
+      ...prev,
+      name,
+      email,
+      phone,
+      surname,
+    }));
+
+    setStrategy(contentTypes.Discount);
   };
 
   return (
@@ -29,61 +46,69 @@ export function FillTheForm({ label, ...rest }) {
       <ModalBack onClick={() => setStrategy(contentTypes.UploadPhoto)}>
         <Back />
       </ModalBack>
-      <ModalClosed >
+      <ModalClosed>
         <Close />
-        </ModalClosed>
+      </ModalClosed>
       <Text>Please fill the form</Text>
-        <Form onSubmit={handleSubmit}>
-          <Input
-            type="text"
-            id="name"
-            name="name"
+      <Form onSubmit={handleSubmit}>
+        <Input
+          type="text"
+          id="name"
+          name="name"
           value={name}
-          placeholder='Name'
-            onChange={(e) => setName(e.target.value)}
-          />
+          required
+          placeholder="Name"
+          onChange={e => setName(e.target.value)}
+        />
 
-          <Input
-            type="text"
-            id="surname"
-            name="surname"
+        <Input
+          type="text"
+          id="surname"
+          name="surname"
           value={surname}
-          placeholder='Surname'
-            onChange={(e) => setSurname(e.target.value)}
-          />
+          placeholder="Surname"
+          onChange={e => setSurname(e.target.value)}
+        />
 
-          <Input
-            type="email"
-            id="email"
-            name="email"
+        <Input
+          type="email"
+          id="email"
+          name="email"
           value={email}
-          placeholder='Email'
-            onChange={(e) => setEmail(e.target.value)}
-          />
+          required
+          placeholder="Email"
+          onChange={e => setEmail(e.target.value)}
+        />
 
-          <Input
-            type="tel"
-            id="phone"
-            name="phone"
+        <Input
+          type="tel"
+          id="phone"
+          name="phone"
           value={phone}
-          placeholder='Phone number'
-            onChange={(e) => setPhone(e.target.value)}
-          />
+          required
+          placeholder="Phone number"
+          onChange={e => setPhone(e.target.value)}
+        />
         <CheckboxContainer>
           {label}
-            <input
-              type="checkbox"
-              id="checkbox"
-              name="checkbox"
-              checked={isChecked}
+          <input
+            type="checkbox"
+            id="checkbox"
+            name="checkbox"
+            checked={isChecked}
+            required
             onChange={() => setIsChecked(!isChecked)}
             {...rest}
           />
-            <span className="checkmark"></span>
-            <Label id="checkbox">I have read and agree to the <LabelColor href="#">Privacy Policy</LabelColor></Label>
-          </CheckboxContainer>
+          <span className="checkmark"></span>
+          <Label id="checkbox">
+            I have read and agree to the{' '}
+            <LabelColor href="#">Privacy Policy</LabelColor>
+          </Label>
+        </CheckboxContainer>
+
+        <ButtonForm type="submit">confirm</ButtonForm>
       </Form>
-      <GlobalButton onClick={() => setStrategy(contentTypes.Discount)}>confirm</GlobalButton>
     </Section>
   );
 }
