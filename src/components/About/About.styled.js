@@ -94,7 +94,6 @@ export const TextConteiner = styled(GlobalPostition)`
   @media (min-width: 1024px) and (max-width: 1439px) {
     margin-left: 490px;
   }
-
   @media (min-width: 1440px) {
     margin-left: 518px;
   }
