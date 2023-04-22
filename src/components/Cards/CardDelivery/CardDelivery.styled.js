@@ -36,8 +36,8 @@ export const CardForm = styled(GlobalPostition)`
   animation: ${slideInAnimation} 1s;
   animation-delay: 0;
 
-  @media screen and (max-width: 400px) {
-    width: 90%;
+  @media screen and (max-width: 767px) {
+    width: 300px;
     margin-right: auto;
     margin-left: auto;
   }

@@ -14,7 +14,7 @@ const slideInAnimation = keyframes`
 export const CardForm = styled(GlobalPostition)`
   justify-content: flex-start;
 
-  width: 346px;
+  width: 100%;
   height: 380px;
 
   background-image: url(https://res.cloudinary.com/djoprd9i4/image/upload/v1680381245/samples/picture_market/wentg8b2a0vro5funxje.png);
@@ -29,8 +29,8 @@ export const CardForm = styled(GlobalPostition)`
   animation: ${slideInAnimation} 1s;
   animation-delay: 0;
 
-  @media screen and (max-width: 400px) {
-    width: 90%;
+  @media screen and (max-width: 767px) {
+    width: 300px;
     margin-right: auto;
     margin-left: auto;
   }
