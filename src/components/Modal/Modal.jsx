@@ -10,6 +10,7 @@ import { FillTheForm } from './ModalContent/FillTheForm/FillTheForm';
 import { Discount } from './ModalContent/Discount/Discount';
 import { AddYourReview } from './ModalContent/AddYourReview/AddYourReview';
 import { ModalContentText } from './ModalContent/ModalContent/ModalContent';
+import { Privacy } from 'components/Privacy/Privacy';
 
 const initialGlobalState = {
   photo: null,
@@ -32,6 +33,7 @@ export function Modal({ closeModal }) {
     [contentTypes.Discount]: <Discount />,
     [contentTypes.AddYourReview]: <AddYourReview />,
     [contentTypes.ModalContentText]: <ModalContentText />,
+    [contentTypes.Privacy]: <Privacy />,
   };
 
   useEffect(() => {

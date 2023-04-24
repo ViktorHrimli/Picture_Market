@@ -1,6 +1,7 @@
-import { FooterSection, Container, FooterLogo, FooterList, FooterListContacts, FooterLinkContacts, FooterListText, FooterLinkText} from "./Footer.styles"
+import { FooterSection, Container, FooterLogo, FooterList, FooterListContacts, FooterLinkContacts, FooterListText, FooterLinkText } from "./Footer.styles"
 
-const Footer = () => {
+
+const Footer = (props) => {
     return (
         <FooterSection>
             <Container>
@@ -11,9 +12,9 @@ const Footer = () => {
                         <li><FooterLinkContacts href="tel:+447455871180">Telephone: +447455871180</FooterLinkContacts></li>
                     </FooterListContacts>
                     <FooterListText>
-                        <li><FooterLinkText href="#">Imprint</FooterLinkText></li>
-                        <li><FooterLinkText href="#">Privacy police</FooterLinkText></li>
-                        <li><FooterLinkText href="#">Cookies</FooterLinkText></li>
+                        <li><FooterLinkText onClick={props.handleToggleImprint}>Imprint</FooterLinkText></li>
+                        <li><FooterLinkText onClick={props.handleTogglePrivacy}>Privacy police</FooterLinkText></li>
+                        <li><FooterLinkText>Cookies</FooterLinkText></li>
                     </FooterListText>
                 </FooterList>
             </Container>

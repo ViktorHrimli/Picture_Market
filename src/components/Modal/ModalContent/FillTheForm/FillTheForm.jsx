@@ -3,6 +3,8 @@ import { useContext, useState } from 'react';
 import { contentTypes } from '../../modal.constants';
 import { ModalStrategyContext } from '../../ModalStrategyContext';
 
+import { Privacy } from 'components/Modal/ModalContent/FillTheForm/Privacy/Privacy';
+
 import {
   Section,
   Text,
@@ -26,6 +28,12 @@ export function FillTheForm({ label, ...rest }) {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [isChecked, setIsChecked] = useState(false);
+
+  const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
+
+  function handleTogglePrivacy () {
+    setIsOpenPrivacy(!isOpenPrivacy);
+  }
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -103,12 +111,13 @@ export function FillTheForm({ label, ...rest }) {
           <span className="checkmark"></span>
           <Label id="checkbox">
             I have read and agree to the{' '}
-            <LabelColor href="#">Privacy Policy</LabelColor>
+            <LabelColor onClick={handleTogglePrivacy}>Privacy Policy</LabelColor>
           </Label>
         </CheckboxContainer>
 
         <ButtonForm type="submit">confirm</ButtonForm>
       </Form>
+      {isOpenPrivacy && <Privacy handleTogglePrivacy={handleTogglePrivacy} />}
     </Section>
   );
 }

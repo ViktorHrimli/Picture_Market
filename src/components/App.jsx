@@ -10,15 +10,32 @@ import { Modal } from 'components/Modal/Modal';
 import { CardConteiner } from 'components/CardConteiner/CardConteiner';
 import { Gallery } from 'components/Gallery/Gallery';
 
+import { Privacy } from './Privacy/Privacy';
+import { Imprint } from './Imprint/Imprint';
+
+
+
 // CONTEXT
 import { ModalStateContext } from 'components/ModalStateContext';
+
 
 
 const App = () => {
   const [isOpened, setIsOpened] = useState(false);
   const [showVideo, setShowVideo] = useState(true);
 
+  const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
+  const [isOpenImprint, setIsOpenImprint] = useState(false);
+
+
+  function handleTogglePrivacy () {
+    setIsOpenPrivacy(!isOpenPrivacy);
+  }
   
+  function handleToggleImprint () {
+    setIsOpenImprint(!isOpenImprint);
+  }
+
   function handleCloseVideo() {
     setShowVideo(false);
   }
@@ -27,12 +44,12 @@ const App = () => {
     document.body.classList.add('modal-open');
   } else {
     document.body.classList.remove('modal-open');
-  }
+  };
 
   return (<>
     <Layout>
       <ModalStateContext.Provider
-        value={{ openModal: () => setIsOpened(true) }}
+        value={{ openModal: () => setIsOpened(true)}}
       >
         {!showVideo && <Header /> }
         <main>
@@ -42,8 +59,11 @@ const App = () => {
           {!showVideo && <Gallery />}
           {!showVideo && <Description />}
         </main>
-        {!showVideo && <Footer />}
-        {isOpened && <Modal closeModal={() => setIsOpened(false)} />}
+        {!showVideo && <Footer handleTogglePrivacy={handleTogglePrivacy} handleToggleImprint={handleToggleImprint} />}
+        
+        {isOpened && <Modal closeModal={() => setIsOpened(false)} handleTogglePrivacy={handleTogglePrivacy} />}
+        {isOpenPrivacy && <Privacy handleTogglePrivacy={handleTogglePrivacy} />}
+        {isOpenImprint && <Imprint handleToggleImprint={handleToggleImprint} />}
       </ModalStateContext.Provider>
     </Layout>
   </>
