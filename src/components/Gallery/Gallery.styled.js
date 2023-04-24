@@ -177,7 +177,7 @@ export const GalleryImgLeft = styled.div`
 `;
 
 export const GalleryTitle = styled(GlobalTitleText)`
-  font-size: 20px;
+  font-size: 24px;
   line-height: 24px;
   font-weight: 400;
 

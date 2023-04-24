@@ -24,7 +24,7 @@ export function HeaderMenu({ isClosed, setIsClosed }) {
 					<li><LinkLayout>Home</LinkLayout></li>
 					<li><LinkLayout>About Us</LinkLayout></li>
 					<li><LinkLayout onClick={() => openModal()}>Order</LinkLayout></li>
-					<li><LinkLayout>Reviews</LinkLayout></li>
+					{/* <li><LinkLayout>Reviews</LinkLayout></li> */}
 					<li><LinkLayout>Gallery</LinkLayout></li>
 				</ListLayout>
 			</div>

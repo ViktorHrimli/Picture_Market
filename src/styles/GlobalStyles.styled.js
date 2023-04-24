@@ -65,7 +65,7 @@ const GlobalLayout = styled.div`
     width: 768px;
   }
   @media (min-width: 1024px) and (max-width: 1439px) {
-    width: 1024px;
+    width: 100vh;
   }
   @media (min-width: 1440px) {
     width: 1440px;

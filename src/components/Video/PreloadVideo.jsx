@@ -1,7 +1,8 @@
 import { Player } from "./PreloadVideo.styles";
+import Video from 'components/Video/Video.mp4'
 
 
-const VIDEO = 'https://res.cloudinary.com/djoprd9i4/video/upload/v1681488446/Untitled_sghyfq.mp4'
+const VIDEO = Video;
 
 const PreloadVideo = (props) => {
   
@@ -10,6 +11,8 @@ const PreloadVideo = (props) => {
   if (mediaQuery.matches) {
     return (
       <Player
+        playsinline   // playning iphone
+        autoPlay   // playning iphone
         url={VIDEO}
         muted={true}
         playing={true}
