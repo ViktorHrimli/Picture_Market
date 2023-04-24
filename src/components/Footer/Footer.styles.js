@@ -3,40 +3,69 @@ import styled from 'styled-components';
 export const FooterSection = styled.section`
   background-color: ${p => p.theme.colors.main};
   display: flex;
-  align-items: center;
   width: 100vw;
 
   @media (min-width: 320px) and (max-width: 767px) {
     height: 476px;
     flex-direction: column;
-    padding-top: ${p => p.theme.space[8]};
   }
 
   @media (min-width: 768px) and (max-width: 1023px) {
-    width: 768px;
     height: 300px;
-    padding-top: ${p => p.theme.space[8]};
-    margin: 0 auto;
-    padding-left: ${p => p.theme.space[8]};
-    padding-right: ${p => p.theme.space[8]};
-    justify-content: space-between;
   }
 
   @media (min-width: 1024px) and (max-width: 1439px) {
-    width: 1024px;
     height: 300px;
-    padding-top: ${p => p.theme.space[11]};
-    padding-left: ${p => p.theme.space[14]};
-    padding-right: ${p => p.theme.space[14]};
-    justify-content: space-between;
   }
 
   @media (min-width: 1440px) {
     height: 300px;
+  }
+`;
+
+export const Container = styled.div`
+  display: flex;
+  align-items: center;
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    height: 476px;
+    flex-direction: column;
+    padding-top: ${p => p.theme.space[8]};
+    padding-bottom: ${p => p.theme.space[8]};
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    width: 768px;
+
+    padding-top: ${p => p.theme.space[8]};
+    padding-left: ${p => p.theme.space[8]};
+    padding-right: ${p => p.theme.space[8]};
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    width: 1024px;
+
     padding-top: ${p => p.theme.space[11]};
+    padding-bottom: ${p => p.theme.space[11]};
+
+    padding-left: ${p => p.theme.space[14]};
+    padding-right: ${p => p.theme.space[14]};
+
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  @media (min-width: 1440px) {
+    width: 1440px;
+
+    padding-top: ${p => p.theme.space[11]};
+    padding-bottom: ${p => p.theme.space[11]};
+
     padding-left: ${p => p.theme.space[14]};
     padding-right: ${p => p.theme.space[15]};
+
     justify-content: space-between;
+    margin: 0 auto;
   }
 `;
 
@@ -109,7 +138,7 @@ export const FooterLinkContacts = styled.a`
   }
 
   @media (min-width: 768px) and (max-width: 1024px) {
-    font-size: ${p => p.theme.fontSizes.m};
+    font-size: ${p => p.theme.fontSizes.s};
   }
 
   @media (min-width: 1440px) {

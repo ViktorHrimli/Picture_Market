@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { GlobalLayout } from 'styles/GlobalStyles.styled';
+import { GlobalSection } from 'styles/GlobalStyles.styled';
 
 const shrinkBackgroundTablet = keyframes`
   from {
@@ -29,7 +29,7 @@ const slideInText = keyframes`
   }
 `;
 
-export const Section = styled(GlobalLayout)`
+export const Section = styled(GlobalSection)`
   position: relative;
   z-index: -2;
   overflow: hidden;
@@ -44,7 +44,8 @@ export const Section = styled(GlobalLayout)`
     margin-top: 65px;
   }
   @media (min-width: 768px) and (max-width: 1023px) {
-    margin: 100px 0 auto;
+    margin: 0 auto;
+    margin-top: 100px;
     width: 768px;
     height: 590px;
     padding: auto;
@@ -55,7 +56,8 @@ export const Section = styled(GlobalLayout)`
 
   @media (min-width: 1024px) and (max-width: 1439px) {
     width: 1024px;
-    margin: 219px 0 auto;
+    margin: 0 auto;
+    margin-top: 219px;
     height: 730px;
     padding: auto;
     position: relative;
@@ -67,7 +69,8 @@ export const Section = styled(GlobalLayout)`
     width: 1440px;
     height: 1040px;
     padding: auto;
-    margin: 150px 0 auto;
+    margin: 0 auto;
+    margin-top: 150px;
     position: relative;
     left: 0;
     top: -100px;
