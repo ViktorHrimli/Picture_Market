@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { GlobalPostition } from 'styles/GlobalStyles.styled';
 import { GoX } from 'react-icons/go';
-import { TbArrowLeft } from 'react-icons/tb';
+import { ImArrowLeft2 } from 'react-icons/im';
 
 export const Section = styled(GlobalPostition)`
   @media (min-width: 320px) and (max-width: 767px) {
@@ -61,7 +61,7 @@ export const ModalBack = styled.button`
   }
 `;
 
-export const Back = styled(TbArrowLeft)`
+export const Back = styled(ImArrowLeft2)`
   fill: ${p => p.theme.colors.main};
 
   @media (min-width: 320px) and (max-width: 767px) {

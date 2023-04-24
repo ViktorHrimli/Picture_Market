@@ -29,7 +29,7 @@ export const MenuSection = styled(GlobalLayout)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 44px 28px 68px 28px;
+  padding: 44px 28px 100px 28px;
   margin: 0 auto;
   z-index: 5;
 

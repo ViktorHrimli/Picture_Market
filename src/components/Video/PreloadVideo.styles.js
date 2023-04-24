@@ -26,10 +26,10 @@ const shrinkBackgroundLaptop = keyframes`
     width: 100%;
   }
   to {
-    width: 575px;
-    height: 575px;
-    margin-left: 310px;
-    margin-top: 40px;
+    width: 555px;
+    height: 555px;
+    margin-left: 290px;
+    margin-top: 20px;
   }
 `;
 
