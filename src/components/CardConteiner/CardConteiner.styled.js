@@ -84,7 +84,7 @@ export const ButtonCard = styled(GlobalButton)`
 `;
 
 export const SectionCardTitle = styled(GlobalTitleText)`
-  margin-left: 10px;
+  /* margin-left: 10px; */
   margin-right: auto;
 
   width: 250px;

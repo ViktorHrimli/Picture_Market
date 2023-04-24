@@ -33,6 +33,7 @@ export const Box = styled.div`
   width: 90%;
 
   @media (min-width: 320px) and (max-width: 480px) {
+    width: 300px;
     align-items: center;
   }
   @media (min-width: 481px) and (max-width: 768px) {

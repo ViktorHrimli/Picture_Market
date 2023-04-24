@@ -36,6 +36,7 @@ export const Section = styled(GlobalSection)`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 25px;
 
   @media (min-width: 320px) and (max-width: 767px) {
     display: block;
