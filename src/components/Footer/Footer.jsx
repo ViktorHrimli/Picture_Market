@@ -1,8 +1,9 @@
-import { FooterSection, FooterLogo, FooterList, FooterListContacts, FooterLinkContacts, FooterListText, FooterLinkText} from "./Footer.styles"
+import { FooterSection, Container, FooterLogo, FooterList, FooterListContacts, FooterLinkContacts, FooterListText, FooterLinkText} from "./Footer.styles"
 
 const Footer = () => {
     return (
         <FooterSection>
+            <Container>
                 <FooterLogo src="https://res.cloudinary.com/djoprd9i4/image/upload/v1680381246/samples/picture_market/rbqw9bjjlsupml6mnhfu.png" alt="logo" />
                 <FooterList>
                     <FooterListContacts>
@@ -15,6 +16,7 @@ const Footer = () => {
                         <li><FooterLinkText href="#">Cookies</FooterLinkText></li>
                     </FooterListText>
                 </FooterList>
+            </Container>
         </FooterSection>
     )
 }

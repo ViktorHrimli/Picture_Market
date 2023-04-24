@@ -39,8 +39,9 @@ export const SectionAbout = styled(GlobalSection)`
   }
 
   @media (min-width: 1024px) and (max-width: 1439px) {
-    width: 1024px;
-    height: 574px;
+    /* width: 1024px; */
+    /* height: 574px; */
+    height: 681px;
     background-image: url(https://res.cloudinary.com/djoprd9i4/image/upload/v1680881828/andrysha_special_jvnphu.jpg);
     background-repeat: no-repeat;
     background-position: left;
@@ -51,7 +52,7 @@ export const SectionAbout = styled(GlobalSection)`
   }
 
   @media (min-width: 1440px) {
-    width: 1440px;
+    /* width: 1440px; */
     background-image: url(https://res.cloudinary.com/djoprd9i4/image/upload/v1680881828/andrysha_special_jvnphu.jpg);
     background-repeat: no-repeat;
     background-position: 100% 100%;
@@ -77,7 +78,7 @@ export const TextImgConteiner = styled.div`
 export const TextConteiner = styled(GlobalPostition)`
   flex-direction: row;
 
-  @media (min-width: 320px) and (max-width: 479px) {
+  @media (min-width: 320px) and (max-width: 413px) {
     justify-content: space-between;
     margin-top: 140px;
     grid-gap: 40px;
@@ -85,6 +86,15 @@ export const TextConteiner = styled(GlobalPostition)`
     padding-left: 35px;
     padding-right: 43px;
   }
+  @media (min-width: 414px) and (max-width: 479px) {
+    justify-content: space-between;
+    margin-top: 140px;
+    grid-gap: 40px;
+    width: inherit;
+    padding-left: 35px;
+    padding-right: 63px;
+  }
+
   @media (min-width: 480px) and (max-width: 767px) {
     margin-top: 210px;
     margin-left: auto;
@@ -93,6 +103,7 @@ export const TextConteiner = styled(GlobalPostition)`
   }
   @media (min-width: 1024px) and (max-width: 1439px) {
     margin-left: 490px;
+    margin-top: 50px;
   }
   @media (min-width: 1440px) {
     margin-left: 518px;
