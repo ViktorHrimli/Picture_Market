@@ -169,15 +169,19 @@ export const FooterLinkText = styled.a`
   color: ${p => p.theme.colors.accent};
   font-family: ${p => p.theme.fonts.body};
   font-weight: ${p => p.theme.fontWeights.normal};
+  cursor: pointer;
 
   @media (min-width: 320px) and (max-width: 767px) {
     font-size: ${p => p.theme.fontSizes.xxs};
   }
-
   @media (min-width: 768px) and (max-width: 1439px) {
     font-size: ${p => p.theme.fontSizes.xs};
   }
   @media (min-width: 1440px) {
     font-size: ${p => p.theme.fontSizes.ms};
+  }
+
+  :hover {
+    color: ${p => p.theme.colors.white};
   }
 `;
