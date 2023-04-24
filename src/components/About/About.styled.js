@@ -15,8 +15,8 @@ export const SectionAbout = styled(GlobalSection)`
     background-image: url(https://res.cloudinary.com/djoprd9i4/image/upload/v1680452464/samples/picture_market/Rectangle_119-min_hnzudp.png);
     background-repeat: no-repeat;
     background-position: left;
-    background-size: 100%;
-    background-size: cover;
+    /* background-size: 100%; */
+    /* background-size: cover; */
     height: 530px;
   }
   @media (min-width: 480px) and (max-width: 767px) {

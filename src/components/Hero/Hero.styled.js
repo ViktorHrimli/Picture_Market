@@ -223,9 +223,9 @@ export const Text = styled.p`
     animation: ${shrinkBackgroundTablet} 2s ease forwards;
   }
   @media (min-width: 1024px) and (max-width: 1439px) {
-    font-size: ${p => p.theme.fontSizes.xl};
+    font-size: ${p => p.theme.fontSizes.l};
     color: ${p => p.theme.colors.main};
-    width: 331px;
+    width: 280px;
     height: 144px;
     position: absolute;
     bottom: 100px;
