@@ -11,20 +11,13 @@ import {
   ConteinerBackgroundGradient,
 } from 'components/Gallery/GalleryDesktop/GalleryDesktop.styled';
 
-import  ImgOne  from 'components/Gallery/ImgGallery/gallery1.jpg';
-import  ImgTwo from 'components/Gallery/ImgGallery/gallery2.jpg';
-import  ImgThree  from 'components/Gallery/ImgGallery/gallery3.jpg';
-import  ImgFour from 'components/Gallery/ImgGallery/gallery4.jpg';
-import  ImgFive from 'components/Gallery/ImgGallery/gallery5.jpg';
+import ImgOne from 'components/Gallery/ImgGallery/gallery1.jpg';
+import ImgTwo from 'components/Gallery/ImgGallery/gallery2.jpg';
+import ImgThree from 'components/Gallery/ImgGallery/gallery3.jpg';
+import ImgFour from 'components/Gallery/ImgGallery/gallery4.jpg';
+import ImgFive from 'components/Gallery/ImgGallery/gallery5.jpg';
 
-
-const images = [
-  ImgOne ,
-  ImgTwo ,
-  ImgThree ,
-  ImgFour ,
-  ImgFive ,
-];
+const images = [ImgOne, ImgTwo, ImgThree, ImgFour, ImgFive];
 
 const GalleryDesktop = () => {
   const [count, setCount] = useState(0);

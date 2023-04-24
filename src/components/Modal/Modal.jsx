@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 import { ModalSection, ModalContent, ModalClosed } from './Modal.styled';
 
@@ -35,7 +36,7 @@ export function Modal({ closeModal }) {
   };
 
   useEffect(() => {
-    if (strategy === contentTypes.ModalContentText) {
+    if (strategy === contentTypes.Discount) {
       const formData = new FormData();
 
       const { email, name, phone, photo, surname } = globalModalState;
@@ -46,13 +47,9 @@ export function Modal({ closeModal }) {
       formData.append('phone', phone);
       formData.append('photo', photo);
 
-      fetch('https://postapi.onrender.com/api/sendMail', {
-        body: formData,
-        method: 'POST',
-      })
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(e => console.log(e.message));
+      axios
+        .post('https://postapi.onrender.com/api/send', formData)
+        .then(res => console.log(res.data));
     }
   }, [globalModalState, strategy]);
 
