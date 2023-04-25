@@ -17,10 +17,11 @@ import ImgThree from 'components/Gallery/ImgGallery/gallery3.jpg';
 import ImgFour from 'components/Gallery/ImgGallery/gallery4.jpg';
 import ImgFive from 'components/Gallery/ImgGallery/gallery5.jpg';
 
-const images = [ImgOne, ImgTwo, ImgThree, ImgFour, ImgFive];
+const images = [ImgOne, ImgTwo, ImgThree, ImgFour, ImgFive, ImgOne];
 
 const GalleryDesktop = () => {
   const [count, setCount] = useState(0);
+  const [galleryState, setGalleryState] = useState(images);
 
   useEffect(() => {
     const timeOut = () => {
@@ -33,8 +34,9 @@ const GalleryDesktop = () => {
     return () => {};
   }, []);
 
-  if (count >= images.length) {
+  if (count >= images.length - 3) {
     setCount(0);
+    setGalleryState(prev => prev.concat(images));
   }
 
   return (
@@ -42,27 +44,27 @@ const GalleryDesktop = () => {
       <GalleryTitleDesktop>
         Enjoy our <br /> <span>Gallerry</span>
       </GalleryTitleDesktop>
-      {images.map((item, id, arr) => {
+      {galleryState.map((item, id, arr) => {
         if (id === count) {
           return (
             <Conteiner key={item}>
               <ConteinerImgCenter key={1}>
-                <img src={arr[count + 1]} alt="keks" />
+                <img src={galleryState[count + 1]} alt="keks" />
               </ConteinerImgCenter>
 
               <ConteinerFakeCenterImg key={14}>
-                <img src={images[count]} alt="keks" />
+                <img src={galleryState[count]} alt="keks" />
               </ConteinerFakeCenterImg>
 
               <ConteinerImgRight key={2}>
                 <ConteinerBackgroundGradient></ConteinerBackgroundGradient>
-                <img src={arr[count + 2]} alt="keks" />
+                <img src={galleryState[count + 2]} alt="keks" />
               </ConteinerImgRight>
 
               <ConteinerImgLeft key={3}>
                 <ConteinerBackgroundGradient></ConteinerBackgroundGradient>
 
-                <img src={arr[count + 3]} alt="keks" />
+                <img src={galleryState[count + 3]} alt="keks" />
               </ConteinerImgLeft>
             </Conteiner>
           );

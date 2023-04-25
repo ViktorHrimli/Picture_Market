@@ -14,22 +14,16 @@ import {
 
 import { GalleryDesktop } from 'components/Gallery/GalleryDesktop/GalleryDesktop';
 
-import  ImgOne  from 'components/Gallery/ImgGallery/gallery1.jpg';
-import  ImgTwo from 'components/Gallery/ImgGallery/gallery2.jpg';
-import  ImgThree  from 'components/Gallery/ImgGallery/gallery3.jpg';
-import  ImgFour from 'components/Gallery/ImgGallery/gallery4.jpg';
-import  ImgFive from 'components/Gallery/ImgGallery/gallery5.jpg';
+import ImgOne from 'components/Gallery/ImgGallery/gallery1.jpg';
+import ImgTwo from 'components/Gallery/ImgGallery/gallery2.jpg';
+import ImgThree from 'components/Gallery/ImgGallery/gallery3.jpg';
+import ImgFour from 'components/Gallery/ImgGallery/gallery4.jpg';
+import ImgFive from 'components/Gallery/ImgGallery/gallery5.jpg';
 
-
-const images = [
-  ImgOne ,
-  ImgTwo ,
-  ImgThree ,
-  ImgFour ,
-  ImgFive ,
-];
+const images = [ImgOne, ImgTwo, ImgThree, ImgFour, ImgFive];
 const Gallery = () => {
   const [count, setCount] = useState(1);
+  const [galleryState, setGalleryState] = useState(images);
 
   const isDesktop = useMediaQuery({
     query: '(min-width: 768px)',
@@ -50,8 +44,9 @@ const Gallery = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  if (count >= images.length) {
+  if (count >= images.length - 2) {
     setCount(1);
+    setGalleryState(prev => prev.concat(images));
   }
 
   return (
@@ -61,25 +56,25 @@ const Gallery = () => {
         <>
           <GalleryTitle>Enjoy our Gallerry</GalleryTitle>
           <GallerySliderWrapper>
-            {images.map((item, id, arr) => {
+            {galleryState.map((item, id, arr) => {
               if (id === count && count + 1 === id + 1) {
                 return (
                   <div key={id}>
                     <GalleryImgLeft>
                       <ConteinerBackgroundGradient></ConteinerBackgroundGradient>
                       <img
-                        src={arr[count - 1]}
+                        src={galleryState[count - 1]}
                         alt="card"
                         width={280}
                         height={240}
                       />
                     </GalleryImgLeft>
                     <ConteinerFakeCenterImg key={14}>
-                      <img src={images[count - 1]} alt="keks" />
+                      <img src={galleryState[count - 1]} alt="keks" />
                     </ConteinerFakeCenterImg>
                     <GalleryImgCenter>
                       <img
-                        src={arr[count]}
+                        src={galleryState[count]}
                         alt="card"
                         width={220}
                         height={350}
@@ -88,7 +83,7 @@ const Gallery = () => {
                     <GalleryImgRight>
                       <ConteinerBackgroundGradient></ConteinerBackgroundGradient>
                       <img
-                        src={arr[count + 1]}
+                        src={galleryState[count + 1]}
                         alt="card"
                         width={280}
                         height={240}
