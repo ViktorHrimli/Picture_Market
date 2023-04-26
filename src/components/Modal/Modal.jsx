@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
+
 import axios from 'axios';
 
 import { ModalSection, ModalContent, ModalClosed } from './Modal.styled';
@@ -12,6 +14,9 @@ import { Discount } from './ModalContent/Discount/Discount';
 import { AddYourReview } from './ModalContent/AddYourReview/AddYourReview';
 import { ModalContentText } from './ModalContent/ModalContent/ModalContent';
 import { Privacy } from 'components/Privacy/Privacy';
+
+const modalRoot = document.querySelector('#modal--root');
+
 
 const initialGlobalState = {
   photo: null,
@@ -55,7 +60,7 @@ export function Modal({ closeModal }) {
     }
   }, [globalModalState, strategy]);
 
-  return (
+  return createPortal(
     <ModalStrategyContext.Provider
       value={{ strategy, setStrategy, setGlobalModalState }}
     >
@@ -65,6 +70,6 @@ export function Modal({ closeModal }) {
           <div>{modalStrategies[strategy]}</div>
         </ModalContent>
       </ModalSection>
-    </ModalStrategyContext.Provider>
+    </ModalStrategyContext.Provider> ,modalRoot
   );
 }
