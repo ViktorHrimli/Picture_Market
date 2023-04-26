@@ -105,7 +105,7 @@ export const FooterListContacts = styled.ul`
     justify-content: center;
     align-items: center;
     gap: 18px;
-    margin-bottom: 110px;
+    margin-bottom: 100px;
   }
   @media (min-width: 768px) and (max-width: 1023px) {
     justify-content: center;

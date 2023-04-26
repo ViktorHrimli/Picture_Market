@@ -81,9 +81,7 @@ export function UploadPhoto() {
             onClick={handleButtonClick}
             src={imageUrl}
             alt="UserPhoto"
-            style={{ cursor: 'pointer' }}
-            width="100%"
-            height="100%"
+            style={{ cursor: 'pointer', maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', objectPosition: 'center'}}
           />
         </ChooseImg>
         <input

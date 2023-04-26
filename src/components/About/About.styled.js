@@ -15,8 +15,6 @@ export const SectionAbout = styled(GlobalSection)`
     background-image: url(https://res.cloudinary.com/djoprd9i4/image/upload/v1680452464/samples/picture_market/Rectangle_119-min_hnzudp.png);
     background-repeat: no-repeat;
     background-position: left;
-    /* background-size: 100%; */
-    /* background-size: cover; */
     height: 530px;
   }
   @media (min-width: 480px) and (max-width: 767px) {
@@ -28,7 +26,6 @@ export const SectionAbout = styled(GlobalSection)`
     background-size: cover;
   }
   @media (min-width: 768px) and (max-width: 1023px) {
-    width: 768px;
     background-image: url(https://res.cloudinary.com/djoprd9i4/image/upload/v1680881828/andrysha_special_jvnphu.jpg);
     background-repeat: no-repeat;
     background-position: left;
@@ -39,8 +36,6 @@ export const SectionAbout = styled(GlobalSection)`
   }
 
   @media (min-width: 1024px) and (max-width: 1439px) {
-    /* width: 1024px; */
-    /* height: 574px; */
     height: 681px;
     background-image: url(https://res.cloudinary.com/djoprd9i4/image/upload/v1680881828/andrysha_special_jvnphu.jpg);
     background-repeat: no-repeat;
@@ -52,7 +47,6 @@ export const SectionAbout = styled(GlobalSection)`
   }
 
   @media (min-width: 1440px) {
-    /* width: 1440px; */
     background-image: url(https://res.cloudinary.com/djoprd9i4/image/upload/v1680881828/andrysha_special_jvnphu.jpg);
     background-repeat: no-repeat;
     background-position: 100% 100%;
@@ -72,7 +66,7 @@ export const TextImgConteiner = styled.div`
   width: 100%;
   height: 100%;
 
-  background: linear-gradient(270deg, #634789 0%, rgba(99, 71, 137, 0) 100%);
+  background: linear-gradient(270deg, #634789 23%, rgba(99, 71, 137, 0) 100%);
 `;
 
 export const TextConteiner = styled(GlobalPostition)`
@@ -115,14 +109,14 @@ export const ParagraphConteiner = styled.div`
     margin-left: 66px;
   }
   @media (min-width: 768px) and (max-width: 1023px) {
-    margin-left: 413px;
+    margin-left: 350px;
     margin-top: 154px;
   }
   @media (min-width: 1024px) and (max-width: 1439px) {
     margin-top: 186px;
   }
   @media (min-width: 1440px) {
-    margin-left: 80px;
+    margin-left: 38px;
     margin-top: 460px;
   }
 `;
@@ -182,7 +176,7 @@ export const HederAboutText = styled(GlobalTitleText)`
     text-align: center;
 
     font-weight: 400;
-    width: 280px;
+    width: 310px;
     top: 55px;
     left: 50%;
   }
@@ -200,7 +194,7 @@ export const HederAboutText = styled(GlobalTitleText)`
     font-size: 28px;
     width: 524px;
     top: -100px;
-    left: 677px;
+    left: 610px;
     margin: 0 auto;
   }
   @media (min-width: 1024px) and (max-width: 1439px) {
@@ -209,7 +203,7 @@ export const HederAboutText = styled(GlobalTitleText)`
     font-size: 38px;
     width: 524px;
     top: -150px;
-    left: 259px;
+    left: 230px;
     margin: 0 auto;
   }
 
@@ -218,7 +212,7 @@ export const HederAboutText = styled(GlobalTitleText)`
     transform: translateX(-51%);
     font-weight: 400;
     font-size: 48px;
-    width: 524px;
+    width: 610px;
     top: 20px;
     left: 345px;
     margin: 0 auto;

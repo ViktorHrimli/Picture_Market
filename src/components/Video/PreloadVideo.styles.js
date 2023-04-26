@@ -38,9 +38,9 @@ const shrinkBackgroundLaptopMax = keyframes`
     width: 100%;
   }
   to {
-    width: 745px;
-    height: 745px;
-    margin-left: 325px;
+    width: 665px;
+    height: 665px;
+    margin-left: 240px;
   }
 `;
 

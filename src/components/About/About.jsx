@@ -14,7 +14,7 @@ const About = () => {
         <TextImgConteiner>
           <TextConteiner>
             <TitleAboutConteiner>
-              <HederAboutText>What is string art?</HederAboutText>
+              <HederAboutText>What is string world?</HederAboutText>
             </TitleAboutConteiner>
             <ParagraphConteiner>
               <ParagraphAbout>

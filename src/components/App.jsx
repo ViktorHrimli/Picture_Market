@@ -59,11 +59,11 @@ const App = () => {
           {!showVideo && <Gallery />}
           {!showVideo && <Description />}
         </main>
-        {!showVideo && <Footer handleTogglePrivacy={handleTogglePrivacy} handleToggleImprint={handleToggleImprint} />}
+        {!showVideo && <Footer handleTogglePrivacy={handleTogglePrivacy}  handleToggleImprint={handleToggleImprint} />}
         
-        {isOpened && <Modal closeModal={() => setIsOpened(false)} handleTogglePrivacy={handleTogglePrivacy} />}
-        {isOpenPrivacy && <Privacy handleTogglePrivacy={handleTogglePrivacy} />}
-        {isOpenImprint && <Imprint handleToggleImprint={handleToggleImprint} />}
+        {isOpened && <Modal closeModal={() => setIsOpened(false)} />}
+        {isOpenPrivacy && <Privacy isOpenPrivacy={isOpenPrivacy} handleTogglePrivacy={handleTogglePrivacy} />}
+        {isOpenImprint && <Imprint isOpenImprint={isOpenImprint} handleToggleImprint={handleToggleImprint} />}
       </ModalStateContext.Provider>
     </Layout>
   </>

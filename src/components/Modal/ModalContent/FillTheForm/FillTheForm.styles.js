@@ -257,3 +257,32 @@ export const ButtonForm = styled(GlobalButton)`
   margin-left: auto;
   margin-right: auto;
 `;
+
+export const ErrorBox = styled.div`
+  position: absolute;
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    bottom: 109px;
+    left: 67px;
+  }
+
+  @media (min-width: 768px) {
+    bottom: 160px;
+    left: 160px;
+  }
+`;
+
+export const ErrorMessage = styled.p`
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+  color: red;
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    font-size: 12px;
+  }
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
+`;

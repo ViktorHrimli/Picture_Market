@@ -1,7 +1,7 @@
 import { FooterSection, Container, FooterLogo, FooterList, FooterListContacts, FooterLinkContacts, FooterListText, FooterLinkText } from "./Footer.styles"
 
 
-const Footer = (props) => {
+const Footer = ({handleToggleImprint, handleTogglePrivacy}) => {    
     return (
         <FooterSection>
             <Container>
@@ -12,9 +12,8 @@ const Footer = (props) => {
                         <li><FooterLinkContacts href="tel:+447455871180">Telephone: +447455871180</FooterLinkContacts></li>
                     </FooterListContacts>
                     <FooterListText>
-                        <li><FooterLinkText onClick={props.handleToggleImprint}>Imprint</FooterLinkText></li>
-                        <li><FooterLinkText onClick={props.handleTogglePrivacy}>Privacy police</FooterLinkText></li>
-                        <li><FooterLinkText>Cookies</FooterLinkText></li>
+                        <li><FooterLinkText onClick={handleToggleImprint}>Terms and Conditions</FooterLinkText></li>
+                        <li><FooterLinkText onClick={handleTogglePrivacy}>Privacy police</FooterLinkText></li>
                     </FooterListText>
                 </FooterList>
             </Container>

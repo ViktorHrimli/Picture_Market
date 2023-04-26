@@ -4,7 +4,13 @@ import { Section, Content, Closed, Close, HeaderBox, Text, Description, PreTitle
 
 const privacyRoot = document.querySelector('#privacy--root');
 
-const Privacy = ({handleTogglePrivacy}) => {
+const Privacy = ({ isOpenPrivacy, handleTogglePrivacy }) => {
+  
+  if (isOpenPrivacy) {
+    document.body.classList.add('modal-open');
+  } else {
+    document.body.classList.remove('modal-open');
+  };
   return createPortal(
     <Section>
       <Content>

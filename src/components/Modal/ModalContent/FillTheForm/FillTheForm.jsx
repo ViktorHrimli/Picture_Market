@@ -18,6 +18,8 @@ import {
   Close,
   ModalClosed,
   ButtonForm,
+  ErrorBox,
+  ErrorMessage,
 } from './FillTheForm.styles';
 
 export function FillTheForm({ label, ...rest }) {
@@ -30,6 +32,18 @@ export function FillTheForm({ label, ...rest }) {
   const [isChecked, setIsChecked] = useState(false);
 
   const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
+  
+  const [errorMessage, setErrorMessage] = useState(false);
+
+  function handleErrorMessage () {
+    if (!isChecked) {
+      setErrorMessage(!errorMessage)
+    }
+  }
+
+  function checkedMessage() {
+    setErrorMessage(false)
+  }
 
   function handleTogglePrivacy () {
     setIsOpenPrivacy(!isOpenPrivacy);
@@ -99,7 +113,7 @@ export function FillTheForm({ label, ...rest }) {
         />
         <CheckboxContainer>
           {label}
-          <input
+          <input onClick={checkedMessage}
             type="checkbox"
             id="checkbox"
             name="checkbox"
@@ -114,8 +128,10 @@ export function FillTheForm({ label, ...rest }) {
             <LabelColor onClick={handleTogglePrivacy}>Privacy Policy</LabelColor>
           </Label>
         </CheckboxContainer>
-
-        <ButtonForm type="submit">confirm</ButtonForm>
+        {errorMessage && <ErrorBox>
+          <ErrorMessage>Please agree with Privacy Policy</ErrorMessage>
+        </ErrorBox>}
+        <ButtonForm type="submit" onClick={handleErrorMessage}>confirm</ButtonForm>
       </Form>
       {isOpenPrivacy && <Privacy handleTogglePrivacy={handleTogglePrivacy} />}
     </Section>
