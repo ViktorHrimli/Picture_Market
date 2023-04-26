@@ -30,11 +30,9 @@ const payloadCard = [<Card />, <CardPay />, <CardFill />, <CardDilevery />];
 const CardConteiner = () => {
   const [isChangeCard, setIsChangeCard] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-
   const [card, setCard] = useState(0);
   const elementRef = useRef(null);
 
-  const [currentCardIndex, setCurrentCardIndex] = useState(0);
 
   const { openModal } = useContext(ModalStateContext);
 
@@ -65,13 +63,13 @@ const CardConteiner = () => {
 
   const handlers = useSwipeable({
     onSwipedLeft: () => {
-      if (currentCardIndex < card.length - 1) {
-        setCurrentCardIndex(currentCardIndex + 1);
+      if (card < 3) {
+        setCard(card + 1);
       }
     },
     onSwipedRight: () => {
-      if (currentCardIndex > 0) {
-        setCurrentCardIndex(currentCardIndex - 1);
+      if (card > 0) {
+        setCard(card - 1);
       }
     },
   });
