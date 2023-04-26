@@ -19,7 +19,7 @@ const PreloadVideo = (props) => {
         playing={true}
         onEnded={props.handleCloseVideo}
         loop={false}
-        controls={true}
+        controls={false}
         width='100vw'
         />
     );
