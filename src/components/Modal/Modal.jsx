@@ -59,8 +59,12 @@ export function Modal({ closeModal }) {
         .then(res => console.log(res.data));
     }
   }, [globalModalState, strategy]);
+<<<<<<< HEAD
 
   return createPortal(
+=======
+  return (
+>>>>>>> 063e29659ed008317a79b29fb5ff006ff23a8321
     <ModalStrategyContext.Provider
       value={{ strategy, setStrategy, setGlobalModalState }}
     >
@@ -73,3 +77,5 @@ export function Modal({ closeModal }) {
     </ModalStrategyContext.Provider> ,modalRoot
   );
 }
+// E284088F4D5DBD751BF67C6AEDF25FF9EC81CD9F1326E484C11FF93BC4E25E8297C9093F09CDA079ED1D6396C302E3DA
+// passw 01821B672D65F785D544B35EF93DC7A45B97
