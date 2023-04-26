@@ -35,7 +35,9 @@ const Card = () => {
           Upload a clear portrait photo with visible faces for your
           one-of-a-kind art piece.
         </CardText>
-        {isDesktopScreen && <ArrowIcons /> && <ArrowWay />}
+        {isDesktopScreen && <ArrowWay />}
+        {isDesktopScreen && <ArrowIcons />}
+
         <ConteinerImgCard>
           <img
             src="https://res.cloudinary.com/djoprd9i4/image/upload/v1680381246/samples/picture_market/mpvfnv1glphomfqcwisd.jpg"

@@ -8,7 +8,7 @@ const slideInAnimation = keyframes`
   opacity: 0;
   }
   to {
- opacity: 1;
+  opacity: 1;
   }
 `;
 
@@ -135,6 +135,7 @@ export const ConteinerDeskribe = styled(GlobalPostition)`
 `;
 
 export const TextDeskribe = styled.div`
+  display: none;
   rotate: 270deg;
 
   width: 130px;
@@ -193,20 +194,25 @@ export const ImgDeskribe = styled.div`
   }
 
   @media screen and (min-width: 1440px) {
-    transform: translate(100%, -50%);
+    transform: translate(160%, -36%);
   }
 `;
 
 export const ArrowIcons = styled(FaRegArrowAltCircleDown)`
-  position: absolute;
+  @media screen and (min-width: 320px) and (max-width: 1439px) {
+    display: none;
+  }
+  @media screen and (min-width: 1440px) {
+    position: absolute;
 
-  top: 163px;
-  right: 105px;
+    top: 163px;
+    right: 105px;
 
-  width: 20px;
-  height: 20px;
+    width: 20px;
+    height: 20px;
 
-  color: ${p => p.theme.colors.white};
+    color: ${p => p.theme.colors.white};
+  }
 `;
 
 export const ArrowWay = styled(MdOutlineKeyboardDoubleArrowRight)`
