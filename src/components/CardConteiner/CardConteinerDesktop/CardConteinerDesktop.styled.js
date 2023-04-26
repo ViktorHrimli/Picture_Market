@@ -21,7 +21,7 @@ export const WrapperConteiner = styled.ul`
 
   @media screen and (min-width: 1440px) {
     display: grid;
-    grid-row-gap: 227px;
+    grid-row-gap: 130px;
     grid-column-gap: 126px;
   }
 `;
