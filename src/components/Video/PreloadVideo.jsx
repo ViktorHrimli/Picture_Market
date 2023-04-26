@@ -1,8 +1,8 @@
 import { Player } from "./PreloadVideo.styles";
-import Video from 'components/Video/Video.mp4'
+// import Video from 'components/Video/Video.mp4'
 
 
-const VIDEO = Video;
+const VIDEO = 'https://res.cloudinary.com/djoprd9i4/video/upload/v1681488446/Untitled_sghyfq.mp4';
 
 const PreloadVideo = (props) => {
   
