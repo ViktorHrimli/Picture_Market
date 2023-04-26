@@ -137,7 +137,7 @@ export const CardText = styled.p`
   line-height: ${p => p.theme.lineHeights.mines};
   font-weight: 400;
 
-  width: 156px;
+  width: 250px;
 
   text-align: start;
 
