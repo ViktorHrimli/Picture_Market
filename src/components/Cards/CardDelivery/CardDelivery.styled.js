@@ -26,7 +26,7 @@ export const CardForm = styled(GlobalPostition)`
     ),
     url(https://res.cloudinary.com/djoprd9i4/image/upload/v1680727969/mobile_delivery_1_u300vh.png);
   background-position: center;
-  background-size: cover;
+  background-size: 337px 435px;
   background-repeat: no-repeat;
 
   border-radius: ${p => p.theme.radii.normal};
@@ -44,10 +44,12 @@ export const CardForm = styled(GlobalPostition)`
 
   @media screen and (min-width: 768px) {
     position: relative;
+    background-size: 463px 530px;
   }
 
   @media screen and (min-width: 1440px) {
     position: relative;
+    background-size: 620px 722px;
 
     align-items: start;
 

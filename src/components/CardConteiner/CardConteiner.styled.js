@@ -76,7 +76,7 @@ export const ButtonCard = styled(GlobalButton)`
   @media (min-width: 1440px) {
     position: absolute;
 
-    top: 53%;
+    top: 54%;
     left: 30%;
 
     transform: translate(50%, 50%);

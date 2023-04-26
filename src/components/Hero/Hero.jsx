@@ -26,9 +26,9 @@ const Hero = (props) => {
         <TextAfterArt>ART</TextAfterArt>
       </TextBox>}
       {!props.showVideo && <div>
-        <TextMob><p>Unique</p>
-                <p>string art</p>
-                <p>from your photo</p>
+        <TextMob><span>Unique </span>
+                <span>string art </span>
+                <span>from your photo </span>
         </TextMob>
         <Text>Unique string art from your photo</Text>
       </div>}

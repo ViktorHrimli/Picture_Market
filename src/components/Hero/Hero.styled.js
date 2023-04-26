@@ -202,6 +202,8 @@ export const TextAfterArt = styled.span`
 `;
 
 export const TextMob = styled.p`
+  display: flex;
+  flex-direction: column;
   font-weight: ${p => p.theme.fontWeights.normal};
   font-family: ${p => p.theme.fonts.body};
   line-height: ${p => p.theme.lineHeights.min};
