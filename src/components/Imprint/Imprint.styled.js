@@ -39,32 +39,16 @@ export const Closed = styled.button`
   margin-left: auto;
   cursor: pointer;
   position: relative;
+  top: 40px;
+  right: 22px;
+  width: 29px;
+  height: 27px;
   z-index: 10;
-
-  @media (min-width: 320px) and (max-width: 767px) {
-    top: 18px;
-    right: 20px;
-    width: 20px;
-    height: 20px;
-  }
-  @media (min-width: 768px) {
-    top: 48px;
-    right: 22px;
-    width: 29px;
-    height: 27px;
-  }
 `;
 
 export const Close = styled(GoX)`
   fill: ${p => p.theme.colors.main};
-
-  @media (min-width: 320px) and (max-width: 767px) {
-    font-size: ${p => p.theme.fontSizes.l};
-  }
-
-  @media (min-width: 768px) {
-    font-size: ${p => p.theme.fontSizes.xl};
-  }
+  font-size: ${p => p.theme.fontSizes.xl};
 `;
 
 export const HeaderBox = styled.div`

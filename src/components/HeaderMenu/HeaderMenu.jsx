@@ -12,6 +12,15 @@ export function HeaderMenu({ isClosed, setIsClosed }) {
 		document.body.classList.remove('menu-open');
 	};
 
+	const handleCloseAutoIsModal = () => {
+		handleClose()
+
+    const timeoutId = setTimeout(() => {
+			openModal()
+		}, 600);
+		return () => clearTimeout(timeoutId);
+	}
+
 	return (
 		<MenuSection isClosed={isClosed}>
 			<BtnBox>
@@ -23,7 +32,7 @@ export function HeaderMenu({ isClosed, setIsClosed }) {
 				<ListLayout>
 					<li><LinkLayout>Home</LinkLayout></li>
 					<li><LinkLayout>About Us</LinkLayout></li>
-					<li><LinkLayout onClick={() => openModal()}>Order</LinkLayout></li>
+					<li><LinkLayout onClick={handleCloseAutoIsModal}>Order</LinkLayout></li>
 					{/* <li><LinkLayout>Reviews</LinkLayout></li> */}
 					<li><LinkLayout>Gallery</LinkLayout></li>
 				</ListLayout>

@@ -6,6 +6,7 @@ import {
   TextSpanColor,
   TextAfter,
   TextAfterArt,
+  TextMob,
   Text,
   VideoBox,
 } from './Hero.styled';
@@ -25,7 +26,11 @@ const Hero = (props) => {
         <TextAfterArt>ART</TextAfterArt>
       </TextBox>}
       {!props.showVideo && <div>
-        <Text>Unique string art pieces from your favourite photos</Text>
+        <TextMob><p>Unique</p>
+                <p>string art</p>
+                <p>from your photo</p>
+        </TextMob>
+        <Text>Unique string art from your photo</Text>
       </div>}
     </Section>
 );

@@ -7,7 +7,7 @@ export const DescriptionSection = styled(GlobalSection)`
   align-items: center;
   width: 100vw;
 
-  @media (min-width: 769px) and (max-width: 1023px) {
+  @media (min-width: 768px) and (max-width: 1023px) {
     width: 769px;
     margin: 0 auto;
     padding-left: 40px;
@@ -80,14 +80,17 @@ export const Text = styled.p`
   text-transform: uppercase;
   color: ${p => p.theme.colors.main};
 
-  @media (min-width: 320px) and (max-width: 360px) {
+  @media (min-width: 320px) and (max-width: 479px) {
     font-size: ${p => p.theme.fontSizes.f};
     width: 293px;
     margin-bottom: 24px;
   }
-  @media (min-width: 361px) and (max-width: 768px) {
-    font-size: ${p => p.theme.fontSizes.f};
+  @media (min-width: 480px) and (max-width: 767px) {
+    font-size: ${p => p.theme.fontSizes.l};
     margin-bottom: 24px;
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    font-size: ${p => p.theme.fontSizes.l};
   }
 
   @media (min-width: 1024px) and (max-width: 1439px) {

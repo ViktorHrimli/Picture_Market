@@ -78,6 +78,10 @@ const GlobalSection = styled.section`
   align-items: center;
   justify-content: center;
   margin-bottom: 200px;
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    margin-bottom: 130px;
+  }
   overflow: hidden;
 `;
 
@@ -135,7 +139,7 @@ const GlobalButton = styled.button`
 
   transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
-  &:is(:hover, :focus) {
+  &:is(:hover) {
     background-color: ${p => p.theme.colors.white};
     border: 1px solid #003031;
     color: ${p => p.theme.colors.accent};

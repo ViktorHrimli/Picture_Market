@@ -1,11 +1,17 @@
 import { Section, Content, Closed, Close, HeaderBox, Text, Description, PreTitle } from "./Imprint.styled"
 
-const Imprint = (props) => {
+const Imprint = ({isOpenImprint, handleToggleImprint}) => {
+
+  if (isOpenImprint) {
+    document.body.classList.add('modal-open');
+  } else {
+    document.body.classList.remove('modal-open');
+  };
   return (
     <Section>
       <Content>
         <Closed>
-          <Close onClick={props.handleToggleImprint}/>
+          <Close onClick={handleToggleImprint}/>
         </Closed>
         <HeaderBox>
           <img src="https://res.cloudinary.com/djoprd9i4/image/upload/v1680452464/samples/picture_market/Group_128_4_zvenh9.png"

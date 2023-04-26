@@ -36,12 +36,12 @@ export const Section = styled(GlobalSection)`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 0px;
 
   @media (min-width: 320px) and (max-width: 767px) {
     display: block;
     width: 100vw;
-    height: 800px;
+    height: 725px;
     margin-top: 65px;
   }
   @media (min-width: 768px) and (max-width: 1023px) {
@@ -68,7 +68,7 @@ export const Section = styled(GlobalSection)`
 
   @media (min-width: 1440px) {
     width: 1440px;
-    height: 1040px;
+    height: 990px;
     padding: auto;
     margin: 0 auto;
     margin-top: 150px;
@@ -97,7 +97,7 @@ export const TextBox = styled.div`
     transform: rotate(-90deg) translateY(-50%);
     position: absolute;
     left: -30px;
-    bottom: 435px;
+    bottom: 360px;
     animation: ${slideIn} 2s ease forwards;
   }
 
@@ -201,7 +201,7 @@ export const TextAfterArt = styled.span`
   }
 `;
 
-export const Text = styled.p`
+export const TextMob = styled.p`
   font-weight: ${p => p.theme.fontWeights.normal};
   font-family: ${p => p.theme.fonts.body};
   line-height: ${p => p.theme.lineHeights.min};
@@ -216,10 +216,23 @@ export const Text = styled.p`
     left: 12px;
     animation: ${slideInText} 2s forwards;
   }
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
+export const Text = styled.p`
+  font-weight: ${p => p.theme.fontWeights.normal};
+  font-family: ${p => p.theme.fonts.body};
+  line-height: ${p => p.theme.lineHeights.min};
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    display: none;
+  }
   @media (min-width: 768px) and (max-width: 1023px) {
     font-size: ${p => p.theme.fontSizes.m};
     color: ${p => p.theme.colors.main};
-    width: 240px;
+    width: 207px;
     height: 144px;
     position: absolute;
     top: 390px;
@@ -229,7 +242,7 @@ export const Text = styled.p`
   @media (min-width: 1024px) and (max-width: 1439px) {
     font-size: ${p => p.theme.fontSizes.l};
     color: ${p => p.theme.colors.main};
-    width: 280px;
+    width: 220px;
     height: 144px;
     position: absolute;
     bottom: 100px;
