@@ -13,6 +13,7 @@ const PreloadVideo = (props) => {
       <Player
         playsinline   // playning iphone
         autoPlay   // playning iphone
+        preload='auto' // playning iphone
         url={VIDEO}
         muted={true}
         playing={true}
