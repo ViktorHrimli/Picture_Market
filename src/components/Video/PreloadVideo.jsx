@@ -5,8 +5,13 @@ import Video from 'components/Video/VideoIphone.mp4'
 const VIDEO = Video;
 
 const PreloadVideo = (props) => {
-  
+
+  const isiPhone = /iPhone/i.test(navigator.userAgent);
   const mediaQuery = window.matchMedia('(min-width: 319px) and (max-width: 767px)');
+
+  if (isiPhone) {
+    return props.handleCloseVideo()
+  };
 
   if (mediaQuery.matches) {
     return (
