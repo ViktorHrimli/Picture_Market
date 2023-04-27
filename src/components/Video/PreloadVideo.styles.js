@@ -59,7 +59,7 @@ const shrinkBackgroundLaptopMax = keyframes`
 `;
 
 export const Iphone = styled.img`
-  animation: ${shrinkBackgroundMobailIphone} 1.5s 1s ease forwards;
+  animation: ${shrinkBackgroundMobailIphone} 2s 0.5s ease forwards;
 `;
 
 export const Player = styled(ReactPlayer)`
