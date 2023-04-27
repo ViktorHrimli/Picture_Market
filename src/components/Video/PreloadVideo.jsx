@@ -1,4 +1,4 @@
-import { Player } from "./PreloadVideo.styles";
+import { Player, Iphone } from "./PreloadVideo.styles";
 import Video from 'components/Video/VideoIphone.mp4'
 
 // 'https://res.cloudinary.com/djoprd9i4/video/upload/v1681488446/Untitled_sghyfq.mp4'
@@ -8,9 +8,13 @@ const PreloadVideo = (props) => {
 
   const isiPhone = /iPhone/i.test(navigator.userAgent);
   const mediaQuery = window.matchMedia('(min-width: 319px) and (max-width: 767px)');
+  console.log(isiPhone);
 
   if (isiPhone) {
-    return props.handleCloseVideo()
+    props.handleCloseVideo()
+    return (
+      <Iphone src="https://res.cloudinary.com/djoprd9i4/image/upload/v1680452465/samples/picture_market/hero%D1%84_u5gxtw.png" alt="picture"/>
+    )
   };
 
   if (mediaQuery.matches) {
