@@ -1,6 +1,20 @@
 import styled, { keyframes } from 'styled-components';
 import ReactPlayer from 'react-player';
 
+const shrinkBackgroundMobailIphone = keyframes`
+  from {
+    width: 100%;
+    top: 0;
+  }
+  to {
+    position: absolute;
+    top: -25px;
+    margin-left: 105px;
+    margin-bottom: 50px; 
+    transform: scale(1.3); 
+  }
+`;
+
 const shrinkBackgroundMobail = keyframes`
   from {
     width: 100%;
@@ -42,6 +56,10 @@ const shrinkBackgroundLaptopMax = keyframes`
     height: 665px;
     margin-left: 240px;
   }
+`;
+
+export const Iphone = styled.img`
+  animation: ${shrinkBackgroundMobailIphone} 1.5s 1s ease forwards;
 `;
 
 export const Player = styled(ReactPlayer)`
