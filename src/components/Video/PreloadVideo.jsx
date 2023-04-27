@@ -1,8 +1,10 @@
 import { Player, Iphone } from "./PreloadVideo.styles";
-import Video from 'components/Video/VideoIphone.mp4'
+import Video from 'components/Video/Video/Video.mp4';
+import Img from 'components/Video/Video/heroPhotoIphone.png'
 
-// 'https://res.cloudinary.com/djoprd9i4/video/upload/v1681488446/Untitled_sghyfq.mp4'
+
 const VIDEO = Video;
+const IMG = Img;
 
 const PreloadVideo = (props) => {
 
@@ -13,7 +15,7 @@ const PreloadVideo = (props) => {
   if (isiPhone) {
     props.handleCloseVideo()
     return (
-      <Iphone src="https://res.cloudinary.com/djoprd9i4/image/upload/v1680452465/samples/picture_market/hero%D1%84_u5gxtw.png" alt="picture"/>
+      <Iphone src={IMG} alt="picture"/>
     )
   };
 
