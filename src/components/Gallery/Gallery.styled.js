@@ -24,6 +24,14 @@ export const GallerySliderWrapper = styled.div`
   @media screen and (min-width: 768px) {
     height: 650px;
   }
+
+  @media screen and (min-width: 1024px) {
+    height: 700px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    height: 750px;
+  }
 `;
 
 export const ConteierPaper = styled.div`
@@ -39,6 +47,14 @@ export const ConteierPaper = styled.div`
 
   @media screen and (min-width: 1024px) {
     height: 620px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    height: 650px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    height: 700px;
   }
 
   img {

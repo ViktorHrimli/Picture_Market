@@ -25,27 +25,27 @@ import {
 export function FillTheForm({ label, ...rest }) {
   const { setStrategy, setGlobalModalState } = useContext(ModalStrategyContext);
 
-  const [name, setName] = useState('');
-  const [surname, setSurname] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
+  const [name, setName] = useState(window.globalState['name'] ?? '');
+  const [surname, setSurname] = useState(window.globalState['surname'] ?? '');
+  const [email, setEmail] = useState(window.globalState['email'] ?? '');
+  const [phone, setPhone] = useState(window.globalState['phone'] ?? '');
   const [isChecked, setIsChecked] = useState(false);
 
   const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
-  
+
   const [errorMessage, setErrorMessage] = useState(false);
 
-  function handleErrorMessage () {
+  function handleErrorMessage() {
     if (!isChecked) {
-      setErrorMessage(!errorMessage)
+      setErrorMessage(!errorMessage);
     }
   }
 
   function checkedMessage() {
-    setErrorMessage(false)
+    setErrorMessage(false);
   }
 
-  function handleTogglePrivacy () {
+  function handleTogglePrivacy() {
     setIsOpenPrivacy(!isOpenPrivacy);
   }
 
@@ -80,7 +80,10 @@ export function FillTheForm({ label, ...rest }) {
           value={name}
           required
           placeholder="Name"
-          onChange={e => setName(e.target.value)}
+          onChange={e => {
+            window.globalState['name'] = e.target.value;
+            setName(e.target.value);
+          }}
         />
 
         <Input
@@ -89,7 +92,10 @@ export function FillTheForm({ label, ...rest }) {
           name="surname"
           value={surname}
           placeholder="Surname"
-          onChange={e => setSurname(e.target.value)}
+          onChange={e => {
+            setSurname(e.target.value);
+            window.globalState['surname'] = e.target.value;
+          }}
         />
 
         <Input
@@ -99,7 +105,10 @@ export function FillTheForm({ label, ...rest }) {
           value={email}
           required
           placeholder="Email"
-          onChange={e => setEmail(e.target.value)}
+          onChange={e => {
+            setEmail(e.target.value);
+            window.globalState['email'] = e.target.value;
+          }}
         />
 
         <Input
@@ -109,11 +118,15 @@ export function FillTheForm({ label, ...rest }) {
           value={phone}
           required
           placeholder="Phone number"
-          onChange={e => setPhone(e.target.value)}
+          onChange={e => {
+            setPhone(e.target.value);
+            window.globalState['phone'] = e.target.value;
+          }}
         />
         <CheckboxContainer>
           {label}
-          <input onClick={checkedMessage}
+          <input
+            onClick={checkedMessage}
             type="checkbox"
             id="checkbox"
             name="checkbox"
@@ -125,13 +138,19 @@ export function FillTheForm({ label, ...rest }) {
           <span className="checkmark"></span>
           <Label id="checkbox">
             I have read and agree to the{' '}
-            <LabelColor onClick={handleTogglePrivacy}>Privacy Policy</LabelColor>
+            <LabelColor onClick={handleTogglePrivacy}>
+              Privacy Policy
+            </LabelColor>
           </Label>
         </CheckboxContainer>
-        {errorMessage && <ErrorBox>
-          <ErrorMessage>Please agree with Privacy Policy</ErrorMessage>
-        </ErrorBox>}
-        <ButtonForm type="submit" onClick={handleErrorMessage}>confirm</ButtonForm>
+        {errorMessage && (
+          <ErrorBox>
+            <ErrorMessage>Please agree with Privacy Policy</ErrorMessage>
+          </ErrorBox>
+        )}
+        <ButtonForm type="submit" onClick={handleErrorMessage}>
+          confirm
+        </ButtonForm>
       </Form>
       {isOpenPrivacy && <Privacy handleTogglePrivacy={handleTogglePrivacy} />}
     </Section>

@@ -1,4 +1,4 @@
-import { useMediaQuery } from 'react-responsive';
+// import { useMediaQuery } from 'react-responsive';
 import Carousel from 'react-material-ui-carousel';
 import { Paper } from '@mui/material';
 
@@ -33,13 +33,13 @@ function Item({ item }) {
 }
 
 const Gallery = () => {
-  const isDesktop = useMediaQuery({
-    query: '(min-width: 768px)',
-  });
+  // const isDesktop = useMediaQuery({
+  //   query: '(min-width: 1024px)',
+  // });
 
-  const isMobile = useMediaQuery({
-    query: '(min-width: 320px)',
-  });
+  // const isMobile = useMediaQuery({
+  //   query: '(min-width: 320px)',
+  // });
 
   return (
     <SectionGallery>
@@ -61,6 +61,8 @@ const Gallery = () => {
           ))}
         </Carousel>
       </GallerySliderWrapper>
+
+      {/* {isDesktop && <GalleryDesktop />} */}
     </SectionGallery>
   );
 };
