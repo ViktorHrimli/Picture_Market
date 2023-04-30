@@ -36,7 +36,7 @@ export const Section = styled(GlobalSection)`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 
   @media (min-width: 320px) and (max-width: 767px) {
     display: block;
@@ -58,17 +58,17 @@ export const Section = styled(GlobalSection)`
   @media (min-width: 1024px) and (max-width: 1439px) {
     width: 1024px;
     margin: 0 auto;
-    margin-top: 219px;
-    height: 730px;
+    margin-top: 200px;
+    height: 700px;
     padding: auto;
     position: relative;
     left: 0;
-    top: -140px;
+    top: -130px;
   }
 
   @media (min-width: 1440px) {
     width: 1440px;
-    height: 990px;
+    height: 900px;
     padding: auto;
     margin: 0 auto;
     margin-top: 150px;
@@ -111,14 +111,14 @@ export const TextBox = styled.div`
   @media (min-width: 1024px) and (max-width: 1439px) {
     position: absolute;
     left: 80px;
-    bottom: 290px;
+    bottom: 280px;
     animation: ${shrinkBackgroundTablet} 2s ease forwards;
   }
 
   @media (min-width: 1440px) {
     position: absolute;
     left: 110px;
-    bottom: 420px;
+    bottom: 340px;
     animation: ${shrinkBackgroundTablet} 2s ease forwards;
   }
 `;
@@ -247,7 +247,7 @@ export const Text = styled.p`
     width: 220px;
     height: 144px;
     position: absolute;
-    bottom: 100px;
+    bottom: 80px;
     left: 80px;
     animation: ${shrinkBackgroundTablet} 2s ease forwards;
   }
@@ -258,7 +258,7 @@ export const Text = styled.p`
     width: 331px;
     height: 144px;
     position: absolute;
-    bottom: 215px;
+    bottom: 130px;
     left: 110px;
     animation: ${shrinkBackgroundTablet} 2s ease forwards;
   }
