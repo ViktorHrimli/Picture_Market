@@ -30,7 +30,7 @@ export const SectionAbout = styled(GlobalSection)`
     background-repeat: no-repeat;
     background-position: left;
     background-size: 100% 530px;
-    height: 440px;
+    height: 560px;
     background-size: cover;
     margin-bottom: 178px;
   }
@@ -95,8 +95,12 @@ export const TextConteiner = styled(GlobalPostition)`
     justify-content: end;
     padding-right: 32px;
   }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    height: 100%;
+  }
+
   @media (min-width: 1024px) and (max-width: 1439px) {
-    margin-left: 490px;
+    margin-left: 400px;
     margin-top: 50px;
   }
   @media (min-width: 1440px) {
@@ -133,6 +137,9 @@ export const TitleAboutConteiner = styled.div`
 
   @media (min-width: 768px) and (max-width: 1023px) {
     /* rotate: 270deg; */
+  }
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    left: 30px;
   }
 `;
 

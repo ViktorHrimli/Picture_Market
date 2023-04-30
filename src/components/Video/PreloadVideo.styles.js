@@ -40,9 +40,9 @@ const shrinkBackgroundLaptop = keyframes`
     width: 100%;
   }
   to {
-    width: 555px;
-    height: 555px;
-    margin-left: 290px;
+    width: 535px;
+    height: 535px;
+    margin-left: 270px;
     margin-top: 20px;
   }
 `;
@@ -52,9 +52,9 @@ const shrinkBackgroundLaptopMax = keyframes`
     width: 100%;
   }
   to {
-    width: 665px;
-    height: 665px;
-    margin-left: 240px;
+    width: 555px;
+    height: 555px;
+    margin-left: 140px;
   }
 `;
 
