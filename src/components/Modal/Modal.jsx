@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 
-
 import axios from 'axios';
 
 import { ModalSection, ModalContent, ModalClosed } from './Modal.styled';
@@ -29,6 +28,8 @@ const initialGlobalState = {
   msg: '',
 };
 
+window.globalState = {};
+
 export function Modal({ closeModal }) {
   const [strategy, setStrategy] = useState(contentTypes.UploadPhoto);
   const [globalModalState, setGlobalModalState] = useState(initialGlobalState);
@@ -41,6 +42,7 @@ export function Modal({ closeModal }) {
     [contentTypes.ModalContentText]: <ModalContentText />,
     [contentTypes.Privacy]: <Privacy />,
   };
+  console.log(window.globalState);
 
   useEffect(() => {
     if (strategy === contentTypes.Discount) {
@@ -53,6 +55,12 @@ export function Modal({ closeModal }) {
       formData.append('email', email);
       formData.append('phone', phone);
       formData.append('photo', photo);
+
+      window.globalState.file = null;
+      window.globalState.name = null;
+      window.globalState.surname = null;
+      window.globalState.email = null;
+      window.globalState.phone = null;
 
       axios
         .post('https://postapi.onrender.com/api/send', formData)
@@ -70,6 +78,7 @@ export function Modal({ closeModal }) {
           <div>{modalStrategies[strategy]}</div>
         </ModalContent>
       </ModalSection>
-    </ModalStrategyContext.Provider> , modalRoot
+    </ModalStrategyContext.Provider>,
+    modalRoot
   );
 }

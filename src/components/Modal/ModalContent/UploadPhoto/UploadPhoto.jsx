@@ -19,7 +19,8 @@ import IMG from './Img/chooseImg.png';
 
 export function UploadPhoto() {
   const { setStrategy, setGlobalModalState } = useContext(ModalStrategyContext);
-  const [imageUrl, setImageUrl] = useState(IMG);
+
+  const [imageUrl, setImageUrl] = useState(window.globalState?.file ?? IMG);
 
   const fileInput = useRef(null);
 
@@ -30,6 +31,10 @@ export function UploadPhoto() {
   function handleImageChange(event) {
     const file = event.target.files[0];
     const reader = new FileReader();
+
+    const url = URL.createObjectURL(file);
+
+    window.globalState['file'] = url;
 
     reader.addEventListener('load', event => {
       setImageUrl(event.target.result);
@@ -81,7 +86,13 @@ export function UploadPhoto() {
             onClick={handleButtonClick}
             src={imageUrl}
             alt="UserPhoto"
-            style={{ cursor: 'pointer', maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', objectPosition: 'center'}}
+            style={{
+              cursor: 'pointer',
+              maxWidth: '100%',
+              maxHeight: '100%',
+              objectFit: 'contain',
+              objectPosition: 'center',
+            }}
           />
         </ChooseImg>
         <input
