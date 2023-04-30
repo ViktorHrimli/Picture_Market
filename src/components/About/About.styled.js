@@ -20,7 +20,7 @@ export const SectionAbout = styled(GlobalSection)`
   @media (min-width: 480px) and (max-width: 767px) {
     background-image: url(https://res.cloudinary.com/djoprd9i4/image/upload/v1680881828/andrysha_special_jvnphu.jpg);
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: center;
     background-size: 100% 530px;
     height: 530px;
     background-size: cover;
