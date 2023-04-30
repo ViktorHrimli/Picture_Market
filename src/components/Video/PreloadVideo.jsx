@@ -16,10 +16,8 @@ const PreloadVideo = (props) => {
     props.handleCloseVideo()
     return (
       <Iphone src={IMG} alt="picture"/>
-    )
-  };
-
-  if (mediaQuery.matches) {
+    ) 
+  } else if (mediaQuery.matches) {
     return (
       <Player
         playsinline   // playning iphone

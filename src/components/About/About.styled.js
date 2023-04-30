@@ -124,11 +124,14 @@ export const ParagraphConteiner = styled.div`
 export const TitleAboutConteiner = styled.div`
   position: relative;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 479px) {
     rotate: 270deg;
   }
+  @media (min-width: 480px) and (max-width: 480px) {
+    left: 64px;
+  }
 
-  @media (min-width: 769px) and (max-width: 1023px) {
+  @media (min-width: 768px) and (max-width: 1023px) {
     /* rotate: 270deg; */
   }
 `;
