@@ -6,20 +6,18 @@ import Img from 'components/Video/Video/heroPhotoIphone.png'
 const VIDEO = Video;
 const IMG = Img;
 
-const PreloadVideo = (props) => {
+const PreloadVideo = ({handleCloseVideo}) => {
 
   const isiPhone = /iPhone/i.test(navigator.userAgent);
   const mediaQuery = window.matchMedia('(min-width: 319px) and (max-width: 767px)');
   console.log(isiPhone);
 
   if (isiPhone) {
-    props.handleCloseVideo()
+    handleCloseVideo()
     return (
       <Iphone src={IMG} alt="picture"/>
-    )
-  };
-
-  if (mediaQuery.matches) {
+    ) 
+  } else if (mediaQuery.matches) {
     return (
       <Player
         playsinline   // playning iphone
@@ -28,7 +26,7 @@ const PreloadVideo = (props) => {
         url={VIDEO}
         muted={true}
         playing={true}
-        onEnded={props.handleCloseVideo}
+        onEnded={handleCloseVideo}
         loop={false}
         controls={false}
         width='100vw'
@@ -38,9 +36,10 @@ const PreloadVideo = (props) => {
     return (
     <Player
         url={VIDEO}
+        preload='auto'
         muted={true}
         playing={true}
-        onEnded={props.handleCloseVideo}
+        onEnded={handleCloseVideo}
         loop={false}
         controls={false}
         width='70vw'

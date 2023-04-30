@@ -20,7 +20,7 @@ export const SectionAbout = styled(GlobalSection)`
   @media (min-width: 480px) and (max-width: 767px) {
     background-image: url(https://res.cloudinary.com/djoprd9i4/image/upload/v1680881828/andrysha_special_jvnphu.jpg);
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: center;
     background-size: 100% 530px;
     height: 530px;
     background-size: cover;
@@ -30,7 +30,7 @@ export const SectionAbout = styled(GlobalSection)`
     background-repeat: no-repeat;
     background-position: left;
     background-size: 100% 530px;
-    height: 440px;
+    height: 560px;
     background-size: cover;
     margin-bottom: 178px;
   }
@@ -95,8 +95,12 @@ export const TextConteiner = styled(GlobalPostition)`
     justify-content: end;
     padding-right: 32px;
   }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    height: 100%;
+  }
+
   @media (min-width: 1024px) and (max-width: 1439px) {
-    margin-left: 490px;
+    margin-left: 400px;
     margin-top: 50px;
   }
   @media (min-width: 1440px) {
@@ -124,12 +128,18 @@ export const ParagraphConteiner = styled.div`
 export const TitleAboutConteiner = styled.div`
   position: relative;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 479px) {
     rotate: 270deg;
   }
+  @media (min-width: 480px) and (max-width: 480px) {
+    left: 64px;
+  }
 
-  @media (min-width: 769px) and (max-width: 1023px) {
+  @media (min-width: 768px) and (max-width: 1023px) {
     /* rotate: 270deg; */
+  }
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    left: 30px;
   }
 `;
 
