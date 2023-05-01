@@ -1,4 +1,4 @@
-// import { useMediaQuery } from 'react-responsive';
+import { useMediaQuery } from 'react-responsive';
 import Carousel from 'react-material-ui-carousel';
 import { Paper } from '@mui/material';
 
@@ -8,6 +8,8 @@ import {
   GallerySliderWrapper,
   ConteierPaper,
 } from 'components/Gallery/Gallery.styled';
+
+import { GalleryDesktop } from 'components/Gallery/GalleryDesktop/GalleryDesktop';
 
 const images = [
   'https://res.cloudinary.com/djoprd9i4/image/upload/v1680381248/samples/picture_market/pwaxxvjwcei307vrmlgc.jpg',
@@ -33,36 +35,40 @@ function Item({ item }) {
 }
 
 const Gallery = () => {
-  // const isDesktop = useMediaQuery({
-  //   query: '(min-width: 1024px)',
-  // });
+  const isDesktop = useMediaQuery({
+    query: '(min-width: 1024px)',
+  });
 
-  // const isMobile = useMediaQuery({
-  //   query: '(min-width: 320px)',
-  // });
+  const isMobile = useMediaQuery({
+    query: '(max-width: 1023px)',
+  });
 
   return (
     <SectionGallery>
-      <GalleryTitle>Enjoy our Gallerry</GalleryTitle>
-      <GallerySliderWrapper>
-        <Carousel
-          animation="slide"
-          duration={1000}
-          stopAutoPlayOnHover={true}
-          swipe={true}
-          autoPlay={false}
-          sx={{
-            height: '150%',
-            overflow: 'visible',
-          }}
-        >
-          {images.map((item, i) => (
-            <Item key={i} item={item} />
-          ))}
-        </Carousel>
-      </GallerySliderWrapper>
+      {isMobile && (
+        <>
+          <GalleryTitle>Enjoy our Gallerry</GalleryTitle>
+          <GallerySliderWrapper>
+            <Carousel
+              animation="slide"
+              duration={1000}
+              stopAutoPlayOnHover={true}
+              swipe={true}
+              autoPlay={false}
+              sx={{
+                height: '150%',
+                overflow: 'visible',
+              }}
+            >
+              {images.map((item, i) => (
+                <Item key={i} item={item} />
+              ))}
+            </Carousel>
+          </GallerySliderWrapper>
+        </>
+      )}
 
-      {/* {isDesktop && <GalleryDesktop />} */}
+      {isDesktop && <GalleryDesktop />}
     </SectionGallery>
   );
 };
