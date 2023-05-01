@@ -15,7 +15,6 @@ root.render(
   <>
     <ThemeProvider theme={theme}>
       <GlobalStyled />
-
       <App />
     </ThemeProvider>
   </>
