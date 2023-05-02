@@ -25,6 +25,21 @@ const shrinkBackgroundMobailIphoneXR = keyframes`
   }
 `;
 
+const shrinkBackgroundMobailIphoneProMax = keyframes`
+  from {
+    /* width: 100%; */
+    top: 0;
+  }
+
+  to {
+    position: absolute;
+    top: -25px;
+    margin-left: 110px;
+    padding-bottom: 80px; 
+    transform: scale(1.3); 
+  }
+`;
+
 const shrinkBackgroundMobAppleGorizontal = keyframes`
   from {
       width: 399px;
@@ -96,9 +111,13 @@ export const Iphone = styled.img`
   @media (min-width: 320px) and (max-width: 389px) {
     animation: ${shrinkBackgroundMobailIphoneSE} 2s 0.5s ease forwards;
   }
-  @media (min-width: 390px) and (max-width: 767px) {
+  @media (min-width: 390px) and (max-width: 427px) {
     animation: ${shrinkBackgroundMobailIphoneXR} 2s 0.5s ease forwards;
   }
+  @media (min-width: 428px) and (max-width: 767px) {
+    animation: ${shrinkBackgroundMobailIphoneProMax} 2s 0.5s ease forwards;
+  }
+
   @media (min-width: 768px) and (max-width: 1023px) {
     animation: ${shrinkBackgroundMobAppleGorizontal} 2s 0.5s ease forwards;
   }
