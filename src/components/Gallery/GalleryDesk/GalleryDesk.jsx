@@ -1,6 +1,11 @@
 import React from 'react';
 import { useSnapCarousel } from 'react-snap-carousel';
 
+import {
+  ButtonPagination,
+  ConteinerContorol,
+} from 'components/Gallery/GalleryDesk/GalleryDesk.styled';
+
 const styles = {
   root: {
     padding: '20px',
@@ -64,7 +69,7 @@ export const Carousel = ({ items, renderItem }) => {
           })
         )}
       </ul>
-      <div style={styles.controls} aria-hidden>
+      <ConteinerContorol aria-hidden>
         <button
           style={{
             ...styles.nextPrevButton,
@@ -75,16 +80,18 @@ export const Carousel = ({ items, renderItem }) => {
           {String.fromCharCode(8592)}
         </button>
         {pages.map((_, i) => (
-          <button
+          <ButtonPagination
             key={i}
-            style={{
-              ...styles.paginationButton,
-              ...(activePageIndex === i ? styles.paginationButtonActive : {}),
-            }}
+            flag={activePageIndex === i}
+            // style={{
+            //   ...styles.paginationButton,
+            //   ...(activePageIndex === i ? styles.paginationButtonActive : {}),
+            // }}
+
             onClick={() => goTo(i)}
           >
-            {i + 1}
-          </button>
+            {/* {i + 1} */}
+          </ButtonPagination>
         ))}
         <button
           style={{
@@ -97,7 +104,7 @@ export const Carousel = ({ items, renderItem }) => {
         >
           {String.fromCharCode(8594)}
         </button>
-      </div>
+      </ConteinerContorol>
     </div>
   );
 };
