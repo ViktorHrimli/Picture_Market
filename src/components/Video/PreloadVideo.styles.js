@@ -8,7 +8,7 @@ const shrinkBackgroundMobailIphoneSE = keyframes`
   to {
     position: absolute;
     margin-top: -2%;
-    margin-left: 25.5%;
+    margin-left: 26%;
     transform: scale(1.3); 
   }
 `;

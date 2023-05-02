@@ -49,7 +49,7 @@ export function Header() {
       )}
       <Section>
         <HeaderLogo
-          src="https://res.cloudinary.com/djoprd9i4/image/upload/v1680452464/samples/picture_market/Group_128_4_zvenh9.png"
+          src="https://res.cloudinary.com/de0iwhqf4/image/upload/v1683049746/String%20World/Group_128_4_wtjeu8.png"
           width="100"
           height="75"
           alt="logo"

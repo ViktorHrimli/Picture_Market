@@ -10,7 +10,6 @@ const PreloadVideo = ({handleCloseVideo}) => {
 
   const isiPhone = /iPhone/i.test(navigator.userAgent);
   const mediaQuery = window.matchMedia('(min-width: 319px) and (max-width: 767px)');
-  console.log(isiPhone);
 
   if (isiPhone) {
     handleCloseVideo()
