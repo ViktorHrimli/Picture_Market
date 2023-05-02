@@ -6,15 +6,18 @@ import {
   GlobalSection,
 } from 'styles/GlobalStyles.styled';
 
+import girlMobileAbout from 'assets/about_girl_mob.png';
+
 export const SectionAbout = styled(GlobalSection)`
   width: 100vw;
   position: relative;
   z-index: -5;
 
   @media (min-width: 320px) and (max-width: 479px) {
-    background-image: url(https://res.cloudinary.com/de0iwhqf4/image/upload/v1683049747/String%20World/Group_159_mcslem.jpg);
+    background-image: url(${girlMobileAbout});
     background-repeat: no-repeat;
     background-position: left;
+    background-size: cover;
     height: 530px;
   }
   @media (min-width: 480px) and (max-width: 767px) {
