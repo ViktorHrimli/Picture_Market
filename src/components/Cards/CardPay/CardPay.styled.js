@@ -2,6 +2,8 @@ import styled, { keyframes } from 'styled-components';
 import { GlobalPostition, GlobalTitleText } from 'styles/GlobalStyles.styled';
 import { MdOutlineKeyboardDoubleArrowRight } from 'react-icons/md';
 
+import cardBack from 'assets/card_photo_background_comp.png';
+
 const slideInAnimation = keyframes`
   from {
     opacity: 0;
@@ -17,7 +19,7 @@ export const CardForm = styled(GlobalPostition)`
   width: 100%;
   height: 380px;
 
-  background-image: url(https://res.cloudinary.com/djoprd9i4/image/upload/v1680381245/samples/picture_market/wentg8b2a0vro5funxje.png);
+  background-image: url(${cardBack});
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
