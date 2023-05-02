@@ -9,14 +9,36 @@ import {
   ConteierPaper,
 } from 'components/Gallery/Gallery.styled';
 
-import { GalleryDesktop } from 'components/Gallery/GalleryDesktop/GalleryDesktop';
+import {
+  CarouselItem,
+  Carousel as NewCarusel,
+} from 'components/Gallery/GalleryDesk/GalleryDesk';
+
+import photoFirst from 'components/Gallery/ImgGallery/gallery1.jpg';
+import photoSecond from 'components/Gallery/ImgGallery/gallery2.jpg';
+import photoThird from 'components/Gallery/ImgGallery/gallery3.jpg';
+import photoFourth from 'components/Gallery/ImgGallery/gallery4.jpg';
+import photoFift from 'components/Gallery/ImgGallery/gallery5.jpg';
 
 const images = [
-  'https://res.cloudinary.com/de0iwhqf4/image/upload/v1683049748/String%20World/p-468-pa-8138-04-mockup_hmlmm4.jpg',
-  'https://res.cloudinary.com/de0iwhqf4/image/upload/v1683049748/String%20World/p-468-ak-8795-04-mockup_eus3qt.jpg',
-  'https://res.cloudinary.com/de0iwhqf4/image/upload/v1683049748/String%20World/p-438-td-2422-teddy-jing_wgonqj.jpg',
-  'https://res.cloudinary.com/de0iwhqf4/image/upload/v1683049748/String%20World/p-438-pa-2615-pa-01_mjcuv3.jpg',
-  'https://res.cloudinary.com/de0iwhqf4/image/upload/v1683049747/String%20World/rm355-418-card-tong-room-mockup_2_etosdv.jpg',
+  photoFift,
+  photoFirst,
+  photoFourth,
+  photoSecond,
+  photoThird,
+  photoFift,
+  photoFirst,
+  photoFourth,
+  photoSecond,
+  photoThird,
+  // 'https://res.cloudinary.com/de0iwhqf4/image/upload/v1683049748/String%20World/p-468-pa-8138-04-mockup_hmlmm4.jpg',
+  // 'https://res.cloudinary.com/de0iwhqf4/image/upload/v1683049748/String%20World/p-468-ak-8795-04-mockup_eus3qt.jpg',
+  // 'https://res.cloudinary.com/de0iwhqf4/image/upload/v1683049748/String%20World/p-438-td-2422-teddy-jing_wgonqj.jpg',
+  // 'https://res.cloudinary.com/de0iwhqf4/image/upload/v1683049748/String%20World/p-438-pa-2615-pa-01_mjcuv3.jpg',
+  // 'https://res.cloudinary.com/de0iwhqf4/image/upload/v1683049747/String%20World/rm355-418-card-tong-room-mockup_2_etosdv.jpg',
+  // 'https://res.cloudinary.com/de0iwhqf4/image/upload/v1683049748/String%20World/p-468-pa-8138-04-mockup_hmlmm4.jpg',
+  // 'https://res.cloudinary.com/de0iwhqf4/image/upload/v1683049748/String%20World/p-468-ak-8795-04-mockup_eus3qt.jpg',
+  // 'https://res.cloudinary.com/de0iwhqf4/image/upload/v1683049748/String%20World/p-438-td-2422-teddy-jing_wgonqj.jpg',
 ];
 function Item({ item }) {
   return (
@@ -45,9 +67,9 @@ const Gallery = () => {
 
   return (
     <SectionGallery>
+      <GalleryTitle>Enjoy Gallery</GalleryTitle>
       {isMobile && (
         <>
-          <GalleryTitle>Enjoy our Gallerry</GalleryTitle>
           <GallerySliderWrapper>
             <Carousel
               animation="slide"
@@ -57,15 +79,29 @@ const Gallery = () => {
               autoPlay={false}
               sx={{}}
             >
-              {images.map((item, i) => (
-                <Item key={i} item={item} />
-              ))}
+              {isMobile &&
+                images.map((item, i, arr) => <Item key={i} item={item} />)}
             </Carousel>
           </GallerySliderWrapper>
         </>
       )}
 
-      {isDesktop && <GalleryDesktop />}
+      {isDesktop && (
+        <NewCarusel
+          items={images}
+          renderItem={({ item, isSnapPoint }) => (
+            <CarouselItem key={item} isSnapPoint={isSnapPoint}>
+              <img
+                src={item}
+                width="400"
+                height="600"
+                alt="Placeholder"
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
+            </CarouselItem>
+          )}
+        />
+      )}
     </SectionGallery>
   );
 };
