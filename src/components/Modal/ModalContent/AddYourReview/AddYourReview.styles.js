@@ -160,6 +160,7 @@ export const Message = styled.textarea`
   background-color: rgba(99, 71, 137, 0.1);
   position: relative;
   width: 100%;
+  resize: none;
 
   @media (min-width: 320px) and (max-width: 767px) {
     padding-left: 8px;

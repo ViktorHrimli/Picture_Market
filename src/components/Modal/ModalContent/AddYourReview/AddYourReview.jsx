@@ -11,7 +11,7 @@ import {
   Form,
   Input,
   Message,
-  IconPhoto,
+  // IconPhoto,
   ButtonForm,
 } from './AddYourReview.styles';
 
@@ -71,7 +71,7 @@ export function AddYourReview({ closeModal }) {
           id="textarea"
           placeholder="Message"
         ></Message>
-        <IconPhoto />
+        {/* <IconPhoto /> */}
 
         <ButtonForm type="submit">send</ButtonForm>
       </Form>
