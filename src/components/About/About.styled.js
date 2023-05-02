@@ -14,7 +14,8 @@ export const SectionAbout = styled(GlobalSection)`
   @media (min-width: 320px) and (max-width: 479px) {
     background-image: url(https://res.cloudinary.com/de0iwhqf4/image/upload/v1683049747/String%20World/Group_159_mcslem.jpg);
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: -55px;
+    background-size: 100%;
     height: 530px;
   }
   @media (min-width: 480px) and (max-width: 767px) {
