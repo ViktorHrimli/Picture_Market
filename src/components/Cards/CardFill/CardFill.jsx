@@ -13,6 +13,8 @@ import {
 
 import { CardContextState } from 'components/CardConteiner/CardContextState';
 
+import payment from 'assets/card_photo_card.png';
+
 const CardFill = () => {
   const isDesktopScreen = useMediaQuery({
     query: '(min-width: 768px)',
@@ -34,10 +36,7 @@ const CardFill = () => {
         </CardText>
       </ConteinerInfoCard>
       <FakeFormCard>
-        <img
-          src="https://res.cloudinary.com/djoprd9i4/image/upload/v1680727208/payment_q69xzm.png"
-          alt="payment"
-        />
+        <img src={payment} alt="payment" />
       </FakeFormCard>
     </CardForm>
   );

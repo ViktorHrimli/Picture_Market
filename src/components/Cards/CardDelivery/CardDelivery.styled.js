@@ -2,6 +2,8 @@ import styled, { keyframes } from 'styled-components';
 import { GlobalPostition, GlobalTitleText } from 'styles/GlobalStyles.styled';
 import { MdOutlineKeyboardDoubleArrowRight } from 'react-icons/md';
 
+import cardBack from 'assets/card_photo_background.png';
+
 const slideInAnimation = keyframes`
   from {
     opacity: 0;
@@ -24,9 +26,9 @@ export const CardForm = styled(GlobalPostition)`
       #634789 0%,
       rgba(99, 71, 137, 0) 100%
     ),
-    url(https://res.cloudinary.com/djoprd9i4/image/upload/v1680727969/mobile_delivery_1_u300vh.png);
+    url(${cardBack});
   background-position: center;
-  background-size: 337px 435px;
+  background-size: cover;
   background-repeat: no-repeat;
 
   border-radius: ${p => p.theme.radii.normal};
@@ -44,12 +46,10 @@ export const CardForm = styled(GlobalPostition)`
 
   @media screen and (min-width: 768px) {
     position: relative;
-    background-size: 463px 530px;
   }
 
   @media screen and (min-width: 1440px) {
     position: relative;
-    background-size: 620px 722px;
 
     align-items: start;
 
