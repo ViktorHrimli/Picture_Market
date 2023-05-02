@@ -42,18 +42,18 @@ export const Box = styled.div`
   @media (min-width: 769px) and (max-width: 1023px) {
     align-items: end;
     width: 100%;
-    margin-bottom: 144px;
+    margin-bottom: 100px;
   }
   @media (min-width: 1024px) and (max-width: 1439px) {
     align-items: end;
     width: 100%;
-    margin-bottom: 144px;
+    margin-bottom: 100px;
   }
 
   @media (min-width: 1440px) {
     align-items: end;
     width: 100%;
-    margin-bottom: 244px;
+    margin-bottom: 150px;
   }
 `;
 

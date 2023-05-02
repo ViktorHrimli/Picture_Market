@@ -150,7 +150,7 @@ export const FooterListText = styled.ul`
   display: flex;
 
   @media (min-width: 320px) and (max-width: 767px) {
-    gap: ${p => p.theme.space[9]};
+    /* gap: ${p => p.theme.space[9]}; */
   }
 
   @media (min-width: 768px) and (max-width: 1023px) {
@@ -162,6 +162,9 @@ export const FooterListText = styled.ul`
   @media (min-width: 1440px) {
     gap: ${p => p.theme.space[10]};
   }
+`;
+export const FooterLink = styled.li`
+  margin-right: 44px;
 `;
 
 export const FooterLinkText = styled.a`

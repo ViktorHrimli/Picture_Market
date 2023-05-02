@@ -5,8 +5,10 @@ export const SectionGallery = styled(GlobalSection)`
   padding: 0px;
   overflow: hidden;
 
-  margin-bottom: 50px;
-
+  margin-bottom: 0px;
+  @media screen and (min-width: 320px) {
+    margin-bottom: 100px;
+  }
   @media screen and (min-width: 1024px) {
     position: relative;
 
@@ -15,6 +17,7 @@ export const SectionGallery = styled(GlobalSection)`
 
   @media screen and (min-width: 1440px) {
     margin-bottom: 200px;
+    margin-bottom: 50px;
 
     overflow: hidden;
   }
@@ -77,22 +80,18 @@ export const GalleryTitle = styled(GlobalTitleText)`
   font-weight: 400;
 
   margin-bottom: 32px;
+  margin-right: auto;
+  margin-left: auto;
 
   color: ${p => p.theme.colors.main};
 
   @media screen and (min-width: 768px) {
     font-size: ${p => p.theme.fontSizes.m};
     line-height: ${p => p.theme.lineHeights.keks};
-
-    margin-right: auto;
-    margin-left: 100px;
   }
 
   @media screen and (min-width: 1024px) {
     font-size: 48px;
     line-height: 58px;
-
-    margin-right: auto;
-    margin-left: 150px;
   }
 `;
