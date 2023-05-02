@@ -1,17 +1,51 @@
 import styled, { keyframes } from 'styled-components';
 import ReactPlayer from 'react-player';
 
-const shrinkBackgroundMobailIphone = keyframes`
+const shrinkBackgroundMobailIphoneSE = keyframes`
   from {
-    width: 100%;
-    top: 0;
+    /* width: 100%; */
   }
   to {
     position: absolute;
-    top: -25px;
-    margin-left: 105px;
-    margin-bottom: 50px; 
+    margin-top: -2%;
+    margin-left: 25.5%;
     transform: scale(1.3); 
+  }
+`;
+
+const shrinkBackgroundMobailIphoneXR = keyframes`
+  from {
+    /* width: 100%; */
+  }
+  to {
+    position: absolute;
+    margin-top: -5%;
+    margin-left: 25.5%;
+    transform: scale(1.3); 
+  }
+`;
+
+const shrinkBackgroundMobAppleGorizontal = keyframes`
+  from {
+      width: 399px;
+      height: 399px;
+    }
+  to {
+    width: 399px;
+    height: 399px;
+    margin-left: 255px;
+  }
+`;
+
+const shrinkBackgroundTabAppleGorizontal = keyframes`
+  from {
+      width: 399px;
+      height: 399px;
+    }
+  to {
+    width: 399px;
+    height: 399px;
+    margin-left: 255px;
   }
 `;
 
@@ -59,7 +93,22 @@ const shrinkBackgroundLaptopMax = keyframes`
 `;
 
 export const Iphone = styled.img`
-  animation: ${shrinkBackgroundMobailIphone} 2s 0.5s ease forwards;
+  @media (min-width: 320px) and (max-width: 389px) {
+    animation: ${shrinkBackgroundMobailIphoneSE} 2s 0.5s ease forwards;
+  }
+  @media (min-width: 390px) and (max-width: 767px) {
+    animation: ${shrinkBackgroundMobailIphoneXR} 2s 0.5s ease forwards;
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    animation: ${shrinkBackgroundMobAppleGorizontal} 2s 0.5s ease forwards;
+  }
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    animation: ${shrinkBackgroundTabAppleGorizontal} 2s 0.5s ease forwards;
+    width: 535px;
+    height: 535px;
+    margin-left: 270px;
+    margin-top: 20px;
+  }
 `;
 
 export const Player = styled(ReactPlayer)`
