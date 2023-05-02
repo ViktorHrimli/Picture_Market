@@ -87,4 +87,12 @@ export const GalleryTitle = styled(GlobalTitleText)`
     margin-right: auto;
     margin-left: 100px;
   }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 48px;
+    line-height: 58px;
+
+    margin-right: auto;
+    margin-left: 150px;
+  }
 `;
