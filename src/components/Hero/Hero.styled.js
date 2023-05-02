@@ -42,7 +42,7 @@ export const Section = styled(GlobalSection)`
     display: block;
     width: 100vw;
     height: 725px;
-    margin-top: 65px;
+    margin-top: 15px;
   }
   @media (min-width: 768px) and (max-width: 1023px) {
     margin: 0 auto;
@@ -59,7 +59,7 @@ export const Section = styled(GlobalSection)`
     width: 1024px;
     margin: 0 auto;
     margin-top: 200px;
-    height: 700px;
+    height: 560px;
     padding: auto;
     position: relative;
     left: 0;
@@ -111,7 +111,7 @@ export const TextBox = styled.div`
   @media (min-width: 1024px) and (max-width: 1439px) {
     position: absolute;
     left: 80px;
-    bottom: 280px;
+    bottom: 230px;
     animation: ${shrinkBackgroundTablet} 2s ease forwards;
   }
 
@@ -247,7 +247,7 @@ export const Text = styled.p`
     width: 220px;
     height: 144px;
     position: absolute;
-    bottom: 80px;
+    bottom: 10px;
     left: 80px;
     animation: ${shrinkBackgroundTablet} 2s ease forwards;
   }

@@ -12,10 +12,9 @@ export const SectionAbout = styled(GlobalSection)`
   z-index: -5;
 
   @media (min-width: 320px) and (max-width: 479px) {
-    background-image: url(https://res.cloudinary.com/de0iwhqf4/image/upload/v1683049747/String%20World/Group_159_mcslem.jpg);
+    background-image: url(https://res.cloudinary.com/de0iwhqf4/image/upload/v1683052040/String%20World/Rectangle_113_hs4dlp.jpg);
     background-repeat: no-repeat;
-    background-position: -55px;
-    background-size: 100%;
+    background-position: left;
     height: 530px;
   }
   @media (min-width: 480px) and (max-width: 767px) {
@@ -44,7 +43,7 @@ export const SectionAbout = styled(GlobalSection)`
     background-size: 100% 574px;
     background-size: cover;
     margin: 0 auto;
-    margin-bottom: 178px;
+    margin-bottom: 100px;
   }
 
   @media (min-width: 1440px) {
