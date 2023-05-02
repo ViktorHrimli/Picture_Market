@@ -15,7 +15,12 @@ const PreloadVideo = ({handleCloseVideo}) => {
   if (isiPhone) {
     handleCloseVideo()
     return (
-      <Iphone src={IMG} alt="picture"/>
+      <Iphone src={IMG}
+        alt="picture"
+        width='555px'
+        height='555px'
+        preload='auto'
+      />
     ) 
   } else if (mediaQuery.matches) {
     return (
