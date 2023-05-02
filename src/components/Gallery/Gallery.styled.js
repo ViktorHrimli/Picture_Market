@@ -5,8 +5,16 @@ export const SectionGallery = styled(GlobalSection)`
   padding: 0px;
   overflow: hidden;
 
+  margin-bottom: 50px;
+
   @media screen and (min-width: 1024px) {
     position: relative;
+
+    overflow: hidden;
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 200px;
 
     overflow: hidden;
   }
@@ -19,10 +27,6 @@ export const GallerySliderWrapper = styled.div`
 
   @media screen and (min-width: 768px) {
     height: 500px;
-  }
-
-  @media screen and (min-width: 768px) {
-    height: 650px;
   }
 
   @media screen and (min-width: 1024px) {
@@ -75,4 +79,12 @@ export const GalleryTitle = styled(GlobalTitleText)`
   margin-bottom: 32px;
 
   color: ${p => p.theme.colors.main};
+
+  @media screen and (min-width: 768px) {
+    font-size: ${p => p.theme.fontSizes.m};
+    line-height: ${p => p.theme.lineHeights.keks};
+
+    margin-right: auto;
+    margin-left: 100px;
+  }
 `;

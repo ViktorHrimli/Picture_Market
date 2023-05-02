@@ -17,6 +17,9 @@ import {
 
 import { CardContextState } from 'components/CardConteiner/CardContextState';
 
+import cardPhoto from 'assets/card_photo_mobile.png';
+import cardPicture from 'assets/card_photo.png';
+
 const Card = () => {
   const isDesktopScreen = useMediaQuery({
     query: '(min-width: 768px)',
@@ -39,22 +42,12 @@ const Card = () => {
         {isDesktopScreen && <ArrowIcons />}
 
         <ConteinerImgCard>
-          <img
-            src="https://res.cloudinary.com/djoprd9i4/image/upload/v1680381246/samples/picture_market/mpvfnv1glphomfqcwisd.jpg"
-            alt="phot"
-            width={80}
-            height={80}
-          />
+          <img src={cardPicture} alt="phot" width={80} height={80} />
         </ConteinerImgCard>
       </ConteinerInfoCard>
       <ConteinerDeskribe>
         <ImgDeskribe>
-          <img
-            src="https://res.cloudinary.com/djoprd9i4/image/upload/v1680553749/samples/picture_market/unsplash_52H5Nfi5WiE_dmsqyf.png"
-            alt="mobile"
-            width={100}
-            height={100}
-          />
+          <img src={cardPhoto} alt="mobile" width={100} height={100} />
         </ImgDeskribe>
         <TextDeskribe>
           <p>more information about format photo</p>
