@@ -17,6 +17,9 @@ export const HeaderConteiner = styled.header`
   left: 50%;
   top: 0;
   transform: translate(-50%, -50%);
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    top: -20px;
+  }
 `;
 
 export const Section = styled(GlobalLayout)`

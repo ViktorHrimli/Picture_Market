@@ -1,14 +1,16 @@
 import { Player, Iphone } from "./PreloadVideo.styles";
 import Video from 'components/Video/Video/Video.mp4';
-import Img from 'components/Video/Video/heroPhotoIphone.png'
+import Img from 'components/Video/Video/heroPhotoIphone.png';
 
 
 const VIDEO = Video;
 const IMG = Img;
 
+
 const PreloadVideo = ({handleCloseVideo}) => {
 
   const isiPhone = /iPhone/i.test(navigator.userAgent);
+  
   const mediaQuery = window.matchMedia('(min-width: 319px) and (max-width: 767px)');
 
   if (isiPhone) {

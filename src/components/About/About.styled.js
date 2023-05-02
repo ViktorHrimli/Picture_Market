@@ -46,7 +46,7 @@ export const SectionAbout = styled(GlobalSection)`
     background-size: 100% 574px;
     background-size: cover;
     margin: 0 auto;
-    margin-bottom: 178px;
+    margin-bottom: 100px;
   }
 
   @media (min-width: 1440px) {
