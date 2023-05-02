@@ -31,7 +31,7 @@ const CardDilevery = () => {
         <CardText>
           Production typically takes around 2 days, and we offer free delivery
           throughout the UK. We also offer worldwide shipping for an additional
-          free.
+          fee.
         </CardText>
       </ConteinerInfoCard>
     </CardForm>

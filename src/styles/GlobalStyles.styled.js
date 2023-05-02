@@ -77,7 +77,7 @@ const GlobalSection = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 200px;
+  margin-bottom: 150px;
 
   @media (min-width: 320px) and (max-width: 767px) {
     margin-bottom: 130px;

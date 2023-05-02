@@ -111,7 +111,7 @@ export const TextBox = styled.div`
   @media (min-width: 1024px) and (max-width: 1439px) {
     position: absolute;
     left: 80px;
-    bottom: 230px;
+    bottom: 210px;
     animation: ${shrinkBackgroundTablet} 2s ease forwards;
   }
 

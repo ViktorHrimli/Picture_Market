@@ -9,6 +9,7 @@ import { ModalStateContext } from 'components/ModalStateContext';
 import {
   SectionCard,
   SectionCardTitle,
+  ColorTitle,
   ConteinerCard,
   Slider,
   ButtonCard,
@@ -87,7 +88,7 @@ const CardConteiner = () => {
   return (
     <SectionCard isisChangeCard={isChangeCard} ref={elementRef}>
       <ConteinerCard>
-        <SectionCardTitle>Make your own portrait</SectionCardTitle>
+        <SectionCardTitle>Make your <ColorTitle>own</ColorTitle> portrait</SectionCardTitle>
         {isMobileScreen && (
           <>
             <Slider {...handlers}>

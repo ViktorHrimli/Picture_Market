@@ -16,9 +16,10 @@ export const SectionAbout = styled(GlobalSection)`
   @media (min-width: 320px) and (max-width: 479px) {
     background-image: url(${girlMobileAbout});
     background-repeat: no-repeat;
-    background-position: left;
-    background-size: cover;
+    /* background-position: left;
+    background-size: cover; */
     height: 530px;
+    margin-bottom: 100px;
   }
   @media (min-width: 480px) and (max-width: 767px) {
     background-image: url(https://res.cloudinary.com/de0iwhqf4/image/upload/v1683049747/String%20World/Rectangle_113_1_ujttqg.jpg);
@@ -56,7 +57,7 @@ export const SectionAbout = styled(GlobalSection)`
     background-size: 100%;
     height: 881px;
     margin: 0 auto;
-    margin-bottom: 340px;
+    margin-bottom: 150px;
   }
 `;
 
@@ -80,7 +81,7 @@ export const TextConteiner = styled(GlobalPostition)`
     margin-top: 140px;
     grid-gap: 40px;
     width: inherit;
-    padding-left: 35px;
+    padding-left: 40px;
     padding-right: 43px;
   }
   @media (min-width: 414px) and (max-width: 479px) {
@@ -88,7 +89,7 @@ export const TextConteiner = styled(GlobalPostition)`
     margin-top: 140px;
     grid-gap: 40px;
     width: inherit;
-    padding-left: 35px;
+    padding-left: 40px;
     padding-right: 63px;
   }
 
@@ -164,7 +165,7 @@ export const ParagraphAbout = styled(GlobalText)`
     line-height: 21px;
   }
   @media (min-width: 1024px) and (max-width: 1439px) {
-    width: 400px;
+    width: 402px;
     font-style: normal;
     font-weight: 400;
     font-size: 27px;

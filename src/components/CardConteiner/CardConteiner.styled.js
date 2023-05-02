@@ -36,7 +36,7 @@ export const SectionCard = styled(GlobalSection)`
 export const ConteinerCard = styled(GlobalPostition)`
   position: relative;
 
-  gap: 34px;
+  gap: 14px;
 
   @media screen and (min-width: 768px) {
     flex-direction: column;
@@ -76,7 +76,7 @@ export const ButtonCard = styled(GlobalButton)`
   @media (min-width: 1440px) {
     position: absolute;
 
-    top: 54%;
+    top: 51%;
     left: 30%;
 
     transform: translate(50%, 50%);
@@ -93,9 +93,11 @@ export const SectionCardTitle = styled(GlobalTitleText)`
   }
 
   @media screen and (min-width: 1024px) {
-    width: 320px;
+    width: 420px;
+    font-size: 48px;
+    line-height: 58px;
 
-    margin-bottom: 48px;
+    /* margin-bottom: 48px; */
   }
 
   @media (min-width: 1440px) {
@@ -104,8 +106,12 @@ export const SectionCardTitle = styled(GlobalTitleText)`
     font-size: 48px;
     line-height: 58px;
 
-    margin-bottom: 48px;
+    /* margin-bottom: 48px; */
   }
+`;
+
+export const ColorTitle = styled.span`
+  color: ${p => p.theme.colors.accent};
 `;
 
 export const ArrowRight = styled(MdOutlineKeyboardDoubleArrowRight)`

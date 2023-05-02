@@ -31,7 +31,7 @@ const CardPay = () => {
       {isDesktopScreen && <ArrowWay />}
 
       <ConteinerImgBackground>
-        <CardTitle>Fill the form</CardTitle>
+        <CardTitle>Complete the form</CardTitle>
         <CardText>
           Please leave your contact details so that our assistant can get in
           touch with you to approve the layout before we start creating your
