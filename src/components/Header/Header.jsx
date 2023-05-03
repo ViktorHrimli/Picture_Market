@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { ModalStateContext } from "components/ModalStateContext"
+import { ModalStateContext } from 'components/ModalStateContext';
 
 import {
   HeaderConteiner,
@@ -18,8 +18,7 @@ export function Header() {
   const [isClosedSection, setIsClosedSection] = useState(true);
   const [isOpenedNavigation, setIsOpenedNavigation] = useState(false);
 
-  const { openModal } = useContext(ModalStateContext)
-
+  const { openModal } = useContext(ModalStateContext);
 
   const handleClick = () => {
     setIsOpenedNavigation(true);
@@ -38,6 +37,13 @@ export function Header() {
 
     return () => clearTimeout(timeoutId);
   }, [isClosedSection]);
+
+  const handleClickScroll = e => {
+    const element = document.getElementById(e.currentTarget.id + '1');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <HeaderConteiner>
@@ -59,10 +65,10 @@ export function Header() {
           <HeaderBtnLin />
         </HeaderBtn>
         <ListLayout>
-          <li>
+          <li id="about" onClick={handleClickScroll}>
             <LinkLayout>About Us</LinkLayout>
           </li>
-          <li>
+          <li id="gallery" onClick={handleClickScroll}>
             <LinkLayout>Gallery</LinkLayout>
           </li>
           <li>
