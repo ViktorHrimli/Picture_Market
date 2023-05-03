@@ -186,13 +186,14 @@ export const HederAboutText = styled(GlobalTitleText)`
   position: absolute;
 
   @media (min-width: 320px) and (max-width: 479px) {
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
     text-align: center;
-    rotate: 270deg;
+    /* rotate: 270deg; */
+    -webkit-transform: rotate(270deg);
 
     font-weight: 400;
     width: 310px;
-    top: -165px;
+    top: -15px;
     left: -87px;
   }
   @media (min-width: 480px) and (max-width: 767px) {

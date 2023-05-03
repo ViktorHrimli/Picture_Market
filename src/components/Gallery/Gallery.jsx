@@ -15,10 +15,19 @@ import {
 } from 'components/Gallery/GalleryDesk/GalleryDesk';
 
 import photoFirst from 'components/Gallery/ImgGallery/gallery1.jpg';
-import photoSecond from 'components/Gallery/ImgGallery/gallery2.jpg';
-import photoThird from 'components/Gallery/ImgGallery/gallery3.jpg';
-import photoFourth from 'components/Gallery/ImgGallery/gallery4.jpg';
+import photoSecond from 'components/Gallery/ImgGalleryDesk/gallery3.jpeg';
+import photoThird from 'components/Gallery/ImgGalleryDesk/gallery2.jpeg';
+import photoFourth from 'components/Gallery/ImgGallery/gallery14.jpeg';
 import photoFift from 'components/Gallery/ImgGallery/gallery5.jpg';
+
+// imagesTabDesk 
+import photoFirstDesk from 'components/Gallery/ImgGalleryDesk/gallery1.jpeg';
+import photoSecondDesk from 'components/Gallery/ImgGalleryDesk/gallery2.jpeg';
+import photoThirdDesk from 'components/Gallery/ImgGalleryDesk/gallery3.jpeg';
+import photoFourthDesk from 'components/Gallery/ImgGalleryDesk/gallery4.jpg';
+import photoFiftDesk from 'components/Gallery/ImgGalleryDesk/gallery5.jpeg';
+
+
 
 const images = [
   photoFift,
@@ -40,6 +49,17 @@ const images = [
   // 'https://res.cloudinary.com/de0iwhqf4/image/upload/v1683049748/String%20World/p-468-ak-8795-04-mockup_eus3qt.jpg',
   // 'https://res.cloudinary.com/de0iwhqf4/image/upload/v1683049748/String%20World/p-438-td-2422-teddy-jing_wgonqj.jpg',
 ];
+
+// imagesDesk
+
+const imagesDesk = [
+  photoFirstDesk,
+  photoSecondDesk,
+  photoThirdDesk,
+  photoFourthDesk,
+  photoFiftDesk,
+]
+
 function Item({ item }) {
   return (
     <Paper
@@ -50,7 +70,10 @@ function Item({ item }) {
       }}
     >
       <ConteierPaper>
-        <img src={item} alt="becouse error happend you read that text" />
+        <img
+          src={item}
+          alt="becouse error happend you read that text"
+        />
       </ConteierPaper>
     </Paper>
   );
@@ -61,8 +84,12 @@ const Gallery = () => {
     query: '(min-width: 1024px)',
   });
 
+  const isLaptop = useMediaQuery({
+    query: '(min-width: 768px) and (max-width: 1023px)',
+  });
+
   const isMobile = useMediaQuery({
-    query: '(max-width: 1023px)',
+    query: '(max-width: 767px)',
   });
 
   return (
@@ -86,9 +113,26 @@ const Gallery = () => {
         </>
       )}
 
+      {isLaptop && (
+        <NewCarusel
+          items={imagesDesk}
+          renderItem={({ item, isSnapPoint }) => (
+            <CarouselItem key={item} isSnapPoint={isSnapPoint}>
+              <img
+                src={item}
+                width="400"
+                height="600"
+                alt="Placeholder"
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
+            </CarouselItem>
+          )}
+        />
+      )}
+
       {isDesktop && (
         <NewCarusel
-          items={images}
+          items={imagesDesk}
           renderItem={({ item, isSnapPoint }) => (
             <CarouselItem key={item} isSnapPoint={isSnapPoint}>
               <img

@@ -24,3 +24,8 @@ export const ConteinerContorol = styled.div`
   margin-top: 20px;
   grid-gap: 5px;
 `;
+
+export const ConteinerList = styled.li`
+  border: 4px solid #634789;
+  border-radius: 8px;
+`;
