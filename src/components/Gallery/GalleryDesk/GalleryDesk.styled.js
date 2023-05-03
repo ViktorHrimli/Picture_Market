@@ -34,7 +34,7 @@ export const ListScroll = styled.ul`
   scroll-behavior: smooth;
 
   width: ${({ isWidth }) => {
-    return isWidth ? '1270px' : '980px';
+    return isWidth ? '1250px' : '980px';
   }};
 
   ::-webkit-scrollbar {
@@ -54,6 +54,12 @@ export const ConteinerContorol = styled.div`
 `;
 
 export const ConteinerList = styled.li`
+  width: ${({ isWidth }) => {
+    return isWidth ? '700px' : '620px';
+  }};
+  height: 450px;
+  flex-shrink: 0;
+
   border: 4px solid #634789;
   border-radius: 8px;
 `;

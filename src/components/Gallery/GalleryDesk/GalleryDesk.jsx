@@ -10,11 +10,6 @@ import {
 } from 'components/Gallery/GalleryDesk/GalleryDesk.styled';
 
 const styles = {
-  item: {
-    width: '620px',
-    height: '450px',
-    flexShrink: 0,
-  },
   itemSnapPoint: {
     scrollSnapAlign: 'start',
   },
@@ -67,9 +62,7 @@ export const Carousel = ({ items, renderItem, isBigDesktop }) => {
             ...(activePageIndex === 0 ? styles.nextPrevButtonDisabled : {}),
           }}
           onClick={() => prev()}
-        >
-          {String.fromCharCode(8592)}
-        </button>
+        ></button>
         {pages.map((_, i) => (
           <ButtonPagination
             key={i}
@@ -85,18 +78,16 @@ export const Carousel = ({ items, renderItem, isBigDesktop }) => {
               : {}),
           }}
           onClick={() => next()}
-        >
-          {String.fromCharCode(8594)}
-        </button>
+        ></button>
       </ConteinerContorol>
     </Root>
   );
 };
 
-export const CarouselItem = ({ isSnapPoint, children }) => (
+export const CarouselItem = ({ isSnapPoint, children, isBigDesktop }) => (
   <ConteinerList
+    isWidth={isBigDesktop}
     style={{
-      ...styles.item,
       ...(isSnapPoint ? styles.itemSnapPoint : {}),
     }}
   >

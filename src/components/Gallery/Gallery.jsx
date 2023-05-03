@@ -72,7 +72,7 @@ const Gallery = () => {
   });
 
   return (
-    <SectionGallery>
+    <SectionGallery id="gallery1">
       <GalleryTitle>Enjoy Gallery</GalleryTitle>
       {isMobile && (
         <>
@@ -115,7 +115,11 @@ const Gallery = () => {
           items={imagesDesk}
           isBigDesktop={isBigDesktop}
           renderItem={({ item, isSnapPoint }) => (
-            <CarouselItem key={item} isSnapPoint={isSnapPoint}>
+            <CarouselItem
+              key={item}
+              isSnapPoint={isSnapPoint}
+              isBigDesktop={isBigDesktop}
+            >
               <img
                 src={item}
                 width="400"
