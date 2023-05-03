@@ -7,6 +7,8 @@ import {
   ConteinerList,
   ListScroll,
   Root,
+  ButtonNext,
+  ButtonPrev,
 } from 'components/Gallery/GalleryDesk/GalleryDesk.styled';
 
 const styles = {
@@ -15,18 +17,19 @@ const styles = {
   },
   controls: {
     display: 'flex',
-
     justifyContent: 'center',
     alignItems: 'center',
+    width: '100%',
   },
-  nextPrevButton: {},
+  nextPrevButton: {
+    width: '30px',
+    height: '25px',
+    cursor: 'pointer',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
   nextPrevButtonDisabled: { opacity: 0.3 },
-  pagination: {
-    display: 'flex',
-  },
-  paginationButton: {
-    margin: '10px',
-  },
+
   paginationButtonActive: { opacity: 0.3 },
   pageIndicator: {
     display: 'flex',
@@ -56,13 +59,13 @@ export const Carousel = ({ items, renderItem, isBigDesktop }) => {
         )}
       </ListScroll>
       <ConteinerContorol aria-hidden>
-        <button
+        <ButtonPrev
           style={{
             ...styles.nextPrevButton,
             ...(activePageIndex === 0 ? styles.nextPrevButtonDisabled : {}),
           }}
           onClick={() => prev()}
-        ></button>
+        />
         {pages.map((_, i) => (
           <ButtonPagination
             key={i}
@@ -70,7 +73,7 @@ export const Carousel = ({ items, renderItem, isBigDesktop }) => {
             onClick={() => goTo(i)}
           ></ButtonPagination>
         ))}
-        <button
+        <ButtonNext
           style={{
             ...styles.nextPrevButton,
             ...(activePageIndex === pages.length - 1
@@ -78,7 +81,7 @@ export const Carousel = ({ items, renderItem, isBigDesktop }) => {
               : {}),
           }}
           onClick={() => next()}
-        ></button>
+        />
       </ConteinerContorol>
     </Root>
   );
