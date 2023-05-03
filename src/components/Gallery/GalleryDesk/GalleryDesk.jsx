@@ -4,6 +4,7 @@ import { useSnapCarousel } from 'react-snap-carousel';
 import {
   ButtonPagination,
   ConteinerContorol,
+  ConteinerList,
 } from 'components/Gallery/GalleryDesk/GalleryDesk.styled';
 
 const styles = {
@@ -18,7 +19,7 @@ const styles = {
     overflow: 'hidden',
     scrollSnapType: 'x mandatory',
 
-    gap: '20px',
+    gap: '30px',
   },
   item: {
     width: '600px',
@@ -110,12 +111,12 @@ export const Carousel = ({ items, renderItem }) => {
 };
 
 export const CarouselItem = ({ isSnapPoint, children }) => (
-  <li
+  <ConteinerList
     style={{
       ...styles.item,
       ...(isSnapPoint ? styles.itemSnapPoint : {}),
     }}
   >
     {children}
-  </li>
+  </ConteinerList>
 );

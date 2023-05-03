@@ -69,7 +69,7 @@ export const ConteierPaper = styled.div`
     height: 100%;
 
     object-fit: cover;
-
+    border: 2px solid ${p => p.theme.colors.accent};
     border-radius: 8px;
   }
 `;
