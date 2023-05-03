@@ -12,6 +12,7 @@ export const DescriptionSection = styled(GlobalSection)`
     margin: 0 auto;
     padding-left: 40px;
     padding-right: 40px;
+    margin-bottom: 100px;
   }
   @media (min-width: 1024px) and (max-width: 1439px) {
     width: 1024px;
