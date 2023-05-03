@@ -133,7 +133,7 @@ export const TitleAboutConteiner = styled.div`
   position: relative;
 
   @media (min-width: 320px) and (max-width: 479px) {
-    rotate: 270deg;
+    /* rotate: 270deg; */
   }
   @media (min-width: 480px) and (max-width: 480px) {
     left: 64px;
@@ -188,11 +188,12 @@ export const HederAboutText = styled(GlobalTitleText)`
   @media (min-width: 320px) and (max-width: 479px) {
     transform: translateX(-50%);
     text-align: center;
+    rotate: 270deg;
 
     font-weight: 400;
     width: 310px;
-    top: 55px;
-    left: 50%;
+    top: -165px;
+    left: -87px;
   }
   @media (min-width: 480px) and (max-width: 767px) {
     transform: translateX(-51%);
