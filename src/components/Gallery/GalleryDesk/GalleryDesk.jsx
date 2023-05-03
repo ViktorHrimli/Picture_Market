@@ -5,24 +5,13 @@ import {
   ButtonPagination,
   ConteinerContorol,
   ConteinerList,
+  ListScroll,
+  Root,
 } from 'components/Gallery/GalleryDesk/GalleryDesk.styled';
 
 const styles = {
-  root: {
-    padding: '20px',
-    width: '100vw',
-  },
-  scroll: {
-    position: 'relative',
-
-    display: 'flex',
-    overflow: 'hidden',
-    scrollSnapType: 'x mandatory',
-
-    gap: '30px',
-  },
   item: {
-    width: '600px',
+    width: '620px',
     height: '450px',
     flexShrink: 0,
   },
@@ -50,7 +39,7 @@ const styles = {
   },
 };
 
-export const Carousel = ({ items, renderItem }) => {
+export const Carousel = ({ items, renderItem, isBigDesktop }) => {
   const {
     scrollRef,
     pages,
@@ -60,16 +49,17 @@ export const Carousel = ({ items, renderItem }) => {
     goTo,
     snapPointIndexes,
   } = useSnapCarousel();
+
   return (
-    <div style={styles.root}>
-      <ul style={styles.scroll} ref={scrollRef}>
+    <Root>
+      <ListScroll ref={scrollRef} isWidth={isBigDesktop}>
         {items.map((item, i) =>
           renderItem({
             item,
             isSnapPoint: snapPointIndexes.has(i),
           })
         )}
-      </ul>
+      </ListScroll>
       <ConteinerContorol aria-hidden>
         <button
           style={{
@@ -84,15 +74,8 @@ export const Carousel = ({ items, renderItem }) => {
           <ButtonPagination
             key={i}
             flag={activePageIndex === i}
-            // style={{
-            //   ...styles.paginationButton,
-            //   ...(activePageIndex === i ? styles.paginationButtonActive : {}),
-            // }}
-
             onClick={() => goTo(i)}
-          >
-            {/* {i + 1} */}
-          </ButtonPagination>
+          ></ButtonPagination>
         ))}
         <button
           style={{
@@ -106,7 +89,7 @@ export const Carousel = ({ items, renderItem }) => {
           {String.fromCharCode(8594)}
         </button>
       </ConteinerContorol>
-    </div>
+    </Root>
   );
 };
 

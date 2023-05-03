@@ -17,6 +17,34 @@ export const ButtonPagination = styled.button`
   }
 `;
 
+export const Root = styled.div`
+  padding: 50px;
+  width: 100vw;
+
+  scroll-behavior: smooth;
+`;
+
+export const ListScroll = styled.ul`
+  position: relative;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+
+  scroll-behavior: smooth;
+
+  width: ${({ isWidth }) => {
+    return isWidth ? '1270px' : '980px';
+  }};
+
+  ::-webkit-scrollbar {
+    visibility: hidden;
+    scroll-behavior: smooth;
+  }
+
+  gap: 20px;
+`;
+
 export const ConteinerContorol = styled.div`
   display: flex;
   align-items: center;
