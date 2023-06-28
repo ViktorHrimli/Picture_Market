@@ -114,7 +114,7 @@ const CardConteiner = () => {
         )}
       </ConteinerCard>
 
-      <ButtonCard onClick={() => openModal()}>Buy for £ 149</ButtonCard>
+      <ButtonCard onClick={() => openModal()}>Buy for £ 69</ButtonCard>
     </SectionCard>
   );
 };
