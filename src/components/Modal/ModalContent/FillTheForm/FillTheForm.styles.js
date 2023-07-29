@@ -174,6 +174,7 @@ export const Close = styled(GoX)`
 
 export const LabelColor = styled.a`
   color: #634789;
+  text-decoration: underline;
 `;
 //----------------- checkbox ---------
 
@@ -262,12 +263,12 @@ export const ErrorBox = styled.div`
   position: absolute;
 
   @media (min-width: 320px) and (max-width: 767px) {
-    bottom: 109px;
+    bottom: 125px;
     left: 67px;
   }
 
   @media (min-width: 768px) {
-    bottom: 160px;
+    bottom: 190px;
     left: 160px;
   }
 `;

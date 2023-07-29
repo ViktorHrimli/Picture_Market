@@ -137,7 +137,7 @@ export function FillTheForm({ label, ...rest }) {
           />
           <span className="checkmark"></span>
           <Label id="checkbox">
-            I have read and agree to the{' '}
+            I have read and agree to the
             <LabelColor onClick={handleTogglePrivacy}>
               Privacy Policy
             </LabelColor>
