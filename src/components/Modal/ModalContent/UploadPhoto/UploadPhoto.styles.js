@@ -3,6 +3,7 @@ import { GlobalPostition, GlobalButton } from 'styles/GlobalStyles.styled';
 import { GoX } from 'react-icons/go';
 import { BsArrowClockwise } from 'react-icons/bs';
 
+import { CheckboxContainer } from '../FillTheForm/FillTheForm.styles';
 export const Section = styled(GlobalPostition)`
   position: relative;
 
@@ -56,7 +57,7 @@ export const ChooseImg = styled.div`
   @media (min-width: 768px) {
     width: 350px;
     height: 250px;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
   }
 `;
 
@@ -109,8 +110,13 @@ export const Close = styled(GoX)`
   }
 `;
 
+export const FormCheckBox = styled(CheckboxContainer)`
+  margin-bottom: 15px;
+`;
+
 export const BtnBox = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 4px;
 `;
