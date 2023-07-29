@@ -173,7 +173,7 @@ export const ParagraphAbout = styled(GlobalText)`
   }
 
   @media (min-width: 1440px) {
-    width: 539px;
+    width: 529px;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;

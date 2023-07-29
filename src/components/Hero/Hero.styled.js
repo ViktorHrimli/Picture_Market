@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { GlobalSection } from 'styles/GlobalStyles.styled';
+import { GlobalSection, GlobalButton } from 'styles/GlobalStyles.styled';
 
 const shrinkBackgroundTablet = keyframes`
   from {
@@ -260,6 +260,46 @@ export const Text = styled.p`
     position: absolute;
     bottom: 130px;
     left: 110px;
+    animation: ${shrinkBackgroundTablet} 2s ease forwards;
+  }
+`;
+
+export const BtnHero = styled(GlobalButton)`
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  visibility: visible;
+
+  @media (min-width: 320px) and (max-width: 360px) {
+    width: 301px;
+    height: 49px;
+    font-size: ${p => p.theme.fontSizes.s};
+    left: 10px;
+    bottom: 30px;
+  }
+  @media (min-width: 361px) and (max-width: 768px) {
+    width: 301px;
+    height: 49px;
+    font-size: ${p => p.theme.fontSizes.s};
+    left: 60px;
+    bottom: 30px;
+  }
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    width: 301px;
+    height: 49px;
+    font-size: ${p => p.theme.fontSizes.s};
+    left: 80px;
+    bottom: 0px;
+    animation: ${shrinkBackgroundTablet} 2s ease forwards;
+  }
+
+  @media (min-width: 1440px) {
+    width: 334px;
+    height: 61px;
+    font-size: ${p => p.theme.fontSizes.m};
+    margin-left: 950px;
+    left: -840px;
+    bottom: 40px;
     animation: ${shrinkBackgroundTablet} 2s ease forwards;
   }
 `;

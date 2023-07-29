@@ -1,4 +1,4 @@
-import { Section, Content, Closed, Close, HeaderBox, Text, Description, PreTitle } from "./Imprint.styled"
+import { Section, Content, Closed, Close, HeaderBox, Text, Description, PreTitle, DescriptionEmail } from "./Imprint.styled"
 
 const Imprint = ({isOpenImprint, handleToggleImprint}) => {
 
@@ -22,7 +22,7 @@ const Imprint = ({isOpenImprint, handleToggleImprint}) => {
         </HeaderBox>
         <div>
           <Description><PreTitle>Introduction</PreTitle>
-          Welcome to our website, where we offer string art portraits created from your photos. By accessing and using our website, you agree to comply with and be bound by these terms and conditions of use, which together with our privacy policy govern our relationship with you in relation to this website.
+          Welcome to our website, where we (String World) offer string art portraits created from your photos. By accessing and using our website, you agree to comply with and be bound by these terms and conditions of use, which together with our privacy policy govern our relationship with you in relation to this website.
           </Description>
           <Description><PreTitle>Intellectual Property</PreTitle>
           All content and materials available on this website, including but not limited to text, graphics, images, videos, logos, and software, are the property of String World and are protected by applicable copyright, trademark, and other intellectual property laws. You may not use, copy, reproduce, distribute, transmit, or modify any content or materials on this website without our prior written consent.
@@ -34,21 +34,22 @@ const Imprint = ({isOpenImprint, handleToggleImprint}) => {
           We offer competitive pricing for our string art portrait services. All prices are subject to change without notice. Payment is required in advance and can be made through our website using our secure payment system.
           </Description>
           <Description><PreTitle>Delivery</PreTitle>
-          We offer free delivery of our string art portraits throughout the UK. We aim to complete production within 2 days of receiving your order and will provide you with an estimated delivery date when your order is confirmed. We are not responsible for any delays or damages caused by third-party delivery services.
+          We offer free delivery of our string art portraits throughout the UK. We aim to complete production within 2-3 days of receiving your order and will provide you with an estimated delivery date when your order is confirmed. We are not responsible for any delays or damages caused by third-party delivery services.
           </Description>
           <Description><PreTitle>Refunds and Returns</PreTitle>
           We take pride in the quality of our string art portraits and strive to ensure that you are completely satisfied with your purchase. If you are not satisfied with your portrait for any reason, please contact us within 14 days of receipt to arrange for a refund or exchange. We are not responsible for any damages caused by mishandling or misuse of our products.
           </Description>
+          <Description><PreTitle>Shipping of Product Returns</PreTitle>
+          If you decide to return your string art portrait, the shipping costs for the return will be the responsibility of the customer. We recommend using a trackable shipping service to ensure that the return is safely delivered to us.
+          </Description>
           <Description><PreTitle>Limitation of Liability</PreTitle>
           We make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of our website or the information, products, services, or related graphics contained on our website. In no event will we be liable for any loss or damage, including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of our website.
           </Description>
-          <Description><PreTitle>Governing Law</PreTitle>
-          These terms and conditions of use are governed by and construed in accordance with the laws of England and Wales, and any disputes relating to these terms and conditions of use will be subject to the exclusive jurisdiction of the courts of England and Wales.
-          </Description>
           <Description><PreTitle>Changes to These Terms and Conditions of Use</PreTitle>We reserve the right to modify these terms and conditions of use at any time without notice. By continuing to use our website after such modifications are made, you agree to be bound by the revised terms and conditions of use.
           </Description>
-
-          <Description>If you have any questions or concerns about these terms and conditions of use, please do not hesitate to contact us.</Description>
+          <Description><PreTitle>Contact Information</PreTitle>If you have any questions or concerns about these terms and conditions of use, please do not hesitate to contact us at <DescriptionEmail href="mailto:designer@string-world.com">designer@string-world.com</DescriptionEmail>.
+          </Description>
+          <Description>Date of Last Update: 25.07.2023</Description>
         </div>
       </Content>
   </Section>

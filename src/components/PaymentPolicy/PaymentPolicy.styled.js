@@ -52,7 +52,7 @@ export const Close = styled(GoX)`
 `;
 
 export const HeaderBox = styled.div`
-  width: 70%;
+  width: 60%;
   display: flex;
   justify-content: space-between;
   align-items: center;

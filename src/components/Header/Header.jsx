@@ -10,6 +10,7 @@ import {
   ListLayout,
   LinkLayout,
   LinkBorder,
+  BtnHero,
 } from 'components/Header/Header.styled';
 
 import { HeaderMenu } from 'components/HeaderMenu/HeaderMenu';
@@ -76,6 +77,8 @@ export function Header() {
           </li>
         </ListLayout>
         <LinkBorder />
+        <BtnHero onClick={() => openModal()}>Buy for £ 69</BtnHero>
+
       </Section>
     </HeaderConteiner>
   );

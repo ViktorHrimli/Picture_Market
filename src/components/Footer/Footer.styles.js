@@ -6,20 +6,20 @@ export const FooterSection = styled.section`
   width: 100vw;
 
   @media (min-width: 320px) and (max-width: 767px) {
-    height: 476px;
+    height: 620px;
     flex-direction: column;
   }
 
   @media (min-width: 768px) and (max-width: 1023px) {
-    height: 300px;
+    height: 570px;
   }
 
   @media (min-width: 1024px) and (max-width: 1439px) {
-    height: 300px;
+    height: 570px;
   }
 
   @media (min-width: 1440px) {
-    height: 300px;
+    height: 570px;
   }
 `;
 
@@ -148,16 +148,22 @@ export const FooterLinkContacts = styled.a`
 
 export const FooterListText = styled.ul`
   display: flex;
+  flex-wrap: wrap;
+  height: 100px;
+  justify-content: center;
 
   @media (min-width: 320px) and (max-width: 767px) {
-    /* gap: ${p => p.theme.space[9]}; */
+    /* gap: 5px; */
+    width: 300px;
   }
 
   @media (min-width: 768px) and (max-width: 1023px) {
-    gap: ${p => p.theme.space[10]};
+    /* gap: ${p => p.theme.space[10]}; */
+    width: 300px;
   }
   @media (min-width: 1024px) and (max-width: 1439px) {
-    gap: ${p => p.theme.space[8]};
+    /* gap: ${p => p.theme.space[8]}; */
+    width: 300px;
   }
   @media (min-width: 1440px) {
     gap: ${p => p.theme.space[10]};
@@ -169,13 +175,14 @@ export const FooterLink = styled.li`
 
 export const FooterLinkText = styled.a`
   line-height: ${p => p.theme.lineHeights.min};
-  color: ${p => p.theme.colors.accent};
+  color: ${p => p.theme.colors.white};
   font-family: ${p => p.theme.fonts.body};
   font-weight: ${p => p.theme.fontWeights.normal};
+
   cursor: pointer;
 
   @media (min-width: 320px) and (max-width: 767px) {
-    font-size: ${p => p.theme.fontSizes.xxs};
+    font-size: ${p => p.theme.fontSizes.xs};
   }
   @media (min-width: 768px) and (max-width: 1439px) {
     font-size: ${p => p.theme.fontSizes.xs};
@@ -185,6 +192,19 @@ export const FooterLinkText = styled.a`
   }
 
   :hover {
-    color: ${p => p.theme.colors.white};
+    color: ${p => p.theme.colors.accent};
   }
+`;
+
+export const FooterPaymant = styled.div`
+  width: 300px;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+`;
+
+export const FooterPaymantBox = styled.div`
+  width: 110px;
 `;

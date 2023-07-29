@@ -12,6 +12,8 @@ import { Gallery } from 'components/Gallery/Gallery';
 
 import { Privacy } from './Privacy/Privacy';
 import { Imprint } from './Imprint/Imprint';
+import  Payment  from './PaymentPolicy/PaymentPolicy'
+
 
 
 
@@ -22,10 +24,12 @@ import { ModalStateContext } from 'components/ModalStateContext';
 
 const App = () => {
   const [isOpened, setIsOpened] = useState(false);
-  const [showVideo, setShowVideo] = useState(true);
+  const [showVideo, setShowVideo] = useState(false);
 
   const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
   const [isOpenImprint, setIsOpenImprint] = useState(false);
+  const [isOpenPayment, setIsOpenPayment] = useState(false);
+
 
 
   function handleTogglePrivacy () {
@@ -34,6 +38,10 @@ const App = () => {
   
   function handleToggleImprint () {
     setIsOpenImprint(!isOpenImprint);
+  }
+
+  function handleTogglePayment () {
+    setIsOpenPayment(!isOpenPayment);
   }
 
   function handleCloseVideo() {
@@ -59,11 +67,13 @@ const App = () => {
           {!showVideo && <Gallery />}
           {!showVideo && <Description />}
         </main>
-        {!showVideo && <Footer handleTogglePrivacy={handleTogglePrivacy}  handleToggleImprint={handleToggleImprint} />}
+        {!showVideo && <Footer handleTogglePrivacy={handleTogglePrivacy}  handleToggleImprint={handleToggleImprint} isOpenPayment={isOpenPayment} handleTogglePayment={handleTogglePayment}/>}
         
         {isOpened && <Modal closeModal={() => setIsOpened(false)} />}
         {isOpenPrivacy && <Privacy isOpenPrivacy={isOpenPrivacy} handleTogglePrivacy={handleTogglePrivacy} />}
         {isOpenImprint && <Imprint isOpenImprint={isOpenImprint} handleToggleImprint={handleToggleImprint} />}
+        {isOpenPayment && <Payment isOpenPayment={isOpenPayment} handleTogglePayment={handleTogglePayment} />}
+
       </ModalStateContext.Provider>
     </Layout>
   </>

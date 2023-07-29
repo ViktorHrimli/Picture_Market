@@ -1,4 +1,5 @@
 import { PreloadVideo } from 'components/Video/PreloadVideo';
+
 import {
   Section,
   TextBox,
@@ -12,6 +13,7 @@ import {
 } from './Hero.styled';
 
 const Hero = (props) => {
+
   return (
     
     <Section>
@@ -20,10 +22,11 @@ const Hero = (props) => {
       </VideoBox>
       {!props.showVideo && <TextBox>
         <TextHeader>
-          PERSONALIZ<TextSpanColor>ED</TextSpanColor>
+          PERSONALIS<TextSpanColor>ED</TextSpanColor>
         </TextHeader>
         <TextAfter>STRING</TextAfter>
         <TextAfterArt>ART</TextAfterArt>
+  
       </TextBox>}
       {!props.showVideo && <div>
         <TextMob><span>Unique </span>

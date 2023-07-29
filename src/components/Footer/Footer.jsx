@@ -1,7 +1,10 @@
-import { FooterSection, Container, FooterLogo, FooterList, FooterListContacts, FooterLink, FooterLinkContacts, FooterListText, FooterLinkText } from "./Footer.styles"
+import { FooterSection, Container, FooterLogo, FooterList, FooterListContacts, FooterLink, FooterLinkContacts, FooterListText, FooterLinkText, FooterPaymant, FooterPaymantBox } from "./Footer.styles"
+
+import  Visa  from './img/visa.png'
+import  MasterCard  from './img/mastercard.png'
 
 
-const Footer = ({handleToggleImprint, handleTogglePrivacy}) => {    
+const Footer = ({handleToggleImprint, handleTogglePrivacy, handleTogglePayment}) => {    
     return (
         <FooterSection>
             <Container>
@@ -13,8 +16,17 @@ const Footer = ({handleToggleImprint, handleTogglePrivacy}) => {
                     </FooterListContacts>
                     <FooterListText>
                         <FooterLink><FooterLinkText onClick={handleToggleImprint}>Terms and Conditions</FooterLinkText></FooterLink>
-                        <li><FooterLinkText onClick={handleTogglePrivacy}>Privacy police</FooterLinkText></li>
+                        <li><FooterLinkText onClick={handleTogglePrivacy}>Privacy Policy</FooterLinkText></li>
+                        <li><FooterLinkText onClick={handleTogglePayment}>Payment Policy</FooterLinkText></li>
                     </FooterListText>
+                    <FooterPaymant>
+                        <FooterPaymantBox>
+                        <img src={Visa} width={110} height={50} alt="Visa" />
+                        </FooterPaymantBox>
+                        <FooterPaymantBox>
+                        <img src={MasterCard} width={80} height={50} alt="MasterCard" />
+                        </FooterPaymantBox>
+                    </FooterPaymant>
                 </FooterList>
             </Container>
         </FooterSection>

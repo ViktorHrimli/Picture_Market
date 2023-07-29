@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { GlobalLayout } from 'styles/GlobalStyles.styled';
+import { GlobalLayout, GlobalButton } from 'styles/GlobalStyles.styled';
 
 const slideIn = keyframes`
   from {
@@ -7,6 +7,16 @@ const slideIn = keyframes`
   }
   to {
     transform: translateY(0);
+  }
+`;
+
+const shrinkBackgroundTablet = keyframes`
+  from {
+    transform: scale(10%); 
+  }
+
+  to {
+    transform: scale(100%); 
   }
 `;
 
@@ -169,5 +179,51 @@ export const LinkBorder = styled.span`
     border-bottom: 3px solid;
     width: 68px;
     color: ${p => p.theme.colors.accent};
+  }
+`;
+
+export const BtnHero = styled(GlobalButton)`
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  visibility: visible;
+  animation: ${shrinkBackgroundTablet} 2s ease forwards;
+
+  @media (min-width: 320px) and (max-width: 360px) {
+    width: 301px;
+    height: 49px;
+    font-size: ${p => p.theme.fontSizes.s};
+    top: 640px;
+    left: 10px;
+  }
+  @media (min-width: 361px) and (max-width: 479px) {
+    width: 301px;
+    height: 49px;
+    font-size: ${p => p.theme.fontSizes.s};
+    left: 10px;
+    top: 640px;
+  }
+  @media (min-width: 480px) and (max-width: 767px) {
+    top: 650px;
+    left: 10px;
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    top: 550px;
+  }
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    width: 301px;
+    height: 49px;
+    font-size: ${p => p.theme.fontSizes.s};
+    left: 80px;
+    top: 600px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 334px;
+    height: 61px;
+    font-size: ${p => p.theme.fontSizes.m};
+    margin-left: 950px;
+    left: -840px;
+    top: 820px;
   }
 `;

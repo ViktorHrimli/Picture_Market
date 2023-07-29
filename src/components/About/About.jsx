@@ -20,10 +20,10 @@ const About = () => {
             <ParagraphAbout>
               String World creates stunning, one-of-a-kind string art portraits
               based on your photo, crafted by crossing a single continuous black
-              thread over 15 million times. We capture the details and nuances
+              thread over 3 million times. We capture the details and nuances
               of your image, resulting in a truly unique and striking piece of
               art. Perfect as a unique gift or addition to your home decor.
-              Circle diameter 50cm.
+              Circle diameter 45cm.
             </ParagraphAbout>
           </ParagraphConteiner>
         </TextConteiner>
