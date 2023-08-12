@@ -44,6 +44,7 @@ export const Text = styled.p`
 `;
 
 export const ChooseImg = styled.div`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,6 +63,9 @@ export const ChooseImg = styled.div`
 `;
 
 export const BoxIcon = styled(GlobalButton)`
+  position: absolute;
+  top: 235px;
+  left: 34px;
   width: 48px;
   height: 48px;
   background-color: ${p => p.theme.colors.accent};
@@ -69,6 +73,11 @@ export const BoxIcon = styled(GlobalButton)`
   cursor: pointer;
   & :hover {
     fill: ${p => p.theme.colors.accent};
+  }
+
+  @media screen and (min-width: 768px) {
+    top: 336px;
+    left: 123px;
   }
 `;
 
