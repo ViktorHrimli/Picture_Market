@@ -28,7 +28,7 @@ export function AddYourReview({ handleToggleForm }) {
     if (!name || !email || !message) {
     } else {
       axios
-        .post('https://postapi.onrender.com/api/sendphoto', {
+        .post('https://postapi.onrender.com/api/sendinfo', {
           name,
           email,
           message,
