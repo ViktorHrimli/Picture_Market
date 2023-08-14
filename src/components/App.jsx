@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 // COMPONENTS
 import { Layout } from 'components/Layout/Layout';
 import { Header } from 'components/Header/Header';
@@ -16,9 +17,9 @@ import Payment from './PaymentPolicy/PaymentPolicy';
 
 import { Discount } from './Modal/ModalContent/Discount/Discount';
 
+
 // CONTEXT
 import { ModalStateContext } from 'components/ModalStateContext';
-
 
 const App = () => {
   const [isOpened, setIsOpened] = useState(false);
@@ -30,7 +31,7 @@ const App = () => {
 
   // const [isOpenedForm, setIsOpenedForm] = useState(false);
 
-  const [isOpenedDiscont, setIsOpenedDiscont] = useState(true);
+  const [isOpenedDiscont, setIsOpenedDiscont] = useState(false);
 
 
   function handleToggleDiscont () {
@@ -40,12 +41,12 @@ const App = () => {
   function handleTogglePrivacy () {
     setIsOpenPrivacy(!isOpenPrivacy);
   }
-  
-  function handleToggleImprint () {
+
+  function handleToggleImprint() {
     setIsOpenImprint(!isOpenImprint);
   }
 
-  function handleTogglePayment () {
+  function handleTogglePayment() {
     setIsOpenPayment(!isOpenPayment);
   }
 
@@ -57,33 +58,68 @@ const App = () => {
     document.body.classList.add('modal-open');
   } else {
     document.body.classList.remove('modal-open');
-  };
+  }
 
-  return (<>
-    <Layout>
-      <ModalStateContext.Provider
-        value={{ openModal: () => setIsOpened(true)}}
-      >
-        {!showVideo && <Header /> }
-        <main>
-          <Hero handleCloseVideo={handleCloseVideo} showVideo={showVideo} />
-          {!showVideo && <About />}
-          {!showVideo && <CardConteiner />}
-          {!showVideo && <Gallery />}
-          {!showVideo && <Description />}
-        </main>
-        {!showVideo && <Footer handleTogglePrivacy={handleTogglePrivacy}  handleToggleImprint={handleToggleImprint} isOpenPayment={isOpenPayment} handleTogglePayment={handleTogglePayment}/>}
-        
-        {isOpened && <Modal closeModal={() => setIsOpened(false)} />}
-        {isOpenPrivacy && <Privacy isOpenPrivacy={isOpenPrivacy} handleTogglePrivacy={handleTogglePrivacy} />}
-        {isOpenImprint && <Imprint isOpenImprint={isOpenImprint} handleToggleImprint={handleToggleImprint} />}
-        {isOpenPayment && <Payment isOpenPayment={isOpenPayment} handleTogglePayment={handleTogglePayment} />}
-
-        {isOpenedDiscont && <Discount handleToggleDiscont={handleToggleDiscont} />}
-
-      </ModalStateContext.Provider>
-    </Layout>
-  </>
+  return (
+    <>
+      <Layout>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <ModalStateContext.Provider
+                value={{ openModal: () => setIsOpened(true) }}
+              >
+                {!showVideo && <Header />}
+                <main>
+                  <Hero
+                    handleCloseVideo={handleCloseVideo}
+                    showVideo={showVideo}
+                  />
+                  {!showVideo && <About />}
+                  {!showVideo && <CardConteiner />}
+                  {!showVideo && <Gallery />}
+                  {!showVideo && <Description />}
+                </main>
+                {!showVideo && (
+                  <Footer
+                    handleTogglePrivacy={handleTogglePrivacy}
+                    handleToggleImprint={handleToggleImprint}
+                    isOpenPayment={isOpenPayment}
+                    handleTogglePayment={handleTogglePayment}
+                  />
+                )}
+                {isOpened && <Modal closeModal={() => setIsOpened(false)} />}
+                {isOpenPrivacy && (
+                  <Privacy
+                    isOpenPrivacy={isOpenPrivacy}
+                    handleTogglePrivacy={handleTogglePrivacy}
+                  />
+                )}
+                {isOpenImprint && (
+                  <Imprint
+                    isOpenImprint={isOpenImprint}
+                    handleToggleImprint={handleToggleImprint}
+                  />
+                )}
+                {isOpenPayment && (
+                  <Payment
+                    isOpenPayment={isOpenPayment}
+                    handleTogglePayment={handleTogglePayment}
+                  />
+                )}
+              </ModalStateContext.Provider>
+            }
+          />
+          <Route
+            path="/plesuare"
+            element={<>
+              <Discount handleToggleDiscont={ handleToggleDiscont} />
+            </>}
+          />
+        </Routes>
+      </Layout>
+    </>
   );
 };
 

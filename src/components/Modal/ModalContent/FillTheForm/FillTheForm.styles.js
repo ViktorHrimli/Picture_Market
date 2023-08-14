@@ -295,12 +295,12 @@ export const ErrorBox = styled.div`
   position: absolute;
 
   @media (min-width: 320px) and (max-width: 767px) {
-    bottom: 95px;
+    bottom: 155px;
     left: 67px;
   }
 
   @media (min-width: 768px) {
-    bottom: 150px;
+    bottom: 194px;
     left: 160px;
   }
 `;

@@ -58,7 +58,7 @@ export const ChooseImg = styled.div`
   @media (min-width: 768px) {
     width: 350px;
     height: 250px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 `;
 
@@ -131,5 +131,14 @@ export const BtnBox = styled.div`
 `;
 
 export const BtnUse = styled(GlobalButton)`
-  width: 240px;
+  width: 288px;
+  height: 44px;
+  font-size: 16px;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-transform: none;
+  background-color: rgb(99, 71, 137);
+  color: rgb(255, 255, 255);
+  --merchant-button-color: #634789;
 `;

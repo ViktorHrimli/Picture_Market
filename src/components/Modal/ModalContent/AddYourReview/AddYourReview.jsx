@@ -1,6 +1,5 @@
-import { useContext, useState } from 'react';
-import { contentTypes } from '../../modal.constants';
-import { ModalStrategyContext } from '../../ModalStrategyContext';
+import { useState } from 'react';
+
 import {
   ModalSection,
   ModalContent,
@@ -17,33 +16,32 @@ import {
   ButtonForm,
 } from './AddYourReview.styles';
 
+// <<<<<<< HEAD
 
 
 export function AddYourReview({handleToggleForm }) {
-  const { setStrategy, setGlobalModalState } = useContext(ModalStrategyContext);
+//   const { setStrategy, setGlobalModalState } = useContext(ModalStrategyContext);
 
+// =======
+// export function AddYourReview({ closeModal }) {
+// >>>>>>> e43587d99ee7c2c2a2f3d61aea700cd7c3cbe8fb
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
   const handleSubmit = event => {
     event.preventDefault();
-
-    setGlobalModalState(prev => ({
-      ...prev,
-      msg: message,
-      nameMsg: name,
-      emailMsg: email,
-    }));
-
-    setStrategy(contentTypes.ModalContentText);
   };
 
   return (
     <ModalSection>
     <ModalContent>
     <Section>
+
       {/* <ModalBack onClick={() => setStrategy(contentTypes.Discount)}>
+
+      <ModalBack>
+
         <Back />
       </ModalBack> */}
       <ModalClosed onClick={handleToggleForm}>
