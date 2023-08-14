@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import axios from 'axios';
 
 import {
   ModalSection,
@@ -16,69 +17,67 @@ import {
   ButtonForm,
 } from './AddYourReview.styles';
 
-// <<<<<<< HEAD
-
-
-export function AddYourReview({handleToggleForm }) {
-//   const { setStrategy, setGlobalModalState } = useContext(ModalStrategyContext);
-
-// =======
-// export function AddYourReview({ closeModal }) {
-// >>>>>>> e43587d99ee7c2c2a2f3d61aea700cd7c3cbe8fb
+export function AddYourReview({ handleToggleForm }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
   const handleSubmit = event => {
     event.preventDefault();
+
+    if (!name || !email || !message) {
+    } else {
+      axios
+        .post('https://postapi.onrender.com/api/sendphoto', {
+          name,
+          email,
+          message,
+        })
+        .then(res => console.log(res.data));
+    }
   };
 
   return (
     <ModalSection>
-    <ModalContent>
-    <Section>
+      <ModalContent>
+        <Section>
+          <ModalClosed onClick={handleToggleForm}>
+            <Close />
+          </ModalClosed>
 
-      {/* <ModalBack onClick={() => setStrategy(contentTypes.Discount)}>
+          <Text>Please add your review</Text>
 
-      <ModalBack>
+          <Form onSubmit={handleSubmit}>
+            <Input
+              type="text"
+              id="name"
+              name="name"
+              value={name}
+              placeholder="Name"
+              required
+              onChange={e => setName(e.target.value)}
+            />
 
-        <Back />
-      </ModalBack> */}
-      <ModalClosed onClick={handleToggleForm}>
-        <Close />
-      </ModalClosed>
+            <Input
+              type="email"
+              id="email"
+              name="Email"
+              value={email}
+              placeholder="Email"
+              required
+              onChange={e => setEmail(e.target.value)}
+            />
+            <Message
+              onChange={e => setMessage(e.target.value)}
+              value={message}
+              name="textarea"
+              id="textarea"
+              required
+              placeholder="Message"
+            ></Message>
 
-      <Text>Please add your review</Text>
-
-      <Form onSubmit={handleSubmit}>
-        <Input
-          type="text"
-          id="name"
-          name="name"
-          value={name}
-          placeholder="Name"
-          onChange={e => setName(e.target.value)}
-        />
-
-        <Input
-          type="email"
-          id="email"
-          name="Email"
-          value={email}
-          placeholder="Email"
-          onChange={e => setEmail(e.target.value)}
-        />
-        <Message
-          onChange={e => setMessage(e.target.value)}
-          value={message}
-          name="textarea"
-          id="textarea"
-          placeholder="Message"
-        ></Message>
-        {/* <IconPhoto /> */}
-
-        <ButtonForm type="submit">send</ButtonForm>
-      </Form>
+            <ButtonForm type="submit">send</ButtonForm>
+          </Form>
         </Section>
       </ModalContent>
     </ModalSection>
