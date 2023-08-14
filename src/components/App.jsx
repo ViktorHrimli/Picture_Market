@@ -15,11 +15,8 @@ import { Imprint } from './Imprint/Imprint';
 import  Payment  from './PaymentPolicy/PaymentPolicy'
 
 
-
-
 // CONTEXT
 import { ModalStateContext } from 'components/ModalStateContext';
-
 
 
 const App = () => {
@@ -29,7 +26,6 @@ const App = () => {
   const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
   const [isOpenImprint, setIsOpenImprint] = useState(false);
   const [isOpenPayment, setIsOpenPayment] = useState(false);
-
 
 
   function handleTogglePrivacy () {
@@ -73,7 +69,6 @@ const App = () => {
         {isOpenPrivacy && <Privacy isOpenPrivacy={isOpenPrivacy} handleTogglePrivacy={handleTogglePrivacy} />}
         {isOpenImprint && <Imprint isOpenImprint={isOpenImprint} handleToggleImprint={handleToggleImprint} />}
         {isOpenPayment && <Payment isOpenPayment={isOpenPayment} handleTogglePayment={handleTogglePayment} />}
-
       </ModalStateContext.Provider>
     </Layout>
   </>

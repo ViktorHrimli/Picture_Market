@@ -3,9 +3,14 @@ import { useContext, useState } from 'react';
 import { contentTypes } from '../../modal.constants';
 import { ModalStrategyContext } from '../../ModalStrategyContext';
 
-import { Privacy } from 'components/Modal/ModalContent/FillTheForm/Privacy/Privacy';
+import { Privacy } from 'components/Privacy/Privacy';
+import { Imprint } from 'components/Imprint/Imprint';
+import  PaymentPolicy  from 'components/PaymentPolicy/PaymentPolicy';
+
 
 import {
+  ModalSection,
+  ModalContent,
   Section,
   Text,
   Form,
@@ -13,8 +18,8 @@ import {
   CheckboxContainer,
   Label,
   LabelColor,
-  ModalBack,
-  Back,
+  // ModalBack,
+  // Back,
   Close,
   ModalClosed,
   ButtonForm,
@@ -22,7 +27,7 @@ import {
   ErrorMessage,
 } from './FillTheForm.styles';
 
-export function FillTheForm({ label, ...rest }) {
+export function FillTheForm({handleToggleForm, label, ...rest }) {
   const { setStrategy, setGlobalModalState } = useContext(ModalStrategyContext);
 
   const [name, setName] = useState(window.globalState['name'] ?? '');
@@ -32,6 +37,9 @@ export function FillTheForm({ label, ...rest }) {
   const [isChecked, setIsChecked] = useState(false);
 
   const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
+  const [isOpenImprint, setIsOpenImprint] = useState(false);
+  const [isOpenPayment, setIsOpenPayment] = useState(false);
+
 
   const [errorMessage, setErrorMessage] = useState(false);
 
@@ -49,6 +57,14 @@ export function FillTheForm({ label, ...rest }) {
     setIsOpenPrivacy(!isOpenPrivacy);
   }
 
+  function handleToggleImprint() {
+  setIsOpenImprint(!isOpenImprint);
+  }
+
+  function handleTogglePayment() {
+  setIsOpenPayment(!isOpenPayment);
+  }
+
   const handleSubmit = event => {
     event.preventDefault();
 
@@ -64,11 +80,13 @@ export function FillTheForm({ label, ...rest }) {
   };
 
   return (
+    <ModalSection>
+      <ModalContent>
     <Section>
-      <ModalBack onClick={() => setStrategy(contentTypes.UploadPhoto)}>
+      {/* <ModalBack onClick={() => setStrategy(contentTypes.UploadPhoto)}>
         <Back />
-      </ModalBack>
-      <ModalClosed>
+      </ModalBack> */}
+      <ModalClosed onClick={handleToggleForm}>
         <Close />
       </ModalClosed>
       <Text>Please fill the form</Text>
@@ -137,10 +155,15 @@ export function FillTheForm({ label, ...rest }) {
           />
           <span className="checkmark"></span>
           <Label id="checkbox">
-            I have read and agree to the{' '}
+            I have read and agree to the
             <LabelColor onClick={handleTogglePrivacy}>
-              Privacy Policy
-            </LabelColor>
+                Privacy Policy
+              </LabelColor>
+              <span> and </span>
+              <br />
+              <LabelColor onClick={handleToggleImprint}>Terms and Conditions</LabelColor>
+              <span> and </span>
+              <LabelColor onClick={handleTogglePayment}>Payment Policy</LabelColor>
           </Label>
         </CheckboxContainer>
         {errorMessage && (
@@ -152,7 +175,11 @@ export function FillTheForm({ label, ...rest }) {
           confirm
         </ButtonForm>
       </Form>
-      {isOpenPrivacy && <Privacy handleTogglePrivacy={handleTogglePrivacy} />}
-    </Section>
+        {isOpenPrivacy && <Privacy handleTogglePrivacy={handleTogglePrivacy} />}
+        {isOpenImprint && <Imprint handleToggleImprint={handleToggleImprint} />}
+        {isOpenPayment && <PaymentPolicy handleTogglePayment={handleTogglePayment} />}
+        </Section>
+        </ModalContent>
+      </ModalSection>
   );
 }

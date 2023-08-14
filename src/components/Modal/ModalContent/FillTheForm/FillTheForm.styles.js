@@ -3,6 +3,36 @@ import { GlobalPostition, GlobalButton } from 'styles/GlobalStyles.styled';
 import { GoX } from 'react-icons/go';
 import { ImArrowLeft2 } from 'react-icons/im';
 
+export const ModalSection = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: ${p => p.theme.colors.blackLight};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+`;
+
+export const ModalContent = styled.div`
+  position: relative;
+  background-color: ${p => p.theme.colors.white};
+  border-radius: ${p => p.theme.space[2]};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    width: 312px;
+  }
+  @media (min-width: 768px) {
+    width: 583px;
+  }
+`;
+
 export const Section = styled(GlobalPostition)`
   @media (min-width: 320px) and (max-width: 767px) {
     width: 312px;
@@ -102,8 +132,9 @@ export const Label = styled.label`
   font-style: normal;
   font-weight: 400;
   line-height: 22px;
-  text-align: center;
+  text-align: start;
   color: #003031;
+
   @media (min-width: 320px) and (max-width: 767px) {
     font-size: 12px;
   }
@@ -174,6 +205,8 @@ export const Close = styled(GoX)`
 
 export const LabelColor = styled.a`
   color: #634789;
+  text-decoration: underline;
+  cursor: pointer;
 `;
 //----------------- checkbox ---------
 
@@ -262,12 +295,12 @@ export const ErrorBox = styled.div`
   position: absolute;
 
   @media (min-width: 320px) and (max-width: 767px) {
-    bottom: 109px;
+    bottom: 125px;
     left: 67px;
   }
 
   @media (min-width: 768px) {
-    bottom: 160px;
+    bottom: 190px;
     left: 160px;
   }
 `;

@@ -42,7 +42,7 @@ export function Modal({ closeModal }) {
     [contentTypes.ModalContentText]: <ModalContentText />,
     [contentTypes.Privacy]: <Privacy />,
   };
-  console.log(window.globalState);
+
 
   useEffect(() => {
     if (strategy === contentTypes.Discount) {

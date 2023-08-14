@@ -6,20 +6,20 @@ export const FooterSection = styled.section`
   width: 100vw;
 
   @media (min-width: 320px) and (max-width: 767px) {
-    height: 620px;
+    height: 550px;
     flex-direction: column;
   }
 
   @media (min-width: 768px) and (max-width: 1023px) {
-    height: 570px;
+    height: 450px;
   }
 
   @media (min-width: 1024px) and (max-width: 1439px) {
-    height: 570px;
+    height: 320px;
   }
 
   @media (min-width: 1440px) {
-    height: 570px;
+    height: 320px;
   }
 `;
 
@@ -69,6 +69,18 @@ export const Container = styled.div`
   }
 `;
 
+//  + address
+export const BoxAddress = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+`;
+
 export const FooterLogo = styled.img`
   @media (min-width: 320px) and (max-width: 767px) {
     width: 202px;
@@ -90,6 +102,30 @@ export const FooterLogo = styled.img`
   }
 `;
 
+export const FooterAdress = styled.p`
+  width: 288px;
+  line-height: ${p => p.theme.lineHeights.min};
+  color: ${p => p.theme.colors.white};
+  font-family: ${p => p.theme.fonts.body};
+  font-weight: ${p => p.theme.fontWeights.normal};
+  margin-bottom: 30px;
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    font-size: ${p => p.theme.fontSizes.ms};
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 350px;
+    font-size: ${p => p.theme.fontSizes.s};
+  }
+
+  @media (min-width: 1440px) {
+    width: 350px;
+    font-size: ${p => p.theme.fontSizes.s};
+    margin-bottom: 0;
+  }
+`;
+
 export const FooterList = styled.div`
   display: flex;
   flex-direction: column;
@@ -105,7 +141,7 @@ export const FooterListContacts = styled.ul`
     justify-content: center;
     align-items: center;
     gap: 18px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
   @media (min-width: 768px) and (max-width: 1023px) {
     justify-content: center;
@@ -151,6 +187,7 @@ export const FooterListText = styled.ul`
   flex-wrap: wrap;
   height: 100px;
   justify-content: center;
+  align-items: center;
 
   @media (min-width: 320px) and (max-width: 767px) {
     /* gap: 5px; */
@@ -167,6 +204,7 @@ export const FooterListText = styled.ul`
   }
   @media (min-width: 1440px) {
     gap: ${p => p.theme.space[10]};
+    width: 400px;
   }
 `;
 export const FooterLink = styled.li`
@@ -196,15 +234,12 @@ export const FooterLinkText = styled.a`
   }
 `;
 
-export const FooterPaymant = styled.div`
-  width: 300px;
-  height: 110px;
+export const FooterPaymant = styled.li`
+  width: 90px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
 `;
 
 export const FooterPaymantBox = styled.div`
-  width: 110px;
+  width: 70px;
+  height: 15px;
 `;

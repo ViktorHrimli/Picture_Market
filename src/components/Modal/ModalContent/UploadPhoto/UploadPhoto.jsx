@@ -3,6 +3,11 @@ import { useContext, useState, useRef } from 'react';
 import { contentTypes } from '../../modal.constants';
 import { ModalStrategyContext } from '../../ModalStrategyContext';
 
+import { Privacy } from 'components/Privacy/Privacy';
+import { Imprint } from 'components/Imprint/Imprint';
+import  PaymentPolicy  from 'components/PaymentPolicy/PaymentPolicy';
+
+
 import {
   Section,
   Text,
@@ -13,7 +18,16 @@ import {
   Icon,
   BtnBox,
   BtnUse,
+  FormCheckBox,
 } from './UploadPhoto.styles';
+
+import {
+  Label,
+  LabelColor,
+  ErrorMessage,
+  ErrorBox,
+} from '../FillTheForm/FillTheForm.styles';
+
 import { GlobalButton } from 'styles/GlobalStyles.styled';
 import IMG from './Img/chooseImg.png';
 
@@ -22,10 +36,38 @@ export function UploadPhoto() {
 
   const [imageUrl, setImageUrl] = useState(window.globalState?.file ?? IMG);
 
+  const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
+  const [isOpenImprint, setIsOpenImprint] = useState(false);
+  const [isOpenPayment, setIsOpenPayment] = useState(false);
+
+  const [isChecked, setisChecked] = useState(false);
+  const [isError, setIsError] = useState(false);
+
   const fileInput = useRef(null);
 
   function handleButtonClick() {
     fileInput.current.click();
+  }
+
+  function handleTogglePrivacy() {
+    setIsOpenPrivacy(!isOpenPrivacy);
+  }
+
+  function handleToggleImprint() {
+  setIsOpenImprint(!isOpenImprint);
+  }
+
+  function handleTogglePayment() {
+  setIsOpenPayment(!isOpenPayment);
+  }
+
+  function handleNextModal() {
+    if (isChecked) {
+      setIsError(false);
+      setStrategy(contentTypes.FillTheForm);
+    } else {
+      setIsError(true);
+    }
   }
 
   function handleImageChange(event) {
@@ -105,13 +147,55 @@ export function UploadPhoto() {
           onChange={handleImageChange}
         />
         <BtnBox>
-          <BoxIcon>
-            <Icon onClick={handleButtonClick} />
-          </BoxIcon>
-          <BtnUse onClick={() => setStrategy(contentTypes.FillTheForm)}>
-            use this photo
-          </BtnUse>
+          <FormCheckBox>
+            <input
+              type="checkbox"
+              id="checkbox"
+              onClick={() => setisChecked(!isChecked)}
+              value={isChecked}
+              name="checkbox"
+              required
+            />
+            <span className="checkmark"></span>
+            <Label id="checkbox">
+              I am agree to the <span></span>
+              <LabelColor onClick={handleTogglePrivacy}>
+                Privacy Policy
+              </LabelColor>
+              <span> and </span>
+              <br />
+              <LabelColor onClick={handleToggleImprint}>Terms and Conditions</LabelColor>
+              <span> and </span>
+              <LabelColor onClick={handleTogglePayment}>Payment Policy</LabelColor>
+
+            </Label>
+          </FormCheckBox>
+
+          {isError && (
+            <ErrorBox>
+              <ErrorMessage>Please agree with Privacy Policy</ErrorMessage>
+            </ErrorBox>
+          )}
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <BoxIcon>
+              <Icon onClick={handleButtonClick} type="button" />
+            </BoxIcon>
+            <BtnUse onClick={handleNextModal} type="button">
+              Buy for £ 69
+            </BtnUse>
+          </div>
         </BtnBox>
+
+        {isOpenPrivacy && <Privacy handleTogglePrivacy={handleTogglePrivacy} />}
+        {isOpenImprint && <Imprint handleToggleImprint={handleToggleImprint} />}
+        {isOpenPayment && <PaymentPolicy handleTogglePayment={handleTogglePayment} />}
+
       </Section>
     );
   }
