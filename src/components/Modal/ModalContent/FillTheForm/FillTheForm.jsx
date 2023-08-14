@@ -155,12 +155,14 @@ export function FillTheForm({handleToggleForm, label, ...rest }) {
           />
           <span className="checkmark"></span>
           <Label id="checkbox">
-            I have read and agree to the
+                I have read and agree to the 
+                <span>  </span>
             <LabelColor onClick={handleTogglePrivacy}>
                 Privacy Policy
-              </LabelColor>
+                </LabelColor>
+                <br />
               <span> and </span>
-              <br />
+              
               <LabelColor onClick={handleToggleImprint}>Terms and Conditions</LabelColor>
               <span> and </span>
               <LabelColor onClick={handleTogglePayment}>Payment Policy</LabelColor>

@@ -17,7 +17,6 @@ import {
   BoxIcon,
   Icon,
   BtnBox,
-  BtnUse,
   FormCheckBox,
 } from './UploadPhoto.styles';
 
@@ -42,6 +41,7 @@ export function UploadPhoto() {
 
   const [isChecked, setisChecked] = useState(false);
   const [isError, setIsError] = useState(false);
+
 
   const fileInput = useRef(null);
 
@@ -186,9 +186,14 @@ export function UploadPhoto() {
             <BoxIcon>
               <Icon onClick={handleButtonClick} type="button" />
             </BoxIcon>
-            <BtnUse onClick={handleNextModal} type="button">
-              Buy for £ 69
-            </BtnUse>
+
+            <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+            <stripe-buy-button
+              onClick={handleNextModal}
+              buy-button-id="buy_btn_1NWKedBvsSffaihHlkNwDr5v"
+              publishable-key="pk_live_51NTPQmBvsSffaihHutVQGNFakDGH0b8Yeqb5qgVW7X1xgge8YRucsJlxLmOVNtr0xGzlRaKk2lsT7vfSL2J2ZZ0800vVyTZ1UY"
+            ></stripe-buy-button>
           </div>
         </BtnBox>
 

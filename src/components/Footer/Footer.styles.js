@@ -6,7 +6,7 @@ export const FooterSection = styled.section`
   width: 100vw;
 
   @media (min-width: 320px) and (max-width: 767px) {
-    height: 550px;
+    height: 570px;
     flex-direction: column;
   }
 
@@ -103,7 +103,7 @@ export const FooterLogo = styled.img`
 `;
 
 export const FooterAdress = styled.p`
-  width: 288px;
+  width: 220px;
   line-height: ${p => p.theme.lineHeights.min};
   color: ${p => p.theme.colors.white};
   font-family: ${p => p.theme.fonts.body};
@@ -112,10 +112,11 @@ export const FooterAdress = styled.p`
 
   @media (min-width: 320px) and (max-width: 767px) {
     font-size: ${p => p.theme.fontSizes.ms};
+    text-align: center;
   }
 
   @media (min-width: 768px) and (max-width: 1024px) {
-    width: 350px;
+    width: 245px;
     font-size: ${p => p.theme.fontSizes.s};
   }
 

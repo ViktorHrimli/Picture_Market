@@ -220,11 +220,11 @@ export const CheckboxContainer = styled.label`
   position: relative;
 
   @media (min-width: 320px) and (max-width: 767px) {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
   }
 
   @media (min-width: 768px) {
-    margin-bottom: 90px;
+    margin-bottom: 50px;
   }
 
   input {
@@ -295,12 +295,12 @@ export const ErrorBox = styled.div`
   position: absolute;
 
   @media (min-width: 320px) and (max-width: 767px) {
-    bottom: 125px;
+    bottom: 95px;
     left: 67px;
   }
 
   @media (min-width: 768px) {
-    bottom: 190px;
+    bottom: 150px;
     left: 160px;
   }
 `;

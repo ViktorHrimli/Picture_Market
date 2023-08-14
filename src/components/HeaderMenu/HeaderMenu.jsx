@@ -1,5 +1,7 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { ModalStateContext } from 'components/ModalStateContext';
+
+import { FillTheForm } from 'components/Modal/ModalContent/FillTheForm/FillTheForm';
 
 import {
   MenuSection,
@@ -16,6 +18,12 @@ import {
 
 export function HeaderMenu({ isClosed, setIsClosed }) {
   const { openModal } = useContext(ModalStateContext);
+
+      const [isOpenedForm, setIsOpenedForm] = useState(false);
+    
+    function handleToggleForm () {
+    setIsOpenedForm(!isOpenedForm);
+    }
 
   const handleClose = () => {
     setIsClosed(false);
@@ -65,10 +73,8 @@ export function HeaderMenu({ isClosed, setIsClosed }) {
       </div>
       <BtnBox>
         <ListContacts>
-          <LinkIcons>
-            <a href="mailto:sales.stringworld@gmail.com">
+          <LinkIcons onClick={handleToggleForm}>
               <Email />
-            </a>
           </LinkIcons>
           <LinkIcons>
             <span>
@@ -77,6 +83,7 @@ export function HeaderMenu({ isClosed, setIsClosed }) {
           </LinkIcons>
         </ListContacts>
       </BtnBox>
+      {isOpenedForm && <FillTheForm handleToggleForm={handleToggleForm} /> }
     </MenuSection>
   );
 }

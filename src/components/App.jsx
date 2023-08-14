@@ -21,7 +21,7 @@ import { ModalStateContext } from 'components/ModalStateContext';
 
 const App = () => {
   const [isOpened, setIsOpened] = useState(false);
-  const [showVideo, setShowVideo] = useState(false);
+  const [showVideo, setShowVideo] = useState(true);
 
   const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
   const [isOpenImprint, setIsOpenImprint] = useState(false);

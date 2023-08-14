@@ -18,16 +18,15 @@ const Footer = ({ handleToggleImprint, handleTogglePrivacy, handleTogglePayment 
             <Container>
                 <BoxAddress>
                     <FooterLogo src="https://res.cloudinary.com/de0iwhqf4/image/upload/v1683049747/String%20World/Group_166_1_mmzt5a.png" alt="logo" />
-                    <FooterAdress>Business address:
-                                48 Epstein Road
-                                London
-                                SE28 8EJ
-                                United Kingdom
+                    <FooterAdress>
+                        48 Epstein Road
+                        SE28 8EJ
+                        London United Kingdom
                     </FooterAdress>
                 </BoxAddress>
                 <FooterList>
                     <FooterListContacts>
-                        <li><FooterLinkContacts onClick={handleToggleForm} >Email: sales.stringworld@gmail.com</FooterLinkContacts></li>
+                        <li><FooterLinkContacts onClick={handleToggleForm}>Email: sales.stringworld@gmail.com</FooterLinkContacts></li>
                         <li><FooterLinkContacts href="tel:+447455871180">Telephone: +447455871180</FooterLinkContacts></li>
                     </FooterListContacts>
                     <FooterListText>
