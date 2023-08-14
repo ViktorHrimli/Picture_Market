@@ -1,12 +1,9 @@
-import { useContext, useState, useRef } from 'react';
-
-import { contentTypes } from '../../modal.constants';
-import { ModalStrategyContext } from '../../ModalStrategyContext';
+import { useState, useRef, useEffect } from 'react';
+// import axios from 'axios';
 
 import { Privacy } from 'components/Privacy/Privacy';
 import { Imprint } from 'components/Imprint/Imprint';
-import  PaymentPolicy  from 'components/PaymentPolicy/PaymentPolicy';
-
+import PaymentPolicy from 'components/PaymentPolicy/PaymentPolicy';
 
 import {
   Section,
@@ -17,6 +14,7 @@ import {
   BoxIcon,
   Icon,
   BtnBox,
+  BtnUse,
   FormCheckBox,
 } from './UploadPhoto.styles';
 
@@ -31,9 +29,8 @@ import { GlobalButton } from 'styles/GlobalStyles.styled';
 import IMG from './Img/chooseImg.png';
 
 export function UploadPhoto() {
-  const { setStrategy, setGlobalModalState } = useContext(ModalStrategyContext);
-
   const [imageUrl, setImageUrl] = useState(window.globalState?.file ?? IMG);
+  const [file, setFile] = useState(null);
 
   const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
   const [isOpenImprint, setIsOpenImprint] = useState(false);
@@ -41,7 +38,6 @@ export function UploadPhoto() {
 
   const [isChecked, setisChecked] = useState(false);
   const [isError, setIsError] = useState(false);
-
 
   const fileInput = useRef(null);
 
@@ -54,17 +50,16 @@ export function UploadPhoto() {
   }
 
   function handleToggleImprint() {
-  setIsOpenImprint(!isOpenImprint);
+    setIsOpenImprint(!isOpenImprint);
   }
 
   function handleTogglePayment() {
-  setIsOpenPayment(!isOpenPayment);
+    setIsOpenPayment(!isOpenPayment);
   }
 
   function handleNextModal() {
     if (isChecked) {
       setIsError(false);
-      setStrategy(contentTypes.FillTheForm);
     } else {
       setIsError(true);
     }
@@ -82,9 +77,28 @@ export function UploadPhoto() {
       setImageUrl(event.target.result);
     });
 
-    setGlobalModalState(prev => ({ ...prev, photo: file }));
+    setFile(file);
+
     reader.readAsDataURL(file);
   }
+
+  useEffect(() => {
+    if (file && isChecked) {
+      const formData = new FormData();
+      formData.append('name', '');
+      formData.append('surname', '');
+      formData.append('email', '');
+      formData.append('phone', '');
+
+      formData.append('photo', file);
+
+      window.globalState.file = null;
+
+      // axios
+      //   .post('https://postapi.onrender.com/api/send', formData)
+      //   .then(res => console.log(res.data));
+    }
+  }, [file, isChecked]);
 
   if (imageUrl === IMG) {
     return (
@@ -164,14 +178,17 @@ export function UploadPhoto() {
               </LabelColor>
               <span> and </span>
               <br />
-              <LabelColor onClick={handleToggleImprint}>Terms and Conditions</LabelColor>
+              <LabelColor onClick={handleToggleImprint}>
+                Terms and Conditions
+              </LabelColor>
               <span> and </span>
-              <LabelColor onClick={handleTogglePayment}>Payment Policy</LabelColor>
-
+              <LabelColor onClick={handleTogglePayment}>
+                Payment Policy
+              </LabelColor>
             </Label>
           </FormCheckBox>
 
-          {isError && (
+          {isError && !isChecked && (
             <ErrorBox>
               <ErrorMessage>Please agree with Privacy Policy</ErrorMessage>
             </ErrorBox>
@@ -188,19 +205,24 @@ export function UploadPhoto() {
             </BoxIcon>
 
             <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-
-            <stripe-buy-button
-              onClick={handleNextModal}
-              buy-button-id="buy_btn_1NWKedBvsSffaihHlkNwDr5v"
-              publishable-key="pk_live_51NTPQmBvsSffaihHutVQGNFakDGH0b8Yeqb5qgVW7X1xgge8YRucsJlxLmOVNtr0xGzlRaKk2lsT7vfSL2J2ZZ0800vVyTZ1UY"
-            ></stripe-buy-button>
+            {isChecked ? (
+              <stripe-buy-button
+                buy-button-id="buy_btn_1NWKedBvsSffaihHlkNwDr5v"
+                publishable-key="pk_live_51NTPQmBvsSffaihHutVQGNFakDGH0b8Yeqb5qgVW7X1xgge8YRucsJlxLmOVNtr0xGzlRaKk2lsT7vfSL2J2ZZ0800vVyTZ1UY"
+              ></stripe-buy-button>
+            ) : (
+              <BtnUse type="button" onClick={handleNextModal}>
+                Buy for £69
+              </BtnUse>
+            )}
           </div>
         </BtnBox>
 
         {isOpenPrivacy && <Privacy handleTogglePrivacy={handleTogglePrivacy} />}
         {isOpenImprint && <Imprint handleToggleImprint={handleToggleImprint} />}
-        {isOpenPayment && <PaymentPolicy handleTogglePayment={handleTogglePayment} />}
-
+        {isOpenPayment && (
+          <PaymentPolicy handleTogglePayment={handleTogglePayment} />
+        )}
       </Section>
     );
   }

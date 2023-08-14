@@ -1,6 +1,5 @@
-import { useContext, useState } from 'react';
-import { contentTypes } from '../../modal.constants';
-import { ModalStrategyContext } from '../../ModalStrategyContext';
+import { useState } from 'react';
+
 import {
   Section,
   ModalBack,
@@ -16,28 +15,17 @@ import {
 } from './AddYourReview.styles';
 
 export function AddYourReview({ closeModal }) {
-  const { setStrategy, setGlobalModalState } = useContext(ModalStrategyContext);
-
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
   const handleSubmit = event => {
     event.preventDefault();
-
-    setGlobalModalState(prev => ({
-      ...prev,
-      msg: message,
-      nameMsg: name,
-      emailMsg: email,
-    }));
-
-    setStrategy(contentTypes.ModalContentText);
   };
 
   return (
     <Section>
-      <ModalBack onClick={() => setStrategy(contentTypes.Discount)}>
+      <ModalBack>
         <Back />
       </ModalBack>
       <ModalClosed onClick={closeModal}>
