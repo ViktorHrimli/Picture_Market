@@ -4,6 +4,36 @@ import { GoX } from 'react-icons/go';
 import { ImArrowLeft2 } from 'react-icons/im';
 import { MdAddAPhoto } from 'react-icons/md';
 
+export const ModalSection = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: ${p => p.theme.colors.blackLight};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+`;
+
+export const ModalContent = styled.div`
+  position: relative;
+  background-color: ${p => p.theme.colors.white};
+  border-radius: ${p => p.theme.space[2]};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    width: 312px;
+  }
+  @media (min-width: 768px) {
+    width: 583px;
+  }
+`;
+
 export const Section = styled(GlobalPostition)`
   position: relative;
 

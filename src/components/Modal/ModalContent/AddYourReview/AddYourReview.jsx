@@ -2,9 +2,11 @@ import { useContext, useState } from 'react';
 import { contentTypes } from '../../modal.constants';
 import { ModalStrategyContext } from '../../ModalStrategyContext';
 import {
+  ModalSection,
+  ModalContent,
   Section,
-  ModalBack,
-  Back,
+  // ModalBack,
+  // Back,
   ModalClosed,
   Close,
   Text,
@@ -15,7 +17,9 @@ import {
   ButtonForm,
 } from './AddYourReview.styles';
 
-export function AddYourReview({ closeModal }) {
+
+
+export function AddYourReview({handleToggleForm }) {
   const { setStrategy, setGlobalModalState } = useContext(ModalStrategyContext);
 
   const [name, setName] = useState('');
@@ -36,11 +40,13 @@ export function AddYourReview({ closeModal }) {
   };
 
   return (
+    <ModalSection>
+    <ModalContent>
     <Section>
-      <ModalBack onClick={() => setStrategy(contentTypes.Discount)}>
+      {/* <ModalBack onClick={() => setStrategy(contentTypes.Discount)}>
         <Back />
-      </ModalBack>
-      <ModalClosed onClick={closeModal}>
+      </ModalBack> */}
+      <ModalClosed onClick={handleToggleForm}>
         <Close />
       </ModalClosed>
 
@@ -75,6 +81,8 @@ export function AddYourReview({ closeModal }) {
 
         <ButtonForm type="submit">send</ButtonForm>
       </Form>
-    </Section>
+        </Section>
+      </ModalContent>
+    </ModalSection>
   );
 }

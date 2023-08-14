@@ -169,6 +169,7 @@ export const FooterLinkContacts = styled.a`
   font-weight: ${p => p.theme.fontWeights.normal};
   line-height: ${p => p.theme.lineHeights.normal};
   color: ${p => p.theme.colors.white};
+  cursor: pointer;
 
   @media (min-width: 320px) and (max-width: 767px) {
     font-size: ${p => p.theme.fontSizes.ms};

@@ -3,7 +3,7 @@ import { FooterSection, Container, BoxAddress, FooterLogo, FooterAdress, FooterL
 
 import Payment from './img/payment.png';
 
-import { FillTheForm } from "components/Modal/ModalContent/FillTheForm/FillTheForm";
+import { AddYourReview } from "components/Modal/ModalContent/AddYourReview/AddYourReview";
 
 
 const Footer = ({ handleToggleImprint, handleTogglePrivacy, handleTogglePayment }) => {   
@@ -26,7 +26,7 @@ const Footer = ({ handleToggleImprint, handleTogglePrivacy, handleTogglePayment 
                 </BoxAddress>
                 <FooterList>
                     <FooterListContacts>
-                        <li><FooterLinkContacts onClick={handleToggleForm}>Email: sales.stringworld@gmail.com</FooterLinkContacts></li>
+                        <li><FooterLinkContacts onClick={handleToggleForm}>Email: designer@string-world.com</FooterLinkContacts></li>
                         <li><FooterLinkContacts href="tel:+447455871180">Telephone: +447455871180</FooterLinkContacts></li>
                     </FooterListContacts>
                     <FooterListText>
@@ -38,7 +38,7 @@ const Footer = ({ handleToggleImprint, handleTogglePrivacy, handleTogglePayment 
                             </FooterPaymant>
                     </FooterListText>
                 </FooterList>
-                {isOpenedForm && <FillTheForm handleToggleForm={handleToggleForm} /> }
+                {isOpenedForm && <AddYourReview handleToggleForm={handleToggleForm} /> }
             </Container>
         </FooterSection>
     )

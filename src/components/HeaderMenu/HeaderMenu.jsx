@@ -1,7 +1,8 @@
 import { useContext, useState } from 'react';
 import { ModalStateContext } from 'components/ModalStateContext';
 
-import { FillTheForm } from 'components/Modal/ModalContent/FillTheForm/FillTheForm';
+import { AddYourReview } from "components/Modal/ModalContent/AddYourReview/AddYourReview";
+
 
 import {
   MenuSection,
@@ -83,7 +84,7 @@ export function HeaderMenu({ isClosed, setIsClosed }) {
           </LinkIcons>
         </ListContacts>
       </BtnBox>
-      {isOpenedForm && <FillTheForm handleToggleForm={handleToggleForm} /> }
+      {isOpenedForm && <AddYourReview handleToggleForm={handleToggleForm} /> }
     </MenuSection>
   );
 }
