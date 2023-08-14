@@ -17,7 +17,6 @@ import Payment from './PaymentPolicy/PaymentPolicy';
 
 import { Discount } from './Modal/ModalContent/Discount/Discount';
 
-
 // CONTEXT
 import { ModalStateContext } from 'components/ModalStateContext';
 
@@ -33,12 +32,11 @@ const App = () => {
 
   const [isOpenedDiscont, setIsOpenedDiscont] = useState(false);
 
-
-  function handleToggleDiscont () {
+  function handleToggleDiscont() {
     setIsOpenedDiscont(!isOpenedDiscont);
-    }
+  }
 
-  function handleTogglePrivacy () {
+  function handleTogglePrivacy() {
     setIsOpenPrivacy(!isOpenPrivacy);
   }
 
@@ -66,6 +64,7 @@ const App = () => {
         <Routes>
           <Route
             path="/"
+            index
             element={
               <ModalStateContext.Provider
                 value={{ openModal: () => setIsOpened(true) }}
@@ -113,10 +112,10 @@ const App = () => {
           />
           <Route
             path="/plesuare"
-            element={<>
-              <Discount handleToggleDiscont={ handleToggleDiscont} />
-            </>}
+            element={<Discount handleToggleDiscont={handleToggleDiscont} />}
           />
+
+          <Route path="*" element={<h2>Not found</h2>} />
         </Routes>
       </Layout>
     </>

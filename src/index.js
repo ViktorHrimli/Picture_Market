@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <>
-    <BrowserRouter basename="/">
+    <BrowserRouter basename="/https://picturemarket.netlify.app">
       <ThemeProvider theme={theme}>
         <GlobalStyled />
         <App />

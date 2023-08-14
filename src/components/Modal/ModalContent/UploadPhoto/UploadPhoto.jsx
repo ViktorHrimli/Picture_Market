@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 
 import { Privacy } from 'components/Privacy/Privacy';
 import { Imprint } from 'components/Imprint/Imprint';
@@ -85,18 +85,14 @@ export function UploadPhoto() {
   useEffect(() => {
     if (file && isChecked) {
       const formData = new FormData();
-      formData.append('name', '');
-      formData.append('surname', '');
-      formData.append('email', '');
-      formData.append('phone', '');
 
       formData.append('photo', file);
 
       window.globalState.file = null;
 
-      // axios
-      //   .post('https://postapi.onrender.com/api/send', formData)
-      //   .then(res => console.log(res.data));
+      axios
+        .post('https://postapi.onrender.com/api/sendphoto', formData)
+        .then(res => console.log(res.data));
     }
   }, [file, isChecked]);
 
