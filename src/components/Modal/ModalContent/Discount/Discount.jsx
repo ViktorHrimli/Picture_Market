@@ -1,27 +1,50 @@
-import { useContext } from 'react';
+import { useState } from 'react';
 
-import { contentTypes } from '../../modal.constants';
-import { ModalStrategyContext } from '../../ModalStrategyContext';
+// import { contentTypes } from '../../modal.constants';
+// import { ModalStrategyContext } from '../../ModalStrategyContext';
 
-import { Section, ModalBack, Back, ModalClosed, Close, TextBox, Text, TextUp, Btn } from './Discount.styles';
+import { AddYourReview } from '../AddYourReview/AddYourReview';
+
+import { Section,  ModalSection, ModalContent, ModalClosed, Close, TextBox, Text, TextUp, BoxBtn, Btn, Email } from './Discount.styles';
 
 
-export function Discount() {
-    const { setStrategy } = useContext(ModalStrategyContext);
+export function Discount({handleToggleDiscont}) {
+    // const { setStrategy } = useContext(ModalStrategyContext);
+
+    const [isOpenedForm, setIsOpenedForm] = useState(false);
+
+
+    function handleToggleForm () {
+    setIsOpenedForm(!isOpenedForm);
+    }
   
     return (
+        <>
+        <ModalSection>
+        <ModalContent>
         <Section>
-            <ModalBack onClick={() => setStrategy(contentTypes.FillTheForm)}>
+            {/* <ModalBack onClick={() => setStrategy(contentTypes.FillTheForm)}>
                 <Back />
-            </ModalBack>
-            <ModalClosed>
+            </ModalBack> */}
+            <ModalClosed  onClick={handleToggleDiscont}>
                 <Close />
             </ModalClosed>
             <TextBox>
-                <Text>We're currently testing our string art portraits and preparing to launch in the UK. We'll keep you updated and offer a 30% discount on our portraits when we launch. Your feedback is valuable to us as we strive to meet your expectations.</Text>
-                <TextUp>Thanks for considering String World!</TextUp>
-            </TextBox>
-            <Btn onClick={() => setStrategy(contentTypes.AddYourReview)}>send feedback</Btn>
-        </Section>
+                <Text>Thank you for your order!</Text>
+                        <TextUp>Our designer will contact you shortly to discuss and approve the layout for your unique string art portrait. If you have any questions, feel free to reach out to us at
+                                <Email onClick={handleToggleForm}> designer@string-world.com.</Email>
+                                We can't wait to create a special piece of art for you!
+                    </TextUp>
+                    <TextUp>Best regards</TextUp>
+                        </TextBox>
+                    <BoxBtn>
+                        <Btn onClick={handleToggleForm}>contact us</Btn>
+                        <Btn onClick={handleToggleDiscont}>home page</Btn>
+                    </BoxBtn>
+                </Section>
+            </ModalContent>
+            </ModalSection>
+            {isOpenedForm && <AddYourReview handleToggleForm={handleToggleForm} /> }
+            </>
     )
 }

@@ -4,6 +4,36 @@ import { ImArrowLeft2 } from 'react-icons/im';
 
 import { GlobalPostition, GlobalButton } from 'styles/GlobalStyles.styled';
 
+export const ModalSection = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: ${p => p.theme.colors.blackLight};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+`;
+
+export const ModalContent = styled.div`
+  position: relative;
+  background-color: ${p => p.theme.colors.white};
+  border-radius: ${p => p.theme.space[2]};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    width: 312px;
+  }
+  @media (min-width: 768px) {
+    width: 583px;
+  }
+`;
+
 export const Section = styled(GlobalPostition)`
   border-radius: 8px;
   background-color: ${p => p.theme.colors.accent};
@@ -12,15 +42,15 @@ export const Section = styled(GlobalPostition)`
     width: 312px;
     height: 498px;
     padding-top: 82px;
-    padding-right: 23px;
-    padding-left: 23px;
+    padding-right: 12px;
+    padding-left: 12px;
     padding-bottom: 40px;
     position: relative;
   }
 
   @media (min-width: 768px) {
-    width: 583px;
-    padding-top: 160px;
+    width: 660px;
+    padding-top: 110px;
     padding-right: 54px;
     padding-left: 54px;
     padding-bottom: 72px;
@@ -59,18 +89,25 @@ export const TextUp = styled.p`
   font-style: normal;
   font-weight: 400;
   color: ${p => p.theme.colors.background};
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   text-align: center;
 
   @media (min-width: 320px) and (max-width: 767px) {
     font-size: 12px;
     line-height: 14px;
-    margin-bottom: 91px;
+    margin-bottom: 30px;
   }
   @media (min-width: 768px) {
     font-size: 21px;
     line-height: 34px;
   }
+`;
+
+export const Email = styled.p`
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+  cursor: pointer;
 `;
 
 export const ModalBack = styled.button`
@@ -121,7 +158,7 @@ export const ModalClosed = styled.button`
   }
   @media (min-width: 768px) {
     top: 42px;
-    right: 54px;
+    right: -15px;
   }
 `;
 
@@ -134,6 +171,17 @@ export const Close = styled(GoX)`
 
   @media (min-width: 768px) {
     font-size: ${p => p.theme.fontSizes.xl};
+  }
+`;
+
+export const BoxBtn = styled.div`
+  @media (min-width: 320px) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  @media (min-width: 768px) {
+    flex-direction: row;
   }
 `;
 

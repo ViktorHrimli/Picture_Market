@@ -12,8 +12,9 @@ import { Gallery } from 'components/Gallery/Gallery';
 
 import { Privacy } from './Privacy/Privacy';
 import { Imprint } from './Imprint/Imprint';
-import  Payment  from './PaymentPolicy/PaymentPolicy'
+import Payment from './PaymentPolicy/PaymentPolicy';
 
+import { Discount } from './Modal/ModalContent/Discount/Discount';
 
 // CONTEXT
 import { ModalStateContext } from 'components/ModalStateContext';
@@ -27,6 +28,14 @@ const App = () => {
   const [isOpenImprint, setIsOpenImprint] = useState(false);
   const [isOpenPayment, setIsOpenPayment] = useState(false);
 
+  // const [isOpenedForm, setIsOpenedForm] = useState(false);
+
+  const [isOpenedDiscont, setIsOpenedDiscont] = useState(true);
+
+
+  function handleToggleDiscont () {
+    setIsOpenedDiscont(!isOpenedDiscont);
+    }
 
   function handleTogglePrivacy () {
     setIsOpenPrivacy(!isOpenPrivacy);
@@ -69,6 +78,9 @@ const App = () => {
         {isOpenPrivacy && <Privacy isOpenPrivacy={isOpenPrivacy} handleTogglePrivacy={handleTogglePrivacy} />}
         {isOpenImprint && <Imprint isOpenImprint={isOpenImprint} handleToggleImprint={handleToggleImprint} />}
         {isOpenPayment && <Payment isOpenPayment={isOpenPayment} handleTogglePayment={handleTogglePayment} />}
+
+        {isOpenedDiscont && <Discount handleToggleDiscont={handleToggleDiscont} />}
+
       </ModalStateContext.Provider>
     </Layout>
   </>
