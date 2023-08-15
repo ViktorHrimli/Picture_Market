@@ -62,58 +62,59 @@ const App = () => {
     <>
       <Layout>
         <Routes>
-          <Route
-            path="/"
-            index
-            element={
-              <ModalStateContext.Provider
-                value={{ openModal: () => setIsOpened(true) }}
-              >
-                {!showVideo && <Header />}
-                <main>
-                  <Hero
-                    handleCloseVideo={handleCloseVideo}
-                    showVideo={showVideo}
-                  />
-                  {!showVideo && <About />}
-                  {!showVideo && <CardConteiner />}
-                  {!showVideo && <Gallery />}
-                  {!showVideo && <Description />}
-                </main>
-                {!showVideo && (
-                  <Footer
-                    handleTogglePrivacy={handleTogglePrivacy}
-                    handleToggleImprint={handleToggleImprint}
-                    isOpenPayment={isOpenPayment}
-                    handleTogglePayment={handleTogglePayment}
-                  />
-                )}
-                {isOpened && <Modal closeModal={() => setIsOpened(false)} />}
-                {isOpenPrivacy && (
-                  <Privacy
-                    isOpenPrivacy={isOpenPrivacy}
-                    handleTogglePrivacy={handleTogglePrivacy}
-                  />
-                )}
-                {isOpenImprint && (
-                  <Imprint
-                    isOpenImprint={isOpenImprint}
-                    handleToggleImprint={handleToggleImprint}
-                  />
-                )}
-                {isOpenPayment && (
-                  <Payment
-                    isOpenPayment={isOpenPayment}
-                    handleTogglePayment={handleTogglePayment}
-                  />
-                )}
-              </ModalStateContext.Provider>
-            }
-          />
-          <Route
-            path="/gratitude"
-            element={<Discount handleToggleDiscont={handleToggleDiscont} />}
-          />
+          <Route>
+            <Route
+              path="/"
+              element={
+                <ModalStateContext.Provider
+                  value={{ openModal: () => setIsOpened(true) }}
+                >
+                  {!showVideo && <Header />}
+                  <main>
+                    <Hero
+                      handleCloseVideo={handleCloseVideo}
+                      showVideo={showVideo}
+                    />
+                    {!showVideo && <About />}
+                    {!showVideo && <CardConteiner />}
+                    {!showVideo && <Gallery />}
+                    {!showVideo && <Description />}
+                  </main>
+                  {!showVideo && (
+                    <Footer
+                      handleTogglePrivacy={handleTogglePrivacy}
+                      handleToggleImprint={handleToggleImprint}
+                      isOpenPayment={isOpenPayment}
+                      handleTogglePayment={handleTogglePayment}
+                    />
+                  )}
+                  {isOpened && <Modal closeModal={() => setIsOpened(false)} />}
+                  {isOpenPrivacy && (
+                    <Privacy
+                      isOpenPrivacy={isOpenPrivacy}
+                      handleTogglePrivacy={handleTogglePrivacy}
+                    />
+                  )}
+                  {isOpenImprint && (
+                    <Imprint
+                      isOpenImprint={isOpenImprint}
+                      handleToggleImprint={handleToggleImprint}
+                    />
+                  )}
+                  {isOpenPayment && (
+                    <Payment
+                      isOpenPayment={isOpenPayment}
+                      handleTogglePayment={handleTogglePayment}
+                    />
+                  )}
+                </ModalStateContext.Provider>
+              }
+            />
+            <Route
+              path="gratitude"
+              element={<Discount handleToggleDiscont={handleToggleDiscont} />}
+            />
+          </Route>
         </Routes>
       </Layout>
     </>

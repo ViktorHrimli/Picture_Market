@@ -1,6 +1,7 @@
 {
   "name": "market",
   "version": "0.1.0",
+  "homepage": "https://string-world.com/",
   "dependencies": {
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.12.2",
