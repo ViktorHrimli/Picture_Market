@@ -111,11 +111,9 @@ const App = () => {
             }
           />
           <Route
-            path="/plesuare"
+            path="/gratitude"
             element={<Discount handleToggleDiscont={handleToggleDiscont} />}
           />
-
-          <Route path="*" element={<h2>Not found</h2>} />
         </Routes>
       </Layout>
     </>
