@@ -62,7 +62,7 @@ const App = () => {
     <>
       <Layout>
         <Routes>
-          <Route>
+          <Route path="/">
             <Route
               path="/"
               element={
