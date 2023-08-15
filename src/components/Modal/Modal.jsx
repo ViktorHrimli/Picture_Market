@@ -43,12 +43,12 @@ export function Modal({ closeModal }) {
     [contentTypes.Privacy]: <Privacy />,
   };
 
-
   useEffect(() => {
     if (strategy === contentTypes.Discount) {
       const formData = new FormData();
 
       const { email, name, phone, photo, surname } = globalModalState;
+      console.log('adadad');
 
       formData.append('name', name);
       formData.append('surname', surname);
