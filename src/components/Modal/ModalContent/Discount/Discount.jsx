@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import { contentTypes } from '../../modal.constants';
 // import { ModalStrategyContext } from '../../ModalStrategyContext';
 
@@ -23,15 +23,15 @@ export function Discount({ handleToggleDiscont }) {
   // const { setStrategy } = useContext(ModalStrategyContext);
 
   const [isOpenedForm, setIsOpenedForm] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   function handleToggleForm() {
     setIsOpenedForm(!isOpenedForm);
   }
 
-  const handleClickOnHome = () => {
-    navigate('/');
-  };
+  // const handleClickOnHome = () => {
+  //   navigate('');
+  // };
 
   return (
     <>
@@ -41,8 +41,10 @@ export function Discount({ handleToggleDiscont }) {
             {/* <ModalBack onClick={() => setStrategy(contentTypes.FillTheForm)}>
                 <Back />
             </ModalBack> */}
-            <ModalClosed onClick={handleClickOnHome}>
-              <Close />
+            <ModalClosed>
+              <Link to={'https://string-world.com/'}>
+                <Close />
+              </Link>
             </ModalClosed>
             <TextBox>
               <Text>Thank you for your order!</Text>
@@ -60,7 +62,9 @@ export function Discount({ handleToggleDiscont }) {
             </TextBox>
             <BoxBtn>
               <Btn onClick={handleToggleForm}>contact us</Btn>
-              <Btn onClick={handleClickOnHome}>home page</Btn>
+              <Btn>
+                <Link to={'https://string-world.com/'}>home page</Link>
+              </Btn>
             </BoxBtn>
           </Section>
         </ModalContent>
