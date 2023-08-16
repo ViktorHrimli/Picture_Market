@@ -137,9 +137,11 @@ export const Label = styled.label`
 
   @media (min-width: 320px) and (max-width: 767px) {
     font-size: 12px;
+    margin-right: 60px;
   }
   @media (min-width: 768px) {
     font-size: 18px;
+    margin-right: 70px;
   }
 `;
 

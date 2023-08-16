@@ -71,6 +71,7 @@ export const BoxIcon = styled(GlobalButton)`
   background-color: transparent;
   border-radius: 8px;
   cursor: pointer;
+  border: transparent;
 
   & :hover {
     fill: ${p => p.theme.colors.accent};
@@ -81,7 +82,6 @@ export const BoxIcon = styled(GlobalButton)`
     position: absolute;
     top: 519px;
     left: 93px;
-    margin-right: 70px;
   }
 `;
 
