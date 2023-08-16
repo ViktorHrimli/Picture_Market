@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import { Privacy } from 'components/Privacy/Privacy';
 import { Imprint } from 'components/Imprint/Imprint';
-import PaymentPolicy from 'components/PaymentPolicy/PaymentPolicy';
+// import PaymentPolicy from 'components/PaymentPolicy/PaymentPolicy';
 
 import {
   Section,
@@ -34,7 +34,7 @@ export function UploadPhoto() {
 
   const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
   const [isOpenImprint, setIsOpenImprint] = useState(false);
-  const [isOpenPayment, setIsOpenPayment] = useState(false);
+  // const [isOpenPayment, setIsOpenPayment] = useState(false);
 
   const [isChecked, setisChecked] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -53,9 +53,9 @@ export function UploadPhoto() {
     setIsOpenImprint(!isOpenImprint);
   }
 
-  function handleTogglePayment() {
-    setIsOpenPayment(!isOpenPayment);
-  }
+  // function handleTogglePayment() {
+  //   setIsOpenPayment(!isOpenPayment);
+  // }
 
   function handleNextModal() {
     if (isChecked) {
@@ -177,10 +177,10 @@ export function UploadPhoto() {
               <LabelColor onClick={handleToggleImprint}>
                 Terms and Conditions
               </LabelColor>
-              <span> and </span>
+              {/* <span> and </span>
               <LabelColor onClick={handleTogglePayment}>
                 Payment Policy
-              </LabelColor>
+              </LabelColor> */}
             </Label>
           </FormCheckBox>
 
@@ -216,9 +216,9 @@ export function UploadPhoto() {
 
         {isOpenPrivacy && <Privacy handleTogglePrivacy={handleTogglePrivacy} />}
         {isOpenImprint && <Imprint handleToggleImprint={handleToggleImprint} />}
-        {isOpenPayment && (
+        {/* {isOpenPayment && (
           <PaymentPolicy handleTogglePayment={handleTogglePayment} />
-        )}
+        )} */}
       </Section>
     );
   }

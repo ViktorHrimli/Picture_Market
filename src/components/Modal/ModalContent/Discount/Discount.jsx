@@ -62,8 +62,8 @@ export function Discount({ handleToggleDiscont }) {
             </TextBox>
             <BoxBtn>
               <Btn onClick={handleToggleForm}>contact us</Btn>
-              <Btn>
-                <Link to={'https://string-world.com/'}>home page</Link>
+              <Btn to={'https://string-world.com/'}>
+                <Link>home page</Link>
               </Btn>
             </BoxBtn>
           </Section>

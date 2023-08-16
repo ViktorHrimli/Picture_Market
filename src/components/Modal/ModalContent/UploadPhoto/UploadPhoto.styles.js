@@ -64,27 +64,36 @@ export const ChooseImg = styled.div`
 
 export const BoxIcon = styled(GlobalButton)`
   position: absolute;
-  top: 235px;
-  left: 34px;
-  width: 48px;
-  height: 48px;
-  background-color: ${p => p.theme.colors.accent};
+  top: 116px;
+  right: 33px;
+  width: 44px;
+  height: 43px;
+  background-color: transparent;
   border-radius: 8px;
   cursor: pointer;
+
   & :hover {
     fill: ${p => p.theme.colors.accent};
   }
 
   @media screen and (min-width: 768px) {
-    top: 336px;
-    left: 123px;
+    background-color: ${p => p.theme.colors.accent};
+    position: absolute;
+    top: 519px;
+    left: 93px;
+    margin-right: 70px;
   }
 `;
 
 export const Icon = styled(BsArrowClockwise)`
-  width: 25px;
-  height: 25px;
-  fill: ${p => p.theme.colors.white};
+  width: 40px;
+  height: 40px;
+  fill: ${p => p.theme.colors.accent};
+  @media screen and (min-width: 768px) {
+    width: 25px;
+    height: 25px;
+    fill: #ffffff;
+  }
 `;
 
 export const ModalClosed = styled.button`

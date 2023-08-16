@@ -182,8 +182,39 @@ export const LinkBorder = styled.span`
   }
 `;
 
-export const BtnHero = styled(GlobalButton)`
+export const BtnHeroBox = styled.div`
   position: absolute;
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    top: 640px;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    top: 550px;
+  }
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    width: 301px;
+    height: 49px;
+    font-size: ${p => p.theme.fontSizes.s};
+    left: 80px;
+    top: 600px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 334px;
+    height: 61px;
+    font-size: ${p => p.theme.fontSizes.m};
+    margin-left: 950px;
+    left: -840px;
+    top: 820px;
+  }
+`;
+
+export const BtnHero = styled(GlobalButton)`
+  /* position: absolute; */
   cursor: pointer;
   z-index: 10;
   visibility: visible;
