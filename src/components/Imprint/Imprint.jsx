@@ -1,7 +1,16 @@
+import { useState } from "react";
+
 import { Section, Content, Closed, Close, HeaderBox, Text, Description, PreTitle, DescriptionEmail } from "./Imprint.styled"
 
-const Imprint = ({isOpenImprint, handleToggleImprint}) => {
+import { AddYourReview } from "components/Modal/ModalContent/AddYourReview/AddYourReview";
 
+const Imprint = ({isOpenImprint, handleToggleImprint}) => {
+ const [isOpenedForm, setIsOpenedForm] = useState(false);
+    
+  function handleToggleForm () {
+    setIsOpenedForm(!isOpenedForm);
+  }
+  
   if (isOpenImprint) {
     document.body.classList.add('modal-open');
   } else {
@@ -47,11 +56,12 @@ const Imprint = ({isOpenImprint, handleToggleImprint}) => {
           </Description>
           <Description><PreTitle>Changes to These Terms and Conditions of Use</PreTitle>We reserve the right to modify these terms and conditions of use at any time without notice. By continuing to use our website after such modifications are made, you agree to be bound by the revised terms and conditions of use.
           </Description>
-          <Description><PreTitle>Contact Information</PreTitle>If you have any questions or concerns about these terms and conditions of use, please do not hesitate to contact us at <DescriptionEmail href="mailto:designer@string-world.com">designer@string-world.com</DescriptionEmail>.
+          <Description><PreTitle>Contact Information</PreTitle>If you have any questions or concerns about these terms and conditions of use, please do not hesitate to contact us at <DescriptionEmail onClick={handleToggleForm}>designer@string-world.com</DescriptionEmail>.
           </Description>
           <Description>Date of Last Update: 25.07.2023</Description>
         </div>
       </Content>
+        {isOpenedForm && <AddYourReview handleToggleForm={handleToggleForm} /> }
   </Section>
   ) 
 }

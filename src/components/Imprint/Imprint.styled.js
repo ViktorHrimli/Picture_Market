@@ -94,4 +94,5 @@ export const PreTitle = styled.p`
 
 export const DescriptionEmail = styled.a`
   color: red;
+  cursor: pointer;
 `;

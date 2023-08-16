@@ -1,10 +1,19 @@
 import { createPortal } from 'react-dom';
+import { useState } from 'react';
+
+import { AddYourReview } from 'components/Modal/ModalContent/AddYourReview/AddYourReview';
 
 import { Section, Content, Closed, Close, HeaderBox, Text, Description, PreTitle, DescriptionEmail } from "./PaymentPolicy.styled"
 
 const privacyRoot = document.querySelector('#privacy--root');
 
+
 export default function PaymentPolicy({ isOpenPayment, handleTogglePayment }) {
+  const [isOpenedForm, setIsOpenedForm] = useState(false);
+  
+  function handleToggleForm () {
+    setIsOpenedForm(!isOpenedForm);
+  }
   
   if (isOpenPayment) {
     document.body.classList.add('modal-open');
@@ -13,6 +22,7 @@ export default function PaymentPolicy({ isOpenPayment, handleTogglePayment }) {
   };
 
   return createPortal(
+
     <Section>
       <Content>
         <Closed>
@@ -38,13 +48,13 @@ export default function PaymentPolicy({ isOpenPayment, handleTogglePayment }) {
             All prices displayed on our website are in British Pound (GBP), and your payment will be processed in GBP. If you are ordering from outside the United Kingdom, the final amount charged to your card may be subject to conversion fees by your bank or financial institution. Please check with your provider for further details.
           </Description>
           <Description>
-            <PreTitle>Order Confirmation:</PreTitle> Once your payment is successfully processed, you will receive an order confirmation email containing the details of your purchase. If you do not receive this email within a reasonable time after payment, please contact our customer support team at <DescriptionEmail href="mailto:designer@string-world.com">designer@string-world.com</DescriptionEmail>.
+            <PreTitle>Order Confirmation:</PreTitle> Once your payment is successfully processed, you will receive an order confirmation email containing the details of your purchase. If you do not receive this email within a reasonable time after payment, please contact our customer support team at <DescriptionEmail onClick={handleToggleForm}>designer@string-world.com</DescriptionEmail>.
           </Description>
           <Description>
             <PreTitle>Payment Security:</PreTitle> We take the security of your payment information seriously. Stripe employs industry-leading security measures to protect your financial data, ensuring that your transaction is safe and secure.
           </Description>
           <Description>
-            <PreTitle>Payment Issues:</PreTitle> In the event of any payment-related issues or discrepancies, please reach out to our customer support team at <DescriptionEmail href="mailto:designer@string-world.com">designer@string-world.com</DescriptionEmail>. We will promptly investigate the matter and provide a resolution to the best of our ability.
+            <PreTitle>Payment Issues:</PreTitle> In the event of any payment-related issues or discrepancies, please reach out to our customer support team at <DescriptionEmail onClick={handleToggleForm}>designer@string-world.com</DescriptionEmail>. We will promptly investigate the matter and provide a resolution to the best of our ability.
           </Description>
           <Description>
             <PreTitle>Refund Policy:</PreTitle> For information regarding refunds and our refund policy, please refer to our dedicated Refund Policy page, which is included in our Privacy Policy.
@@ -56,7 +66,7 @@ export default function PaymentPolicy({ isOpenPayment, handleTogglePayment }) {
             <PreTitle></PreTitle> By proceeding with your purchase on our website, you acknowledge and agree to the terms and conditions outlined in this Payment Policy.
           </Description>
           <Description>
-            <PreTitle></PreTitle>If you have any questions or concerns about our Payment Policy, please do not hesitate to contact us at <DescriptionEmail href="mailto:designer@string-world.com">designer@string-world.com</DescriptionEmail>.
+            <PreTitle></PreTitle>If you have any questions or concerns about our Payment Policy, please do not hesitate to contact us at <DescriptionEmail onClick={handleToggleForm}>designer@string-world.com</DescriptionEmail>.
           </Description>
           <Description>
             <PreTitle></PreTitle>Date of Last Update: 25.07.2023
@@ -64,6 +74,7 @@ export default function PaymentPolicy({ isOpenPayment, handleTogglePayment }) {
 
         </div>
       </Content>
+      {isOpenedForm && <AddYourReview handleToggleForm={handleToggleForm} /> }
     </Section>, privacyRoot
   );
 };
