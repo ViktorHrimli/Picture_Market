@@ -19,9 +19,10 @@ import {
 
 export function HeaderMenu({ isClosed, setIsClosed }) {
   const { openModal } = useContext(ModalStateContext);
+  const [isOpenedForm, setIsOpenedForm] = useState(false);
+  
+  
 
-      const [isOpenedForm, setIsOpenedForm] = useState(false);
-    
     function handleToggleForm () {
     setIsOpenedForm(!isOpenedForm);
     }

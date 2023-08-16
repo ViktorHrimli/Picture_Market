@@ -12,6 +12,12 @@ const Footer = ({ handleToggleImprint, handleTogglePrivacy, handleTogglePayment 
     function handleToggleForm () {
     setIsOpenedForm(!isOpenedForm);
     }
+
+    if (isOpenedForm) {
+        document.body.classList.add('modal-open');
+    } else {
+        document.body.classList.remove('modal-open');
+    }
     
     return (
         <FooterSection>

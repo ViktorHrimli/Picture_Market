@@ -1,10 +1,17 @@
 import { createPortal } from 'react-dom';
+import { useState } from "react";
 
-import { Section, Content, Closed, Close, HeaderBox, Text, Description, PreTitle } from "./Privacy.styled"
+import { Section, Content, Closed, Close, HeaderBox, Text, Description, PreTitle, DescriptionEmail } from "./Privacy.styled"
+import { AddYourReview } from "components/Modal/ModalContent/AddYourReview/AddYourReview";
 
 const privacyRoot = document.querySelector('#privacy--root');
 
 const Privacy = ({ isOpenPrivacy, handleTogglePrivacy }) => {
+  const [isOpenedForm, setIsOpenedForm] = useState(false);
+    
+  function handleToggleForm () {
+    setIsOpenedForm(!isOpenedForm);
+  }
   
   if (isOpenPrivacy) {
     document.body.classList.add('modal-open');
@@ -49,9 +56,22 @@ const Privacy = ({ isOpenPrivacy, handleTogglePrivacy }) => {
           <Description>
             <PreTitle>Shipping Policy:</PreTitle>We offer free shipping on all orders within the UK. We use standard shipping, and delivery times vary depending on your location. Orders typically take 3-5 business days to arrive.
           </Description>
-
+          <Description>
+            International shipping is available for an additional fee. Delivery times and fees vary depending on your location. We are not responsible for any customs fees or taxes.
+          </Description>
+          <Description>
+            Please note that production typically takes 2-3 days before shipping. We will notify you by email once your order has shipped.
+          </Description>
+          <Description>
+            Date of Last Update: 25.07.2023
+          </Description>
+          <Description>
+            If you have any questions or concerns about our Privacy Policy or any other aspect of our services, please do not hesitate to contact us at<DescriptionEmail onClick={handleToggleForm}> designer@string-world.com </DescriptionEmail>.
+          </Description>
         </div>
       </Content>
+      {isOpenedForm && <AddYourReview handleToggleForm={handleToggleForm} /> }
+
     </Section>, privacyRoot
   );
 };

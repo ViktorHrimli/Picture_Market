@@ -91,3 +91,8 @@ export const PreTitle = styled.p`
   line-height: 22px;
   color: ${p => p.theme.colors.accent};
 `;
+
+export const DescriptionEmail = styled.a`
+  color: red;
+  cursor: pointer;
+`;

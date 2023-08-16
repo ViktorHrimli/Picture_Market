@@ -76,7 +76,7 @@ export function AddYourReview({ handleToggleForm }) {
               placeholder="Message"
             ></Message>
 
-            <ButtonForm type="submit">send</ButtonForm>
+            <ButtonForm type="submit" onClick={handleToggleForm}>send</ButtonForm>
           </Form>
         </Section>
       </ModalContent>
