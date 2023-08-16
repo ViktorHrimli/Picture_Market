@@ -59,7 +59,7 @@ export function HeaderMenu({ isClosed, setIsClosed }) {
       <div>
         <ListLayout>
           <li>
-            <LinkLayout>Home</LinkLayout>
+            <LinkLayout onClick={handleClose}>Home</LinkLayout>
           </li>
           <li id="about" onClick={handleClickScroll}>
             <LinkLayout>About Us</LinkLayout>
@@ -80,7 +80,7 @@ export function HeaderMenu({ isClosed, setIsClosed }) {
           </LinkIcons>
           <LinkIcons>
             <span>
-              <Shop />
+              <Shop onClick={handleCloseAutoIsModal}/>
             </span>
           </LinkIcons>
         </ListContacts>

@@ -207,7 +207,6 @@ export const BtnHeroBox = styled.div`
     width: 334px;
     height: 61px;
     font-size: ${p => p.theme.fontSizes.m};
-    margin-left: 950px;
     left: -840px;
     top: 820px;
   }

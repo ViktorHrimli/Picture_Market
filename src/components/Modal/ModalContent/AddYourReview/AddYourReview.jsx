@@ -24,6 +24,7 @@ export function AddYourReview({ handleToggleForm }) {
 
   const handleSubmit = event => {
     event.preventDefault();
+    handleToggleForm();
 
     if (!name || !email || !message) {
     } else {
@@ -76,7 +77,7 @@ export function AddYourReview({ handleToggleForm }) {
               placeholder="Message"
             ></Message>
 
-            <ButtonForm type="submit" onClick={handleToggleForm}>send</ButtonForm>
+            <ButtonForm type="submit">send</ButtonForm>
           </Form>
         </Section>
       </ModalContent>
