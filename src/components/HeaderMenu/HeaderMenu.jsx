@@ -1,7 +1,7 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { ModalStateContext } from 'components/ModalStateContext';
 
-import { AddYourReview } from "components/Modal/ModalContent/AddYourReview/AddYourReview";
+// import { AddYourReview } from "components/Modal/ModalContent/AddYourReview/AddYourReview";
 
 
 import {
@@ -17,15 +17,14 @@ import {
   Shop,
 } from 'components/HeaderMenu/HeaderMenu.styles';
 
-export function HeaderMenu({ isClosed, setIsClosed }) {
+export function HeaderMenu({ isClosed, setIsClosed, handleToggleForm }) {
   const { openModal } = useContext(ModalStateContext);
-  const [isOpenedForm, setIsOpenedForm] = useState(false);
-  
   
 
-    function handleToggleForm () {
-    setIsOpenedForm(!isOpenedForm);
-    }
+  function handleToggleFormEmail () {
+    handleToggleForm()
+    handleClose()
+  }
 
   const handleClose = () => {
     setIsClosed(false);
@@ -75,7 +74,7 @@ export function HeaderMenu({ isClosed, setIsClosed }) {
       </div>
       <BtnBox>
         <ListContacts>
-          <LinkIcons onClick={handleToggleForm}>
+          <LinkIcons onClick={handleToggleFormEmail}>
               <Email />
           </LinkIcons>
           <LinkIcons>
@@ -85,7 +84,6 @@ export function HeaderMenu({ isClosed, setIsClosed }) {
           </LinkIcons>
         </ListContacts>
       </BtnBox>
-      {isOpenedForm && <AddYourReview handleToggleForm={handleToggleForm} /> }
     </MenuSection>
   );
 }

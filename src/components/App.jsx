@@ -16,6 +16,8 @@ import { Imprint } from './Imprint/Imprint';
 import Payment from './PaymentPolicy/PaymentPolicy';
 
 import { Discount } from './Modal/ModalContent/Discount/Discount';
+import { AddYourReview } from "components/Modal/ModalContent/AddYourReview/AddYourReview";
+
 
 // CONTEXT
 import { ModalStateContext } from 'components/ModalStateContext';
@@ -28,9 +30,16 @@ const App = () => {
   const [isOpenImprint, setIsOpenImprint] = useState(false);
   const [isOpenPayment, setIsOpenPayment] = useState(false);
 
-  // const [isOpenedForm, setIsOpenedForm] = useState(false);
+  const [isOpenedForm, setIsOpenedForm] = useState(false);
 
   const [isOpenedDiscont, setIsOpenedDiscont] = useState(false);
+
+  function handleToggleForm () {
+    const timeoutId = setTimeout(() => {
+      setIsOpenedForm(!isOpenedForm);
+    }, 600);
+    return () => clearTimeout(timeoutId);
+  }
 
   function handleToggleDiscont() {
     setIsOpenedDiscont(!isOpenedDiscont);
@@ -68,7 +77,7 @@ const App = () => {
               <ModalStateContext.Provider
                 value={{ openModal: () => setIsOpened(true) }}
               >
-                {!showVideo && <Header />}
+                {!showVideo && <Header handleToggleForm={handleToggleForm}/>}
                 <main>
                   <Hero
                     handleCloseVideo={handleCloseVideo}
@@ -88,6 +97,8 @@ const App = () => {
                   />
                 )}
                 {isOpened && <Modal closeModal={() => setIsOpened(false)} />}
+                {isOpenedForm && <AddYourReview handleToggleForm={handleToggleForm} /> }
+
                 {isOpenPrivacy && (
                   <Privacy
                     isOpenPrivacy={isOpenPrivacy}

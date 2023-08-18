@@ -15,12 +15,21 @@ import {
 } from 'components/Header/Header.styled';
 
 import { HeaderMenu } from 'components/HeaderMenu/HeaderMenu';
+// import { AddYourReview } from "components/Modal/ModalContent/AddYourReview/AddYourReview";
 
-export function Header() {
+export function Header({handleToggleForm}) {
   const [isClosedSection, setIsClosedSection] = useState(true);
   const [isOpenedNavigation, setIsOpenedNavigation] = useState(false);
+  // const [isOpenedForm, setIsOpenedForm] = useState(false);
+
 
   const { openModal } = useContext(ModalStateContext);
+
+  // function handleToggleForm () {
+  //   setIsOpenedNavigation(false);
+
+  //   setIsOpenedForm(!isOpenedForm);
+  //   }
 
   const handleClick = () => {
     setIsOpenedNavigation(true);
@@ -54,6 +63,7 @@ export function Header() {
         <HeaderMenu
           isClosed={isClosedSection}
           setIsClosed={setIsClosedSection}
+          handleToggleForm={handleToggleForm}
         />
       )}
       <Section>
@@ -83,6 +93,7 @@ export function Header() {
         <BtnHero onClick={() => openModal()}>Buy for £ 69</BtnHero>
         </BtnHeroBox>
       </Section>
+      {/* {isOpenedForm && <AddYourReview handleToggleForm={handleToggleForm} /> } */}
     </HeaderConteiner>
   );
 }
